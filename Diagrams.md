@@ -1,3 +1,3 @@
 # System Diagram
 
-![](system_diagram.png)
+![](system_diagram.svg)
