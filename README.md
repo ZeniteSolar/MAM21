@@ -3,12 +3,12 @@
 
 Embarcação Guarapuvu II
 
-Equipe Zênite solar
+Equipe Zênite Solar
 
 ### Sobre
 Este módulo é responsável por realizar o acionamento de um motor de imã permanente, controlando sua velocidade e sentido de rotação.
 
-![](system_diagram.svg)
+![](diagrams/system_diagram.svg)
 
 
 
@@ -86,7 +86,7 @@ Em um motor DC, a inversão de seu sentido de rotação é feita com a inversão
 
 Para que seja possível o monitoramento dos parâmetros do motor e para fechar a malha de controle, precisarão ser empregados sensores para o monitoramento da corrente e rotação do motor. O diagrama abaixo apresenta a topologia utilizada para o acionamento.
 
-![](topology_step1.svg)
+![](diagrams/topology_step1.svg)
 
 
 
