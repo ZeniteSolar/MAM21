@@ -1,32 +1,65 @@
+---
+
+---
+
 # Embedded System Simulation with PSIM
 
 O objetivo deste documento é registrar a implementação inicial de uma simulação
 de sinais mistos (mixed signals simulation) de um chopper operando nos quatro
 quadrantes, usando o PSIM.
 
-## 4Q Chopper
+## Table Of Contents
+
+- 1.0. Chopper  
+- 2.0. Pilot Controller  
+- 3.0. Signal Conditioning  
+- 4.0. PWM Peripheral  
+- 5.0. Embedded Controller  
+  - 5.1. ADC Inputs  
+    - 5.1.1. ADC Test  
+  - 5.2. Digiital Inputs  
+  - 5.3. Outputs  
+    - 5.3.1. PWM  
+- 6.0. Firmware  
+- 7.0. Test  
+
+
+
+---
+
+## 1.0. Chopper
 
 O circuito do chopper foi implementado de modo a possibilitar o comando
 individual das chaves, assim como a medição das correntes e tensões de entrada e
 saída, além de separar a entrada e saída, a fim de facilitar mudanças na
 simulação.
 
-![](imgs/4q_chopper_sch.png)
+![](imgs/chopper_sch.png)
 
-## Pilot Controller
+
+
+---
+
+## 2.0. Pilot Controller
 
 O Pilot Controller aqui é utilizado para simular comandos supostamente
 utilizados pelo piloto, como:
+
 - ligar/desligar o acionamento (Enable)
 - ligar/desligar a reversão do sentido de rotação (Rev)
 - ligar/desligar a regeneração (Regen)
 - modificar a potência % desejada (Power)
 
 O esquemático utilizado e os sinais gerados podem ser vistos nas figuras abaixo:
+
 ![](imgs/pilot_controller_sch.png)
 ![](imgs/pilot_controller_signals.png)
 
-## Signal Conditioning
+
+
+---
+
+## 3.0. Signal Conditioning
 
 O condicionamento dos sinais aqui é feito com um filtro passa-baixa, ganho e
 offset (quando é necessário medir sinais positivos e negativos - full-range).
@@ -39,11 +72,16 @@ offset (quando é necessário medir sinais positivos e negativos - full-range).
   do ADC, afim de garantir o máximo aproveitamento de sua escala.
 
 O esquemático utilizado e os sinais gerados podem ser vistos nas figuras abaixo:
+
 ![](imgs/signal_conditioning_sch.png)
 ![](imgs/signal_conditioning_signals.png)
 ![](imgs/signal_conditioning_signals_adc.png)
 
-## PWM Peripheral
+
+
+---
+
+## 4.0. PWM Peripheral
 
 O periférico de PWM é realizado com a comparação entre um sinal dente de serra
 e uma referência que define o tempo ligado (que percentualmente é o duty-cycle).
@@ -61,16 +99,21 @@ indispensável para impedir que o curto de braço ocorresse a cada período de
 chaveamento.
 
 O esquemático utilizado e os sinais gerados podem ser vistos nas figuras abaixo:
+
 ![](imgs/signal_conditioning_sch.png)
 ![](imgs/signal_conditioning_signals.png)
 
-## Embedded Controller
+
+
+---
+
+## 5.0. Embedded Controller
 
 O controlador embarcado é implemetado utilizando um elemento C Block, possuindo
 inicialmente 8 entradas e 20 saídas, que podem ser expandidas e que permitem a
 interação do código escrito em C com as variáveis presentes na simulação.
 
-### ADC Inputs
+### 5.1. ADC Inputs
 
 Para implementar o ADC como um periférico do tipo SAR com *N* canais
 compartilhando um único comparador, poderia ser utilizado uma sequência de
@@ -89,7 +132,7 @@ que faz a conversão e guarda os valores em variáveis globais do CONTROLLER.
 
 O código escrito em C está contido no arquivo [chopper_4q__sar_adc.c](chopper_4q__sar_adc.c).
 
-#### ADC Test
+#### 5.1.1. ADC Test
 
 Por se tratar de uma implementação que precisa ser testada individualmente, uma
 segunda simulação foi criada, contendo o mínimo necessário para testar a
@@ -97,40 +140,47 @@ implementação. O teste faz sucessivas conversões com os 4 canais, amostrando 
 mesmo sinal, que deve ser comparado com o sinal original (chamado de `in`).
 
 O esquemático utilizado e os sinais gerados podem ser vistos nas figuras abaixo:
+
 ![](imgs/adc_ut_sch.png)
 ![](imgs/adc_ut_clock.png)
 ![](imgs/adc_ut_conversion.png)
 ![](imgs/adc_ut_sampling_frequency.png)
 
 A figura abaixo detalha o sinal original e o sinial lido pelo CONTROLLER:
+
 ![](imgs/adc_signals.png)
 
-### Digital Inputs
+### 5.2. Digital Inputs
 
 Os sinais digitais são diretamente conectados no CONTROLLER, e seu threshold é
 definido dentro do código (0.5) usando um operador ternário para transformar
 no valor `0` ou `1`.
 
-### Outputs
+### 5.3. Outputs
 
 Os sinais relevantes do CONTROLLER são externalizados utilizando diversas portas
 de saída monitorados por multímetros.
 
-#### PWM
+#### 5.3.1. PWM
 
 O valor de duty-cycle computado pelo controlador é externalizado passando por um
 quantizador, de modo a transformar o valor interno em um sinal quantizado com a
 precisão em bits que um timer utilizado no periférico permitir. Inicialmente foi
 utilizado 7 bits.
 
-### Firmware
+
+
+---
+
+### 6.0. Firmware
 
 No C Block, é possível escrever código em 4 abas. Aqui usamos apenas duas delas:
+
 - `FUNCTIONT TYPE (Variable/Function definitions)` é onde definimos as variáveis
-e funções, que seria análogo aos arquivos incluídos por `#include`, sendo
-headers ou sources.
+  e funções, que seria análogo aos arquivos incluídos por `#include`, sendo
+  headers ou sources.
 - `RunSimUser Fcn` é a função que a simulação chama a cada iteração de intervalo
-timestep da simulação.
+  timestep da simulação.
 
 O código inicial pode ser visto no arquivo [chopper_4q__embedded_controller.c](chopper_4q__embedded_controller.c).
 
@@ -139,7 +189,11 @@ modificação drástica entre as etapas, a fim de documentar um estado básico e
 sólido para as possíveis centenas de iterações com a simulação até o
 desenvolvimento final do sistema.
 
-#### 4Q Chopper Test
+
+
+---
+
+## 7.0. Test
 
 Com todas as partes integradas na mesma simulação, podemos simular a interação
 entre um sistema físico e seu firmware.
@@ -148,4 +202,3 @@ Na figura abaixo pode ser visto os sinais de corrente e tensão acionando uma
 carga resistiva nos quatro quadrantes em decorrência dos controles do piloto.
 
 ![](imgs/chopper_signals.png)
-
