@@ -71,7 +71,6 @@ O esquemático utilizado e os sinais gerados podem ser vistos nas figuras abaixo
 
 ![](imgs/signal_conditioning_sch.png)
 ![](imgs/signal_conditioning_signals.png)
-![](imgs/signal_conditioning_signals_adc.png)
 
 
 
@@ -96,8 +95,8 @@ chaveamento.
 
 O esquemático utilizado e os sinais gerados podem ser vistos nas figuras abaixo:
 
-![](imgs/signal_conditioning_sch.png)
-![](imgs/signal_conditioning_signals.png)
+![](imgs/pwm_peripheral_sch.png)
+![](imgs/pwm_peripheral_signals.png)
 
 
 
