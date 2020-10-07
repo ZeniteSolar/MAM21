@@ -15,13 +15,9 @@ Este módulo é responsável por realizar o acionamento de um motor de imã perm
 ### Requisitos de projeto
 
 1. **Acionamento do motor**
-
    - Permitir o acionamento nos dois sentidos
-
    - Permitir o controle em malha fechada
-
      - Corrente/Torque
-
      - Tensão/RPM
 
        
@@ -93,4 +89,3 @@ Para que seja possível o monitoramento dos parâmetros do motor e para fechar a
 O motor utilizado pela embarcação é o **[ME0909](https://www.electricmotorsport.com/me0909-pmdc-motor-12-48v-4-hp-cont-12-8-hp-pk.html)**. Este motor possui tensão de operação de 12 ~ 48V e 4,8 kW de potência nominal.
 
 A rede CAN utilizada será a já implementada atualmente.
-
