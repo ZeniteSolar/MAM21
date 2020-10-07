@@ -15,7 +15,7 @@ Este módulo é responsável por realizar o acionamento de um motor de imã perm
 ### Requisitos de projeto
 
 1. **Acionamento do motor**
-   - Permitir o acionamento nos dois sentidos
+   - Permitir o acionamento nos dois sentidos de rotação
    - Permitir o controle em malha fechada
      - Corrente/Torque
      - Tensão/RPM
@@ -23,41 +23,25 @@ Este módulo é responsável por realizar o acionamento de um motor de imã perm
        
 
 2. **Proteções**
-
    - Sobre-temperatura do motor
-
    - Sobre-temperatura do acionamento
-
    - Sobre-tensão de entrada
-
    - Sobre-corrente de saída
-
    - Falha de comunicação
-
    - Desconexão dos mosfets de potência
-
      - Garantir que os mosfets permaneçam desligados se a placa de controle for removida
-
    - Lógica para início de funcionamento
-
      - O motor só pode ser acionado se o procedimento de início for seguido na sequência correta
-
        - Dead man`s switch conectado
-
        - Sistema elétrico ativado
-
        - Potenciômetro em zero
-
        - Chave do motor ligada
 
          
 
 3. **Interfaces**
-
    - Ser controlado pela rede CANBUS implementada na embarcação
-
    - Sinalização por meio de LEDs
-
    - Permitir debug pela serial
 
      
