@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name RJ45_Zenite)(type Legacy)(uri ${KIPRJMOD}/../Bibliotecas/RJ45.lib)(options "")(descr ""))
+)
