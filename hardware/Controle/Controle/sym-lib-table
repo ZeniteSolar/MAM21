@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name RJ45_Zenite)(type Legacy)(uri ${KIPRJMOD}/../Bibliotecas/RJ45.lib)(options "")(descr ""))
+  (lib (name tl7726)(type Legacy)(uri /home/alejopm/Documents/zenite/MAM21/hardware/Controle/Bibliotecas/tl7726.lib)(options "")(descr ""))
 )
