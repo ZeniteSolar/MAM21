@@ -236,7 +236,7 @@ U 1 1 60782D59
 P 4050 2450
 F 0 "JP501" V 4096 2552 50  0000 L CNN
 F 1 "Jumper_NC_Dual" V 4005 2552 50  0000 L CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Open_Pad1.0x1.5mm" H 4050 2450 50  0001 C CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4050 2450 50  0001 C CNN
 F 3 "~" H 4050 2450 50  0001 C CNN
 	1    4050 2450
 	0    -1   -1   0   
@@ -297,7 +297,7 @@ U 1 1 6079E0DD
 P 4700 2700
 F 0 "Y501" V 4654 2831 50  0000 L CNN
 F 1 "8mhz" V 4745 2831 50  0000 L CNN
-F 2 "Crystal:Crystal_HC49-U_Vertical" H 4700 2700 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_HC49-SD" H 4700 2700 50  0001 C CNN
 F 3 "~" H 4700 2700 50  0001 C CNN
 	1    4700 2700
 	0    1    1    0   

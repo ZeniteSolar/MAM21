@@ -174,7 +174,7 @@ AR Path="/6075C4FB" Ref="J102"  Part="1"
 AR Path="/607427E0/6075C4FB" Ref="J?"  Part="1" 
 F 0 "J102" H 1468 2317 50  0000 C CNN
 F 1 "ST_LINK" H 1550 2200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1550 2000 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 1550 2000 50  0001 C CNN
 F 3 "~" H 1550 2000 50  0001 C CNN
 	1    1550 2000
 	-1   0    0    -1  
@@ -240,7 +240,7 @@ AR Path="/60823D5A" Ref="J101"  Part="1"
 AR Path="/607427E0/60823D5A" Ref="J?"  Part="1" 
 F 0 "J101" H 1468 1667 50  0000 C CNN
 F 1 "USART" H 1468 1576 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1550 1350 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 1550 1350 50  0001 C CNN
 F 3 "~" H 1550 1350 50  0001 C CNN
 	1    1550 1350
 	-1   0    0    -1  
@@ -418,7 +418,7 @@ U 1 1 608D358A
 P 1600 3000
 F 0 "J103" H 1518 2675 50  0000 C CNN
 F 1 "FAN" H 1600 2800 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1600 3000 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left" H 1600 3000 50  0001 C CNN
 F 3 "~" H 1600 3000 50  0001 C CNN
 	1    1600 3000
 	-1   0    0    1   
