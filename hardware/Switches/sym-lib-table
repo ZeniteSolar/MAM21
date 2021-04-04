@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name ucc27211ddar)(type Legacy)(uri ${KIPRJMOD}/ucc27211ddar.lib)(options "")(descr ""))
+)
