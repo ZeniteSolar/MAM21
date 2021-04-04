@@ -1,0 +1,21 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP UCC27210
+D 120-V Boot, 4-A Peak, High-Frequency High-Side and Low-Side Driver
+K Driver, Dual MOSFET
+F https://www.ti.com/lit/ds/symlink/ucc27210.pdf
+$ENDCMP
+#
+$CMP UCC27211
+D 120-V Boot, 4-A Peak, High-Frequency High-Side and Low-Side Driver
+K Driver, Dual MOSFET
+F https://www.ti.com/lit/ds/symlink/ucc27211.pdf
+$ENDCMP
+#
+$CMP UCC27211DDAR
+D 120-V Boot, 4-A Peak, High-Frequency High-Side and Low-Side Driver
+K Driver, Dual MOSFET
+F https://www.ti.com/lit/ds/symlink/ucc27211.pdf
+$ENDCMP
+#
+#End Doc Library
