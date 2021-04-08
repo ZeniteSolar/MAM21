@@ -422,47 +422,47 @@ $Comp
 L tl7726:TL7726IDR U601
 U 1 1 60A10993
 P 4850 1450
-F 0 "U601" H 4850 2131 50  0000 C CNN
-F 1 "TL7726IDR" H 4850 2040 50  0000 C CNN
+F 0 "U601" H 4550 2000 50  0000 C CNN
+F 1 "TL7726IDR" H 4650 1900 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3900 950 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tpd4s1394.pdf" H 4750 1400 50  0001 C CNN
 	1    4850 1450
 	1    0    0    -1  
 $EndComp
 Text Label 2350 850  0    50   ~ 0
-OUT0
+Out0
 Text Label 2350 1550 0    50   ~ 0
-OUT1
+Out1
 Text Label 2350 2250 0    50   ~ 0
-OUT2
+Out2
 Text Label 2350 2950 0    50   ~ 0
-OUT3
+Out3
 Text Label 2350 3650 0    50   ~ 0
-OUT4
+Out4
 Text Label 2350 4350 0    50   ~ 0
-OUT5
+Out5
 Text Label 4000 1150 0    50   ~ 0
-OUT0
+Out0
 Wire Wire Line
 	4000 1150 4350 1150
 Text Label 4000 1450 0    50   ~ 0
-OUT1
+Out1
 Wire Wire Line
 	4000 1450 4350 1450
 Text Label 4000 1750 0    50   ~ 0
-OUT2
+Out2
 Wire Wire Line
 	4000 1750 4350 1750
 Text Label 5650 1750 2    50   ~ 0
-OUT3
+Out3
 Wire Wire Line
 	5650 1150 5350 1150
 Text Label 5650 1450 2    50   ~ 0
-OUT4
+Out4
 Wire Wire Line
 	5650 1450 5350 1450
 Text Label 5650 1150 2    50   ~ 0
-OUT5
+Out5
 Wire Wire Line
 	5650 1750 5350 1750
 $Comp
@@ -496,12 +496,12 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0121
 U 1 1 60A2DB9D
-P 4850 700
-F 0 "#PWR0121" H 4850 550 50  0001 C CNN
-F 1 "+3V3" H 4865 873 50  0000 C CNN
-F 2 "" H 4850 700 50  0001 C CNN
-F 3 "" H 4850 700 50  0001 C CNN
-	1    4850 700 
+P 4850 550
+F 0 "#PWR0121" H 4850 400 50  0001 C CNN
+F 1 "+3V3" H 4865 723 50  0000 C CNN
+F 2 "" H 4850 550 50  0001 C CNN
+F 3 "" H 4850 550 50  0001 C CNN
+	1    4850 550 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -520,15 +520,15 @@ $Comp
 L Device:C_Small C607
 U 1 1 60A6394D
 P 5050 800
-F 0 "C607" V 4821 800 50  0000 C CNN
-F 1 "100n" V 4912 800 50  0000 C CNN
+F 0 "C607" V 5000 700 50  0000 C CNN
+F 1 "100n" V 5000 950 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5050 800 50  0001 C CNN
 F 3 "~" H 5050 800 50  0001 C CNN
 	1    5050 800 
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4850 700  4850 800 
+	4850 550  4850 650 
 $Comp
 L power:GND #PWR0122
 U 1 1 60A69EE4
@@ -549,4 +549,25 @@ Wire Wire Line
 Connection ~ 4850 800 
 Wire Wire Line
 	4850 800  4850 950 
+$Comp
+L Device:C_Small C12
+U 1 1 607A1571
+P 5050 650
+F 0 "C12" V 5000 500 50  0000 C CNN
+F 1 "4.7u" V 5000 800 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5050 650 50  0001 C CNN
+F 3 "~" H 5050 650 50  0001 C CNN
+	1    5050 650 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 650  5200 650 
+Wire Wire Line
+	5200 650  5200 800 
+Connection ~ 5200 800 
+Wire Wire Line
+	4950 650  4850 650 
+Connection ~ 4850 650 
+Wire Wire Line
+	4850 650  4850 800 
 $EndSCHEMATC

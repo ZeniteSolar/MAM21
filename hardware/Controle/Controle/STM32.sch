@@ -14,56 +14,22 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:+3.3V #PWR?
-U 1 1 60747711
-P 6000 1850
-AR Path="/60747711" Ref="#PWR?"  Part="1" 
-AR Path="/607427E0/60747711" Ref="#PWR0508"  Part="1" 
-F 0 "#PWR0508" H 6000 1700 50  0001 C CNN
-F 1 "+3.3V" H 6015 2023 50  0000 C CNN
-F 2 "" H 6000 1850 50  0001 C CNN
-F 3 "" H 6000 1850 50  0001 C CNN
-	1    6000 1850
-	1    0    0    -1  
-$EndComp
-Connection ~ 6000 2050
-$Comp
-L Device:C_Small C?
-U 1 1 60747718
-P 6300 1900
-AR Path="/60747718" Ref="C?"  Part="1" 
-AR Path="/607427E0/60747718" Ref="C504"  Part="1" 
-F 0 "C504" V 6071 1900 50  0000 C CNN
-F 1 "100n" V 6162 1900 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6300 1900 50  0001 C CNN
-F 3 "~" H 6300 1900 50  0001 C CNN
-	1    6300 1900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6200 1900 6000 1900
-Wire Wire Line
-	6000 1850 6000 1900
-Connection ~ 6000 1900
-Wire Wire Line
-	6000 1900 6000 2050
-$Comp
 L power:GND #PWR?
 U 1 1 60747722
-P 6600 1950
+P 6750 1950
 AR Path="/60747722" Ref="#PWR?"  Part="1" 
 AR Path="/607427E0/60747722" Ref="#PWR0509"  Part="1" 
-F 0 "#PWR0509" H 6600 1700 50  0001 C CNN
-F 1 "GND" H 6605 1777 50  0000 C CNN
-F 2 "" H 6600 1950 50  0001 C CNN
-F 3 "" H 6600 1950 50  0001 C CNN
-	1    6600 1950
+F 0 "#PWR0509" H 6750 1700 50  0001 C CNN
+F 1 "GND" H 6755 1777 50  0000 C CNN
+F 2 "" H 6750 1950 50  0001 C CNN
+F 3 "" H 6750 1950 50  0001 C CNN
+	1    6750 1950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6600 1950 6600 1900
+	6750 1950 6750 1900
 Wire Wire Line
-	6600 1900 6400 1900
+	6750 1900 6550 1900
 Text Label 7000 4550 2    50   ~ 0
 CAN_TX
 Wire Wire Line
@@ -88,37 +54,6 @@ $EndComp
 Wire Wire Line
 	5900 5350 5900 5050
 Connection ~ 5900 5050
-Wire Wire Line
-	5950 5050 5900 5050
-Wire Wire Line
-	6050 5050 5950 5050
-Connection ~ 5950 5050
-Wire Wire Line
-	5850 5050 5750 5050
-Wire Wire Line
-	5900 5050 5850 5050
-Connection ~ 5850 5050
-Wire Wire Line
-	6050 2050 6000 2050
-Wire Wire Line
-	6150 2050 6050 2050
-Connection ~ 6050 2050
-Wire Wire Line
-	6000 2050 5950 2050
-Connection ~ 5950 2050
-$Comp
-L MCU_ST_STM32F1:STM32F103C8Tx U?
-U 1 1 60747742
-P 5950 3550
-AR Path="/60747742" Ref="U?"  Part="1" 
-AR Path="/607427E0/60747742" Ref="U501"  Part="1" 
-F 0 "U501" H 5900 1961 50  0000 C CNN
-F 1 "STM32F103C8Tx" H 5900 1870 50  0000 C CNN
-F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 5350 2150 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 5950 3550 50  0001 C CNN
-	1    5950 3550
-	1    0    0    -1  
-$EndComp
 Text HLabel 7000 4450 2    50   Input ~ 0
 CAN_RX
 Text HLabel 7000 4550 2    50   Input ~ 0
@@ -225,11 +160,6 @@ Wire Wire Line
 Connection ~ 4500 3900
 Wire Wire Line
 	4500 3900 4650 3900
-Wire Wire Line
-	5750 2050 5850 2050
-Connection ~ 5850 2050
-Wire Wire Line
-	5850 2050 5950 2050
 $Comp
 L Device:Jumper_NC_Dual JP501
 U 1 1 60782D59
@@ -522,4 +452,204 @@ Wire Wire Line
 	5100 3600 5100 3550
 Wire Wire Line
 	5100 3550 5250 3550
+$Comp
+L power:+3.3V #PWR?
+U 1 1 60747711
+P 5750 1350
+AR Path="/60747711" Ref="#PWR?"  Part="1" 
+AR Path="/607427E0/60747711" Ref="#PWR0508"  Part="1" 
+F 0 "#PWR0508" H 5750 1200 50  0001 C CNN
+F 1 "+3.3V" H 5765 1523 50  0000 C CNN
+F 2 "" H 5750 1350 50  0001 C CNN
+F 3 "" H 5750 1350 50  0001 C CNN
+	1    5750 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 1900 6150 1900
+Wire Wire Line
+	6150 1900 6150 2050
+Wire Wire Line
+	6050 5050 5950 5050
+Wire Wire Line
+	5950 5050 5900 5050
+Connection ~ 5950 5050
+Wire Wire Line
+	5900 5050 5850 5050
+Wire Wire Line
+	5850 5050 5750 5050
+Connection ~ 5850 5050
+$Comp
+L MCU_ST_STM32F1:STM32F103C8Tx U?
+U 1 1 60747742
+P 5950 3550
+AR Path="/60747742" Ref="U?"  Part="1" 
+AR Path="/607427E0/60747742" Ref="U501"  Part="1" 
+F 0 "U501" H 5900 1961 50  0000 C CNN
+F 1 "STM32F103C8Tx" H 5900 1870 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 5350 2150 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 5950 3550 50  0001 C CNN
+	1    5950 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60747718
+P 6450 1900
+AR Path="/60747718" Ref="C?"  Part="1" 
+AR Path="/607427E0/60747718" Ref="C504"  Part="1" 
+F 0 "C504" V 6400 2100 50  0000 C CNN
+F 1 "100n" V 6400 1700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6450 1900 50  0001 C CNN
+F 3 "~" H 6450 1900 50  0001 C CNN
+	1    6450 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60714BEE
+P 6450 1800
+AR Path="/60714BEE" Ref="C?"  Part="1" 
+AR Path="/607427E0/60714BEE" Ref="C11"  Part="1" 
+F 0 "C11" V 6400 2000 50  0000 C CNN
+F 1 "100n" V 6400 1600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6450 1800 50  0001 C CNN
+F 3 "~" H 6450 1800 50  0001 C CNN
+	1    6450 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60715125
+P 6450 1700
+AR Path="/60715125" Ref="C?"  Part="1" 
+AR Path="/607427E0/60715125" Ref="C10"  Part="1" 
+F 0 "C10" V 6400 1900 50  0000 C CNN
+F 1 "100n" V 6400 1500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6450 1700 50  0001 C CNN
+F 3 "~" H 6450 1700 50  0001 C CNN
+	1    6450 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60715682
+P 6450 1600
+AR Path="/60715682" Ref="C?"  Part="1" 
+AR Path="/607427E0/60715682" Ref="C9"  Part="1" 
+F 0 "C9" V 6400 1800 50  0000 C CNN
+F 1 "100n" V 6400 1400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6450 1600 50  0001 C CNN
+F 3 "~" H 6450 1600 50  0001 C CNN
+	1    6450 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6350 1800 6150 1800
+Wire Wire Line
+	6050 1800 6050 2050
+Wire Wire Line
+	6350 1700 6050 1700
+Wire Wire Line
+	5950 1700 5950 2050
+Wire Wire Line
+	6350 1600 5950 1600
+Wire Wire Line
+	5850 1600 5850 2050
+$Comp
+L Device:C_Small C?
+U 1 1 6071A30B
+P 6450 1500
+AR Path="/6071A30B" Ref="C?"  Part="1" 
+AR Path="/607427E0/6071A30B" Ref="C8"  Part="1" 
+F 0 "C8" V 6400 1700 50  0000 C CNN
+F 1 "100n" V 6400 1300 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6450 1500 50  0001 C CNN
+F 3 "~" H 6450 1500 50  0001 C CNN
+	1    6450 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6350 1500 5850 1500
+Wire Wire Line
+	5750 1500 5750 2050
+Wire Wire Line
+	5750 1350 5750 1500
+Connection ~ 5750 1500
+Wire Wire Line
+	5850 1600 5850 1500
+Connection ~ 5850 1600
+Connection ~ 5850 1500
+Wire Wire Line
+	5850 1500 5750 1500
+Wire Wire Line
+	5950 1700 5950 1600
+Connection ~ 5950 1700
+Connection ~ 5950 1600
+Wire Wire Line
+	5950 1600 5850 1600
+Wire Wire Line
+	6050 1800 6050 1700
+Connection ~ 6050 1800
+Connection ~ 6050 1700
+Wire Wire Line
+	6050 1700 5950 1700
+Wire Wire Line
+	6150 1900 6150 1800
+Connection ~ 6150 1900
+Connection ~ 6150 1800
+Wire Wire Line
+	6150 1800 6050 1800
+Wire Wire Line
+	6550 1500 6750 1500
+Wire Wire Line
+	6750 1500 6750 1600
+Connection ~ 6750 1900
+Wire Wire Line
+	6550 1600 6750 1600
+Connection ~ 6750 1600
+Wire Wire Line
+	6750 1600 6750 1700
+Wire Wire Line
+	6550 1700 6750 1700
+Connection ~ 6750 1700
+Wire Wire Line
+	6750 1700 6750 1800
+Wire Wire Line
+	6550 1800 6750 1800
+Connection ~ 6750 1800
+Wire Wire Line
+	6750 1800 6750 1900
+$Comp
+L Device:C_Small C?
+U 1 1 60736FEA
+P 5500 1650
+AR Path="/60736FEA" Ref="C?"  Part="1" 
+AR Path="/607427E0/60736FEA" Ref="C7"  Part="1" 
+F 0 "C7" H 5450 1750 50  0000 C CNN
+F 1 "4.7u" H 5400 1850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5500 1650 50  0001 C CNN
+F 3 "~" H 5500 1650 50  0001 C CNN
+	1    5500 1650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5500 1550 5500 1500
+Wire Wire Line
+	5500 1500 5750 1500
+$Comp
+L power:GND #PWR?
+U 1 1 60739C07
+P 5500 1850
+AR Path="/60739C07" Ref="#PWR?"  Part="1" 
+AR Path="/607427E0/60739C07" Ref="#PWR0123"  Part="1" 
+F 0 "#PWR0123" H 5500 1600 50  0001 C CNN
+F 1 "GND" H 5505 1677 50  0000 C CNN
+F 2 "" H 5500 1850 50  0001 C CNN
+F 3 "" H 5500 1850 50  0001 C CNN
+	1    5500 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 1850 5500 1750
 $EndSCHEMATC
