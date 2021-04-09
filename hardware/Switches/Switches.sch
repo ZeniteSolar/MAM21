@@ -928,32 +928,29 @@ F 3 "~" H 3900 8700 50  0001 C CNN
 	1    3900 8700
 	0    1    1    0   
 $EndComp
-Text Label 3150 2550 0    50   ~ 0
-PWM_H1
-Text Label 3150 2450 0    50   ~ 0
-PWM_L1
-Text Label 3150 2750 0    50   ~ 0
-PWM_H2
 Text Label 3150 2650 0    50   ~ 0
+PWM_H1
+Text Label 3150 2550 0    50   ~ 0
+PWM_L1
+Text Label 3150 2850 0    50   ~ 0
+PWM_H2
+Text Label 3150 2750 0    50   ~ 0
 PWM_L2
 $Comp
 L power:+15V #PWR0101
 U 1 1 60920038
-P 3150 1600
-F 0 "#PWR0101" H 3150 1450 50  0001 C CNN
-F 1 "+15V" H 3150 1800 50  0000 C CNN
-F 2 "" H 3150 1600 50  0001 C CNN
-F 3 "" H 3150 1600 50  0001 C CNN
-	1    3150 1600
+P 4100 2000
+F 0 "#PWR0101" H 4100 1850 50  0001 C CNN
+F 1 "+15V" H 4100 2200 50  0000 C CNN
+F 2 "" H 4100 2000 50  0001 C CNN
+F 3 "" H 4100 2000 50  0001 C CNN
+	1    4100 2000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3150 1600 3150 1650
+	4100 2000 4100 2050
 Wire Wire Line
 	3150 2050 3050 2050
-Connection ~ 3150 1650
-Wire Wire Line
-	3150 1650 3150 2050
 $Comp
 L Device:C_Small C111
 U 1 1 609EE52F
@@ -994,26 +991,18 @@ Wire Wire Line
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 60CF3365
-P 2800 1650
-F 0 "#FLG0101" H 2800 1725 50  0001 C CNN
-F 1 "PWR_FLAG" H 2800 1850 50  0000 C CNN
-F 2 "" H 2800 1650 50  0001 C CNN
-F 3 "~" H 2800 1650 50  0001 C CNN
-	1    2800 1650
+P 3750 2050
+F 0 "#FLG0101" H 3750 2125 50  0001 C CNN
+F 1 "PWR_FLAG" H 3750 2250 50  0000 C CNN
+F 2 "" H 3750 2050 50  0001 C CNN
+F 3 "~" H 3750 2050 50  0001 C CNN
+	1    3750 2050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2800 1650 3150 1650
-NoConn ~ 2450 2250
-NoConn ~ 2450 2350
-NoConn ~ 3150 2350
-NoConn ~ 3150 2850
-NoConn ~ 3150 2950
-NoConn ~ 3150 2250
+	3750 2050 4100 2050
 Wire Wire Line
 	3150 2850 3050 2850
-Wire Wire Line
-	3150 2950 3050 2950
 Wire Wire Line
 	1500 8200 1500 8000
 Wire Wire Line
@@ -1031,7 +1020,7 @@ F 3 "~" H 1950 2050 50  0001 C CNN
 $EndComp
 Text Notes 9550 11050 0    50   ~ 0
 References:\nhttps://www.ti.com/lit/an/slva959a/slva959a.pdf\nhttps://www.ti.com/tool/TIDA-00774\nhttps://www.ti.com/lit/ug/tiducb6/tiducb6.pdf
-Text Label 2450 2750 2    50   ~ 0
+Text Label 2450 2850 2    50   ~ 0
 TEMP1
 $Comp
 L Device:R_Small_US R118
@@ -1134,11 +1123,11 @@ Wire Wire Line
 	7200 2150 7200 2250
 Wire Wire Line
 	7950 2150 7950 2250
-Text Label 2450 2450 2    50   ~ 0
-SL1_sen
 Text Label 2450 2550 2    50   ~ 0
-SL2_sen
+SL1_sen
 Text Label 2450 2650 2    50   ~ 0
+SL2_sen
+Text Label 2450 2750 2    50   ~ 0
 Vin_sen
 $Comp
 L Device:C_Small C131
@@ -1208,22 +1197,11 @@ L Device:R_Small_US R117
 U 1 1 60A3B2FF
 P 9600 2350
 F 0 "R117" H 9450 2400 50  0000 C CNN
-F 1 "47k" H 9450 2300 50  0000 C CNN
+F 1 "5k6" H 9450 2300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 9600 2350 50  0001 C CNN
 F 3 "~" H 9600 2350 50  0001 C CNN
 	1    9600 2350
 	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+15V #PWR0113
-U 1 1 60A6701F
-P 9600 2250
-F 0 "#PWR0113" H 9600 2100 50  0001 C CNN
-F 1 "+15V" H 9600 2450 50  0000 C CNN
-F 2 "" H 9600 2250 50  0001 C CNN
-F 3 "" H 9600 2250 50  0001 C CNN
-	1    9600 2250
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9600 2500 9600 2550
@@ -1357,10 +1335,6 @@ F 3 "" H 1950 3000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1950 2850 1950 2950
-Wire Wire Line
-	1950 2850 2550 2850
-Wire Wire Line
 	1950 2950 2550 2950
 Connection ~ 1950 2950
 Wire Wire Line
@@ -1369,19 +1343,17 @@ Wire Wire Line
 	2450 2150 2450 2050
 Wire Wire Line
 	3150 2150 3150 2050
-Connection ~ 3150 2050
 $Comp
 L power:PWR_FLAG #FLG0104
 U 1 1 6142A2F3
-P 1950 2850
-F 0 "#FLG0104" H 1950 2925 50  0001 C CNN
-F 1 "PWR_FLAG" H 1950 3050 50  0000 C CNN
-F 2 "" H 1950 2850 50  0001 C CNN
-F 3 "~" H 1950 2850 50  0001 C CNN
-	1    1950 2850
+P 1950 2950
+F 0 "#FLG0104" H 1950 3025 50  0001 C CNN
+F 1 "PWR_FLAG" H 1950 3150 50  0000 C CNN
+F 2 "" H 1950 2950 50  0001 C CNN
+F 3 "~" H 1950 2950 50  0001 C CNN
+	1    1950 2950
 	1    0    0    -1  
 $EndComp
-Connection ~ 1950 2850
 Wire Wire Line
 	2450 2050 1950 2050
 Connection ~ 2450 2050
@@ -3947,6 +3919,70 @@ F 1 "10u" H 13850 5100 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 13838 5150 50  0001 C CNN
 F 3 "~" H 13800 5300 50  0001 C CNN
 	1    13800 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0105
+U 1 1 6079DC9E
+P 3750 2950
+F 0 "#FLG0105" H 3750 3025 50  0001 C CNN
+F 1 "PWR_FLAG" H 3750 3150 50  0000 C CNN
+F 2 "" H 3750 2950 50  0001 C CNN
+F 3 "~" H 3750 2950 50  0001 C CNN
+	1    3750 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 2950 3750 2950
+Wire Wire Line
+	4100 2950 3750 2950
+Connection ~ 3750 2950
+Wire Wire Line
+	2550 2850 2450 2850
+Wire Wire Line
+	2450 2150 2450 2250
+Connection ~ 2450 2150
+Connection ~ 2450 2250
+Wire Wire Line
+	2450 2250 2450 2350
+Connection ~ 2450 2350
+Wire Wire Line
+	2450 2350 2450 2450
+Wire Wire Line
+	3150 2150 3150 2250
+Connection ~ 3150 2150
+Connection ~ 3150 2250
+Wire Wire Line
+	3150 2250 3150 2350
+Connection ~ 3150 2350
+Wire Wire Line
+	3150 2350 3150 2450
+$Comp
+L power:+5VA #PWR0113
+U 1 1 60BF436C
+P 9600 2250
+F 0 "#PWR0113" H 9600 2100 50  0001 C CNN
+F 1 "+5VA" H 9650 2450 50  0000 C CNN
+F 2 "" H 9600 2250 50  0001 C CNN
+F 3 "" H 9600 2250 50  0001 C CNN
+	1    9600 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2050 3150 2050
+Connection ~ 3750 2050
+Connection ~ 3150 2050
+Wire Wire Line
+	4100 2900 4100 2950
+$Comp
+L power:+5VA #PWR0139
+U 1 1 60BF364D
+P 4100 2900
+F 0 "#PWR0139" H 4100 2750 50  0001 C CNN
+F 1 "+5VA" H 4150 3100 50  0000 C CNN
+F 2 "" H 4100 2900 50  0001 C CNN
+F 3 "" H 4100 2900 50  0001 C CNN
+	1    4100 2900
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
