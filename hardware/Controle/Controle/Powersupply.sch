@@ -150,9 +150,9 @@ L Regulator_Linear:AP1117-15 U403
 U 1 1 608AFF81
 P 7600 3700
 F 0 "U403" H 7600 3942 50  0000 C CNN
-F 1 "AP1117-15" H 7600 3851 50  0000 C CNN
+F 1 "K78L15-1000R3" H 7600 3851 50  0000 C CNN
 F 2 "KicadZeniteSolarLibrary18:TO-220-3_Horizontal_TabDown_SMD" H 7600 3900 50  0001 C CNN
-F 3 "http://www.diodes.com/datasheets/AP1117.pdf" H 7700 3450 50  0001 C CNN
+F 3 "" H 7700 3450 50  0001 C CNN
 	1    7600 3700
 	-1   0    0    -1  
 $EndComp
@@ -240,9 +240,9 @@ L Regulator_Linear:AP1117-15 U402
 U 1 1 609ABA99
 P 6450 3700
 F 0 "U402" H 6450 3942 50  0000 C CNN
-F 1 "AP1117-5" H 6450 3851 50  0000 C CNN
-F 2 "KicadZeniteSolarLibrary18:TO-220-3_Horizontal_TabDown_SMD" H 6450 3900 50  0001 C CNN
-F 3 "http://www.diodes.com/datasheets/AP1117.pdf" H 6550 3450 50  0001 C CNN
+F 1 "AMS1117-5" H 6450 3851 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 6450 3900 50  0001 C CNN
+F 3 "" H 6550 3450 50  0001 C CNN
 	1    6450 3700
 	-1   0    0    -1  
 $EndComp
@@ -251,9 +251,9 @@ L Regulator_Linear:AP1117-15 U401
 U 1 1 609AE25D
 P 5150 3700
 F 0 "U401" H 5150 3942 50  0000 C CNN
-F 1 "AP1117-3.3" H 5150 3851 50  0000 C CNN
-F 2 "KicadZeniteSolarLibrary18:TO-220-3_Horizontal_TabDown_SMD" H 5150 3900 50  0001 C CNN
-F 3 "http://www.diodes.com/datasheets/AP1117.pdf" H 5250 3450 50  0001 C CNN
+F 1 "AMS1117-3.3" H 5150 3851 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 5150 3900 50  0001 C CNN
+F 3 "" H 5250 3450 50  0001 C CNN
 	1    5150 3700
 	-1   0    0    -1  
 $EndComp

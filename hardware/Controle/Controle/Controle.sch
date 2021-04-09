@@ -88,6 +88,7 @@ F16 "TIM1_CH2" O R 3800 2300 50
 F17 "SWCLK" I L 2800 2000 50 
 F18 "SWDIO" B L 2800 2100 50 
 F19 "RESET" I L 2800 1250 50 
+F20 "SWO" I L 2800 2200 50 
 $EndSheet
 $Comp
 L power:GND #PWR0115
@@ -167,19 +168,6 @@ $EndComp
 Wire Wire Line
 	6150 3400 6250 3400
 $Comp
-L Connector_Generic:Conn_01x04 J102
-U 1 1 6075C4FB
-P 1550 2000
-AR Path="/6075C4FB" Ref="J102"  Part="1" 
-AR Path="/607427E0/6075C4FB" Ref="J?"  Part="1" 
-F 0 "J102" H 1468 2317 50  0000 C CNN
-F 1 "ST_LINK" H 1550 2200 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left" H 1550 2000 50  0001 C CNN
-F 3 "~" H 1550 2000 50  0001 C CNN
-	1    1550 2000
-	-1   0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0102
 U 1 1 6075C503
 P 1750 2350
@@ -206,32 +194,7 @@ F 3 "" H 1750 1800 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 1800 1750 1900
-$Comp
-L Device:C_Small C101
-U 1 1 6075C510
-P 1750 2050
-AR Path="/6075C510" Ref="C101"  Part="1" 
-AR Path="/607427E0/6075C510" Ref="C?"  Part="1" 
-F 0 "C101" H 1658 2004 50  0000 R CNN
-F 1 "100n" H 1658 2095 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1750 2050 50  0001 C CNN
-F 3 "~" H 1750 2050 50  0001 C CNN
-	1    1750 2050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1750 1950 1750 1900
-Connection ~ 1750 1900
-Wire Wire Line
-	1750 2150 1750 2200
-Connection ~ 1750 2200
-Wire Wire Line
-	1750 2200 1750 2350
-Wire Wire Line
-	1750 2000 2800 2000
-Wire Wire Line
-	1750 2100 2800 2100
+	1700 2100 2800 2100
 $Comp
 L Connector_Generic:Conn_01x04 J101
 U 1 1 60823D5A
@@ -425,17 +388,6 @@ F 3 "~" H 7450 2450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7450 2300 7450 2150
-$Comp
-L Device:D_Small D101
-U 1 1 6093366B
-P 7200 2150
-F 0 "D101" H 7200 2357 50  0000 C CNN
-F 1 "LL4148" H 7200 2266 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-523" V 7200 2150 50  0001 C CNN
-F 3 "~" V 7200 2150 50  0001 C CNN
-	1    7200 2150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7100 2150 7000 2150
 Wire Wire Line
@@ -711,8 +663,8 @@ L Device:D_Small D102
 U 1 1 6091605D
 P 7300 950
 F 0 "D102" H 7200 750 50  0000 C CNN
-F 1 "LL4148" H 7250 850 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-523" V 7300 950 50  0001 C CNN
+F 1 "B0530W" H 7050 850 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" V 7300 950 50  0001 C CNN
 F 3 "~" V 7300 950 50  0001 C CNN
 	1    7300 950 
 	-1   0    0    1   
@@ -780,4 +732,59 @@ F 3 "" H 3950 1900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3950 1900 4050 1900
+$Comp
+L Connector_Generic:Conn_01x05 J102
+U 1 1 6075C4FB
+P 1500 2100
+AR Path="/6075C4FB" Ref="J102"  Part="1" 
+AR Path="/607427E0/6075C4FB" Ref="J?"  Part="1" 
+F 0 "J102" H 1418 2417 50  0000 C CNN
+F 1 "ST_LINK" H 1500 2300 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical_SMD_Pin1Left" H 1500 2100 50  0001 C CNN
+F 3 "~" H 1500 2100 50  0001 C CNN
+	1    1500 2100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 1800 1750 1900
+Wire Wire Line
+	1700 1900 1750 1900
+Connection ~ 1750 1900
+Wire Wire Line
+	1750 2350 1750 2300
+Wire Wire Line
+	1700 2300 1750 2300
+Connection ~ 1750 2300
+Wire Wire Line
+	1750 1900 1750 1950
+Wire Wire Line
+	1700 2000 2800 2000
+Wire Wire Line
+	1750 2300 1750 2150
+Wire Wire Line
+	2800 2200 1700 2200
+$Comp
+L Device:C_Small C101
+U 1 1 6075C510
+P 1750 2050
+AR Path="/6075C510" Ref="C101"  Part="1" 
+AR Path="/607427E0/6075C510" Ref="C?"  Part="1" 
+F 0 "C101" H 1658 2004 50  0000 R CNN
+F 1 "100n" H 1658 2095 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 1750 2050 50  0001 C CNN
+F 3 "~" H 1750 2050 50  0001 C CNN
+	1    1750 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:D_Small D101
+U 1 1 609E3BEA
+P 7200 2150
+F 0 "D101" H 7100 2350 50  0000 C CNN
+F 1 "B0530W" H 7350 2250 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" V 7200 2150 50  0001 C CNN
+F 3 "~" V 7200 2150 50  0001 C CNN
+	1    7200 2150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
