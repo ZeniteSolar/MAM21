@@ -371,7 +371,7 @@ AR Path="/60736FEA" Ref="C?"  Part="1"
 AR Path="/607427E0/60736FEA" Ref="C7"  Part="1" 
 F 0 "C7" H 2500 2300 50  0000 C CNN
 F 1 "4.7u" H 2450 2400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 2550 2200 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 2550 2200 50  0001 C CNN
 F 3 "~" H 2550 2200 50  0001 C CNN
 	1    2550 2200
 	-1   0    0    1   

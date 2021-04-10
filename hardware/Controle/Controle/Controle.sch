@@ -85,10 +85,10 @@ F13 "TIM1_CH1N" O R 3800 2600 50
 F14 "TIM1_CH2N" O R 3800 2500 50 
 F15 "TIM1_CH1" O R 3800 2400 50 
 F16 "TIM1_CH2" O R 3800 2300 50 
-F17 "SWCLK" I L 2800 2000 50 
-F18 "SWDIO" B L 2800 2100 50 
+F17 "SWCLK" I L 2800 2200 50 
+F18 "SWDIO" B L 2800 2000 50 
 F19 "RESET" I L 2800 1250 50 
-F20 "SWO" I L 2800 2200 50 
+F20 "SWO" I L 2800 2100 50 
 $EndSheet
 $Comp
 L power:GND #PWR0115
@@ -422,7 +422,7 @@ AR Path="/607831AE" Ref="C1"  Part="1"
 AR Path="/607427E0/607831AE" Ref="C?"  Part="1" 
 F 0 "C1" H 9950 650 50  0000 R CNN
 F 1 "4.7u" H 9950 850 50  0000 R CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 10000 750 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 10000 750 50  0001 C CNN
 F 3 "~" H 10000 750 50  0001 C CNN
 	1    10000 750 
 	0    1    -1   0   
@@ -459,7 +459,7 @@ AR Path="/60830DE1" Ref="C103"  Part="1"
 AR Path="/607427E0/60830DE1" Ref="C?"  Part="1" 
 F 0 "C103" H 8700 1200 50  0000 R CNN
 F 1 "4.7u" H 8600 1200 50  0000 R CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 8550 1050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 8550 1050 50  0001 C CNN
 F 3 "~" H 8550 1050 50  0001 C CNN
 	1    8550 1050
 	-1   0    0    1   
@@ -548,7 +548,7 @@ AR Path="/60895922" Ref="C104"  Part="1"
 AR Path="/607427E0/60895922" Ref="C?"  Part="1" 
 F 0 "C104" H 10100 500 50  0000 R CNN
 F 1 "4.7u" H 10150 700 50  0000 R CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 10000 600 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 10000 600 50  0001 C CNN
 F 3 "~" H 10000 600 50  0001 C CNN
 	1    10000 600 
 	0    1    1    0   
@@ -688,7 +688,7 @@ AR Path="/6091606A" Ref="C102"  Part="1"
 AR Path="/607427E0/6091606A" Ref="C?"  Part="1" 
 F 0 "C102" H 7750 1200 50  0000 R CNN
 F 1 "4.7u" H 7650 1200 50  0000 R CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7600 1050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 7600 1050 50  0001 C CNN
 F 3 "~" H 7600 1050 50  0001 C CNN
 	1    7600 1050
 	-1   0    0    1   
@@ -845,6 +845,17 @@ F 1 "MountingHole" H 9700 3305 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 3350 50  0001 C CNN
 F 3 "~" H 9600 3350 50  0001 C CNN
 	1    9600 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 60B88A3F
+P 9600 3650
+F 0 "H?" H 9700 3696 50  0000 L CNN
+F 1 "MountingHole" H 9700 3605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 3650 50  0001 C CNN
+F 3 "~" H 9600 3650 50  0001 C CNN
+	1    9600 3650
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
