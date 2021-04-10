@@ -115,17 +115,6 @@ Connection ~ 7450 4200
 Wire Wire Line
 	7450 4200 7300 4200
 $Comp
-L Device:Jumper_NC_Dual JP501
-U 1 1 60782D59
-P 9700 3950
-F 0 "JP501" V 9746 4052 50  0000 L CNN
-F 1 "Jumper_NC_Dual" V 9655 4052 50  0000 L CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm" H 9700 3950 50  0001 C CNN
-F 3 "~" H 9700 3950 50  0001 C CNN
-	1    9700 3950
-	0    1    -1   0   
-$EndComp
-$Comp
 L power:+3.3V #PWR?
 U 1 1 607842A4
 P 9700 3650
@@ -138,8 +127,6 @@ F 3 "" H 9700 3650 50  0001 C CNN
 	1    9700 3650
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	9700 3650 9700 3700
 $Comp
 L power:GND #PWR?
 U 1 1 60785683
@@ -153,8 +140,6 @@ F 3 "" H 9700 4250 50  0001 C CNN
 	1    9700 4250
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	9700 4250 9700 4200
 Wire Wire Line
 	7300 3750 7300 3950
 Text Label 7000 3750 2    50   ~ 0
@@ -173,8 +158,6 @@ Text HLabel 7150 2450 2    50   Input ~ 0
 USART3_RX
 Text HLabel 7150 2350 2    50   Input ~ 0
 USART3_TX
-Wire Wire Line
-	9600 3950 9050 3950
 Text HLabel 7150 3050 2    50   Output ~ 0
 TIM1_CH1N
 Wire Wire Line
@@ -400,18 +383,18 @@ Wire Wire Line
 $Comp
 L power:GND #PWR?
 U 1 1 60739C07
-P 2550 2400
+P 2550 2450
 AR Path="/60739C07" Ref="#PWR?"  Part="1" 
 AR Path="/607427E0/60739C07" Ref="#PWR0123"  Part="1" 
-F 0 "#PWR0123" H 2550 2150 50  0001 C CNN
-F 1 "GND" H 2555 2227 50  0000 C CNN
-F 2 "" H 2550 2400 50  0001 C CNN
-F 3 "" H 2550 2400 50  0001 C CNN
-	1    2550 2400
+F 0 "#PWR0123" H 2550 2200 50  0001 C CNN
+F 1 "GND" H 2555 2277 50  0000 C CNN
+F 2 "" H 2550 2450 50  0001 C CNN
+F 3 "" H 2550 2450 50  0001 C CNN
+	1    2550 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2550 2400 2550 2300
+	2550 2450 2550 2300
 Wire Wire Line
 	4600 3150 4100 3150
 Wire Wire Line
@@ -600,4 +583,33 @@ Wire Wire Line
 NoConn ~ 4600 4150
 NoConn ~ 6700 2150
 NoConn ~ 6700 2250
+$Comp
+L Device:R_Small R505
+U 1 1 60A61AF0
+P 9700 4050
+F 0 "R505" V 9504 4050 50  0000 C CNN
+F 1 "10k" V 9595 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 9700 4050 50  0001 C CNN
+F 3 "~" H 9700 4050 50  0001 C CNN
+	1    9700 4050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 3950 9700 3950
+Wire Wire Line
+	9700 4150 9700 4250
+$Comp
+L Device:R_Small R504
+U 1 1 60A66235
+P 9700 3850
+F 0 "R504" V 9500 3900 50  0000 C CNN
+F 1 "BOOT0" V 9600 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9700 3850 50  0001 C CNN
+F 3 "~" H 9700 3850 50  0001 C CNN
+	1    9700 3850
+	-1   0    0    -1  
+$EndComp
+Connection ~ 9700 3950
+Wire Wire Line
+	9700 3650 9700 3750
 $EndSCHEMATC

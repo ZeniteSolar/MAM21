@@ -365,23 +365,21 @@ Wire Wire Line
 $Comp
 L Device:R_Small R101
 U 1 1 60904DF2
-P 1900 2900
-F 0 "R101" V 1704 2900 50  0000 C CNN
-F 1 "?" V 1795 2900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 1900 2900 50  0001 C CNN
-F 3 "~" H 1900 2900 50  0001 C CNN
-	1    1900 2900
+P 1950 2900
+F 0 "R101" V 1754 2900 50  0000 C CNN
+F 1 "?" V 1845 2900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 1950 2900 50  0001 C CNN
+F 3 "~" H 1950 2900 50  0001 C CNN
+	1    1950 2900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2000 2900 2050 2900
 $Comp
 L Device:Fuse F101
 U 1 1 60932CB5
 P 7450 2450
 F 0 "F101" H 7510 2496 50  0000 L CNN
-F 1 "500ma" H 7510 2405 50  0000 L CNN
-F 2 "Fuse:Fuse_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7380 2450 50  0001 C CNN
+F 1 "1A" H 7510 2405 50  0000 L CNN
+F 2 "Fuse:Fuse_1812_4532Metric_Pad1.30x3.40mm_HandSolder" V 7380 2450 50  0001 C CNN
 F 3 "~" H 7450 2450 50  0001 C CNN
 	1    7450 2450
 	1    0    0    -1  
@@ -785,6 +783,68 @@ F 1 "B0530W" H 7350 2250 50  0000 C CNN
 F 2 "Diode_SMD:D_SOD-123F" V 7200 2150 50  0001 C CNN
 F 3 "~" V 7200 2150 50  0001 C CNN
 	1    7200 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R103
+U 1 1 60A35BB8
+P 1850 2750
+F 0 "R103" H 1800 2600 50  0000 C CNN
+F 1 "?" H 1650 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 1850 2750 50  0001 C CNN
+F 3 "~" H 1850 2750 50  0001 C CNN
+	1    1850 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1800 2900 1850 2900
+Wire Wire Line
+	1850 2850 1850 2900
+Connection ~ 1850 2900
+$Comp
+L power:+5V #PWR0130
+U 1 1 60A3FB9E
+P 1850 2600
+F 0 "#PWR0130" H 1850 2450 50  0001 C CNN
+F 1 "+5V" H 1865 2773 50  0000 C CNN
+F 2 "" H 1850 2600 50  0001 C CNN
+F 3 "" H 1850 2600 50  0001 C CNN
+	1    1850 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2600 1850 2650
+$Comp
+L Mechanical:MountingHole H101
+U 1 1 60AAC1BB
+P 9600 2800
+F 0 "H101" H 9700 2846 50  0000 L CNN
+F 1 "MountingHole" H 9700 2755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 2800 50  0001 C CNN
+F 3 "~" H 9600 2800 50  0001 C CNN
+	1    9600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H102
+U 1 1 60AADB74
+P 9600 3050
+F 0 "H102" H 9700 3096 50  0000 L CNN
+F 1 "MountingHole" H 9700 3005 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 3050 50  0001 C CNN
+F 3 "~" H 9600 3050 50  0001 C CNN
+	1    9600 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H103
+U 1 1 60AAE00A
+P 9600 3350
+F 0 "H103" H 9700 3396 50  0000 L CNN
+F 1 "MountingHole" H 9700 3305 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 3350 50  0001 C CNN
+F 3 "~" H 9600 3350 50  0001 C CNN
+	1    9600 3350
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

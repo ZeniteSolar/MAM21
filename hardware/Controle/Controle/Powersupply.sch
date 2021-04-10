@@ -146,17 +146,6 @@ Text HLabel 4650 3550 1    50   Input ~ 0
 Text HLabel 6750 4100 3    50   Input ~ 0
 GND
 $Comp
-L Regulator_Linear:AP1117-15 U403
-U 1 1 608AFF81
-P 7600 3700
-F 0 "U403" H 7600 3942 50  0000 C CNN
-F 1 "K78L15-1000R3" H 7600 3851 50  0000 C CNN
-F 2 "KicadZeniteSolarLibrary18:TO-220-3_Horizontal_TabDown_SMD" H 7600 3900 50  0001 C CNN
-F 3 "" H 7700 3450 50  0001 C CNN
-	1    7600 3700
-	-1   0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C?
 U 1 1 608B1292
 P 7250 3900
@@ -386,4 +375,15 @@ Wire Wire Line
 	8250 3700 8600 3700
 Text Label 6600 2550 0    50   ~ 0
 1210
+$Comp
+L Regulator_Linear:LM7805_TO220 U403
+U 1 1 609F70B2
+P 7600 3700
+F 0 "U403" H 7600 3942 50  0000 C CNN
+F 1 "K78L15-1000R3" H 7600 3851 50  0000 C CNN
+F 2 "KicadZeniteSolarLibrary18:TO-220-3_Horizontal_Tabless_SMD" H 7600 3925 50  0001 C CIN
+F 3 "https://www.onsemi.cn/PowerSolutions/document/MC7800-D.PDF" H 7600 3650 50  0001 C CNN
+	1    7600 3700
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
