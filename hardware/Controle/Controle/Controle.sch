@@ -318,62 +318,6 @@ F 3 "" H 10750 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J103
-U 1 1 608D358A
-P 1600 3000
-F 0 "J103" H 1518 2675 50  0000 C CNN
-F 1 "FAN" H 1600 2800 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left" H 1600 3000 50  0001 C CNN
-F 3 "~" H 1600 3000 50  0001 C CNN
-	1    1600 3000
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R102
-U 1 1 608DAEF1
-P 2600 3100
-F 0 "R102" V 2404 3100 50  0000 C CNN
-F 1 "?" V 2495 3100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 2600 3100 50  0001 C CNN
-F 3 "~" H 2600 3100 50  0001 C CNN
-	1    2600 3100
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2700 3100 2800 3100
-Wire Wire Line
-	2350 3100 2500 3100
-Wire Wire Line
-	1800 3000 1800 3300
-Wire Wire Line
-	1800 3300 2050 3300
-$Comp
-L power:GND #PWR0104
-U 1 1 608F5B69
-P 2050 3450
-AR Path="/608F5B69" Ref="#PWR0104"  Part="1" 
-AR Path="/607427E0/608F5B69" Ref="#PWR?"  Part="1" 
-F 0 "#PWR0104" H 2050 3200 50  0001 C CNN
-F 1 "GND" H 2055 3277 50  0000 C CNN
-F 2 "" H 2050 3450 50  0001 C CNN
-F 3 "" H 2050 3450 50  0001 C CNN
-	1    2050 3450
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	2050 3450 2050 3300
-$Comp
-L Device:R_Small R101
-U 1 1 60904DF2
-P 1950 2900
-F 0 "R101" V 1754 2900 50  0000 C CNN
-F 1 "?" V 1845 2900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 1950 2900 50  0001 C CNN
-F 3 "~" H 1950 2900 50  0001 C CNN
-	1    1950 2900
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:Fuse F101
 U 1 1 60932CB5
 P 7450 2450
@@ -402,18 +346,6 @@ F 3 "~" H 7400 3250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 7400 3250
-$Comp
-L Device:Q_NPN_BEC Q101
-U 1 1 6095AC0C
-P 2150 3100
-F 0 "Q101" H 2341 3146 50  0000 L CNN
-F 1 "BCV27" H 2341 3055 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 2350 3200 50  0001 C CNN
-F 3 "~" H 2150 3100 50  0001 C CNN
-	1    2150 3100
-	-1   0    0    -1  
-$EndComp
-Connection ~ 2050 3300
 $Comp
 L Device:C_Small C1
 U 1 1 607831AE
@@ -786,35 +718,6 @@ F 3 "~" V 7200 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R103
-U 1 1 60A35BB8
-P 1850 2750
-F 0 "R103" H 1800 2600 50  0000 C CNN
-F 1 "?" H 1650 2600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 1850 2750 50  0001 C CNN
-F 3 "~" H 1850 2750 50  0001 C CNN
-	1    1850 2750
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1800 2900 1850 2900
-Wire Wire Line
-	1850 2850 1850 2900
-Connection ~ 1850 2900
-$Comp
-L power:+5V #PWR0130
-U 1 1 60A3FB9E
-P 1850 2600
-F 0 "#PWR0130" H 1850 2450 50  0001 C CNN
-F 1 "+5V" H 1865 2773 50  0000 C CNN
-F 2 "" H 1850 2600 50  0001 C CNN
-F 3 "" H 1850 2600 50  0001 C CNN
-	1    1850 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1850 2600 1850 2650
-$Comp
 L Mechanical:MountingHole H101
 U 1 1 60AAC1BB
 P 9600 2800
@@ -848,14 +751,111 @@ F 3 "~" H 9600 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:MountingHole H?
+L Mechanical:MountingHole H104
 U 1 1 60B88A3F
 P 9600 3650
-F 0 "H?" H 9700 3696 50  0000 L CNN
+F 0 "H104" H 9700 3696 50  0000 L CNN
 F 1 "MountingHole" H 9700 3605 50  0000 L CNN
 F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 3650 50  0001 C CNN
 F 3 "~" H 9600 3650 50  0001 C CNN
 	1    9600 3650
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	2700 3100 2800 3100
+$Comp
+L Connector_Generic:Conn_01x02 J103
+U 1 1 608D358A
+P 1600 3000
+F 0 "J103" H 1518 2675 50  0000 C CNN
+F 1 "FAN" H 1600 2800 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left" H 1600 3000 50  0001 C CNN
+F 3 "~" H 1600 3000 50  0001 C CNN
+	1    1600 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R102
+U 1 1 608DAEF1
+P 2600 3100
+F 0 "R102" V 2404 3100 50  0000 C CNN
+F 1 "?" V 2495 3100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 2600 3100 50  0001 C CNN
+F 3 "~" H 2600 3100 50  0001 C CNN
+	1    2600 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2350 3100 2500 3100
+Wire Wire Line
+	1800 3000 1800 3300
+Wire Wire Line
+	1800 3300 2050 3300
+$Comp
+L power:GND #PWR0104
+U 1 1 608F5B69
+P 2050 3450
+AR Path="/608F5B69" Ref="#PWR0104"  Part="1" 
+AR Path="/607427E0/608F5B69" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0104" H 2050 3200 50  0001 C CNN
+F 1 "GND" H 2055 3277 50  0000 C CNN
+F 2 "" H 2050 3450 50  0001 C CNN
+F 3 "" H 2050 3450 50  0001 C CNN
+	1    2050 3450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 3450 2050 3300
+$Comp
+L Device:R_Small R101
+U 1 1 60904DF2
+P 1950 2900
+F 0 "R101" V 1754 2900 50  0000 C CNN
+F 1 "?" V 1845 2900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 1950 2900 50  0001 C CNN
+F 3 "~" H 1950 2900 50  0001 C CNN
+	1    1950 2900
+	0    1    1    0   
+$EndComp
+Connection ~ 2050 3300
+$Comp
+L Device:Q_NPN_BEC Q101
+U 1 1 6095AC0C
+P 2150 3100
+F 0 "Q101" H 2341 3146 50  0000 L CNN
+F 1 "BCV27" H 2341 3055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 2350 3200 50  0001 C CNN
+F 3 "~" H 2150 3100 50  0001 C CNN
+	1    2150 3100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R103
+U 1 1 60A35BB8
+P 1850 2750
+F 0 "R103" H 1800 2600 50  0000 C CNN
+F 1 "?" H 1650 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 1850 2750 50  0001 C CNN
+F 3 "~" H 1850 2750 50  0001 C CNN
+	1    1850 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1800 2900 1850 2900
+Connection ~ 1850 2900
+Wire Wire Line
+	1850 2850 1850 2900
+$Comp
+L power:+5V #PWR0130
+U 1 1 60A3FB9E
+P 1850 2600
+F 0 "#PWR0130" H 1850 2450 50  0001 C CNN
+F 1 "+5V" H 1865 2773 50  0000 C CNN
+F 2 "" H 1850 2600 50  0001 C CNN
+F 3 "" H 1850 2600 50  0001 C CNN
+	1    1850 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2600 1850 2650
 $EndSCHEMATC
