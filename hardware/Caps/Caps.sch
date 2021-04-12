@@ -1,0 +1,2888 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Connection ~ 4100 1350
+$Comp
+L power:+BATT #PWR0101
+U 1 1 6073E4AF
+P 1100 900
+F 0 "#PWR0101" H 1100 750 50  0001 C CNN
+F 1 "+BATT" V 1150 1050 50  0000 L CNN
+F 2 "" H 1100 900 50  0001 C CNN
+F 3 "" H 1100 900 50  0001 C CNN
+	1    1100 900 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:-BATT #PWR0102
+U 1 1 6073E73B
+P 1100 1250
+F 0 "#PWR0102" H 1100 1100 50  0001 C CNN
+F 1 "-BATT" V 1150 1400 50  0000 L CNN
+F 2 "" H 1100 1250 50  0001 C CNN
+F 3 "" H 1100 1250 50  0001 C CNN
+	1    1100 1250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 60740E54
+P 1250 900
+F 0 "#FLG0101" H 1250 975 50  0001 C CNN
+F 1 "PWR_FLAG" V 1250 1050 50  0000 L CNN
+F 2 "" H 1250 900 50  0001 C CNN
+F 3 "~" H 1250 900 50  0001 C CNN
+	1    1250 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 60741A7D
+P 1250 1250
+F 0 "#FLG0102" H 1250 1325 50  0001 C CNN
+F 1 "PWR_FLAG" V 1250 1400 50  0000 L CNN
+F 2 "" H 1250 1250 50  0001 C CNN
+F 3 "~" H 1250 1250 50  0001 C CNN
+	1    1250 1250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1250 1250 1100 1250
+Wire Wire Line
+	1100 900  1250 900 
+Wire Wire Line
+	4350 1350 4100 1350
+Wire Wire Line
+	4600 1350 4350 1350
+Connection ~ 4350 1350
+Wire Wire Line
+	4350 1150 4350 1350
+Wire Wire Line
+	4100 1150 4100 1350
+Wire Wire Line
+	4100 1350 3850 1350
+Wire Wire Line
+	3850 1350 3600 1350
+Connection ~ 3850 1350
+Wire Wire Line
+	3850 1150 3850 1350
+Wire Wire Line
+	3600 1350 3600 1150
+Wire Wire Line
+	4600 1150 4600 1350
+$Comp
+L Device:C_Small C103
+U 1 1 60739B72
+P 3600 1050
+F 0 "C103" H 3650 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 3550 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3600 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 3600 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 3650 800 25  0000 C CIN "PartNumber"
+	1    3600 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C104
+U 1 1 6073BCA6
+P 3850 1050
+F 0 "C104" H 3900 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 3800 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3850 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 3850 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 3900 800 25  0000 C CIN "PartNumber"
+	1    3850 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C105
+U 1 1 6073C02D
+P 4100 1050
+F 0 "C105" H 4150 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4050 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4100 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4100 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4150 800 25  0000 C CIN "PartNumber"
+	1    4100 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C106
+U 1 1 6073C384
+P 4350 1050
+F 0 "C106" H 4400 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4300 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4350 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4350 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4400 800 25  0000 C CIN "PartNumber"
+	1    4350 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C107
+U 1 1 6073C933
+P 4600 1050
+F 0 "C107" H 4650 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4550 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4600 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4600 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4650 800 25  0000 C CIN "PartNumber"
+	1    4600 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C108
+U 1 1 6073CDEA
+P 4850 1050
+F 0 "C108" H 4900 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4800 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4850 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4850 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4900 800 25  0000 C CIN "PartNumber"
+	1    4850 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C109
+U 1 1 6073CE03
+P 5100 1050
+F 0 "C109" H 5150 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5050 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5100 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5100 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5150 800 25  0000 C CIN "PartNumber"
+	1    5100 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C110
+U 1 1 6073CE0E
+P 5350 1050
+F 0 "C110" H 5400 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5300 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5350 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5350 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5400 800 25  0000 C CIN "PartNumber"
+	1    5350 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 1350 4850 1350
+Wire Wire Line
+	4850 1350 4850 1150
+Connection ~ 4600 1350
+Wire Wire Line
+	5100 1350 4850 1350
+Wire Wire Line
+	5100 1150 5100 1350
+Wire Wire Line
+	5100 1350 5350 1350
+Wire Wire Line
+	5350 1350 5350 1150
+Connection ~ 5100 1350
+Connection ~ 4850 1350
+Wire Wire Line
+	5600 1350 5350 1350
+Connection ~ 5350 1350
+Wire Wire Line
+	5600 1150 5600 1350
+Wire Wire Line
+	5850 1350 5850 1150
+Wire Wire Line
+	6100 1150 6100 1350
+Wire Wire Line
+	6100 1350 6350 1350
+Wire Wire Line
+	6350 1350 6350 1150
+Connection ~ 6100 1350
+$Comp
+L Device:C_Small C115
+U 1 1 60743897
+P 6600 1050
+F 0 "C115" H 6650 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6550 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6600 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6600 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6650 800 25  0000 C CIN "PartNumber"
+	1    6600 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C116
+U 1 1 607438B0
+P 6850 1050
+F 0 "C116" H 6900 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6800 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6850 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6850 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6900 800 25  0000 C CIN "PartNumber"
+	1    6850 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C117
+U 1 1 607438BB
+P 7100 1050
+F 0 "C117" H 7150 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7050 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7100 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7100 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7150 800 25  0000 C CIN "PartNumber"
+	1    7100 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C118
+U 1 1 607438C6
+P 7350 1050
+F 0 "C118" H 7400 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7300 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7350 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7350 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7400 800 25  0000 C CIN "PartNumber"
+	1    7350 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 1350 6350 1350
+Wire Wire Line
+	6600 1150 6600 1350
+Wire Wire Line
+	6600 1350 6850 1350
+Wire Wire Line
+	6850 1350 6850 1150
+Connection ~ 6600 1350
+Wire Wire Line
+	7100 1350 6850 1350
+Wire Wire Line
+	7100 1150 7100 1350
+Wire Wire Line
+	7100 1350 7350 1350
+Wire Wire Line
+	7350 1350 7350 1150
+Connection ~ 7100 1350
+Connection ~ 6850 1350
+Connection ~ 6350 1350
+$Comp
+L Device:C_Small C119
+U 1 1 607451FB
+P 7600 1050
+F 0 "C119" H 7650 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7550 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7600 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7600 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7650 800 25  0000 C CIN "PartNumber"
+	1    7600 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C120
+U 1 1 60745214
+P 7850 1050
+F 0 "C120" H 7900 1150 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7800 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7850 1050 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7850 1050 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7900 800 25  0000 C CIN "PartNumber"
+	1    7850 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 1350 7350 1350
+Wire Wire Line
+	7600 1150 7600 1350
+Wire Wire Line
+	7600 1350 7850 1350
+Wire Wire Line
+	7850 1350 7850 1150
+Connection ~ 7600 1350
+Connection ~ 7350 1350
+Connection ~ 7350 750 
+Wire Wire Line
+	7100 750  7350 750 
+Wire Wire Line
+	6850 750  7100 750 
+Connection ~ 7100 750 
+Wire Wire Line
+	7100 950  7100 750 
+Wire Wire Line
+	7350 950  7350 750 
+Wire Wire Line
+	7350 750  7600 750 
+Wire Wire Line
+	7600 750  7850 750 
+Connection ~ 7600 750 
+Wire Wire Line
+	7600 950  7600 750 
+Wire Wire Line
+	7850 750  7850 950 
+Wire Wire Line
+	6850 950  6850 750 
+Wire Wire Line
+	6850 750  6600 750 
+Wire Wire Line
+	6600 750  6600 950 
+Connection ~ 6850 750 
+Wire Wire Line
+	6350 750  6600 750 
+Wire Wire Line
+	6350 950  6350 750 
+Wire Wire Line
+	6350 750  6100 750 
+Wire Wire Line
+	6100 750  6100 950 
+Connection ~ 6350 750 
+Connection ~ 6600 750 
+Wire Wire Line
+	5850 750  6100 750 
+Connection ~ 6100 750 
+Wire Wire Line
+	5850 950  5850 750 
+Wire Wire Line
+	5850 750  5600 750 
+Wire Wire Line
+	5600 750  5600 950 
+Connection ~ 5850 750 
+Wire Wire Line
+	5350 750  5600 750 
+Wire Wire Line
+	5350 950  5350 750 
+Wire Wire Line
+	5350 750  5100 750 
+Wire Wire Line
+	5100 750  5100 950 
+Connection ~ 5350 750 
+Connection ~ 5600 750 
+Wire Wire Line
+	4850 750  5100 750 
+Wire Wire Line
+	4850 950  4850 750 
+Wire Wire Line
+	4850 750  4600 750 
+Wire Wire Line
+	4600 750  4600 950 
+Connection ~ 4850 750 
+Wire Wire Line
+	4350 750  4600 750 
+Wire Wire Line
+	4350 950  4350 750 
+Wire Wire Line
+	4350 750  4100 750 
+Wire Wire Line
+	4100 750  4100 950 
+Connection ~ 4350 750 
+Connection ~ 4600 750 
+Connection ~ 5100 750 
+Wire Wire Line
+	3850 750  4100 750 
+Wire Wire Line
+	3850 950  3850 750 
+Wire Wire Line
+	3850 750  3600 750 
+Wire Wire Line
+	3600 750  3600 950 
+Connection ~ 3850 750 
+Connection ~ 4100 750 
+$Comp
+L power:+BATT #PWR0103
+U 1 1 60765E9E
+P 2450 750
+F 0 "#PWR0103" H 2450 600 50  0001 C CNN
+F 1 "+BATT" V 2500 900 50  0000 L CNN
+F 2 "" H 2450 750 50  0001 C CNN
+F 3 "" H 2450 750 50  0001 C CNN
+	1    2450 750 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:-BATT #PWR0104
+U 1 1 60765EB4
+P 9000 1350
+F 0 "#PWR0104" H 9000 1200 50  0001 C CNN
+F 1 "-BATT" V 9050 1500 50  0000 L CNN
+F 2 "" H 9000 1350 50  0001 C CNN
+F 3 "" H 9000 1350 50  0001 C CNN
+	1    9000 1350
+	0    1    1    0   
+$EndComp
+Connection ~ 3600 750 
+Wire Wire Line
+	9000 1350 8550 1350
+Wire Wire Line
+	2450 750  2900 750 
+Connection ~ 7850 1350
+$Comp
+L Device:C_Small C102
+U 1 1 6096C9F1
+P 3150 1050
+F 0 "C102" H 3200 1150 50  0000 L CNN
+F 1 "100n 100V X7" V 3100 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3150 1050 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 3150 1050 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 3200 750 25  0000 C CIN "PartNumber"
+	1    3150 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 950  3150 750 
+Connection ~ 3150 750 
+Wire Wire Line
+	3150 750  3600 750 
+Wire Wire Line
+	3150 1150 3150 1350
+Connection ~ 3600 1350
+Wire Wire Line
+	2900 950  2900 750 
+Wire Wire Line
+	2900 1150 2900 1350
+Wire Wire Line
+	2900 1350 3150 1350
+Connection ~ 2900 750 
+Wire Wire Line
+	2900 750  3150 750 
+Connection ~ 3150 1350
+Wire Wire Line
+	3150 1350 3600 1350
+$Comp
+L Device:C_Small C101
+U 1 1 609CDE92
+P 2900 1050
+F 0 "C101" H 2950 1150 50  0000 L CNN
+F 1 "100n 100V X7" V 2850 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2900 1050 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 2900 1050 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 2950 750 25  0000 C CIN "PartNumber"
+	1    2900 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C121
+U 1 1 609CF6A9
+P 8300 1050
+F 0 "C121" H 8350 1150 50  0000 L CNN
+F 1 "100n 100V X7" V 8250 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8300 1050 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8300 1050 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8350 750 25  0000 C CIN "PartNumber"
+	1    8300 1050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 950  8300 750 
+Wire Wire Line
+	8300 1150 8300 1350
+Wire Wire Line
+	8550 950  8550 750 
+Wire Wire Line
+	8550 1150 8550 1350
+Wire Wire Line
+	8550 1350 8300 1350
+Connection ~ 8300 1350
+Wire Wire Line
+	8300 1350 7850 1350
+$Comp
+L Device:C_Small C122
+U 1 1 609CF6C9
+P 8550 1050
+F 0 "C122" H 8600 1150 50  0000 L CNN
+F 1 "100n 100V X7" V 8500 700 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8550 1050 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8550 1050 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8600 750 25  0000 C CIN "PartNumber"
+	1    8550 1050
+	-1   0    0    -1  
+$EndComp
+Connection ~ 8550 1350
+Wire Wire Line
+	8550 750  8300 750 
+Connection ~ 7850 750 
+Connection ~ 8300 750 
+Wire Wire Line
+	8300 750  7850 750 
+$Comp
+L Device:C_Small C144
+U 1 1 60A33514
+P 8550 1950
+F 0 "C144" H 8600 2050 50  0000 L CNN
+F 1 "100n 100V X7" V 8500 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8550 1950 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8550 1950 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8600 1650 25  0000 C CIN "PartNumber"
+	1    8550 1950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 2050 8550 2250
+Wire Wire Line
+	8550 1850 8550 1650
+Wire Wire Line
+	8300 2250 7850 2250
+Wire Wire Line
+	8550 2250 8300 2250
+Connection ~ 8300 2250
+Wire Wire Line
+	8300 2050 8300 2250
+Wire Wire Line
+	8300 1650 7850 1650
+Wire Wire Line
+	8550 1650 8300 1650
+Connection ~ 8300 1650
+Wire Wire Line
+	8300 1850 8300 1650
+$Comp
+L Device:C_Small C143
+U 1 1 60A33502
+P 8300 1950
+F 0 "C143" H 8350 2050 50  0000 L CNN
+F 1 "100n 100V X7" V 8250 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8300 1950 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8300 1950 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8350 1650 25  0000 C CIN "PartNumber"
+	1    8300 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C123
+U 1 1 60A334F7
+P 2900 1950
+F 0 "C123" H 2950 2050 50  0000 L CNN
+F 1 "100n 100V X7" V 2850 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2900 1950 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 2900 1950 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 2950 1650 25  0000 C CIN "PartNumber"
+	1    2900 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2050 2900 2250
+Wire Wire Line
+	2900 1850 2900 1650
+Wire Wire Line
+	3150 2250 3600 2250
+Wire Wire Line
+	2900 2250 3150 2250
+Connection ~ 3150 2250
+Wire Wire Line
+	3150 2050 3150 2250
+Wire Wire Line
+	2900 1650 3150 1650
+Wire Wire Line
+	3150 1650 3600 1650
+Connection ~ 3150 1650
+Wire Wire Line
+	3150 1850 3150 1650
+$Comp
+L Device:C_Small C124
+U 1 1 60A334E0
+P 3150 1950
+F 0 "C124" H 3200 2050 50  0000 L CNN
+F 1 "100n 100V X7" V 3100 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3150 1950 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 3150 1950 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 3200 1650 25  0000 C CIN "PartNumber"
+	1    3150 1950
+	1    0    0    -1  
+$EndComp
+Connection ~ 2900 1650
+Wire Wire Line
+	2450 1650 2900 1650
+Connection ~ 8550 2250
+Wire Wire Line
+	9000 2250 8550 2250
+$Comp
+L power:-BATT #PWR0106
+U 1 1 60A334D1
+P 9000 2250
+F 0 "#PWR0106" H 9000 2100 50  0001 C CNN
+F 1 "-BATT" V 9050 2400 50  0000 L CNN
+F 2 "" H 9000 2250 50  0001 C CNN
+F 3 "" H 9000 2250 50  0001 C CNN
+	1    9000 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+BATT #PWR0105
+U 1 1 60A334C7
+P 2450 1650
+F 0 "#PWR0105" H 2450 1500 50  0001 C CNN
+F 1 "+BATT" V 2500 1800 50  0000 L CNN
+F 2 "" H 2450 1650 50  0001 C CNN
+F 3 "" H 2450 1650 50  0001 C CNN
+	1    2450 1650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3600 1650 3600 1850
+Connection ~ 3600 1650
+Wire Wire Line
+	3850 1650 3600 1650
+Wire Wire Line
+	3850 1850 3850 1650
+Connection ~ 3850 1650
+Wire Wire Line
+	3850 1650 4100 1650
+Wire Wire Line
+	4100 1650 4100 1850
+Connection ~ 4100 1650
+Wire Wire Line
+	4350 1650 4100 1650
+Wire Wire Line
+	4350 1850 4350 1650
+Connection ~ 4350 1650
+Wire Wire Line
+	4350 1650 4600 1650
+Wire Wire Line
+	4600 1650 4600 1850
+Connection ~ 4600 1650
+Wire Wire Line
+	4850 1650 4600 1650
+Wire Wire Line
+	4850 1850 4850 1650
+Connection ~ 4850 1650
+Wire Wire Line
+	4850 1650 5100 1650
+Wire Wire Line
+	5100 1650 5100 1850
+Connection ~ 5100 1650
+Wire Wire Line
+	5350 1650 5100 1650
+Wire Wire Line
+	5350 1850 5350 1650
+Connection ~ 5350 1650
+Wire Wire Line
+	5350 1650 5600 1650
+Wire Wire Line
+	5600 1650 5600 1850
+Connection ~ 5600 1650
+Wire Wire Line
+	5850 1650 5600 1650
+Wire Wire Line
+	5850 1850 5850 1650
+Connection ~ 5850 1650
+Wire Wire Line
+	5850 1650 6100 1650
+Wire Wire Line
+	6100 1650 6100 1850
+Connection ~ 6100 1650
+Wire Wire Line
+	6350 1650 6100 1650
+Wire Wire Line
+	6350 1850 6350 1650
+Connection ~ 6350 1650
+Wire Wire Line
+	6350 1650 6600 1650
+Wire Wire Line
+	6600 1650 6600 1850
+Connection ~ 6600 1650
+Wire Wire Line
+	6850 1650 6600 1650
+Wire Wire Line
+	6850 1850 6850 1650
+Wire Wire Line
+	7850 1650 7850 1850
+Wire Wire Line
+	7600 1850 7600 1650
+Connection ~ 7850 1650
+Connection ~ 7600 1650
+Wire Wire Line
+	7600 1650 7850 1650
+Wire Wire Line
+	7350 1850 7350 1650
+Wire Wire Line
+	7100 1850 7100 1650
+Connection ~ 7100 1650
+Connection ~ 6850 1650
+Wire Wire Line
+	6850 1650 7100 1650
+Wire Wire Line
+	7350 1650 7600 1650
+Wire Wire Line
+	7100 1650 7350 1650
+Connection ~ 7350 1650
+Wire Wire Line
+	7850 2250 7850 2050
+Connection ~ 7850 2250
+Wire Wire Line
+	7600 2250 7850 2250
+Wire Wire Line
+	7600 2050 7600 2250
+Connection ~ 7600 2250
+Wire Wire Line
+	7600 2250 7350 2250
+$Comp
+L Device:C_Small C142
+U 1 1 60A33484
+P 7850 1950
+F 0 "C142" H 7900 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7800 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7850 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7850 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7900 1700 25  0000 C CIN "PartNumber"
+	1    7850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C141
+U 1 1 60A33479
+P 7600 1950
+F 0 "C141" H 7650 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7550 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7600 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7600 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7650 1700 25  0000 C CIN "PartNumber"
+	1    7600 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 2250 7350 2050
+Connection ~ 7350 2250
+Wire Wire Line
+	7100 2250 7350 2250
+Wire Wire Line
+	7100 2050 7100 2250
+Connection ~ 7100 2250
+Wire Wire Line
+	7100 2250 6850 2250
+Wire Wire Line
+	6850 2250 6850 2050
+Connection ~ 6850 2250
+Wire Wire Line
+	6600 2250 6850 2250
+Wire Wire Line
+	6600 2050 6600 2250
+Connection ~ 6600 2250
+Wire Wire Line
+	6600 2250 6350 2250
+$Comp
+L Device:C_Small C140
+U 1 1 60A33462
+P 7350 1950
+F 0 "C140" H 7400 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7300 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7350 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7350 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7400 1700 25  0000 C CIN "PartNumber"
+	1    7350 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C139
+U 1 1 60A33457
+P 7100 1950
+F 0 "C139" H 7150 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7050 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7100 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7100 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7150 1700 25  0000 C CIN "PartNumber"
+	1    7100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C138
+U 1 1 60A3344C
+P 6850 1950
+F 0 "C138" H 6900 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6800 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6850 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6850 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6900 1700 25  0000 C CIN "PartNumber"
+	1    6850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C137
+U 1 1 60A33441
+P 6600 1950
+F 0 "C137" H 6650 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6550 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6600 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6600 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6650 1700 25  0000 C CIN "PartNumber"
+	1    6600 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2250 6350 2050
+Connection ~ 6350 2250
+Wire Wire Line
+	6100 2250 6350 2250
+Wire Wire Line
+	6100 2050 6100 2250
+Connection ~ 6100 2250
+Wire Wire Line
+	6100 2250 5850 2250
+Wire Wire Line
+	5850 2250 5850 2050
+Connection ~ 5850 2250
+Wire Wire Line
+	5600 2250 5850 2250
+Wire Wire Line
+	5600 2050 5600 2250
+Connection ~ 5600 2250
+Wire Wire Line
+	5600 2250 5350 2250
+Wire Wire Line
+	5350 2250 5350 2050
+Connection ~ 5350 2250
+Wire Wire Line
+	5100 2250 5350 2250
+Wire Wire Line
+	5100 2050 5100 2250
+Connection ~ 5100 2250
+Wire Wire Line
+	5100 2250 4850 2250
+Wire Wire Line
+	4850 2250 4850 2050
+Connection ~ 4850 2250
+Wire Wire Line
+	4600 2250 4850 2250
+$Comp
+L Device:C_Small C135
+U 1 1 60A33416
+P 6100 1950
+F 0 "C135" H 6150 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6050 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6100 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6100 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6150 1700 25  0000 C CIN "PartNumber"
+	1    6100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C134
+U 1 1 60A3340B
+P 5850 1950
+F 0 "C134" H 5900 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5800 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5850 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5850 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5900 1700 25  0000 C CIN "PartNumber"
+	1    5850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C131
+U 1 1 60A333EA
+P 5100 1950
+F 0 "C131" H 5150 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5050 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5100 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5100 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5150 1700 25  0000 C CIN "PartNumber"
+	1    5100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C129
+U 1 1 60A333D4
+P 4600 1950
+F 0 "C129" H 4650 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4550 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4600 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4600 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4650 1700 25  0000 C CIN "PartNumber"
+	1    4600 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C128
+U 1 1 60A333C9
+P 4350 1950
+F 0 "C128" H 4400 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4300 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4350 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4350 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4400 1700 25  0000 C CIN "PartNumber"
+	1    4350 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C127
+U 1 1 60A333BE
+P 4100 1950
+F 0 "C127" H 4150 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4050 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4100 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4100 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4150 1700 25  0000 C CIN "PartNumber"
+	1    4100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C126
+U 1 1 60A333B3
+P 3850 1950
+F 0 "C126" H 3900 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 3800 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3850 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 3850 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 3900 1700 25  0000 C CIN "PartNumber"
+	1    3850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C125
+U 1 1 60A333A8
+P 3600 1950
+F 0 "C125" H 3650 2050 50  0000 L CNN
+F 1 "4.7u 100V X7" V 3550 1600 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3600 1950 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 3600 1950 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 3650 1700 25  0000 C CIN "PartNumber"
+	1    3600 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2050 4600 2250
+Wire Wire Line
+	3600 2250 3600 2050
+Wire Wire Line
+	3850 2050 3850 2250
+Connection ~ 3600 2250
+Connection ~ 3850 2250
+Wire Wire Line
+	3850 2250 3600 2250
+Wire Wire Line
+	4100 2050 4100 2250
+Wire Wire Line
+	4350 2050 4350 2250
+Connection ~ 4350 2250
+Connection ~ 4600 2250
+Wire Wire Line
+	4600 2250 4350 2250
+Wire Wire Line
+	4100 2250 3850 2250
+Wire Wire Line
+	4350 2250 4100 2250
+Connection ~ 4100 2250
+Wire Wire Line
+	4600 3150 4350 3150
+Connection ~ 4350 3150
+Wire Wire Line
+	4350 2950 4350 3150
+Wire Wire Line
+	4350 3150 4100 3150
+Connection ~ 4100 3150
+Wire Wire Line
+	4100 2950 4100 3150
+Wire Wire Line
+	4100 3150 3850 3150
+Wire Wire Line
+	3850 3150 3600 3150
+Connection ~ 3850 3150
+Wire Wire Line
+	3850 2950 3850 3150
+Wire Wire Line
+	3600 3150 3600 2950
+Wire Wire Line
+	4600 2950 4600 3150
+$Comp
+L Device:C_Small C148
+U 1 1 60A48B9C
+P 3850 2850
+F 0 "C148" H 3900 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 3800 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3850 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 3850 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 3900 2600 25  0000 C CIN "PartNumber"
+	1    3850 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C149
+U 1 1 60A48BA7
+P 4100 2850
+F 0 "C149" H 4150 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4050 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4100 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4100 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4150 2600 25  0000 C CIN "PartNumber"
+	1    4100 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C150
+U 1 1 60A48BB2
+P 4350 2850
+F 0 "C150" H 4400 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4300 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4350 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4350 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4400 2600 25  0000 C CIN "PartNumber"
+	1    4350 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C151
+U 1 1 60A48BBD
+P 4600 2850
+F 0 "C151" H 4650 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4550 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4600 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4600 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4650 2600 25  0000 C CIN "PartNumber"
+	1    4600 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C152
+U 1 1 60A48BC8
+P 4850 2850
+F 0 "C152" H 4900 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4800 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4850 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4850 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4900 2600 25  0000 C CIN "PartNumber"
+	1    4850 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C153
+U 1 1 60A48BD3
+P 5100 2850
+F 0 "C153" H 5150 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5050 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5100 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5100 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5150 2600 25  0000 C CIN "PartNumber"
+	1    5100 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C155
+U 1 1 60A48BE9
+P 5600 2850
+F 0 "C155" H 5650 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5550 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5600 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5600 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5650 2600 25  0000 C CIN "PartNumber"
+	1    5600 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C156
+U 1 1 60A48BF4
+P 5850 2850
+F 0 "C156" H 5900 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5800 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5850 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5850 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5900 2600 25  0000 C CIN "PartNumber"
+	1    5850 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C157
+U 1 1 60A48BFF
+P 6100 2850
+F 0 "C157" H 6150 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6050 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6100 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6100 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6150 2600 25  0000 C CIN "PartNumber"
+	1    6100 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 4600 3150
+Wire Wire Line
+	4600 3150 4850 3150
+Wire Wire Line
+	4850 3150 4850 2950
+Connection ~ 4850 3150
+Wire Wire Line
+	5100 3150 4850 3150
+Wire Wire Line
+	5100 2950 5100 3150
+Connection ~ 5100 3150
+Wire Wire Line
+	5100 3150 5350 3150
+Wire Wire Line
+	5350 3150 5350 2950
+Connection ~ 5350 3150
+Wire Wire Line
+	5600 3150 5350 3150
+Wire Wire Line
+	5600 2950 5600 3150
+Connection ~ 5600 3150
+Wire Wire Line
+	5600 3150 5850 3150
+Wire Wire Line
+	5850 3150 5850 2950
+Connection ~ 5850 3150
+Wire Wire Line
+	6100 3150 5850 3150
+Wire Wire Line
+	6100 2950 6100 3150
+Connection ~ 6100 3150
+Wire Wire Line
+	6100 3150 6350 3150
+Wire Wire Line
+	6350 3150 6350 2950
+$Comp
+L Device:C_Small C159
+U 1 1 60A48C2A
+P 6600 2850
+F 0 "C159" H 6650 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6550 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6600 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6600 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6650 2600 25  0000 C CIN "PartNumber"
+	1    6600 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C160
+U 1 1 60A48C35
+P 6850 2850
+F 0 "C160" H 6900 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6800 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6850 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6850 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6900 2600 25  0000 C CIN "PartNumber"
+	1    6850 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C161
+U 1 1 60A48C40
+P 7100 2850
+F 0 "C161" H 7150 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7050 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7100 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7100 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7150 2600 25  0000 C CIN "PartNumber"
+	1    7100 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C162
+U 1 1 60A48C4B
+P 7350 2850
+F 0 "C162" H 7400 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7300 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7350 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7350 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7400 2600 25  0000 C CIN "PartNumber"
+	1    7350 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 6350 3150
+Wire Wire Line
+	6600 3150 6350 3150
+Wire Wire Line
+	6600 2950 6600 3150
+Connection ~ 6600 3150
+Wire Wire Line
+	6600 3150 6850 3150
+Wire Wire Line
+	6850 3150 6850 2950
+Connection ~ 6850 3150
+Wire Wire Line
+	7100 3150 6850 3150
+Wire Wire Line
+	7100 2950 7100 3150
+Connection ~ 7100 3150
+Wire Wire Line
+	7100 3150 7350 3150
+Wire Wire Line
+	7350 3150 7350 2950
+$Comp
+L Device:C_Small C164
+U 1 1 60A48C6D
+P 7850 2850
+F 0 "C164" H 7900 2950 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7800 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7850 2850 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7850 2850 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7900 2600 25  0000 C CIN "PartNumber"
+	1    7850 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 7350 3150
+Wire Wire Line
+	7600 3150 7350 3150
+Wire Wire Line
+	7600 2950 7600 3150
+Connection ~ 7600 3150
+Wire Wire Line
+	7600 3150 7850 3150
+Wire Wire Line
+	7850 3150 7850 2950
+Wire Wire Line
+	6850 2550 7100 2550
+Connection ~ 7100 2550
+Wire Wire Line
+	7100 2750 7100 2550
+Wire Wire Line
+	7100 2550 7350 2550
+Connection ~ 7350 2550
+Wire Wire Line
+	7350 2750 7350 2550
+Wire Wire Line
+	7350 2550 7600 2550
+Wire Wire Line
+	7600 2550 7850 2550
+Connection ~ 7600 2550
+Wire Wire Line
+	7600 2750 7600 2550
+Wire Wire Line
+	7850 2550 7850 2750
+Wire Wire Line
+	6850 2750 6850 2550
+Connection ~ 6850 2550
+Wire Wire Line
+	6850 2550 6600 2550
+Wire Wire Line
+	6600 2550 6600 2750
+Connection ~ 6600 2550
+Wire Wire Line
+	6350 2550 6600 2550
+Wire Wire Line
+	6350 2750 6350 2550
+Connection ~ 6350 2550
+Wire Wire Line
+	6350 2550 6100 2550
+Wire Wire Line
+	6100 2550 6100 2750
+Connection ~ 6100 2550
+Wire Wire Line
+	5850 2550 6100 2550
+Wire Wire Line
+	5850 2750 5850 2550
+Connection ~ 5850 2550
+Wire Wire Line
+	5850 2550 5600 2550
+Wire Wire Line
+	5600 2550 5600 2750
+Connection ~ 5600 2550
+Wire Wire Line
+	5350 2550 5600 2550
+Wire Wire Line
+	5350 2750 5350 2550
+Connection ~ 5350 2550
+Wire Wire Line
+	5350 2550 5100 2550
+Wire Wire Line
+	5100 2550 5100 2750
+Connection ~ 5100 2550
+Wire Wire Line
+	4850 2550 5100 2550
+Wire Wire Line
+	4850 2750 4850 2550
+Connection ~ 4850 2550
+Wire Wire Line
+	4850 2550 4600 2550
+Wire Wire Line
+	4600 2550 4600 2750
+Connection ~ 4600 2550
+Wire Wire Line
+	4350 2550 4600 2550
+Wire Wire Line
+	4350 2750 4350 2550
+Connection ~ 4350 2550
+Wire Wire Line
+	4350 2550 4100 2550
+Wire Wire Line
+	4100 2550 4100 2750
+Connection ~ 4100 2550
+Wire Wire Line
+	3850 2550 4100 2550
+Wire Wire Line
+	3850 2750 3850 2550
+Connection ~ 3850 2550
+Wire Wire Line
+	3850 2550 3600 2550
+Wire Wire Line
+	3600 2550 3600 2750
+$Comp
+L power:+BATT #PWR0107
+U 1 1 60A48CB0
+P 2450 2550
+F 0 "#PWR0107" H 2450 2400 50  0001 C CNN
+F 1 "+BATT" V 2500 2700 50  0000 L CNN
+F 2 "" H 2450 2550 50  0001 C CNN
+F 3 "" H 2450 2550 50  0001 C CNN
+	1    2450 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:-BATT #PWR0108
+U 1 1 60A48CBA
+P 9000 3150
+F 0 "#PWR0108" H 9000 3000 50  0001 C CNN
+F 1 "-BATT" V 9050 3300 50  0000 L CNN
+F 2 "" H 9000 3150 50  0001 C CNN
+F 3 "" H 9000 3150 50  0001 C CNN
+	1    9000 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C146
+U 1 1 60A48CC9
+P 3150 2850
+F 0 "C146" H 3200 2950 50  0000 L CNN
+F 1 "100n 100V X7" V 3100 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3150 2850 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 3150 2850 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 3200 2550 25  0000 C CIN "PartNumber"
+	1    3150 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2750 3150 2550
+Connection ~ 3600 2550
+Connection ~ 3150 2550
+Wire Wire Line
+	3150 2550 3600 2550
+Wire Wire Line
+	3150 2950 3150 3150
+Wire Wire Line
+	2900 3150 3150 3150
+Connection ~ 3600 3150
+Connection ~ 3150 3150
+Wire Wire Line
+	3150 3150 3600 3150
+Wire Wire Line
+	2450 2550 2900 2550
+Wire Wire Line
+	2900 2550 3150 2550
+Connection ~ 2900 2550
+Wire Wire Line
+	2900 2750 2900 2550
+Wire Wire Line
+	2900 2950 2900 3150
+$Comp
+L Device:C_Small C145
+U 1 1 60A48CE0
+P 2900 2850
+F 0 "C145" H 2950 2950 50  0000 L CNN
+F 1 "100n 100V X7" V 2850 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2900 2850 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 2900 2850 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 2950 2550 25  0000 C CIN "PartNumber"
+	1    2900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C165
+U 1 1 60A48CEB
+P 8300 2850
+F 0 "C165" H 8350 2950 50  0000 L CNN
+F 1 "100n 100V X7" V 8250 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8300 2850 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8300 2850 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8350 2550 25  0000 C CIN "PartNumber"
+	1    8300 2850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 2750 8300 2550
+Wire Wire Line
+	8550 2550 8300 2550
+Connection ~ 7850 2550
+Connection ~ 8300 2550
+Wire Wire Line
+	8300 2550 7850 2550
+Wire Wire Line
+	8300 2950 8300 3150
+Connection ~ 7850 3150
+Connection ~ 8300 3150
+Wire Wire Line
+	8300 3150 7850 3150
+Wire Wire Line
+	8550 2750 8550 2550
+Wire Wire Line
+	9000 3150 8550 3150
+Wire Wire Line
+	8550 3150 8300 3150
+Connection ~ 8550 3150
+Wire Wire Line
+	8550 2950 8550 3150
+$Comp
+L Device:C_Small C166
+U 1 1 60A48CFD
+P 8550 2850
+F 0 "C166" H 8600 2950 50  0000 L CNN
+F 1 "100n 100V X7" V 8500 2500 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8550 2850 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8550 2850 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8600 2550 25  0000 C CIN "PartNumber"
+	1    8550 2850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C188
+U 1 1 60A48E85
+P 8550 3750
+F 0 "C188" H 8600 3850 50  0000 L CNN
+F 1 "100n 100V X7" V 8500 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8550 3750 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8550 3750 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8600 3450 25  0000 C CIN "PartNumber"
+	1    8550 3750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 3850 8550 4050
+Connection ~ 8550 4050
+Wire Wire Line
+	9000 4050 8550 4050
+Wire Wire Line
+	8550 3650 8550 3450
+Wire Wire Line
+	8550 4050 8300 4050
+Wire Wire Line
+	8300 4050 7850 4050
+Connection ~ 8300 4050
+Wire Wire Line
+	8300 3850 8300 4050
+Wire Wire Line
+	8300 3450 7850 3450
+Wire Wire Line
+	8550 3450 8300 3450
+Connection ~ 8300 3450
+Wire Wire Line
+	8300 3650 8300 3450
+$Comp
+L Device:C_Small C187
+U 1 1 60A48E73
+P 8300 3750
+F 0 "C187" H 8350 3850 50  0000 L CNN
+F 1 "100n 100V X7" V 8250 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8300 3750 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8300 3750 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8350 3450 25  0000 C CIN "PartNumber"
+	1    8300 3750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C167
+U 1 1 60A48E68
+P 2900 3750
+F 0 "C167" H 2950 3850 50  0000 L CNN
+F 1 "100n 100V X7" V 2850 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2900 3750 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 2900 3750 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 2950 3450 25  0000 C CIN "PartNumber"
+	1    2900 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 3850 2900 4050
+Wire Wire Line
+	2900 3650 2900 3450
+Connection ~ 2900 3450
+Wire Wire Line
+	2450 3450 2900 3450
+Wire Wire Line
+	3150 4050 3600 4050
+Wire Wire Line
+	2900 4050 3150 4050
+Connection ~ 3150 4050
+Wire Wire Line
+	3150 3850 3150 4050
+Wire Wire Line
+	2900 3450 3150 3450
+Wire Wire Line
+	3150 3450 3600 3450
+Connection ~ 3150 3450
+Wire Wire Line
+	3150 3650 3150 3450
+$Comp
+L Device:C_Small C168
+U 1 1 60A48E51
+P 3150 3750
+F 0 "C168" H 3200 3850 50  0000 L CNN
+F 1 "100n 100V X7" V 3100 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3150 3750 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 3150 3750 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 3200 3450 25  0000 C CIN "PartNumber"
+	1    3150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-BATT #PWR0110
+U 1 1 60A48E42
+P 9000 4050
+F 0 "#PWR0110" H 9000 3900 50  0001 C CNN
+F 1 "-BATT" V 9050 4200 50  0000 L CNN
+F 2 "" H 9000 4050 50  0001 C CNN
+F 3 "" H 9000 4050 50  0001 C CNN
+	1    9000 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+BATT #PWR0109
+U 1 1 60A48E38
+P 2450 3450
+F 0 "#PWR0109" H 2450 3300 50  0001 C CNN
+F 1 "+BATT" V 2500 3600 50  0000 L CNN
+F 2 "" H 2450 3450 50  0001 C CNN
+F 3 "" H 2450 3450 50  0001 C CNN
+	1    2450 3450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3600 3450 3600 3650
+Connection ~ 3600 3450
+Wire Wire Line
+	3850 3450 3600 3450
+Wire Wire Line
+	3850 3650 3850 3450
+Connection ~ 3850 3450
+Wire Wire Line
+	3850 3450 4100 3450
+Wire Wire Line
+	4100 3450 4100 3650
+Connection ~ 4100 3450
+Wire Wire Line
+	4350 3450 4100 3450
+Wire Wire Line
+	4350 3650 4350 3450
+Connection ~ 4350 3450
+Wire Wire Line
+	4350 3450 4600 3450
+Wire Wire Line
+	4600 3450 4600 3650
+Connection ~ 4600 3450
+Wire Wire Line
+	4850 3450 4600 3450
+Wire Wire Line
+	4850 3650 4850 3450
+Connection ~ 4850 3450
+Wire Wire Line
+	4850 3450 5100 3450
+Wire Wire Line
+	5100 3450 5100 3650
+Connection ~ 5100 3450
+Wire Wire Line
+	5350 3450 5100 3450
+Wire Wire Line
+	5350 3650 5350 3450
+Connection ~ 5350 3450
+Wire Wire Line
+	5350 3450 5600 3450
+Wire Wire Line
+	5600 3450 5600 3650
+Connection ~ 5600 3450
+Wire Wire Line
+	5850 3450 5600 3450
+Wire Wire Line
+	5850 3650 5850 3450
+Connection ~ 5850 3450
+Wire Wire Line
+	5850 3450 6100 3450
+Wire Wire Line
+	6100 3450 6100 3650
+Connection ~ 6100 3450
+Wire Wire Line
+	6350 3450 6100 3450
+Wire Wire Line
+	6350 3650 6350 3450
+Connection ~ 6350 3450
+Wire Wire Line
+	6350 3450 6600 3450
+Wire Wire Line
+	6600 3450 6600 3650
+Connection ~ 6600 3450
+Wire Wire Line
+	6850 3450 6600 3450
+Wire Wire Line
+	6850 3650 6850 3450
+Wire Wire Line
+	7850 3450 7850 3650
+Wire Wire Line
+	7600 3650 7600 3450
+Connection ~ 7850 3450
+Wire Wire Line
+	7600 3450 7850 3450
+Connection ~ 7600 3450
+Wire Wire Line
+	7350 3450 7600 3450
+Wire Wire Line
+	7350 3650 7350 3450
+Connection ~ 7350 3450
+Wire Wire Line
+	7100 3450 7350 3450
+Wire Wire Line
+	7100 3650 7100 3450
+Connection ~ 7100 3450
+Connection ~ 6850 3450
+Wire Wire Line
+	6850 3450 7100 3450
+Wire Wire Line
+	7850 4050 7850 3850
+Connection ~ 7850 4050
+Wire Wire Line
+	7600 4050 7850 4050
+Wire Wire Line
+	7600 3850 7600 4050
+Connection ~ 7600 4050
+Wire Wire Line
+	7600 4050 7350 4050
+$Comp
+L Device:C_Small C186
+U 1 1 60A48DF5
+P 7850 3750
+F 0 "C186" H 7900 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7800 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7850 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7850 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7900 3500 25  0000 C CIN "PartNumber"
+	1    7850 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 4050 7350 3850
+Connection ~ 7350 4050
+Wire Wire Line
+	7100 4050 7350 4050
+Wire Wire Line
+	7100 3850 7100 4050
+Connection ~ 7100 4050
+Wire Wire Line
+	7100 4050 6850 4050
+Wire Wire Line
+	6850 4050 6850 3850
+Connection ~ 6850 4050
+Wire Wire Line
+	6600 4050 6850 4050
+Wire Wire Line
+	6600 3850 6600 4050
+Connection ~ 6600 4050
+Wire Wire Line
+	6600 4050 6350 4050
+$Comp
+L Device:C_Small C184
+U 1 1 60A48DD3
+P 7350 3750
+F 0 "C184" H 7400 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7300 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7350 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7350 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7400 3500 25  0000 C CIN "PartNumber"
+	1    7350 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C183
+U 1 1 60A48DC8
+P 7100 3750
+F 0 "C183" H 7150 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7050 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7100 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7100 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7150 3500 25  0000 C CIN "PartNumber"
+	1    7100 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C182
+U 1 1 60A48DBD
+P 6850 3750
+F 0 "C182" H 6900 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6800 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6850 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6850 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6900 3500 25  0000 C CIN "PartNumber"
+	1    6850 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4050 6350 3850
+Connection ~ 6350 4050
+Wire Wire Line
+	6100 4050 6350 4050
+Wire Wire Line
+	6100 3850 6100 4050
+Connection ~ 6100 4050
+Wire Wire Line
+	6100 4050 5850 4050
+Wire Wire Line
+	5850 4050 5850 3850
+Connection ~ 5850 4050
+Wire Wire Line
+	5600 4050 5850 4050
+Wire Wire Line
+	5600 3850 5600 4050
+Connection ~ 5600 4050
+Wire Wire Line
+	5600 4050 5350 4050
+Wire Wire Line
+	5350 4050 5350 3850
+Connection ~ 5350 4050
+Wire Wire Line
+	5100 4050 5350 4050
+Wire Wire Line
+	5100 3850 5100 4050
+Connection ~ 5100 4050
+Wire Wire Line
+	5100 4050 4850 4050
+Wire Wire Line
+	4850 4050 4850 3850
+Connection ~ 4850 4050
+Wire Wire Line
+	4600 4050 4850 4050
+$Comp
+L Device:C_Small C180
+U 1 1 60A48D92
+P 6350 3750
+F 0 "C180" H 6400 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6300 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6350 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6350 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6400 3500 25  0000 C CIN "PartNumber"
+	1    6350 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C179
+U 1 1 60A48D87
+P 6100 3750
+F 0 "C179" H 6150 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6050 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6100 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6100 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6150 3500 25  0000 C CIN "PartNumber"
+	1    6100 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C178
+U 1 1 60A48D7C
+P 5850 3750
+F 0 "C178" H 5900 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5800 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5850 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5850 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5900 3500 25  0000 C CIN "PartNumber"
+	1    5850 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C177
+U 1 1 60A48D71
+P 5600 3750
+F 0 "C177" H 5650 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5550 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5600 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5600 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5650 3500 25  0000 C CIN "PartNumber"
+	1    5600 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C175
+U 1 1 60A48D5B
+P 5100 3750
+F 0 "C175" H 5150 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5050 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5100 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5100 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5150 3500 25  0000 C CIN "PartNumber"
+	1    5100 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C174
+U 1 1 60A48D50
+P 4850 3750
+F 0 "C174" H 4900 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4800 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4850 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4850 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4900 3500 25  0000 C CIN "PartNumber"
+	1    4850 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C172
+U 1 1 60A48D3A
+P 4350 3750
+F 0 "C172" H 4400 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4300 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4350 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4350 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4400 3500 25  0000 C CIN "PartNumber"
+	1    4350 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C171
+U 1 1 60A48D2F
+P 4100 3750
+F 0 "C171" H 4150 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4050 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4100 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4100 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4150 3500 25  0000 C CIN "PartNumber"
+	1    4100 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C170
+U 1 1 60A48D24
+P 3850 3750
+F 0 "C170" H 3900 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 3800 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3850 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 3850 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 3900 3500 25  0000 C CIN "PartNumber"
+	1    3850 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C169
+U 1 1 60A48D19
+P 3600 3750
+F 0 "C169" H 3650 3850 50  0000 L CNN
+F 1 "4.7u 100V X7" V 3550 3400 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3600 3750 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 3600 3750 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 3650 3500 25  0000 C CIN "PartNumber"
+	1    3600 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3850 4600 4050
+Wire Wire Line
+	3600 4050 3600 3850
+Wire Wire Line
+	3850 3850 3850 4050
+Connection ~ 3600 4050
+Wire Wire Line
+	3850 4050 3600 4050
+Connection ~ 3850 4050
+Wire Wire Line
+	4100 4050 3850 4050
+Wire Wire Line
+	4100 3850 4100 4050
+Connection ~ 4100 4050
+Wire Wire Line
+	4350 4050 4100 4050
+Wire Wire Line
+	4350 3850 4350 4050
+Connection ~ 4350 4050
+Connection ~ 4600 4050
+Wire Wire Line
+	4600 4050 4350 4050
+Wire Wire Line
+	4600 4950 4350 4950
+Connection ~ 4350 4950
+Wire Wire Line
+	4350 4750 4350 4950
+Wire Wire Line
+	4350 4950 4100 4950
+Connection ~ 4100 4950
+Wire Wire Line
+	4100 4750 4100 4950
+Wire Wire Line
+	4100 4950 3850 4950
+Wire Wire Line
+	3850 4950 3600 4950
+Connection ~ 3850 4950
+Wire Wire Line
+	3850 4750 3850 4950
+Wire Wire Line
+	3600 4950 3600 4750
+Wire Wire Line
+	4600 4750 4600 4950
+$Comp
+L Device:C_Small C191
+U 1 1 60D71581
+P 3600 4650
+F 0 "C191" H 3650 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 3550 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3600 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 3600 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 3650 4400 25  0000 C CIN "PartNumber"
+	1    3600 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C192
+U 1 1 60D7158C
+P 3850 4650
+F 0 "C192" H 3900 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 3800 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3850 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 3850 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 3900 4400 25  0000 C CIN "PartNumber"
+	1    3850 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C193
+U 1 1 60D71597
+P 4100 4650
+F 0 "C193" H 4150 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4050 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4100 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4100 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4150 4400 25  0000 C CIN "PartNumber"
+	1    4100 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C194
+U 1 1 60D715A2
+P 4350 4650
+F 0 "C194" H 4400 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4300 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4350 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4350 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4400 4400 25  0000 C CIN "PartNumber"
+	1    4350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C195
+U 1 1 60D715AD
+P 4600 4650
+F 0 "C195" H 4650 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4550 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4600 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4600 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4650 4400 25  0000 C CIN "PartNumber"
+	1    4600 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C196
+U 1 1 60D715B8
+P 4850 4650
+F 0 "C196" H 4900 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4800 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4850 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4850 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4900 4400 25  0000 C CIN "PartNumber"
+	1    4850 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C198
+U 1 1 60D715CE
+P 5350 4650
+F 0 "C198" H 5400 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5300 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5350 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5350 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5400 4400 25  0000 C CIN "PartNumber"
+	1    5350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C199
+U 1 1 60D715D9
+P 5600 4650
+F 0 "C199" H 5650 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5550 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5600 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5600 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5650 4400 25  0000 C CIN "PartNumber"
+	1    5600 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C200
+U 1 1 60D715E4
+P 5850 4650
+F 0 "C200" H 5900 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5800 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5850 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5850 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5900 4400 25  0000 C CIN "PartNumber"
+	1    5850 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C201
+U 1 1 60D715EF
+P 6100 4650
+F 0 "C201" H 6150 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6050 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6100 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6100 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6150 4400 25  0000 C CIN "PartNumber"
+	1    6100 4650
+	1    0    0    -1  
+$EndComp
+Connection ~ 4600 4950
+Wire Wire Line
+	4600 4950 4850 4950
+Wire Wire Line
+	4850 4950 4850 4750
+Connection ~ 4850 4950
+Wire Wire Line
+	5100 4950 4850 4950
+Wire Wire Line
+	5100 4750 5100 4950
+Connection ~ 5100 4950
+Wire Wire Line
+	5100 4950 5350 4950
+Wire Wire Line
+	5350 4950 5350 4750
+Connection ~ 5350 4950
+Wire Wire Line
+	5600 4950 5350 4950
+Wire Wire Line
+	5600 4750 5600 4950
+Connection ~ 5600 4950
+Wire Wire Line
+	5600 4950 5850 4950
+Wire Wire Line
+	5850 4950 5850 4750
+Connection ~ 5850 4950
+Wire Wire Line
+	6100 4950 5850 4950
+Wire Wire Line
+	6100 4750 6100 4950
+Connection ~ 6100 4950
+Wire Wire Line
+	6100 4950 6350 4950
+Wire Wire Line
+	6350 4950 6350 4750
+$Comp
+L Device:C_Small C203
+U 1 1 60D7161A
+P 6600 4650
+F 0 "C203" H 6650 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6550 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6600 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6600 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6650 4400 25  0000 C CIN "PartNumber"
+	1    6600 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C204
+U 1 1 60D71625
+P 6850 4650
+F 0 "C204" H 6900 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6800 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6850 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6850 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6900 4400 25  0000 C CIN "PartNumber"
+	1    6850 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C206
+U 1 1 60D7163B
+P 7350 4650
+F 0 "C206" H 7400 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7300 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7350 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7350 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7400 4400 25  0000 C CIN "PartNumber"
+	1    7350 4650
+	1    0    0    -1  
+$EndComp
+Connection ~ 6350 4950
+Wire Wire Line
+	6600 4950 6350 4950
+Wire Wire Line
+	6600 4750 6600 4950
+Connection ~ 6600 4950
+Wire Wire Line
+	6600 4950 6850 4950
+Wire Wire Line
+	6850 4950 6850 4750
+Connection ~ 6850 4950
+Wire Wire Line
+	7100 4950 6850 4950
+Wire Wire Line
+	7100 4750 7100 4950
+Connection ~ 7100 4950
+Wire Wire Line
+	7100 4950 7350 4950
+Wire Wire Line
+	7350 4950 7350 4750
+$Comp
+L Device:C_Small C207
+U 1 1 60D71652
+P 7600 4650
+F 0 "C207" H 7650 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7550 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7600 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7600 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7650 4400 25  0000 C CIN "PartNumber"
+	1    7600 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C208
+U 1 1 60D7165D
+P 7850 4650
+F 0 "C208" H 7900 4750 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7800 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7850 4650 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7850 4650 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7900 4400 25  0000 C CIN "PartNumber"
+	1    7850 4650
+	1    0    0    -1  
+$EndComp
+Connection ~ 7350 4950
+Wire Wire Line
+	7600 4950 7350 4950
+Wire Wire Line
+	7600 4750 7600 4950
+Connection ~ 7600 4950
+Wire Wire Line
+	7600 4950 7850 4950
+Wire Wire Line
+	7850 4950 7850 4750
+Wire Wire Line
+	6850 4350 7100 4350
+Connection ~ 7100 4350
+Wire Wire Line
+	7100 4550 7100 4350
+Wire Wire Line
+	7100 4350 7350 4350
+Connection ~ 7350 4350
+Wire Wire Line
+	7350 4550 7350 4350
+Wire Wire Line
+	7350 4350 7600 4350
+Wire Wire Line
+	7600 4350 7850 4350
+Connection ~ 7600 4350
+Wire Wire Line
+	7600 4550 7600 4350
+Wire Wire Line
+	7850 4350 7850 4550
+Wire Wire Line
+	6850 4550 6850 4350
+Connection ~ 6850 4350
+Wire Wire Line
+	6850 4350 6600 4350
+Wire Wire Line
+	6600 4350 6600 4550
+Connection ~ 6600 4350
+Wire Wire Line
+	6350 4350 6600 4350
+Wire Wire Line
+	6350 4550 6350 4350
+Connection ~ 6350 4350
+Wire Wire Line
+	6350 4350 6100 4350
+Wire Wire Line
+	6100 4350 6100 4550
+Connection ~ 6100 4350
+Wire Wire Line
+	5850 4350 6100 4350
+Wire Wire Line
+	5850 4550 5850 4350
+Connection ~ 5850 4350
+Wire Wire Line
+	5850 4350 5600 4350
+Wire Wire Line
+	5600 4350 5600 4550
+Connection ~ 5600 4350
+Wire Wire Line
+	5350 4350 5600 4350
+Wire Wire Line
+	5350 4550 5350 4350
+Connection ~ 5350 4350
+Wire Wire Line
+	5350 4350 5100 4350
+Wire Wire Line
+	5100 4350 5100 4550
+Connection ~ 5100 4350
+Wire Wire Line
+	4850 4350 5100 4350
+Wire Wire Line
+	4850 4550 4850 4350
+Connection ~ 4850 4350
+Wire Wire Line
+	4850 4350 4600 4350
+Wire Wire Line
+	4600 4350 4600 4550
+Connection ~ 4600 4350
+Wire Wire Line
+	4350 4350 4600 4350
+Wire Wire Line
+	4350 4550 4350 4350
+Connection ~ 4350 4350
+Wire Wire Line
+	4350 4350 4100 4350
+Wire Wire Line
+	4100 4350 4100 4550
+Connection ~ 4100 4350
+Wire Wire Line
+	3850 4350 4100 4350
+Wire Wire Line
+	3850 4550 3850 4350
+Connection ~ 3850 4350
+Wire Wire Line
+	3850 4350 3600 4350
+Wire Wire Line
+	3600 4350 3600 4550
+$Comp
+L power:+BATT #PWR0111
+U 1 1 60D716A0
+P 2450 4350
+F 0 "#PWR0111" H 2450 4200 50  0001 C CNN
+F 1 "+BATT" V 2500 4500 50  0000 L CNN
+F 2 "" H 2450 4350 50  0001 C CNN
+F 3 "" H 2450 4350 50  0001 C CNN
+	1    2450 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:-BATT #PWR0112
+U 1 1 60D716AA
+P 9000 4950
+F 0 "#PWR0112" H 9000 4800 50  0001 C CNN
+F 1 "-BATT" V 9050 5100 50  0000 L CNN
+F 2 "" H 9000 4950 50  0001 C CNN
+F 3 "" H 9000 4950 50  0001 C CNN
+	1    9000 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C190
+U 1 1 60D716B5
+P 3150 4650
+F 0 "C190" H 3200 4750 50  0000 L CNN
+F 1 "100n 100V X7" V 3100 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3150 4650 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 3150 4650 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 3200 4350 25  0000 C CIN "PartNumber"
+	1    3150 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 4550 3150 4350
+Connection ~ 3600 4350
+Connection ~ 3150 4350
+Wire Wire Line
+	3150 4350 3600 4350
+Wire Wire Line
+	3150 4750 3150 4950
+Wire Wire Line
+	2900 4950 3150 4950
+Connection ~ 3600 4950
+Connection ~ 3150 4950
+Wire Wire Line
+	3150 4950 3600 4950
+Wire Wire Line
+	2450 4350 2900 4350
+Wire Wire Line
+	2900 4350 3150 4350
+Connection ~ 2900 4350
+Wire Wire Line
+	2900 4550 2900 4350
+Wire Wire Line
+	2900 4750 2900 4950
+$Comp
+L Device:C_Small C189
+U 1 1 60D716CE
+P 2900 4650
+F 0 "C189" H 2950 4750 50  0000 L CNN
+F 1 "100n 100V X7" V 2850 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2900 4650 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 2900 4650 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 2950 4350 25  0000 C CIN "PartNumber"
+	1    2900 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C209
+U 1 1 60D716D9
+P 8300 4650
+F 0 "C209" H 8350 4750 50  0000 L CNN
+F 1 "100n 100V X7" V 8250 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8300 4650 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8300 4650 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8350 4350 25  0000 C CIN "PartNumber"
+	1    8300 4650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 4550 8300 4350
+Wire Wire Line
+	8550 4350 8300 4350
+Connection ~ 7850 4350
+Connection ~ 8300 4350
+Wire Wire Line
+	8300 4350 7850 4350
+Wire Wire Line
+	8300 4750 8300 4950
+Connection ~ 7850 4950
+Connection ~ 8300 4950
+Wire Wire Line
+	8300 4950 7850 4950
+Wire Wire Line
+	8550 4550 8550 4350
+Wire Wire Line
+	9000 4950 8550 4950
+Wire Wire Line
+	8550 4950 8300 4950
+Connection ~ 8550 4950
+Wire Wire Line
+	8550 4750 8550 4950
+$Comp
+L Device:C_Small C210
+U 1 1 60D716F2
+P 8550 4650
+F 0 "C210" H 8600 4750 50  0000 L CNN
+F 1 "100n 100V X7" V 8500 4300 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8550 4650 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8550 4650 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8600 4350 25  0000 C CIN "PartNumber"
+	1    8550 4650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C232
+U 1 1 60D716FD
+P 8550 5550
+F 0 "C232" H 8600 5650 50  0000 L CNN
+F 1 "100n 100V X7" V 8500 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8550 5550 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8550 5550 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8600 5250 25  0000 C CIN "PartNumber"
+	1    8550 5550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 5650 8550 5850
+Connection ~ 8550 5850
+Wire Wire Line
+	9000 5850 8550 5850
+Wire Wire Line
+	8550 5450 8550 5250
+Wire Wire Line
+	8550 5850 8300 5850
+Wire Wire Line
+	8300 5850 7850 5850
+Connection ~ 8300 5850
+Wire Wire Line
+	8300 5650 8300 5850
+Wire Wire Line
+	8300 5250 7850 5250
+Wire Wire Line
+	8550 5250 8300 5250
+Connection ~ 8300 5250
+Wire Wire Line
+	8300 5450 8300 5250
+$Comp
+L Device:C_Small C231
+U 1 1 60D71714
+P 8300 5550
+F 0 "C231" H 8350 5650 50  0000 L CNN
+F 1 "100n 100V X7" V 8250 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8300 5550 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 8300 5550 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 8350 5250 25  0000 C CIN "PartNumber"
+	1    8300 5550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C211
+U 1 1 60D7171F
+P 2900 5550
+F 0 "C211" H 2950 5650 50  0000 L CNN
+F 1 "100n 100V X7" V 2850 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2900 5550 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 2900 5550 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 2950 5250 25  0000 C CIN "PartNumber"
+	1    2900 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 5650 2900 5850
+Wire Wire Line
+	2900 5450 2900 5250
+Connection ~ 2900 5250
+Wire Wire Line
+	2450 5250 2900 5250
+Wire Wire Line
+	3150 5850 3600 5850
+Wire Wire Line
+	2900 5850 3150 5850
+Connection ~ 3150 5850
+Wire Wire Line
+	3150 5650 3150 5850
+Wire Wire Line
+	2900 5250 3150 5250
+Wire Wire Line
+	3150 5250 3600 5250
+Connection ~ 3150 5250
+Wire Wire Line
+	3150 5450 3150 5250
+$Comp
+L Device:C_Small C212
+U 1 1 60D71736
+P 3150 5550
+F 0 "C212" H 3200 5650 50  0000 L CNN
+F 1 "100n 100V X7" V 3100 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3150 5550 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/2007071713_CCTC-TCC0603X7R104K101CT_C696916.pdf" H 3150 5550 50  0001 C CNN
+F 4 "TCC0603X7R104K101CT" V 3200 5250 25  0000 C CIN "PartNumber"
+	1    3150 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-BATT #PWR0114
+U 1 1 60D71740
+P 9000 5850
+F 0 "#PWR0114" H 9000 5700 50  0001 C CNN
+F 1 "-BATT" V 9050 6000 50  0000 L CNN
+F 2 "" H 9000 5850 50  0001 C CNN
+F 3 "" H 9000 5850 50  0001 C CNN
+	1    9000 5850
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+BATT #PWR0113
+U 1 1 60D7174A
+P 2450 5250
+F 0 "#PWR0113" H 2450 5100 50  0001 C CNN
+F 1 "+BATT" V 2500 5400 50  0000 L CNN
+F 2 "" H 2450 5250 50  0001 C CNN
+F 3 "" H 2450 5250 50  0001 C CNN
+	1    2450 5250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3600 5250 3600 5450
+Connection ~ 3600 5250
+Wire Wire Line
+	3850 5250 3600 5250
+Wire Wire Line
+	3850 5450 3850 5250
+Connection ~ 3850 5250
+Wire Wire Line
+	3850 5250 4100 5250
+Wire Wire Line
+	4100 5250 4100 5450
+Connection ~ 4100 5250
+Wire Wire Line
+	4350 5250 4100 5250
+Wire Wire Line
+	4350 5450 4350 5250
+Connection ~ 4350 5250
+Wire Wire Line
+	4350 5250 4600 5250
+Wire Wire Line
+	4600 5250 4600 5450
+Connection ~ 4600 5250
+Wire Wire Line
+	4850 5250 4600 5250
+Wire Wire Line
+	4850 5450 4850 5250
+Connection ~ 4850 5250
+Wire Wire Line
+	4850 5250 5100 5250
+Wire Wire Line
+	5100 5250 5100 5450
+Connection ~ 5100 5250
+Wire Wire Line
+	5350 5250 5100 5250
+Wire Wire Line
+	5350 5450 5350 5250
+Connection ~ 5350 5250
+Wire Wire Line
+	5350 5250 5600 5250
+Wire Wire Line
+	5600 5250 5600 5450
+Connection ~ 5600 5250
+Wire Wire Line
+	5850 5250 5600 5250
+Wire Wire Line
+	5850 5450 5850 5250
+Connection ~ 5850 5250
+Wire Wire Line
+	5850 5250 6100 5250
+Wire Wire Line
+	6100 5250 6100 5450
+Connection ~ 6100 5250
+Wire Wire Line
+	6350 5250 6100 5250
+Wire Wire Line
+	6350 5450 6350 5250
+Connection ~ 6350 5250
+Wire Wire Line
+	6350 5250 6600 5250
+Wire Wire Line
+	6600 5250 6600 5450
+Connection ~ 6600 5250
+Wire Wire Line
+	6850 5250 6600 5250
+Wire Wire Line
+	6850 5450 6850 5250
+Wire Wire Line
+	7850 5250 7850 5450
+Wire Wire Line
+	7600 5450 7600 5250
+Connection ~ 7850 5250
+Wire Wire Line
+	7600 5250 7850 5250
+Connection ~ 7600 5250
+Wire Wire Line
+	7350 5250 7600 5250
+Wire Wire Line
+	7350 5450 7350 5250
+Connection ~ 7350 5250
+Wire Wire Line
+	7100 5250 7350 5250
+Wire Wire Line
+	7100 5450 7100 5250
+Connection ~ 7100 5250
+Connection ~ 6850 5250
+Wire Wire Line
+	6850 5250 7100 5250
+Wire Wire Line
+	7850 5850 7850 5650
+Connection ~ 7850 5850
+Wire Wire Line
+	7600 5850 7850 5850
+Wire Wire Line
+	7600 5650 7600 5850
+Connection ~ 7600 5850
+Wire Wire Line
+	7600 5850 7350 5850
+$Comp
+L Device:C_Small C230
+U 1 1 60D71790
+P 7850 5550
+F 0 "C230" H 7900 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7800 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7850 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7850 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7900 5300 25  0000 C CIN "PartNumber"
+	1    7850 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C229
+U 1 1 60D7179B
+P 7600 5550
+F 0 "C229" H 7650 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7550 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7600 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7600 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7650 5300 25  0000 C CIN "PartNumber"
+	1    7600 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 5850 7350 5650
+Connection ~ 7350 5850
+Wire Wire Line
+	7100 5850 7350 5850
+Wire Wire Line
+	7100 5650 7100 5850
+Connection ~ 7100 5850
+Wire Wire Line
+	7100 5850 6850 5850
+Wire Wire Line
+	6850 5850 6850 5650
+Connection ~ 6850 5850
+Wire Wire Line
+	6600 5850 6850 5850
+Wire Wire Line
+	6600 5650 6600 5850
+Connection ~ 6600 5850
+Wire Wire Line
+	6600 5850 6350 5850
+$Comp
+L Device:C_Small C228
+U 1 1 60D717B2
+P 7350 5550
+F 0 "C228" H 7400 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7300 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7350 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7350 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7400 5300 25  0000 C CIN "PartNumber"
+	1    7350 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C227
+U 1 1 60D717BD
+P 7100 5550
+F 0 "C227" H 7150 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 7050 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7100 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 7100 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 7150 5300 25  0000 C CIN "PartNumber"
+	1    7100 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C225
+U 1 1 60D717D3
+P 6600 5550
+F 0 "C225" H 6650 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 6550 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6600 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 6600 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 6650 5300 25  0000 C CIN "PartNumber"
+	1    6600 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 5850 6350 5650
+Connection ~ 6350 5850
+Wire Wire Line
+	6100 5850 6350 5850
+Wire Wire Line
+	6100 5650 6100 5850
+Connection ~ 6100 5850
+Wire Wire Line
+	6100 5850 5850 5850
+Wire Wire Line
+	5850 5850 5850 5650
+Connection ~ 5850 5850
+Wire Wire Line
+	5600 5850 5850 5850
+Wire Wire Line
+	5600 5650 5600 5850
+Connection ~ 5600 5850
+Wire Wire Line
+	5600 5850 5350 5850
+Wire Wire Line
+	5350 5850 5350 5650
+Connection ~ 5350 5850
+Wire Wire Line
+	5100 5850 5350 5850
+Wire Wire Line
+	5100 5650 5100 5850
+Connection ~ 5100 5850
+Wire Wire Line
+	5100 5850 4850 5850
+Wire Wire Line
+	4850 5850 4850 5650
+Connection ~ 4850 5850
+Wire Wire Line
+	4600 5850 4850 5850
+$Comp
+L Device:C_Small C222
+U 1 1 60D71809
+P 5850 5550
+F 0 "C222" H 5900 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5800 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5850 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5850 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5900 5300 25  0000 C CIN "PartNumber"
+	1    5850 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C221
+U 1 1 60D71814
+P 5600 5550
+F 0 "C221" H 5650 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 5550 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 5600 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 5600 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 5650 5300 25  0000 C CIN "PartNumber"
+	1    5600 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C218
+U 1 1 60D71835
+P 4850 5550
+F 0 "C218" H 4900 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4800 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4850 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4850 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4900 5300 25  0000 C CIN "PartNumber"
+	1    4850 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C217
+U 1 1 60D71840
+P 4600 5550
+F 0 "C217" H 4650 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4550 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4600 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4600 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4650 5300 25  0000 C CIN "PartNumber"
+	1    4600 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C216
+U 1 1 60D7184B
+P 4350 5550
+F 0 "C216" H 4400 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4300 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4350 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4350 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4400 5300 25  0000 C CIN "PartNumber"
+	1    4350 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C215
+U 1 1 60D71856
+P 4100 5550
+F 0 "C215" H 4150 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 4050 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 4100 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 4100 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 4150 5300 25  0000 C CIN "PartNumber"
+	1    4100 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C214
+U 1 1 60D71861
+P 3850 5550
+F 0 "C214" H 3900 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 3800 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3850 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 3850 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 3900 5300 25  0000 C CIN "PartNumber"
+	1    3850 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C213
+U 1 1 60D7186C
+P 3600 5550
+F 0 "C213" H 3650 5650 50  0000 L CNN
+F 1 "4.7u 100V X7" V 3550 5200 25  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3600 5550 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/or/detail?pn=HMK325C7475KMHPE&u=M" H 3600 5550 50  0001 C CNN
+F 4 "HMK325C7475KMHPE" V 3650 5300 25  0000 C CIN "PartNumber"
+	1    3600 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 5650 4600 5850
+Wire Wire Line
+	3600 5850 3600 5650
+Wire Wire Line
+	3850 5650 3850 5850
+Connection ~ 3600 5850
+Wire Wire Line
+	3850 5850 3600 5850
+Connection ~ 3850 5850
+Wire Wire Line
+	4100 5850 3850 5850
+Wire Wire Line
+	4100 5650 4100 5850
+Connection ~ 4100 5850
+Wire Wire Line
+	4350 5850 4100 5850
+Wire Wire Line
+	4350 5650 4350 5850
+Connection ~ 4350 5850
+Connection ~ 4600 5850
+Wire Wire Line
+	4600 5850 4350 5850
+$Comp
+L Mechanical:MountingHole H101
+U 1 1 61142223
+P 2300 6550
+F 0 "H101" H 2400 6600 50  0000 L CNN
+F 1 "M3" H 2400 6550 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2300 6550 50  0001 C CNN
+F 3 "~" H 2300 6550 50  0001 C CNN
+	1    2300 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H103
+U 1 1 611430EC
+P 2300 6750
+F 0 "H103" H 2400 6800 50  0000 L CNN
+F 1 "M3" H 2400 6750 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2300 6750 50  0001 C CNN
+F 3 "~" H 2300 6750 50  0001 C CNN
+	1    2300 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H105
+U 1 1 61143398
+P 2300 6950
+F 0 "H105" H 2400 7000 50  0000 L CNN
+F 1 "M3" H 2400 6950 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2300 6950 50  0001 C CNN
+F 3 "~" H 2300 6950 50  0001 C CNN
+	1    2300 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H107
+U 1 1 6114369D
+P 2300 7150
+F 0 "H107" H 2400 7200 50  0000 L CNN
+F 1 "M3" H 2400 7150 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2300 7150 50  0001 C CNN
+F 3 "~" H 2300 7150 50  0001 C CNN
+	1    2300 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H102
+U 1 1 6118FC10
+P 2800 6550
+F 0 "H102" H 2900 6600 50  0000 L CNN
+F 1 "M3" H 2900 6550 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2800 6550 50  0001 C CNN
+F 3 "~" H 2800 6550 50  0001 C CNN
+	1    2800 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H104
+U 1 1 6118FC22
+P 2800 6750
+F 0 "H104" H 2900 6800 50  0000 L CNN
+F 1 "M3" H 2900 6750 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2800 6750 50  0001 C CNN
+F 3 "~" H 2800 6750 50  0001 C CNN
+	1    2800 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H106
+U 1 1 6118FC2C
+P 2800 6950
+F 0 "H106" H 2900 7000 50  0000 L CNN
+F 1 "M3" H 2900 6950 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2800 6950 50  0001 C CNN
+F 3 "~" H 2800 6950 50  0001 C CNN
+	1    2800 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H108
+U 1 1 6118FC36
+P 2800 7150
+F 0 "H108" H 2900 7200 50  0000 L CNN
+F 1 "M3" H 2900 7150 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 2800 7150 50  0001 C CNN
+F 3 "~" H 2800 7150 50  0001 C CNN
+	1    2800 7150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 1350 5850 1350
+Connection ~ 5600 1350
+Connection ~ 5850 1350
+Wire Wire Line
+	5850 1350 6100 1350
+$EndSCHEMATC

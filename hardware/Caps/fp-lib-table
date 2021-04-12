@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name Switches)(type KiCad)(uri /home/joaoantoniocardoso/ZeniteSolar/2021/MAM21/hardware/Switches/Switches.pretty)(options "")(descr ""))
+)
