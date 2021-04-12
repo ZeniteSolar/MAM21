@@ -31,28 +31,6 @@ Text Label 6650 6550 0    50   ~ 0
 SL1
 Text Label 9800 6550 2    50   ~ 0
 SL2
-$Comp
-L Device:R_Small_US R109
-U 1 1 6067713F
-P 7650 7150
-F 0 "R109" H 7750 7200 50  0000 L CNN
-F 1 "10" H 7750 7150 50  0000 L CNN
-F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 7650 7150 50  0001 C CNN
-F 3 "~" H 7650 7150 50  0001 C CNN
-	1    7650 7150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C105
-U 1 1 6067937E
-P 7650 7350
-F 0 "C105" H 7750 7400 50  0000 L CNN
-F 1 "100n" H 7750 7350 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7650 7350 50  0001 C CNN
-F 3 "~" H 7650 7350 50  0001 C CNN
-	1    7650 7350
-	1    0    0    -1  
-$EndComp
 Text Label 6900 6950 3    50   ~ 0
 GL1_3
 Wire Wire Line
@@ -80,8 +58,6 @@ Wire Wire Line
 	7200 7600 7200 7400
 Connection ~ 6700 7600
 Wire Wire Line
-	7650 7050 7650 6850
-Wire Wire Line
 	7650 6850 7200 6850
 Connection ~ 7200 6850
 Wire Wire Line
@@ -99,28 +75,6 @@ Text Label 8950 6950 3    50   ~ 0
 GL2_2
 Wire Wire Line
 	8950 6950 8950 7200
-$Comp
-L Device:R_Small_US R110
-U 1 1 6069711C
-P 10200 7150
-F 0 "R110" H 10300 7200 50  0000 L CNN
-F 1 "10" H 10300 7150 50  0000 L CNN
-F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 10200 7150 50  0001 C CNN
-F 3 "~" H 10200 7150 50  0001 C CNN
-	1    10200 7150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C106
-U 1 1 60697126
-P 10200 7350
-F 0 "C106" H 10300 7400 50  0000 L CNN
-F 1 "100n" H 10300 7350 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 10200 7350 50  0001 C CNN
-F 3 "~" H 10200 7350 50  0001 C CNN
-	1    10200 7350
-	1    0    0    -1  
-$EndComp
 Text Label 9450 6950 3    50   ~ 0
 GL3_3
 Wire Wire Line
@@ -163,28 +117,6 @@ Text Label 6400 5600 3    50   ~ 0
 GH1_2
 Wire Wire Line
 	6400 5600 6400 5850
-$Comp
-L Device:R_Small_US R101
-U 1 1 606A4184
-P 7650 5800
-F 0 "R101" H 7750 5850 50  0000 L CNN
-F 1 "10" H 7750 5800 50  0000 L CNN
-F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 7650 5800 50  0001 C CNN
-F 3 "~" H 7650 5800 50  0001 C CNN
-	1    7650 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C102
-U 1 1 606A418E
-P 7650 6000
-F 0 "C102" H 7750 6050 50  0000 L CNN
-F 1 "100n" H 7750 6000 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7650 6000 50  0001 C CNN
-F 3 "~" H 7650 6000 50  0001 C CNN
-	1    7650 6000
-	1    0    0    -1  
-$EndComp
 Text Label 6900 5600 3    50   ~ 0
 GH1_3
 Wire Wire Line
@@ -215,8 +147,6 @@ Wire Wire Line
 	7650 5500 7200 5500
 Connection ~ 7200 5500
 Wire Wire Line
-	7650 6100 7650 6250
-Wire Wire Line
 	7650 6250 7200 6250
 Connection ~ 7200 6250
 Text Label 8450 5600 3    50   ~ 0
@@ -228,26 +158,15 @@ GH2_2
 Wire Wire Line
 	8950 5600 8950 5850
 $Comp
-L Device:R_Small_US R102
-U 1 1 606A41CE
-P 10200 5800
-F 0 "R102" H 10300 5850 50  0000 L CNN
-F 1 "10" H 10300 5800 50  0000 L CNN
-F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 10200 5800 50  0001 C CNN
-F 3 "~" H 10200 5800 50  0001 C CNN
-	1    10200 5800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C103
+L Device:C_Small Csn103
 U 1 1 606A41D8
 P 10200 6000
-F 0 "C103" H 10300 6050 50  0000 L CNN
+F 0 "Csn103" H 10300 6050 50  0000 L CNN
 F 1 "100n" H 10300 6000 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 10200 6000 50  0001 C CNN
 F 3 "~" H 10200 6000 50  0001 C CNN
 	1    10200 6000
-	1    0    0    -1  
+	-1   0    0    -1  
 $EndComp
 Text Label 9450 5600 3    50   ~ 0
 GH2_3
@@ -275,8 +194,6 @@ Wire Wire Line
 Wire Wire Line
 	9750 6250 9750 6050
 Connection ~ 9250 6250
-Wire Wire Line
-	10200 5700 10200 5500
 Wire Wire Line
 	10200 5500 9750 5500
 Connection ~ 9750 5500
@@ -360,7 +277,7 @@ U 1 1 607E90E9
 P 6100 5850
 F 0 "Q101" H 5900 5700 50  0000 L CNN
 F 1 "IPT015N10N5" H 5600 5600 50  0000 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 6300 5775 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 6300 5775 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 6100 5850 50  0001 L CNN
 	1    6100 5850
 	1    0    0    -1  
@@ -371,7 +288,7 @@ U 1 1 607EBB6B
 P 6600 5850
 F 0 "Q102" H 6400 5700 50  0000 L CNN
 F 1 "IPT015N10N5" H 6850 5850 50  0001 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 6800 5775 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 6800 5775 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 6600 5850 50  0001 L CNN
 	1    6600 5850
 	1    0    0    -1  
@@ -382,7 +299,7 @@ U 1 1 607EC601
 P 7100 5850
 F 0 "Q103" H 6900 5700 50  0000 L CNN
 F 1 "IPT015N10N5" H 7350 5850 50  0001 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 7300 5775 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 7300 5775 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 7100 5850 50  0001 L CNN
 	1    7100 5850
 	1    0    0    -1  
@@ -393,7 +310,7 @@ U 1 1 607ECFDB
 P 6100 7200
 F 0 "Q107" H 5900 7050 50  0000 L CNN
 F 1 "IPT015N10N5" H 5600 6950 50  0001 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 6300 7125 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 6300 7125 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 6100 7200 50  0001 L CNN
 	1    6100 7200
 	1    0    0    -1  
@@ -404,7 +321,7 @@ U 1 1 607EE01C
 P 6600 7200
 F 0 "Q108" H 6400 7050 50  0000 L CNN
 F 1 "IPT015N10N5" H 6850 7200 50  0001 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 6800 7125 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 6800 7125 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 6600 7200 50  0001 L CNN
 	1    6600 7200
 	1    0    0    -1  
@@ -415,7 +332,7 @@ U 1 1 607EE88E
 P 7100 7200
 F 0 "Q109" H 6900 7050 50  0000 L CNN
 F 1 "IPT015N10N5" H 7350 7200 50  0001 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 7300 7125 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 7300 7125 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 7100 7200 50  0001 L CNN
 	1    7100 7200
 	1    0    0    -1  
@@ -426,7 +343,7 @@ U 1 1 607EF48F
 P 8650 5850
 F 0 "Q104" H 8450 5700 50  0000 L CNN
 F 1 "IPT015N10N5" H 8900 5850 50  0001 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 8850 5775 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 8850 5775 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 8650 5850 50  0001 L CNN
 	1    8650 5850
 	1    0    0    -1  
@@ -437,7 +354,7 @@ U 1 1 607F00AC
 P 9150 5850
 F 0 "Q105" H 8950 5700 50  0000 L CNN
 F 1 "IPT015N10N5" H 9400 5850 50  0001 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 9350 5775 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 9350 5775 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 9150 5850 50  0001 L CNN
 	1    9150 5850
 	1    0    0    -1  
@@ -448,7 +365,7 @@ U 1 1 607F14FA
 P 9650 5850
 F 0 "Q106" H 9450 5700 50  0000 L CNN
 F 1 "IPT015N10N5" H 9900 5850 50  0001 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 9850 5775 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 9850 5775 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 9650 5850 50  0001 L CNN
 	1    9650 5850
 	1    0    0    -1  
@@ -459,7 +376,7 @@ U 1 1 607F1E48
 P 8650 7200
 F 0 "Q110" H 8450 7050 50  0000 L CNN
 F 1 "IPT015N10N5" H 8900 7200 50  0001 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 8850 7125 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 8850 7125 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 8650 7200 50  0001 L CNN
 	1    8650 7200
 	1    0    0    -1  
@@ -470,7 +387,7 @@ U 1 1 607F2DDC
 P 9150 7200
 F 0 "Q111" H 8950 7050 50  0000 L CNN
 F 1 "IPT015N10N5" H 9400 7200 50  0001 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 9350 7125 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 9350 7125 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 9150 7200 50  0001 L CNN
 	1    9150 7200
 	1    0    0    -1  
@@ -481,7 +398,7 @@ U 1 1 607F345E
 P 9650 7200
 F 0 "Q112" H 9450 7050 50  0000 L CNN
 F 1 "IPT015N10N5" H 9900 7200 50  0001 L CNN
-F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias_custom" H 9850 7125 50  0001 L CIN
+F 2 "Switches:Infineon_PG-HSOF-8-1_ThermalVias3" H 9850 7125 50  0001 L CIN
 F 3 "http://www.infineon.com/dgdl/Infineon-IPT015N10N5-DS-v02_01-EN.pdf?fileId=5546d4624a75e5f1014ac94680661aff" H 9650 7200 50  0001 L CNN
 	1    9650 7200
 	1    0    0    -1  
@@ -2125,5 +2042,348 @@ F 2 "" H 4100 2900 50  0001 C CNN
 F 3 "" H 4100 2900 50  0001 C CNN
 	1    4100 2900
 	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 5900 10200 5900
+Connection ~ 10200 5900
+Wire Wire Line
+	10200 5500 10200 5700
+Wire Wire Line
+	10350 5700 10200 5700
+Connection ~ 10200 5700
+Wire Wire Line
+	10350 6100 10200 6100
+Connection ~ 10200 6100
+$Comp
+L Device:R_Small_US Rsn104
+U 1 1 60989154
+P 10350 5800
+F 0 "Rsn104" H 10450 5850 50  0001 L CNN
+F 1 "NC" H 10450 5800 50  0001 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 10350 5800 50  0001 C CNN
+F 3 "~" H 10350 5800 50  0001 C CNN
+	1    10350 5800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small Csn104
+U 1 1 6098965F
+P 10350 6000
+F 0 "Csn104" H 10450 6050 50  0001 L CNN
+F 1 "NC" H 10450 6000 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 10350 6000 50  0001 C CNN
+F 3 "~" H 10350 6000 50  0001 C CNN
+	1    10350 6000
+	-1   0    0    -1  
+$EndComp
+Connection ~ 10350 5900
+$Comp
+L Device:D_Schottky_Small Dsn103
+U 1 1 6098B341
+P 10500 5800
+F 0 "Dsn103" H 10500 5500 50  0000 C CNN
+F 1 "MBR2H100SFT3G" H 10500 5600 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" V 10500 5800 50  0001 C CNN
+F 3 "https://www.onsemi.com/pdf/datasheet/mbr2h100sf-d.pdf" V 10500 5800 50  0001 C CNN
+	1    10500 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10500 5700 10350 5700
+Connection ~ 10350 5700
+Wire Wire Line
+	10350 5900 10500 5900
+$Comp
+L Device:D_Schottky_Small Dsn104
+U 1 1 609C8580
+P 10600 5800
+F 0 "Dsn104" H 10600 5550 50  0001 C CNN
+F 1 "NC" H 10600 5650 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123F" V 10600 5800 50  0001 C CNN
+F 3 "https://www.onsemi.com/pdf/datasheet/mbr2h100sf-d.pdf" V 10600 5800 50  0001 C CNN
+	1    10600 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10600 5700 10500 5700
+Connection ~ 10500 5700
+Wire Wire Line
+	10600 5900 10500 5900
+Connection ~ 10500 5900
+Wire Wire Line
+	10350 7450 10200 7450
+Wire Wire Line
+	7800 7450 7650 7450
+$Comp
+L Device:R_Small_US Rsn103
+U 1 1 606A41CE
+P 10200 5800
+F 0 "Rsn103" H 10300 5850 50  0000 L CNN
+F 1 "10" H 10300 5800 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 10200 5800 50  0001 C CNN
+F 3 "~" H 10200 5800 50  0001 C CNN
+	1    10200 5800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 5700 7800 5700
+Wire Wire Line
+	10200 7050 10350 7050
+$Comp
+L Device:C_Small Csn107
+U 1 1 60B87E92
+P 10200 7350
+F 0 "Csn107" H 10300 7400 50  0000 L CNN
+F 1 "100n" H 10300 7350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 10200 7350 50  0001 C CNN
+F 3 "~" H 10200 7350 50  0001 C CNN
+	1    10200 7350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10350 7250 10200 7250
+Connection ~ 10200 7250
+Connection ~ 10200 7050
+Connection ~ 10200 7450
+$Comp
+L Device:R_Small_US Rsn108
+U 1 1 60B87EB2
+P 10350 7150
+F 0 "Rsn108" H 10450 7200 50  0001 L CNN
+F 1 "NC" H 10450 7150 50  0001 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 10350 7150 50  0001 C CNN
+F 3 "~" H 10350 7150 50  0001 C CNN
+	1    10350 7150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small Csn108
+U 1 1 60B87EBC
+P 10350 7350
+F 0 "Csn108" H 10450 7400 50  0001 L CNN
+F 1 "NC" H 10450 7350 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 10350 7350 50  0001 C CNN
+F 3 "~" H 10350 7350 50  0001 C CNN
+	1    10350 7350
+	-1   0    0    -1  
+$EndComp
+Connection ~ 10350 7250
+$Comp
+L Device:D_Schottky_Small Dsn107
+U 1 1 60B87EC7
+P 10500 7150
+F 0 "Dsn107" H 10500 6850 50  0000 C CNN
+F 1 "MBR2H100SFT3G" H 10500 6950 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" V 10500 7150 50  0001 C CNN
+F 3 "https://www.onsemi.com/pdf/datasheet/mbr2h100sf-d.pdf" V 10500 7150 50  0001 C CNN
+	1    10500 7150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10500 7050 10350 7050
+Connection ~ 10350 7050
+Wire Wire Line
+	10350 7250 10500 7250
+$Comp
+L Device:D_Schottky_Small Dsn108
+U 1 1 60B87ED4
+P 10600 7150
+F 0 "Dsn108" H 10600 6900 50  0001 C CNN
+F 1 "NC" H 10600 7000 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123F" V 10600 7150 50  0001 C CNN
+F 3 "https://www.onsemi.com/pdf/datasheet/mbr2h100sf-d.pdf" V 10600 7150 50  0001 C CNN
+	1    10600 7150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10600 7050 10500 7050
+Connection ~ 10500 7050
+Wire Wire Line
+	10600 7250 10500 7250
+Connection ~ 10500 7250
+$Comp
+L Device:R_Small_US Rsn107
+U 1 1 60B87EE2
+P 10200 7150
+F 0 "Rsn107" H 10300 7200 50  0000 L CNN
+F 1 "10" H 10300 7150 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 10200 7150 50  0001 C CNN
+F 3 "~" H 10200 7150 50  0001 C CNN
+	1    10200 7150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 7050 7650 6850
+Wire Wire Line
+	7650 7050 7800 7050
+$Comp
+L Device:C_Small Csn105
+U 1 1 60BAE17B
+P 7650 7350
+F 0 "Csn105" H 7750 7400 50  0000 L CNN
+F 1 "100n" H 7750 7350 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7650 7350 50  0001 C CNN
+F 3 "~" H 7650 7350 50  0001 C CNN
+	1    7650 7350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 7250 7650 7250
+Connection ~ 7650 7250
+Connection ~ 7650 7050
+Connection ~ 7650 7450
+$Comp
+L Device:R_Small_US Rsn106
+U 1 1 60BAE189
+P 7800 7150
+F 0 "Rsn106" H 7900 7200 50  0001 L CNN
+F 1 "NC" H 7900 7150 50  0001 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 7800 7150 50  0001 C CNN
+F 3 "~" H 7800 7150 50  0001 C CNN
+	1    7800 7150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small Csn106
+U 1 1 60BAE193
+P 7800 7350
+F 0 "Csn106" H 7900 7400 50  0001 L CNN
+F 1 "NC" H 7900 7350 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7800 7350 50  0001 C CNN
+F 3 "~" H 7800 7350 50  0001 C CNN
+	1    7800 7350
+	-1   0    0    -1  
+$EndComp
+Connection ~ 7800 7250
+$Comp
+L Device:D_Schottky_Small Dsn105
+U 1 1 60BAE19E
+P 7950 7150
+F 0 "Dsn105" H 7950 6850 50  0000 C CNN
+F 1 "MBR2H100SFT3G" H 7950 6950 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" V 7950 7150 50  0001 C CNN
+F 3 "https://www.onsemi.com/pdf/datasheet/mbr2h100sf-d.pdf" V 7950 7150 50  0001 C CNN
+	1    7950 7150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7950 7050 7800 7050
+Connection ~ 7800 7050
+Wire Wire Line
+	7800 7250 7950 7250
+$Comp
+L Device:D_Schottky_Small Dsn106
+U 1 1 60BAE1AB
+P 8050 7150
+F 0 "Dsn106" H 8050 6900 50  0001 C CNN
+F 1 "NC" H 8050 7000 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123F" V 8050 7150 50  0001 C CNN
+F 3 "https://www.onsemi.com/pdf/datasheet/mbr2h100sf-d.pdf" V 8050 7150 50  0001 C CNN
+	1    8050 7150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8050 7050 7950 7050
+Connection ~ 7950 7050
+Wire Wire Line
+	8050 7250 7950 7250
+Connection ~ 7950 7250
+$Comp
+L Device:R_Small_US Rsn105
+U 1 1 60BAE1B9
+P 7650 7150
+F 0 "Rsn105" H 7750 7200 50  0000 L CNN
+F 1 "10" H 7750 7150 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 7650 7150 50  0001 C CNN
+F 3 "~" H 7650 7150 50  0001 C CNN
+	1    7650 7150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 6100 7650 6250
+Wire Wire Line
+	7800 6100 7650 6100
+$Comp
+L Device:C_Small Csn101
+U 1 1 60BD03D3
+P 7650 6000
+F 0 "Csn101" H 7750 6050 50  0000 L CNN
+F 1 "100n" H 7750 6000 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7650 6000 50  0001 C CNN
+F 3 "~" H 7650 6000 50  0001 C CNN
+	1    7650 6000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 5900 7650 5900
+Connection ~ 7650 5900
+Connection ~ 7650 5700
+Connection ~ 7650 6100
+$Comp
+L Device:R_Small_US Rsn102
+U 1 1 60BD03E1
+P 7800 5800
+F 0 "Rsn102" H 7900 5850 50  0001 L CNN
+F 1 "NC" H 7900 5800 50  0001 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 7800 5800 50  0001 C CNN
+F 3 "~" H 7800 5800 50  0001 C CNN
+	1    7800 5800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small Csn102
+U 1 1 60BD03EB
+P 7800 6000
+F 0 "Csn102" H 7900 6050 50  0001 L CNN
+F 1 "NC" H 7900 6000 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 7800 6000 50  0001 C CNN
+F 3 "~" H 7800 6000 50  0001 C CNN
+	1    7800 6000
+	-1   0    0    -1  
+$EndComp
+Connection ~ 7800 5900
+$Comp
+L Device:D_Schottky_Small Dsn101
+U 1 1 60BD03F6
+P 7950 5800
+F 0 "Dsn101" H 7950 5500 50  0000 C CNN
+F 1 "MBR2H100SFT3G" H 7950 5600 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123F" V 7950 5800 50  0001 C CNN
+F 3 "https://www.onsemi.com/pdf/datasheet/mbr2h100sf-d.pdf" V 7950 5800 50  0001 C CNN
+	1    7950 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7950 5700 7800 5700
+Connection ~ 7800 5700
+Wire Wire Line
+	7800 5900 7950 5900
+$Comp
+L Device:D_Schottky_Small Dsn102
+U 1 1 60BD0403
+P 8050 5800
+F 0 "Dsn102" H 8050 5550 50  0001 C CNN
+F 1 "NC" H 8050 5650 50  0001 C CNN
+F 2 "Diode_SMD:D_SOD-123F" V 8050 5800 50  0001 C CNN
+F 3 "https://www.onsemi.com/pdf/datasheet/mbr2h100sf-d.pdf" V 8050 5800 50  0001 C CNN
+	1    8050 5800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8050 5700 7950 5700
+Connection ~ 7950 5700
+Wire Wire Line
+	8050 5900 7950 5900
+Connection ~ 7950 5900
+$Comp
+L Device:R_Small_US Rsn101
+U 1 1 60BD0411
+P 7650 5800
+F 0 "Rsn101" H 7750 5850 50  0000 L CNN
+F 1 "10" H 7750 5800 50  0000 L CNN
+F 2 "Resistor_SMD:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder" H 7650 5800 50  0001 C CNN
+F 3 "~" H 7650 5800 50  0001 C CNN
+	1    7650 5800
+	-1   0    0    -1  
 $EndComp
 $EndSCHEMATC
