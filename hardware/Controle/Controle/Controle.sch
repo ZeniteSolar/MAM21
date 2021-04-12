@@ -750,17 +750,6 @@ F 3 "~" H 9600 3350 50  0001 C CNN
 	1    9600 3350
 	1    0    0    -1  
 $EndComp
-$Comp
-L Mechanical:MountingHole H104
-U 1 1 60B88A3F
-P 9600 3650
-F 0 "H104" H 9700 3696 50  0000 L CNN
-F 1 "MountingHole" H 9700 3605 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 3650 50  0001 C CNN
-F 3 "~" H 9600 3650 50  0001 C CNN
-	1    9600 3650
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2700 3100 2800 3100
 $Comp
@@ -858,4 +847,15 @@ F 3 "" H 1850 2600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1850 2600 1850 2650
+$Comp
+L Mechanical:MountingHole H104
+U 1 1 60B88A3F
+P 9600 3650
+F 0 "H104" H 9700 3696 50  0000 L CNN
+F 1 "MountingHole" H 9700 3605 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 9600 3650 50  0001 C CNN
+F 3 "~" H 9600 3650 50  0001 C CNN
+	1    9600 3650
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
