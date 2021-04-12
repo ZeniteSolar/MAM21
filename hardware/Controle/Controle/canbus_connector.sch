@@ -22,8 +22,6 @@ CAN_18V
 Text HLabel 3100 3700 0    60   BiDi ~ 0
 CAN_GND
 Wire Wire Line
-	5950 4500 5950 3900
-Wire Wire Line
 	5000 3600 5550 3600
 Wire Wire Line
 	5550 3700 5000 3700
@@ -38,7 +36,7 @@ CAN_L
 Text Label 5000 3700 0    60   ~ 0
 CAN_H
 $Comp
-L Connector:RJ45_Shielded J301
+L Connector:RJ45 J301
 U 1 1 5BE6C2F7
 P 5950 3400
 F 0 "J301" H 6150 3950 50  0000 C CNN
@@ -52,8 +50,6 @@ Wire Wire Line
 	5550 3000 5450 3000
 Wire Wire Line
 	4950 3000 4950 3500
-Wire Wire Line
-	4950 4500 5950 4500
 Wire Wire Line
 	5550 3100 5450 3100
 Wire Wire Line
@@ -73,8 +69,6 @@ Wire Wire Line
 Wire Wire Line
 	4950 3500 5550 3500
 Connection ~ 4950 3500
-Wire Wire Line
-	4950 3500 4950 4500
 $Comp
 L power:GND #PWR0302
 U 1 1 5BE6CF28
@@ -86,9 +80,6 @@ F 3 "" H 4950 4600 50  0001 C CNN
 	1    4950 4600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4950 4500 4950 4600
-Connection ~ 4950 4500
 Text Label 3200 3400 0    60   ~ 0
 CAN_18V
 Wire Wire Line
@@ -119,4 +110,6 @@ Wire Wire Line
 Wire Wire Line
 	5450 3200 5450 3100
 Connection ~ 5450 3100
+Wire Wire Line
+	4950 3500 4950 4600
 $EndSCHEMATC

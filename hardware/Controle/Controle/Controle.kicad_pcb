@@ -245,7 +245,7 @@
     (fp_text reference R103 (at 0 -1.43 90) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43 90) (layer Eco2.User) hide
+    (fp_text value 10k (at 0 1.43 90) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4125) (end -0.8 -0.4125) (layer F.Fab) (width 0.1))
@@ -329,7 +329,7 @@
     (fp_text reference R102 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 100R (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -365,7 +365,7 @@
     (fp_text reference R101 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 100R (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -2317,7 +2317,7 @@
     (fp_text reference R612 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value NC (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -2353,7 +2353,7 @@
     (fp_text reference R611 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value NC (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4125) (end -0.8 -0.4125) (layer F.Fab) (width 0.1))
@@ -2389,7 +2389,7 @@
     (fp_text reference R610 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value NC (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -2425,7 +2425,7 @@
     (fp_text reference R609 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 3k3 (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -2461,7 +2461,7 @@
     (fp_text reference R608 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 3k3 (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -2497,7 +2497,7 @@
     (fp_text reference R607 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 3k3 (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -2533,7 +2533,7 @@
     (fp_text reference R606 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value NC (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -2569,7 +2569,7 @@
     (fp_text reference R605 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value NC (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -2605,7 +2605,7 @@
     (fp_text reference R604 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 0R (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -2641,7 +2641,7 @@
     (fp_text reference R603 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 10k (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -2677,7 +2677,7 @@
     (fp_text reference R602 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 10k (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -2713,7 +2713,7 @@
     (fp_text reference R601 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 10k (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -3003,7 +3003,7 @@
     (fp_text reference C604 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 100n (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -3039,7 +3039,7 @@
     (fp_text reference C603 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 1n (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -3075,7 +3075,7 @@
     (fp_text reference C602 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 1n (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -3111,7 +3111,7 @@
     (fp_text reference C601 (at 0 -1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (fp_text value ? (at 0 1.43) (layer Eco2.User) hide
+    (fp_text value 1n (at 0 1.43) (layer Eco2.User) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start 1.65 0.73) (end -1.65 0.73) (layer F.CrtYd) (width 0.05))
@@ -4153,9 +4153,9 @@
   (segment (start 133.8213 70.1497) (end 133.546999 70.424001) (width 0.508) (layer B.Cu) (net 2) (tstamp 6072DDC5))
   (via (at 133.8213 70.1497) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (segment (start 133.7198 68.4988) (end 133.415 68.194) (width 0.25) (layer F.Cu) (net 2) (tstamp 6072DDC7))
-  (via (at 133.7198 68.4988) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
+  (via (at 134.0246 68.067) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (segment (start 136.207201 65.604999) (end 136.921999 65.604999) (width 0.25) (layer F.Cu) (net 2) (tstamp 6072DDC9))
-  (via (at 136.207201 65.604999) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
+  (via (at 136.1836 65.146) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (segment (start 151.13701 68.50599) (end 151.51801 68.50599) (width 0.25) (layer F.Cu) (net 2) (tstamp 6072DDCB))
   (via (at 151.13701 68.50599) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
   (via (at 158.8658 76.9316) (size 0.8) (drill 0.4) (layers F.Cu B.Cu) (net 2))
@@ -4628,7 +4628,7 @@
   (segment (start 155.513 71.12) (end 156.275 71.882) (width 0.25) (layer F.Cu) (net 62) (tstamp 607539AA))
   (segment (start 155.513 69.8685) (end 155.513 71.12) (width 0.25) (layer F.Cu) (net 62) (tstamp 60752888))
 
-  (zone (net 2) (net_name GND) (layer B.Cu) (tstamp 6073DB17) (hatch edge 0.508)
+  (zone (net 2) (net_name GND) (layer B.Cu) (tstamp 6074BD61) (hatch edge 0.508)
     (connect_pads (clearance 0.254))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -5020,7 +5020,7 @@
       )
     )
   )
-  (zone (net 2) (net_name GND) (layer F.Cu) (tstamp 6073DB14) (hatch edge 0.508)
+  (zone (net 2) (net_name GND) (layer F.Cu) (tstamp 6074BD5E) (hatch edge 0.508)
     (connect_pads yes (clearance 0.254))
     (min_thickness 0.254)
     (fill yes (arc_segments 32) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -5869,7 +5869,7 @@
       )
     )
   )
-  (zone (net 3) (net_name +5V) (layer F.Cu) (tstamp 6073DB11) (hatch edge 0.508)
+  (zone (net 3) (net_name +5V) (layer F.Cu) (tstamp 6074BD5B) (hatch edge 0.508)
     (priority 1)
     (connect_pads yes (clearance 0.254))
     (min_thickness 0.254)
@@ -5907,7 +5907,7 @@
       )
     )
   )
-  (zone (net 1) (net_name +3V3) (layer F.Cu) (tstamp 6073DB0E) (hatch edge 0.508)
+  (zone (net 1) (net_name +3V3) (layer F.Cu) (tstamp 6074BD58) (hatch edge 0.508)
     (priority 1)
     (connect_pads yes (clearance 0.254))
     (min_thickness 0.254)
@@ -5938,7 +5938,7 @@
       )
     )
   )
-  (zone (net 1) (net_name +3V3) (layer F.Cu) (tstamp 6073DB0B) (hatch edge 0.508)
+  (zone (net 1) (net_name +3V3) (layer F.Cu) (tstamp 6074BD55) (hatch edge 0.508)
     (priority 1)
     (connect_pads yes (clearance 0.254))
     (min_thickness 0.254)
