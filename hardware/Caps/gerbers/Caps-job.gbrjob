@@ -7,7 +7,7 @@
       "Application": "Pcbnew",
       "Version":     "5.1.9"
     },
-    "CreationDate":  "2021-04-12T04:53:29-03:00"
+    "CreationDate":  "2021-04-12T08:18:13-03:00"
   },
   "GeneralSpecs":
   {
@@ -60,6 +60,11 @@
       "FilePolarity":  "Positive"
     },
     {
+      "Path":  "Caps-B_SilkS.gbo",
+      "FileFunction":  "Legend,Bot",
+      "FilePolarity":  "Positive"
+    },
+    {
       "Path":  "Caps-F_Mask.gts",
       "FileFunction":  "SolderMask,Top",
       "FilePolarity":  "Negative"
@@ -105,6 +110,10 @@
     {
       "Type":  "SolderMask",
       "Notes":  "Layer B.Mask"
+    },
+    {
+      "Type":  "Legend",
+      "Notes":  "Layer B.SilkS"
     }
   ]
 }
