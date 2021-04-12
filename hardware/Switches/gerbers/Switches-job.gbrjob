@@ -7,7 +7,7 @@
       "Application": "Pcbnew",
       "Version":     "5.1.9"
     },
-    "CreationDate":  "2021-04-12T01:52:26-03:00"
+    "CreationDate":  "2021-04-12T02:39:58-03:00"
   },
   "GeneralSpecs":
   {
@@ -48,57 +48,57 @@
   "FilesAttributes":
   [
     {
-      "Path":  "Switches-F_Cu.gbr",
+      "Path":  "Switches-F_Cu.gtl",
       "FileFunction":  "Copper,L1,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Switches-In1_Cu.gbr",
+      "Path":  "Switches-In1_Cu.g2",
       "FileFunction":  "Copper,L2,Inr",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Switches-In2_Cu.gbr",
+      "Path":  "Switches-In2_Cu.g3",
       "FileFunction":  "Copper,L3,Inr",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Switches-B_Cu.gbr",
+      "Path":  "Switches-B_Cu.gbl",
       "FileFunction":  "Copper,L4,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Switches-F_Paste.gbr",
+      "Path":  "Switches-F_Paste.gtp",
       "FileFunction":  "SolderPaste,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Switches-B_Paste.gbr",
+      "Path":  "Switches-B_Paste.gbp",
       "FileFunction":  "SolderPaste,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Switches-F_SilkS.gbr",
+      "Path":  "Switches-F_SilkS.gto",
       "FileFunction":  "Legend,Top",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Switches-B_SilkS.gbr",
+      "Path":  "Switches-B_SilkS.gbo",
       "FileFunction":  "Legend,Bot",
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "Switches-F_Mask.gbr",
+      "Path":  "Switches-F_Mask.gts",
       "FileFunction":  "SolderMask,Top",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "Switches-B_Mask.gbr",
+      "Path":  "Switches-B_Mask.gbs",
       "FileFunction":  "SolderMask,Bot",
       "FilePolarity":  "Negative"
     },
     {
-      "Path":  "Switches-Edge_Cuts.gbr",
+      "Path":  "Switches-Edge_Cuts.gm1",
       "FileFunction":  "Profile",
       "FilePolarity":  "Positive"
     }
