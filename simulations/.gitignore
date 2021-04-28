@@ -1,0 +1,8 @@
+*.smv
+*.lnk
+*.raw
+*.op.raw
+*.pdf
+*.zip
+*.log
+.ipynb_checkpoints

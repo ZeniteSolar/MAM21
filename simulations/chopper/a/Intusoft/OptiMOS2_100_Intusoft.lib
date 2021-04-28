@@ -1,0 +1,1620 @@
+*****************************************************************
+* INFINEON Power Transistors                                    *
+* Simplified Intusoft SPICE Model Library for OptiMOS n-Channel *
+* Transistors                                                   *
+* Version 101208                                                *
+*                                                               *
+*****************************************************************
+*                                                               *
+* The Simulation Model is subject to change without notice. In  *
+* addition, models can be a useful tool in evaluating device    *
+* performance, they cannot reflect the accurate device          *
+* performance under all conditions, nor are they intended to    *
+* replace bread boarding for final verification. Infineon       *
+* therefore does not assume any warranty or liability           *
+* whatsoever arising from their use. Infineon does not assume   *
+* any warranty or liability for the values and functions of the *
+* Simulation Model.                                             *
+* The methods and results of the Simulation Model are to the    *
+* best of our knowledge                                         *
+* correct. However, the user is fully responsible to verify and *
+* validate these results under the operating conditions and in  *
+* the environment of its application. Infineon will not bear    *
+* the responsibility arising out of or in connection with any   *
+* malfunction of the Simulation Models.                         *
+* Models provided by Infineon are not warranted by Infineon as  *
+* completely and comprehensively representing all the           *
+* specifications and operating characteristics of the           *
+* semiconductor products to which these models relate. The      *
+* models describe the characteristics of typical devices. In    *
+* all cases, the current data sheet information for a given     *
+* device is the conclusive design guideline and the only actual * 
+* performance specification.                                    *
+*                                                               *
+* This library contains models of the following INFINEON        *
+* OptiMOS2 transistors:                                         *
+*                                                               *
+*   100V NL                                                     *
+*  IPB04CN10N           IPD12CN10N                              *
+*  IPB05CN10N           IPD16CN10N                              *
+*  IPB06CN10N           IPD25CN10N                              *
+*  IPB08CN10N           IPD33CN10N                              *
+*  IPB12CN10N           IPD49CN10N                              *
+*  IPB16CN10N           IPD78CN10N                              *
+*  IPP04CN10N           IPD64CN10N                              *
+*  IPP05CN10N           BSC079N10NS                             *
+*  IPP06CN10N           BSC118N10NS                             *
+*  IPP08CN10N           BSC196N10NS                             *
+*  IPP12CN10N           BSC100N10NSF                            *
+*  IPP16CN10N           BSC152N10NSF                            *
+*  IPP26CN10N           BSC252N10NSF                            *
+*  IPP35CN10N           BSC750N10ND                             *
+*  IPP50CN10N                                                   *
+*  IPP80CN10N                                                   *
+*                                                               *
+*   100 V LL                                                    *
+*  IPP05CN10L           IPS12CN10L            BSC159N10LSF      *
+*  IPP06CN10L           BSC082N10LS           BSC265N10LSF      *
+*  IPP08CN10L           BSC123N10LS                             *
+*  IPP12CN10L           BSC205N10LS                             *
+*  IPP16CN10L           BSC105N10LSF                            *
+*****************************************************************
+
+
+*SRC=IPB04CN10N_L0;IPB04CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 100A 4.1mOhm
+*SYM=POWMOSN
+.SUBCKT IPB04CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    1n
+Ls     source s1   3n
+Rs      s1    s2   623u
+
+Rg     g1    g2     1.9
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 372.6  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 2.3m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=7.7n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=51.5p  N=1.11  RS=0.74u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 0.53m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   3.39n
+.MODEL     DGD    D(M=2.4   CJO=3.39n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    10.36n
+
+.ENDS IPB04CN10N_L0
+******
+
+*SRC=IPP04CN10N_L0;IPP04CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 100A 4.4mOhm
+*SYM=POWMOSN
+.SUBCKT IPP04CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   3n
+Rs      s1    s2   623u
+
+Rg     g1    g2     1.9
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 372.6  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 2.6m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=7.7n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=51.5p  N=1.11  RS=0.74u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 0.53m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   3.39n
+.MODEL     DGD    D(M=2.4   CJO=3.39n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    10.36n
+
+.ENDS IPP04CN10N_L0
+******
+
+*SRC=IPB05CN10N_L0;IPB05CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 100A 5.1mOhm
+*SYM=POWMOSN
+.SUBCKT IPB05CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    1n
+Ls     source s1   3n
+Rs      s1    s2   805u
+
+Rg     g1    g2     1.9
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 322.7  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 2.65m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=6.67n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=44.6p  N=1.11  RS=0.85u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 0.61m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   2.94n
+.MODEL     DGD    D(M=2.4   CJO=2.94n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    8.98n
+
+.ENDS IPB05CN10N_L0
+******
+
+*SRC=IPP05CN10N_L0;IPP05CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 100A 5.4mOhm
+*SYM=POWMOSN
+.SUBCKT IPP05CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   3n
+Rs      s1    s2   805u
+
+Rg     g1    g2     1.9
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 322.7  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 2.95m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=6.67n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=44.6p  N=1.11  RS=0.85u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 0.61m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   2.94n
+.MODEL     DGD    D(M=2.4   CJO=2.94n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    8.98n
+
+.ENDS IPP05CN10N_L0
+******
+
+*SRC=IPB06CN10N_L0;IPB06CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 100A 6.2mOhm
+*SYM=POWMOSN
+.SUBCKT IPB06CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    1n
+Ls     source s1   3n
+Rs      s1    s2   745u
+
+Rg     g1    g2     1.6
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 246.1  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 3.46m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=5.08n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=34p  N=1.11  RS=1.12u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 0.8m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   2.24n
+.MODEL     DGD    D(M=2.4   CJO=2.24n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    6.86n
+
+.ENDS IPB06CN10N_L0
+******
+
+*SRC=IPP06CN10N_L0;IPP06CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 100A 6.5mOhm
+*SYM=POWMOSN
+.SUBCKT IPP06CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   3n
+Rs      s1    s2   745u
+
+Rg     g1    g2     1.6
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 246.1  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 3.76m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=5.08n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=34p  N=1.11  RS=1.12u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 0.8m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   2.24n
+.MODEL     DGD    D(M=2.4   CJO=2.24n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    6.86n
+
+.ENDS IPP06CN10N_L0
+******
+
+*SRC=IPB08CN10N_L0;IPB08CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 95A 8.2mOhm
+*SYM=POWMOSN
+.SUBCKT IPB08CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    1n
+Ls     source s1   3n
+Rs      s1    s2   705u
+
+Rg     g1    g2     1.5
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 177.4  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 4.78m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=3.66n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=24.5p  N=1.11  RS=1.55u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.12m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   1.62n
+.MODEL     DGD    D(M=2.4   CJO=1.62n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    4.96n
+
+.ENDS IPB08CN10N_L0
+******
+
+*SRC=IPP08CN10N_L0;IPP08CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 95A 8.5mOhm
+*SYM=POWMOSN
+.SUBCKT IPP08CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   3n
+Rs      s1    s2   705u
+
+Rg     g1    g2     1.5
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 177.4  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 5.08m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=3.66n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=24.5p  N=1.11  RS=1.55u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.12m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   1.62n
+.MODEL     DGD    D(M=2.4   CJO=1.62n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    4.96n
+
+.ENDS IPP08CN10N_L0
+******
+
+*SRC=IPB12CN10N_L0;IPB12CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 67A 12.6mOhm
+*SYM=POWMOSN
+.SUBCKT IPB12CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    1n
+Ls     source s1   4n
+Rs      s1    s2   958u
+
+Rg     g1    g2     1.5
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 114.3  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 7.39m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=2.36n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=15.8p  N=1.11  RS=2.41u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.73m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   1.04n
+.MODEL     DGD    D(M=2.4   CJO=1.04n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    3.22n
+
+.ENDS IPB12CN10N_L0
+******
+
+*SRC=IPP12CN10N_L0;IPP12CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 67A 12.9mOhm
+*SYM=POWMOSN
+.SUBCKT IPP12CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   4n
+Rs      s1    s2   958u
+
+Rg     g1    g2     1.5
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 114.3  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 7.69m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=2.36n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=15.8p  N=1.11  RS=2.41u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.73m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   1.04n
+.MODEL     DGD    D(M=2.4   CJO=1.04n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    3.22n
+
+.ENDS IPP12CN10N_L0
+******
+
+*SRC=IPD12CN10N_L0;IPD12CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 67A 12.4mOhm
+*SYM=POWMOSN
+.SUBCKT IPD12CN10N_L0  drain  gate  source
+
+Lg     gate  g1    3n
+Ld     drain d1    1n
+Ls     source s1   2n
+Rs      s1    s2   791u
+
+Rg     g1    g2     1.5
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 114.3  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 7.39m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=2.36n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=15.8p  N=1.11  RS=2.41u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.73m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   1.04n
+.MODEL     DGD    D(M=2.4   CJO=1.04n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    3.22n
+
+.ENDS IPD12CN10N_L0
+******
+
+*SRC=IPB16CN10N_L0;IPB16CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 53A 16.2mOhm
+*SYM=POWMOSN
+.SUBCKT IPB16CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    1n
+Ls     source s1   4n
+Rs      s1    s2   908u
+
+Rg     g1    g2     1.2
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 84.7  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 9.95m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=1.75n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=11.7p  N=1.11  RS=3.25u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 2.34m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.77n
+.MODEL     DGD    D(M=2.4   CJO=0.77n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    2.4n
+
+.ENDS IPB16CN10N_L0
+******
+
+*SRC=IPP16CN10N_L0;IPP16CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 53A 16.5mOhm
+*SYM=POWMOSN
+.SUBCKT IPP16CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   4n
+Rs      s1    s2   908u
+
+Rg     g1    g2     1.2
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 84.7  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 10.25m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=1.75n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=11.7p  N=1.11  RS=3.25u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 2.34m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.77n
+.MODEL     DGD    D(M=2.4   CJO=0.77n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    2.4n
+
+.ENDS IPP16CN10N_L0
+******
+
+*SRC=IPD16CN10N_L0;IPD16CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 53A 16mOhm
+*SYM=POWMOSN
+.SUBCKT IPD16CN10N_L0  drain  gate  source
+
+Lg     gate  g1    3n
+Ld     drain d1    1n
+Ls     source s1   2n
+Rs      s1    s2   741u
+
+Rg     g1    g2     1.2
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 84.7  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 9.95m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=1.75n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=11.7p  N=1.11  RS=3.25u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 2.34m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.77n
+.MODEL     DGD    D(M=2.4   CJO=0.77n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    2.4n
+
+.ENDS IPD16CN10N_L0
+******
+
+*SRC=IPP26CN10N_L0;IPP26CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 35A 26mOhm
+*SYM=POWMOSN
+.SUBCKT IPP26CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   5n
+Rs      s1    s2   1.72m
+
+Rg     g1    g2     1.1
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 53.6  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 15.99m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=1.11n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=7.4p  N=1.11  RS=5.13u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 3.69m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.49n
+.MODEL     DGD    D(M=2.4   CJO=0.49n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    1.54n
+
+.ENDS IPP26CN10N_L0
+******
+
+*SRC=IPD25CN10N_L0;IPD25CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 35A 25mOhm
+*SYM=POWMOSN
+.SUBCKT IPD25CN10N_L0  drain  gate  source
+
+Lg     gate  g1    3n
+Ld     drain d1    1n
+Ls     source s1   2.5n
+Rs      s1    s2   1.41m
+
+Rg     g1    g2     1.1
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 53.6  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 15.69m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=1.11n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=7.4p  N=1.11  RS=5.13u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 3.69m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.49n
+.MODEL     DGD    D(M=2.4   CJO=0.49n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    1.54n
+
+.ENDS IPD25CN10N_L0
+******
+
+*SRC=IPP35CN10N_L0;IPP35CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 27A 35mOhm
+*SYM=POWMOSN
+.SUBCKT IPP35CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   5n
+Rs      s1    s2   1.53m
+
+Rg     g1    g2     1
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 40.2  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 21.24m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=0.83n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=5.5p  N=1.11  RS=6.85u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 4.93m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.37n
+.MODEL     DGD    D(M=2.4   CJO=0.37n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    1.17n
+
+.ENDS IPP35CN10N_L0
+******
+
+*SRC=IPD33CN10N_L0;IPD33CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 27A 33mOhm
+*SYM=POWMOSN
+.SUBCKT IPD33CN10N_L0  drain  gate  source
+
+Lg     gate  g1    3n
+Ld     drain d1    1n
+Ls     source s1   2.5n
+Rs      s1    s2   1.22m
+
+Rg     g1    g2     1
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 40.2  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 20.94m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=0.83n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=5.5p  N=1.11  RS=6.85u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 4.93m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.37n
+.MODEL     DGD    D(M=2.4   CJO=0.37n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    1.17n
+
+.ENDS IPD33CN10N_L0
+******
+
+*SRC=IPP50CN10N_L0;IPP50CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 20A 50mOhm
+*SYM=POWMOSN
+.SUBCKT IPP50CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   5n
+Rs      s1    s2   2.62m
+
+Rg     g1    g2     0.9
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 27.2  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 31.16m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=0.56n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=3.8p  N=1.11  RS=10.1u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 7.27m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.25n
+.MODEL     DGD    D(M=2.4   CJO=0.25n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    0.81n
+
+.ENDS IPP50CN10N_L0
+******
+
+*SRC=IPD49CN10N_L0;IPD49CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 20A 49mOhm
+*SYM=POWMOSN
+.SUBCKT IPD49CN10N_L0  drain  gate  source
+
+Lg     gate  g1    3n
+Ld     drain d1    1n
+Ls     source s1   2.5n
+Rs      s1    s2   2.01m
+
+Rg     g1    g2     0.9
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 27.2  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 30.86m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=0.56n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=3.8p  N=1.11  RS=10.1u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 7.27m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.25n
+.MODEL     DGD    D(M=2.4   CJO=0.25n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    0.81n
+
+.ENDS IPD49CN10N_L0
+******
+
+*SRC=IPP80CN10N_L0;IPP80CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 13A 80mOhm
+*SYM=POWMOSN
+.SUBCKT IPP80CN10N_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   5n
+Rs      s1    s2   4.3m
+
+Rg     g1    g2     0.8
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 17  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 49.62m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=0.35n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=2.4p  N=1.11  RS=16.16u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 11.63m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.16n
+.MODEL     DGD    D(M=2.4   CJO=0.16n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    0.53n
+
+.ENDS IPP80CN10N_L0
+******
+
+*SRC=IPD78CN10N_L0;IPD78CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 13A 78mOhm
+*SYM=POWMOSN
+.SUBCKT IPD78CN10N_L0  drain  gate  source
+
+Lg     gate  g1    3n
+Ld     drain d1    1n
+Ls     source s1   2.5n
+Rs      s1    s2   3.14m
+
+Rg     g1    g2     0.8
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 17  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 49.32m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=0.35n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=2.4p  N=1.11  RS=16.16u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 11.63m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.16n
+.MODEL     DGD    D(M=2.4   CJO=0.16n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    0.53n
+
+.ENDS IPD78CN10N_L0
+******
+
+*SRC=IPD64CN10N_L0;IPD64CN10N_L0;MOSFETs N;Infineon;OptiMOS2 100V 18A 64mOhm
+*SYM=POWMOSN
+.SUBCKT IPD64CN10N_L0  drain  gate  source
+
+Lg     gate  g1    3n
+Ld     drain d1    1n
+Ls     source s1   2.5n
+Rs      s1    s2   3.14m
+
+Rg     g1    g2     0.9
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 16.7  VTO=4.3  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 30.05m
+.model Rdmod R TC1=10.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=0.4n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=3.8p  N=1.11  RS=10.1u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 4.04m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.127n
+.MODEL     DGD    D(M=2.1   CJO=0.127n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    0.43n
+
+.ENDS IPD64CN10N_L0
+******
+
+*SRC=IPP05CN10L_L0;IPP05CN10L_L0;MOSFETs N;Infineon;OptiMOS2 100V 100A 5.4mOhm
+*SYM=POWMOSN
+.SUBCKT IPP05CN10L_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   3n
+Rs      s1    s2   805u
+
+Rg     g1    g2     1.9
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 535.1  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 3.09m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=6.67n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=44.6p  N=1.07  RS=0.85u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 0.7m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   2.94n
+.MODEL     DGD    D(M=2.4   CJO=2.94n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    11.56n
+
+.ENDS IPP05CN10L_L0
+******
+
+*SRC=IPP06CN10L_L0;IPP06CN10L_L0;MOSFETs N;Infineon;OptiMOS2 100V 100A 6.5mOhm
+*SYM=POWMOSN
+.SUBCKT IPP06CN10L_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   3n
+Rs      s1    s2   745u
+
+Rg     g1    g2     1.6
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 408.1  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 3.95m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=5.08n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=34p  N=1.07  RS=1.12u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 0.92m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   2.24n
+.MODEL     DGD    D(M=2.4   CJO=2.24n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    8.83n
+
+.ENDS IPP06CN10L_L0
+******
+
+*SRC=IPP08CN10L_L0;IPP08CN10L_L0;MOSFETs N;Infineon;OptiMOS2 100V 95A 8.5mOhm
+*SYM=POWMOSN
+.SUBCKT IPP08CN10L_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   3n
+Rs      s1    s2   705u
+
+Rg     g1    g2     1.5
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 294.1  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 5.34m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=3.66n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=24.5p  N=1.07  RS=1.55u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.28m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   1.62n
+.MODEL     DGD    D(M=2.4   CJO=1.62n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    6.38n
+
+.ENDS IPP08CN10L_L0
+******
+
+*SRC=IPP12CN10L_L0;IPP12CN10L_L0;MOSFETs N;Infineon;OptiMOS2 100V 67A 12.9mOhm
+*SYM=POWMOSN
+.SUBCKT IPP12CN10L_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   4n
+Rs      s1    s2   958u
+
+Rg     g1    g2     1.5
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 189.5  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 8.1m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=2.36n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=15.8p  N=1.07  RS=2.41u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.99m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   1.04n
+.MODEL     DGD    D(M=2.4   CJO=1.04n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    4.13n
+
+.ENDS IPP12CN10L_L0
+******
+
+*SRC=IPS12CN10L_L0;IPS12CN10L_L0;MOSFETs N;Infineon;OptiMOS2 100V 67A 12.4mOhm
+*SYM=POWMOSN
+.SUBCKT IPS12CN10L_L0  drain  gate  source
+
+Lg     gate  g1    3n
+Ld     drain d1    2n
+Ls     source s1   2n
+Rs      s1    s2   791u
+
+Rg     g1    g2     1.5
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 189.5  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 8m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=2.36n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=15.8p  N=1.07  RS=2.41u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.99m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   1.04n
+.MODEL     DGD    D(M=2.4   CJO=1.04n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    4.13n
+
+.ENDS IPS12CN10L_L0
+******
+
+*SRC=IPP16CN10L_L0;IPP16CN10L_L0;MOSFETs N;Infineon;OptiMOS2 100V 53A 16mOhm
+*SYM=POWMOSN
+.SUBCKT IPP16CN10L_L0  drain  gate  source
+
+Lg     gate  g1    4n
+Ld     drain d1    2n
+Ls     source s1   4n
+Rs      s1    s2   908u
+
+Rg     g1    g2     1.2
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 140.4  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 10.8m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=1.75n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=11.7p  N=1.07  RS=3.25u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 2.68m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.77n
+.MODEL     DGD    D(M=2.4   CJO=0.77n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    3.08n
+
+.ENDS IPP16CN10L_L0
+******
+
+
+*SRC=BSC079N10NS_L0;BSC079N10NS_L0;MOSFETs N;Infineon;OptiMOS2 100V 100A 7.9mOhm
+*SYM=POWMOSN
+.SUBCKT BSC079N10NS_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   450u
+
+Rg     g1    g2     1
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 154.1  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 5.45m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=3.18n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=21.3p  N=1.11  RS=1.78u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.28m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   1.405n
+.MODEL     DGD    D(M=2.4   CJO=1.405n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    4.32n
+
+.ENDS BSC079N10NS_L0
+******
+
+*SRC=BSC118N10NS_L0;BSC118N10NS_L0;MOSFETs N;Infineon;OptiMOS2 100V 71A 11.8mOhm
+*SYM=POWMOSN
+.SUBCKT BSC118N10NS_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   349u
+
+Rg     g1    g2     0.8
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 99.1  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 8.47m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=2.05n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=13.7p  N=1.11  RS=2.78u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 2m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.905n
+.MODEL     DGD    D(M=2.4   CJO=0.905n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    2.8n
+
+.ENDS BSC118N10NS_L0
+******
+
+*SRC=BSC196N10NS_L0;BSC196N10NS_L0;MOSFETs N;Infineon;OptiMOS2 100V 45A 19.6mOhm
+*SYM=POWMOSN
+.SUBCKT BSC196N10NS_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   276u
+
+Rg     g1    g2     1
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 58.7  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 14.3m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=1.21n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=8.1p  N=1.11  RS=4.68u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 3.37m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.538n
+.MODEL     DGD    D(M=2.4   CJO=0.538n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    1.68n
+
+.ENDS BSC196N10NS_L0
+******
+
+
+*SRC=BSC100N10NSF_L0;BSC100N10NSF_L0;MOSFETs N;Infineon;OptiMOS2 100V 89A 10mOhm
+*SYM=POWMOSN
+.SUBCKT BSC100N10NSF_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   450u
+
+Rg     g1    g2     1
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 94.7  VTO=4.3  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 5.31m
+.model Rdmod R TC1=10.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=2.24n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=21.3p  N=1.11  RS=1.78u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 0.71m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.699n
+.MODEL     DGD    D(M=2.1   CJO=0.699n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    2.18n
+
+.ENDS BSC100N10NSF_L0
+******
+
+*SRC=BSC152N10NSF_L0;BSC152N10NSF_L0;MOSFETs N;Infineon;OptiMOS2 100V 61A 15.2mOhm
+*SYM=POWMOSN
+.SUBCKT BSC152N10NSF_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   349u
+
+Rg     g1    g2     0.8
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 60.9  VTO=4.3  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 8.25m
+.model Rdmod R TC1=10.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=1.44n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=13.7p  N=1.11  RS=2.78u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.11m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.451n
+.MODEL     DGD    D(M=2.1   CJO=0.451n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    1.42n
+
+.ENDS BSC152N10NSF_L0
+******
+
+*SRC=BSC252N10NSF_L0;BSC252N10NSF_L0;MOSFETs N;Infineon;OptiMOS2 100V 39A 25.2mOhm
+*SYM=POWMOSN
+.SUBCKT BSC252N10NSF_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   276u
+
+Rg     g1    g2     1
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 36.1  VTO=4.3  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 13.92m
+.model Rdmod R TC1=10.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=0.85n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=8.1p  N=1.11  RS=4.68u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.87m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.269n
+.MODEL     DGD    D(M=2.1   CJO=0.269n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    0.87n
+
+.ENDS BSC252N10NSF_L0
+******
+
+*SRC=BSC750N10ND_L0;BSC750N10ND_L0;MOSFETs N;Infineon;OptiMOS2 100V 13A 75mOhm
+*SYM=POWMOSN
+.SUBCKT BSC750N10ND_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   5.06m
+
+Rg     g1    g2     0.8
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 17  VTO=4.2  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 49.28m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=0.35n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=2.4p  N=1.11  RS=16.16u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 11.63m
+.model Rdiod R TC1=2m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.16n
+.MODEL     DGD    D(M=2.4   CJO=0.16n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    0.53n
+
+.ENDS BSC750N10ND_L0
+******
+
+
+*SRC=BSC082N10LS_L0;BSC082N10LS_L0;MOSFETs N;Infineon;OptiMOS2 100V 100A 8.2mOhm
+*SYM=POWMOSN
+.SUBCKT BSC082N10LS_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   450u
+
+Rg     g1    g2     1
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 255.6  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 5.75m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=3.18n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=21.3p  N=1.07  RS=1.78u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.47m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   1.405n
+.MODEL     DGD    D(M=2.4   CJO=1.405n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    5.55n
+
+.ENDS BSC082N10LS_L0
+******
+
+*SRC=BSC123N10LS_L0;BSC123N10LS_L0;MOSFETs N;Infineon;OptiMOS2 100V 72A 12.3mOhm
+*SYM=POWMOSN
+.SUBCKT BSC123N10LS_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   349u
+
+Rg     g1    g2     0.8
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 164.3  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 8.95m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=2.05n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=13.7p  N=1.07  RS=2.78u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 2.29m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.905n
+.MODEL     DGD    D(M=2.4   CJO=0.905n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    3.59n
+
+.ENDS BSC123N10LS_L0
+******
+
+*SRC=BSC205N10LS_L0;BSC205N10LS_L0;MOSFETs N;Infineon;OptiMOS2 100V 45A 20.5mOhm
+*SYM=POWMOSN
+.SUBCKT BSC205N10LS_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   276u
+
+Rg     g1    g2     1
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 97.3  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 15.1m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=1.21n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=8.1p  N=1.07  RS=4.68u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 3.87m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.538n
+.MODEL     DGD    D(M=2.4   CJO=0.538n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    2.15n
+
+.ENDS BSC205N10LS_L0
+******
+******
+
+*SRC=BSC105N10LSF_L0;BSC105N10LSF_L0;MOSFETs N;Infineon;OptiMOS2 100V 50A 10.5mOhm
+*SYM=POWMOSN
+.SUBCKT BSC105N10LSF_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   450u
+
+Rg     g1    g2     1.3
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 125.6  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 5.54m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=3.25n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=21.3p  N=1.07  RS=1.78u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 1.47m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.699n
+.MODEL     DGD    D(M=2.4   CJO=0.699n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    2.85n
+
+.ENDS BSC105N10LSF_L0
+******
+
+*SRC=BSC159N10LSF_L0;BSC159N10LSF_L0;MOSFETs N;Infineon;OptiMOS2 100V 50A 15.9mOhm
+*SYM=POWMOSN
+.SUBCKT BSC159N10LSF_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   349u
+
+Rg     g1    g2     1.0
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 80.7  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 8.61m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=2.09n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=13.7p  N=1.07  RS=2.78u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 2.29m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.451n
+.MODEL     DGD    D(M=2.4   CJO=0.451n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    1.87n
+
+.ENDS BSC159N10LSF_L0
+******
+
+*SRC=BSC265N10LSF_L0;BSC265N10LSF_L0;MOSFETs N;Infineon;OptiMOS2 100V 50A 26.5mOhm
+*SYM=POWMOSN
+.SUBCKT BSC265N10LSF_L0  drain  gate  source
+
+Lg     gate  g1    2n
+Ld     drain d1    0.5n
+Ls     source s1   1n
+Rs      s1    s2   276u
+
+Rg     g1    g2     1.5
+M1      d2    g2    s2    s2    DMOS    L=1u   W=1u
+.MODEL DMOS NMOS ( KP= 47.8  VTO=2.7  THETA=0  VMAX=1.5e5  ETA=0.005  LEVEL=3)
+Rd d1 d2 Rdmod 14.53m
+.model Rdmod R TC1=9.5m
+
+Dbd     s2    d2    Dbt
+.MODEL     Dbt    D(BV=131   M=0.35  CJO=1.24n  VJ=0.8V)
+Dbody   s2   21    DBODY
+.MODEL DBODY  D(IS=8.1p  N=1.07  RS=4.68u  EG=1.12  TT=90n)
+Rdiode d1 21 Rdiod 3.87m
+.model Rdiod R TC1=4m
+
+.MODEL   sw    NMOS(VTO=0  KP=10   LEVEL=1)
+Maux      g2   c    a    a   sw
+Maux2     b    d    g2    g2   sw
+Eaux      c    a    d2    g2   1
+Eaux2     d    g2   d2    g2   -1
+Cox       b    d2   0.269n
+.MODEL     DGD    D(M=2.4   CJO=0.269n   VJ=10)
+Rpar      b    d2   1Meg
+Dgd       a    d2   DGD
+Rpar2     d2   a    10Meg
+Cgs     g2    s2    1.15n
+
+.ENDS BSC265N10LSF_L0
+******

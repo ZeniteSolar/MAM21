@@ -1,0 +1,230 @@
+*version 9.1 1966487578
+@index
+symloc DMOS 0 1038 b
+symloc DMOS_depletion 1038 1063 b
+symloc BSP296_L0:DMOS 2101 277
+symloc BSS123_L0:DMOS 2378 277
+symloc BSP123_L0:DMOS 2655 277
+symloc BSS119_L0:DMOS 2932 277
+symloc BSS169_L0:DMOS_depletion 3209 302
+symloc SISC0_5N10D_L0:DMOS_depletion 3511 317
+symloc BSP372_L0:DMOS 3828 277
+symloc BSL296SN_L0:DMOS 4105 283
+symloc BSL372SN_L0:DMOS 4388 283
+symloc BSL373SN_L0:DMOS 4671 283
+*symbol DMOS b
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=DMOS
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=DMOS
+@pins
+p 0 25 40 hcn 100 source n 30 40 v
+a 0 s 0:1 0 31 38 hln 100 PIN=3
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 10 20 hcn 100 gate n 0 20 h
+a 0 s 0:1 0 1 18 hln 100 PIN=2
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 25 10 hcn 100 drain n 30 0 d
+a 0 s 0:1 0 31 -2 hln 100 PIN=1
+a 0 s 0 0 0 0 hln 100 ERC=x
+@graphics 46 40 0 20 10
+c 0 25 20 20 d_info:,0/0/0,,,,,,,,,,,,, 
+v 0 38 10
+38 30
+28 30
+;
+v 0 38 18 d_info:,,,,4/1/6/6,ON,0/0/255,,,,,,,, 
+35 22
+41 22
+38 18
+;
+v 0 25 16
+20 20
+;
+v 0 20 20
+25 24
+;
+r 0 35 17 41 18 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 30 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 10 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+v 0 30 20
+30 30
+;
+v 0 30 20
+20 20
+;
+v 0 38 10
+30 10
+;
+v 0 15 10
+15 30
+;
+v 0 10 20
+15 20
+;
+v 0 20 10
+30 10
+;
+v 0 20 30
+30 30
+;
+v 0 20 23
+20 17
+;
+v 0 20 33
+20 27
+;
+v 0 20 13
+20 7
+;
+*symbol DMOS_depletion b
+d Infineon n-channel depletion mode DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=DMOS
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=DMOS
+@pins
+p 0 25 40 hcn 100 source n 30 40 v
+a 0 s 0:1 0 31 38 hln 100 PIN=3
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 10 20 hcn 100 gate n 0 20 h
+a 0 s 0:1 0 1 18 hln 100 PIN=2
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 25 10 hcn 100 drain n 30 0 d
+a 0 s 0:1 0 31 -2 hln 100 PIN=1
+a 0 s 0 0 0 0 hln 100 ERC=x
+@graphics 46 40 0 20 10
+c 0 25 20 20 d_info:,0/0/0,,,,,,,,,,,,, 
+v 0 38 10
+38 30
+28 30
+;
+v 0 38 18 d_info:,,,,4/1/6/6,ON,0/0/255,,,,,,,, 
+35 22
+41 22
+38 18
+;
+v 0 25 16
+20 20
+;
+v 0 20 20
+25 24
+;
+r 0 35 17 41 18 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 30 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 10 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+v 0 30 20
+30 30
+;
+v 0 30 20
+20 20
+;
+v 0 38 10
+30 10
+;
+v 0 15 10
+15 30
+;
+v 0 10 20
+15 20
+;
+v 0 20 10
+30 10
+;
+v 0 20 30
+30 30
+;
+v 0 20 27
+20 10
+;
+v 0 20 33
+20 27
+;
+v 0 20 13
+20 7
+;
+*symbol BSP296_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 71 38 hcn 100 PART=BSP296_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSP296_L0
+*symbol BSS123_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 71 38 hcn 100 PART=BSS123_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSS123_L0
+*symbol BSP123_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 71 38 hcn 100 PART=BSP123_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSP123_L0
+*symbol BSS119_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 71 38 hcn 100 PART=BSS119_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSS119_L0
+*symbol BSS169_L0 ako DMOS_depletion
+d Infineon n-channel DMOS depletion mode transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 71 38 hcn 100 PART=BSS169_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSS169_L0
+*symbol SISC0_5N10D_L0 ako DMOS_depletion
+d Infineon n-channel DMOS depletion mode transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 91 36 hcn 100 PART=SISC0_5N10D_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=SISC0_5N10D_L0
+*symbol BSP372_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 71 38 hcn 100 PART=BSP372_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSP372_L0
+*symbol BSL296SN_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 9.1
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 71 38 hcn 100 PART=BSL296SN_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSL296SN_L0
+*symbol BSL372SN_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 9.1
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 71 38 hcn 100 PART=BSL372SN_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSL372SN_L0
+*symbol BSL373SN_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 9.1
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 71 38 hcn 100 PART=BSL373SN_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=BSL373SN_L0
