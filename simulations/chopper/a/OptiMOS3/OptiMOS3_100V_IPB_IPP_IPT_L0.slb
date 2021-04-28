@@ -1,0 +1,215 @@
+*version 9.1 239145096
+@index
+symloc DMOS 0 1038 b
+symloc IPB025N10N3_L0:DMOS 1038 292
+symloc IPB027N10N3_L0:DMOS 1330 292
+symloc IPP030N10N3_L0:DMOS 1622 292
+symloc IPB039N10N3_L0:DMOS 1914 292
+symloc IPB042N10N3_L0:DMOS 2206 292
+symloc IPP045N10N3_L0:DMOS 2498 292
+symloc IPP072N10N3_L0:DMOS 2790 292
+symloc IPB083N10N3_L0:DMOS 3082 292
+symloc IPP086N10N3_L0:DMOS 3374 292
+symloc IPP881N10N3_L0:DMOS 3666 292
+symloc IPB123N10N3_L0:DMOS 3958 292
+symloc IPP126N10N3_L0:DMOS 4250 292
+symloc IPP180N10N3_L0:DMOS 4542 292
+symloc IPP882N10N3_L0:DMOS 4834 292
+symloc IPT020N10N3_L0:DMOS 5126 292
+symloc IPB065N10N3_L0:DMOS 5418 292
+*symbol DMOS b
+d Infineon n-channel DMOS
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=DMOS
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=DMOS
+@pins
+p 0 25 40 hcn 100 source n 30 40 v
+a 0 s 0:1 0 31 38 hln 100 PIN=3
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 10 20 hcn 100 gate n 0 20 h
+a 0 s 0:1 0 1 18 hln 100 PIN=2
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 25 10 hcn 100 drain n 30 0 d
+a 0 s 0:1 0 31 -2 hln 100 PIN=1
+a 0 s 0 0 0 0 hln 100 ERC=x
+@graphics 46 40 0 20 10
+c 0 25 20 20 d_info:,0/0/0,,,,,,,,,,,,, 
+v 0 38 10
+38 30
+28 30
+;
+v 0 38 18 d_info:,,,,4/1/6/6,ON,0/0/255,,,,,,,, 
+35 22
+41 22
+38 18
+;
+v 0 25 16
+20 20
+;
+v 0 20 20
+25 24
+;
+r 0 35 17 41 18 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 30 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 10 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+v 0 30 20
+30 30
+;
+v 0 30 20
+20 20
+;
+v 0 38 10
+30 10
+;
+v 0 15 10
+15 30
+;
+v 0 10 20
+15 20
+;
+v 0 20 10
+30 10
+;
+v 0 20 30
+30 30
+;
+v 0 20 23
+20 17
+;
+v 0 20 33
+20 27
+;
+v 0 20 13
+20 7
+;
+*symbol IPB025N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPB025N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPB025N10N3_L0
+*symbol IPB027N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPB027N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPB027N10N3_L0
+*symbol IPP030N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPP030N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPP030N10N3_L0
+*symbol IPB039N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPB039N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPB039N10N3_L0
+*symbol IPB042N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPB042N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPB042N10N3_L0
+*symbol IPP045N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPP045N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPP045N10N3_L0
+*symbol IPP072N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPP072N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPP072N10N3_L0
+*symbol IPB083N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPB083N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPB083N10N3_L0
+*symbol IPP086N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPP086N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPP086N10N3_L0
+*symbol IPP881N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPP881N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPP881N10N3_L0
+*symbol IPB123N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPB123N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPB123N10N3_L0
+*symbol IPP126N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPP126N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPP126N10N3_L0
+*symbol IPP180N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPP180N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPP180N10N3_L0
+*symbol IPP882N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 8.0
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPP882N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPP882N10N3_L0
+*symbol IPT020N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 9.1
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPT020N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPT020N10N3_L0
+*symbol IPB065N10N3_L0 ako DMOS
+d Infineon n-channel DMOS transistor
+@type p 9.1
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL 
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 89 38 hcn 100 PART=IPB065N10N3_L0
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=IPB065N10N3_L0
