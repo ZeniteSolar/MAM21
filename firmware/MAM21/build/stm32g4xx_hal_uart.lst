@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc7zNdOR.s 			page 1
+ARM GAS  /tmp/cc9xt8el.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****             (+++) Configure the USARTx interrupt priority.
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****             (+++) Enable the NVIC USART IRQ handle.
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         (++) UART interrupts handling:
-ARM GAS  /tmp/cc7zNdOR.s 			page 2
+ARM GAS  /tmp/cc9xt8el.s 			page 2
 
 
   31:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****               -@@-  The specific UART interrupts (Transmission complete interrupt,
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
   85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     (+) ErrorCallback             : Error Callback.
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     (+) AbortCpltCallback         : Abort Complete Callback.
   87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     (+) AbortTransmitCpltCallback : Abort Transmit Complete Callback.
-ARM GAS  /tmp/cc7zNdOR.s 			page 3
+ARM GAS  /tmp/cc9xt8el.s 			page 3
 
 
   88:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     (+) AbortReceiveCpltCallback  : Abort Receive Complete Callback.
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  142:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     not defined, the callback registration feature is not available
  143:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     and weak (surcharged) callbacks are used.
  144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 4
+ARM GAS  /tmp/cc9xt8el.s 			page 4
 
 
  145:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  199:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @{
  200:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   */
  201:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** static void UART_EndTxTransfer(UART_HandleTypeDef *huart);
-ARM GAS  /tmp/cc7zNdOR.s 			page 5
+ARM GAS  /tmp/cc9xt8el.s 			page 5
 
 
  202:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** static void UART_EndRxTransfer(UART_HandleTypeDef *huart);
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  256:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****              in the data register is transmitted but is changed by the parity bit.
  257:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         (++) Hardware flow control
  258:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         (++) Receiver/transmitter modes
-ARM GAS  /tmp/cc7zNdOR.s 			page 6
+ARM GAS  /tmp/cc9xt8el.s 			page 6
 
 
  259:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         (++) Over Sampling Method
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  313:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
  314:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  315:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   if (huart->Init.HwFlowCtl != UART_HWCONTROL_NONE)
-ARM GAS  /tmp/cc7zNdOR.s 			page 7
+ARM GAS  /tmp/cc9xt8el.s 			page 7
 
 
  316:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  370:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* TEACK and/or REACK to check before moving huart->gState and huart->RxState to Ready */
  371:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   return (UART_CheckIdleState(huart));
  372:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** }
-ARM GAS  /tmp/cc7zNdOR.s 			page 8
+ARM GAS  /tmp/cc9xt8el.s 			page 8
 
 
  373:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  427:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* In half-duplex mode, the following bits must be kept cleared:
  428:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   - LINEN and CLKEN bits in the USART_CR2 register,
  429:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   - SCEN and IREN bits in the USART_CR3 register.*/
-ARM GAS  /tmp/cc7zNdOR.s 			page 9
+ARM GAS  /tmp/cc9xt8el.s 			page 9
 
 
  430:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   CLEAR_BIT(huart->Instance->CR2, (USART_CR2_LINEN | USART_CR2_CLKEN));
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  484:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  485:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     if (huart->MspInitCallback == NULL)
  486:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
-ARM GAS  /tmp/cc7zNdOR.s 			page 10
+ARM GAS  /tmp/cc9xt8el.s 			page 10
 
 
  487:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       huart->MspInitCallback = HAL_UART_MspInit;
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  541:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @note  If the user resorts to idle line detection wake up, the Address parameter
  542:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   *        is useless and ignored by the initialization function.
  543:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @note  If the user resorts to address mark wake up, the address length detection
-ARM GAS  /tmp/cc7zNdOR.s 			page 11
+ARM GAS  /tmp/cc9xt8el.s 			page 11
 
 
  544:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   *        is configured by default to 4 bits only. For the UART to be able to
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  598:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   - LINEN and CLKEN bits in the USART_CR2 register,
  599:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   - SCEN, HDSEL and IREN  bits in the USART_CR3 register. */
  600:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   CLEAR_BIT(huart->Instance->CR2, (USART_CR2_LINEN | USART_CR2_CLKEN));
-ARM GAS  /tmp/cc7zNdOR.s 			page 12
+ARM GAS  /tmp/cc9xt8el.s 			page 12
 
 
  601:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   CLEAR_BIT(huart->Instance->CR3, (USART_CR3_SCEN | USART_CR3_HDSEL | USART_CR3_IREN));
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  655:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->ErrorCode = HAL_UART_ERROR_NONE;
  656:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->gState = HAL_UART_STATE_RESET;
  657:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_RESET;
-ARM GAS  /tmp/cc7zNdOR.s 			page 13
+ARM GAS  /tmp/cc9xt8el.s 			page 13
 
 
  658:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->ReceptionType = HAL_UART_RECEPTION_STANDARD;
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  712:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   *           @arg @ref HAL_UART_TX_FIFO_EMPTY_CB_ID Tx Fifo Empty Callback ID
  713:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   *           @arg @ref HAL_UART_MSPINIT_CB_ID MspInit Callback ID
  714:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   *           @arg @ref HAL_UART_MSPDEINIT_CB_ID MspDeInit Callback ID
-ARM GAS  /tmp/cc7zNdOR.s 			page 14
+ARM GAS  /tmp/cc9xt8el.s 			page 14
 
 
  715:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @param  pCallback pointer to the Callback function
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  769:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         huart->WakeupCallback = pCallback;
  770:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         break;
  771:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 15
+ARM GAS  /tmp/cc9xt8el.s 			page 15
 
 
  772:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       case HAL_UART_RX_FIFO_FULL_CB_ID :
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  826:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** /**
  827:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @brief  Unregister an UART Callback
  828:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   *         UART callaback is redirected to the weak predefined callback
-ARM GAS  /tmp/cc7zNdOR.s 			page 16
+ARM GAS  /tmp/cc9xt8el.s 			page 16
 
 
  829:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @param  huart uart handle
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  883:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****                                                                                   AbortTransmitCplt
  884:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         break;
  885:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 17
+ARM GAS  /tmp/cc9xt8el.s 			page 17
 
 
  886:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       case HAL_UART_ABORT_RECEIVE_COMPLETE_CB_ID :
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  940:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  941:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     status =  HAL_ERROR;
  942:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
-ARM GAS  /tmp/cc7zNdOR.s 			page 18
+ARM GAS  /tmp/cc9xt8el.s 			page 18
 
 
  943:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  997:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Process locked */
  998:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   __HAL_LOCK(huart);
  999:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 19
+ARM GAS  /tmp/cc9xt8el.s 			page 19
 
 
 1000:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   if (huart->gState == HAL_UART_STATE_READY)
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1054:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     (#) Non-Blocking mode API's with DMA are :
 1055:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         (+) HAL_UART_Transmit_DMA()
 1056:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         (+) HAL_UART_Receive_DMA()
-ARM GAS  /tmp/cc7zNdOR.s 			page 20
+ARM GAS  /tmp/cc9xt8el.s 			page 20
 
 
 1057:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         (+) HAL_UART_DMAPause()
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1111:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @note When FIFO mode is enabled, writing a data in the TDR register adds one
 1112:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   *       data to the TXFIFO. Write operations to the TDR register are performed
 1113:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   *       when TXFNF flag is set. From hardware perspective, TXFNF flag and
-ARM GAS  /tmp/cc7zNdOR.s 			page 21
+ARM GAS  /tmp/cc9xt8el.s 			page 21
 
 
 1114:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   *       TXE are mapped on the same bit-field.
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1168:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         huart->Instance->TDR = (uint16_t)(*pdata16bits & 0x01FFU);
 1169:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         pdata16bits++;
 1170:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
-ARM GAS  /tmp/cc7zNdOR.s 			page 22
+ARM GAS  /tmp/cc9xt8el.s 			page 22
 
 
 1171:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       else
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1225:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     __HAL_LOCK(huart);
 1226:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 1227:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     huart->ErrorCode = HAL_UART_ERROR_NONE;
-ARM GAS  /tmp/cc7zNdOR.s 			page 23
+ARM GAS  /tmp/cc9xt8el.s 			page 23
 
 
 1228:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     huart->RxState = HAL_UART_STATE_BUSY_RX;
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1282:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     return HAL_BUSY;
 1283:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
 1284:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** }
-ARM GAS  /tmp/cc7zNdOR.s 			page 24
+ARM GAS  /tmp/cc9xt8el.s 			page 24
 
 
 1285:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1339:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         huart->TxISR = UART_TxISR_16BIT;
 1340:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
 1341:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       else
-ARM GAS  /tmp/cc7zNdOR.s 			page 25
+ARM GAS  /tmp/cc9xt8el.s 			page 25
 
 
 1342:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       {
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1396:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
 1397:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   else
 1398:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
-ARM GAS  /tmp/cc7zNdOR.s 			page 26
+ARM GAS  /tmp/cc9xt8el.s 			page 26
 
 
 1399:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     return HAL_BUSY;
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1453:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 1454:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         /* Restore huart->gState to ready */
 1455:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         huart->gState = HAL_UART_STATE_READY;
-ARM GAS  /tmp/cc7zNdOR.s 			page 27
+ARM GAS  /tmp/cc9xt8el.s 			page 27
 
 
 1456:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1510:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         SET_BIT(huart->Instance->CR1, USART_CR1_RTOIE);
 1511:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
 1512:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
-ARM GAS  /tmp/cc7zNdOR.s 			page 28
+ARM GAS  /tmp/cc9xt8el.s 			page 28
 
 
 1513:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1567:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     /* Enable the UART DMA Tx request */
 1568:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     SET_BIT(huart->Instance->CR3, USART_CR3_DMAT);
 1569:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
-ARM GAS  /tmp/cc7zNdOR.s 			page 29
+ARM GAS  /tmp/cc9xt8el.s 			page 29
 
 
 1570:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   if (huart->RxState == HAL_UART_STATE_BUSY_RX)
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1624:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
 1625:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 1626:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     UART_EndTxTransfer(huart);
-ARM GAS  /tmp/cc7zNdOR.s 			page 30
+ARM GAS  /tmp/cc9xt8el.s 			page 30
 
 
 1627:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1681:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Disable the UART DMA Tx request if enabled */
 1682:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   if (HAL_IS_BIT_SET(huart->Instance->CR3, USART_CR3_DMAT))
 1683:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
-ARM GAS  /tmp/cc7zNdOR.s 			page 31
+ARM GAS  /tmp/cc9xt8el.s 			page 31
 
 
 1684:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     CLEAR_BIT(huart->Instance->CR3, USART_CR3_DMAT);
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1738:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Flush the whole TX FIFO (if needed) */
 1739:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   if (huart->FifoMode == UART_FIFOMODE_ENABLE)
 1740:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
-ARM GAS  /tmp/cc7zNdOR.s 			page 32
+ARM GAS  /tmp/cc9xt8el.s 			page 32
 
 
 1741:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     __HAL_UART_SEND_REQ(huart, UART_TXDATA_FLUSH_REQUEST);
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1795:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         }
 1796:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
 1797:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
-ARM GAS  /tmp/cc7zNdOR.s 			page 33
+ARM GAS  /tmp/cc9xt8el.s 			page 33
 
 
 1798:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1852:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       {
 1853:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         if (HAL_DMA_GetError(huart->hdmarx) == HAL_DMA_ERROR_TIMEOUT)
 1854:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         {
-ARM GAS  /tmp/cc7zNdOR.s 			page 34
+ARM GAS  /tmp/cc9xt8el.s 			page 34
 
 
 1855:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           /* Set error code to DMA */
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1909:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* If DMA Tx and/or DMA Rx Handles are associated to UART Handle, DMA Abort complete callbacks sh
 1910:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****      before any call to DMA Abort functions */
 1911:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* DMA Tx Handle is valid */
-ARM GAS  /tmp/cc7zNdOR.s 			page 35
+ARM GAS  /tmp/cc9xt8el.s 			page 35
 
 
 1912:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   if (huart->hdmatx != NULL)
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1966:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
 1967:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     CLEAR_BIT(huart->Instance->CR3, USART_CR3_DMAR);
 1968:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 36
+ARM GAS  /tmp/cc9xt8el.s 			page 36
 
 
 1969:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     /* Abort the UART DMA Rx channel : use non blocking DMA Abort API (callback) */
@@ -2158,7 +2158,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2023:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #else
 2024:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     /* Call legacy weak Abort complete callback */
 2025:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     HAL_UART_AbortCpltCallback(huart);
-ARM GAS  /tmp/cc7zNdOR.s 			page 37
+ARM GAS  /tmp/cc9xt8el.s 			page 37
 
 
 2026:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
@@ -2218,7 +2218,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2080:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       huart->gState = HAL_UART_STATE_READY;
 2081:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 2082:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       /* As no DMA to be aborted, call directly user Abort complete callback */
-ARM GAS  /tmp/cc7zNdOR.s 			page 38
+ARM GAS  /tmp/cc9xt8el.s 			page 38
 
 
 2083:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
@@ -2278,7 +2278,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2137:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** {
 2138:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Disable RXNE, PE and ERR (Frame error, noise error, overrun error) interrupts */
 2139:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   CLEAR_BIT(huart->Instance->CR1, (USART_CR1_PEIE | USART_CR1_RXNEIE_RXFNEIE));
-ARM GAS  /tmp/cc7zNdOR.s 			page 39
+ARM GAS  /tmp/cc9xt8el.s 			page 39
 
 
 2140:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   CLEAR_BIT(huart->Instance->CR3, (USART_CR3_EIE | USART_CR3_RXFTIE));
@@ -2338,7 +2338,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2194:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
 2195:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   else
 2196:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
-ARM GAS  /tmp/cc7zNdOR.s 			page 40
+ARM GAS  /tmp/cc9xt8el.s 			page 40
 
 
 2197:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     /* Reset Rx transfer counter */
@@ -2398,7 +2398,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2251:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
 2252:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
 2253:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 41
+ARM GAS  /tmp/cc9xt8el.s 			page 41
 
 
 2254:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* If some errors occur */
@@ -2458,7 +2458,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2308:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       {
 2309:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         if (huart->RxISR != NULL)
 2310:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         {
-ARM GAS  /tmp/cc7zNdOR.s 			page 42
+ARM GAS  /tmp/cc9xt8el.s 			page 42
 
 
 2311:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           huart->RxISR(huart);
@@ -2518,7 +2518,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2365:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           /*Call registered error callback*/
 2366:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           huart->ErrorCallback(huart);
 2367:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #else
-ARM GAS  /tmp/cc7zNdOR.s 			page 43
+ARM GAS  /tmp/cc9xt8el.s 			page 43
 
 
 2368:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           /*Call legacy weak error callback*/
@@ -2578,7 +2578,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2422:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           CLEAR_BIT(huart->Instance->CR3, USART_CR3_DMAR);
 2423:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 2424:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           /* At end of Rx process, restore huart->RxState to Ready */
-ARM GAS  /tmp/cc7zNdOR.s 			page 44
+ARM GAS  /tmp/cc9xt8el.s 			page 44
 
 
 2425:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           huart->RxState = HAL_UART_STATE_READY;
@@ -2638,7 +2638,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2479:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   if (((isrflags & USART_ISR_WUF) != 0U) && ((cr3its & USART_CR3_WUFIE) != 0U))
 2480:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
 2481:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     __HAL_UART_CLEAR_FLAG(huart, UART_CLEAR_WUF);
-ARM GAS  /tmp/cc7zNdOR.s 			page 45
+ARM GAS  /tmp/cc9xt8el.s 			page 45
 
 
 2482:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -2698,7 +2698,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2536:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     HAL_UARTEx_RxFifoFullCallback(huart);
 2537:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
 2538:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     return;
-ARM GAS  /tmp/cc7zNdOR.s 			page 46
+ARM GAS  /tmp/cc9xt8el.s 			page 46
 
 
 2539:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
@@ -2758,7 +2758,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2593:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** {
 2594:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Prevent unused argument(s) compilation warning */
 2595:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   UNUSED(huart);
-ARM GAS  /tmp/cc7zNdOR.s 			page 47
+ARM GAS  /tmp/cc9xt8el.s 			page 47
 
 
 2596:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -2818,7 +2818,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2650:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @retval None
 2651:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   */
 2652:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** __weak void HAL_UART_AbortReceiveCpltCallback(UART_HandleTypeDef *huart)
-ARM GAS  /tmp/cc7zNdOR.s 			page 48
+ARM GAS  /tmp/cc9xt8el.s 			page 48
 
 
 2653:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** {
@@ -2878,7 +2878,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2707:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   */
 2708:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 2709:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** /**
-ARM GAS  /tmp/cc7zNdOR.s 			page 49
+ARM GAS  /tmp/cc9xt8el.s 			page 49
 
 
 2710:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @brief  Update on the fly the receiver timeout value in RTOR register.
@@ -2938,7 +2938,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2764:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** /**
 2765:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @brief  Disable the UART receiver timeout feature.
 2766:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @param  huart Pointer to a UART_HandleTypeDef structure that contains
-ARM GAS  /tmp/cc7zNdOR.s 			page 50
+ARM GAS  /tmp/cc9xt8el.s 			page 50
 
 
 2767:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   *                    the configuration information for the specified UART module.
@@ -2998,7 +2998,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2821:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 2822:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** /**
 2823:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @brief  Disable UART mute mode (does not mean the UART actually exits mute mode
-ARM GAS  /tmp/cc7zNdOR.s 			page 51
+ARM GAS  /tmp/cc9xt8el.s 			page 51
 
 
 2824:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   *         as it may not have been in mute mode at this very moment).
@@ -3058,7 +3058,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2878:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @param  huart UART handle.
 2879:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @retval HAL status.
 2880:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   */
-ARM GAS  /tmp/cc7zNdOR.s 			page 52
+ARM GAS  /tmp/cc9xt8el.s 			page 52
 
 
 2881:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** HAL_StatusTypeDef HAL_HalfDuplex_EnableReceiver(UART_HandleTypeDef *huart)
@@ -3118,7 +3118,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2935:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     [..]
 2936:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     This subsection provides functions allowing to :
 2937:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       (+) Return the UART handle state.
-ARM GAS  /tmp/cc7zNdOR.s 			page 53
+ARM GAS  /tmp/cc9xt8el.s 			page 53
 
 
 2938:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       (+) Return the UART handle error code
@@ -3178,7 +3178,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2992:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->TxCpltCallback            = HAL_UART_TxCpltCallback;            /* Legacy weak TxCpltCallb
 2993:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->RxHalfCpltCallback        = HAL_UART_RxHalfCpltCallback;        /* Legacy weak RxHalfCpltC
 2994:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->RxCpltCallback            = HAL_UART_RxCpltCallback;            /* Legacy weak RxCpltCallb
-ARM GAS  /tmp/cc7zNdOR.s 			page 54
+ARM GAS  /tmp/cc9xt8el.s 			page 54
 
 
 2995:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->ErrorCallback             = HAL_UART_ErrorCallback;             /* Legacy weak ErrorCallba
@@ -3238,7 +3238,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3049:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   MODIFY_REG(huart->Instance->CR1, USART_CR1_FIELDS, tmpreg);
 3050:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 3051:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /*-------------------------- USART CR2 Configuration -----------------------*/
-ARM GAS  /tmp/cc7zNdOR.s 			page 55
+ARM GAS  /tmp/cc9xt8el.s 			page 55
 
 
 3052:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Configure the UART Stop Bits: Set STOP[13:12] bits according
@@ -3298,7 +3298,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3106:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       lpuart_ker_ck_pres = (pclk / UARTPrescTable[huart->Init.ClockPrescaler]);
 3107:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 3108:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       /* Ensure that Frequency clock is in the range [3 * baudrate, 4096 * baudrate] */
-ARM GAS  /tmp/cc7zNdOR.s 			page 56
+ARM GAS  /tmp/cc9xt8el.s 			page 56
 
 
 3109:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       if ((lpuart_ker_ck_pres < (3U * huart->Init.BaudRate)) ||
@@ -3358,7 +3358,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3163:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         brrtemp = (uint16_t)(usartdiv & 0xFFF0U);
 3164:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         brrtemp |= (uint16_t)((usartdiv & (uint16_t)0x000FU) >> 1U);
 3165:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         huart->Instance->BRR = brrtemp;
-ARM GAS  /tmp/cc7zNdOR.s 			page 57
+ARM GAS  /tmp/cc9xt8el.s 			page 57
 
 
 3166:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
@@ -3418,7 +3418,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3220:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 3221:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   return ret;
 3222:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** }
-ARM GAS  /tmp/cc7zNdOR.s 			page 58
+ARM GAS  /tmp/cc9xt8el.s 			page 58
 
 
 3223:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -3478,7 +3478,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3277:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   if (HAL_IS_BIT_SET(huart->AdvancedInit.AdvFeatureInit, UART_ADVFEATURE_AUTOBAUDRATE_INIT))
 3278:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
 3279:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     assert_param(IS_USART_AUTOBAUDRATE_DETECTION_INSTANCE(huart->Instance));
-ARM GAS  /tmp/cc7zNdOR.s 			page 59
+ARM GAS  /tmp/cc9xt8el.s 			page 59
 
 
 3280:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     assert_param(IS_UART_ADVFEATURE_AUTOBAUDRATE(huart->AdvancedInit.AutoBaudRateEnable));
@@ -3538,7 +3538,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3334:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 3335:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Initialize the UART State */
 3336:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->gState = HAL_UART_STATE_READY;
-ARM GAS  /tmp/cc7zNdOR.s 			page 60
+ARM GAS  /tmp/cc9xt8el.s 			page 60
 
 
 3337:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_READY;
@@ -3598,7 +3598,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3391:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           huart->RxState = HAL_UART_STATE_READY;
 3392:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           huart->ErrorCode = HAL_UART_ERROR_RTO;
 3393:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 61
+ARM GAS  /tmp/cc9xt8el.s 			page 61
 
 
 3394:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           /* Process Unlocked */
@@ -3658,7 +3658,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3448:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     SET_BIT(huart->Instance->CR1, USART_CR1_PEIE);
 3449:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     SET_BIT(huart->Instance->CR3, USART_CR3_RXFTIE);
 3450:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
-ARM GAS  /tmp/cc7zNdOR.s 			page 62
+ARM GAS  /tmp/cc9xt8el.s 			page 62
 
 
 3451:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   else
@@ -3718,7 +3718,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3505:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     if (HAL_DMA_Start_IT(huart->hdmarx, (uint32_t)&huart->Instance->RDR, (uint32_t)huart->pRxBuffPt
 3506:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
 3507:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       /* Set error code to DMA */
-ARM GAS  /tmp/cc7zNdOR.s 			page 63
+ARM GAS  /tmp/cc9xt8el.s 			page 63
 
 
 3508:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       huart->ErrorCode = HAL_UART_ERROR_DMA;
@@ -3778,7 +3778,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
   44              		.loc 1 3546 3 view .LVU3
   45              		.loc 1 3546 17 is_stmt 0 view .LVU4
   46 0014 2023     		movs	r3, #32
-ARM GAS  /tmp/cc7zNdOR.s 			page 64
+ARM GAS  /tmp/cc9xt8el.s 			page 64
 
 
   47 0016 C0F88430 		str	r3, [r0, #132]
@@ -3838,7 +3838,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3565:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
 3566:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 3567:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* At end of Rx process, restore huart->RxState to Ready */
-ARM GAS  /tmp/cc7zNdOR.s 			page 65
+ARM GAS  /tmp/cc9xt8el.s 			page 65
 
 
 3568:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_READY;
@@ -3898,7 +3898,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3591:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****        in the UART CR3 register */
 3592:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     CLEAR_BIT(huart->Instance->CR3, USART_CR3_DMAT);
 3593:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 66
+ARM GAS  /tmp/cc9xt8el.s 			page 66
 
 
 3594:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     /* Enable the UART Transmit Complete Interrupt */
@@ -3958,7 +3958,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3648:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     CLEAR_BIT(huart->Instance->CR3, USART_CR3_DMAR);
 3649:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 3650:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     /* At end of Rx process, restore huart->RxState to Ready */
-ARM GAS  /tmp/cc7zNdOR.s 			page 67
+ARM GAS  /tmp/cc9xt8el.s 			page 67
 
 
 3651:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     huart->RxState = HAL_UART_STATE_READY;
@@ -4018,7 +4018,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3705:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
 3706:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   else
 3707:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
-ARM GAS  /tmp/cc7zNdOR.s 			page 68
+ARM GAS  /tmp/cc9xt8el.s 			page 68
 
 
 3708:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     /* In other cases : use Rx Half Complete callback */
@@ -4078,7 +4078,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3762:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   * @retval None
 3763:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   */
 3764:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** static void UART_DMAAbortOnError(DMA_HandleTypeDef *hdma)
-ARM GAS  /tmp/cc7zNdOR.s 			page 69
+ARM GAS  /tmp/cc9xt8el.s 			page 69
 
 
 3765:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** {
@@ -4138,7 +4138,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3819:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->gState  = HAL_UART_STATE_READY;
 3820:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_READY;
 3821:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->ReceptionType = HAL_UART_RECEPTION_STANDARD;
-ARM GAS  /tmp/cc7zNdOR.s 			page 70
+ARM GAS  /tmp/cc9xt8el.s 			page 70
 
 
 3822:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -4198,7 +4198,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3876:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #if (USE_HAL_UART_REGISTER_CALLBACKS == 1)
 3877:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Call registered Abort complete callback */
 3878:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->AbortCpltCallback(huart);
-ARM GAS  /tmp/cc7zNdOR.s 			page 71
+ARM GAS  /tmp/cc9xt8el.s 			page 71
 
 
 3879:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #else
@@ -4258,7 +4258,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3933:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Clear the Error flags in the ICR register */
 3934:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   __HAL_UART_CLEAR_FLAG(huart, UART_CLEAR_OREF | UART_CLEAR_NEF | UART_CLEAR_PEF | UART_CLEAR_FEF);
 3935:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 72
+ARM GAS  /tmp/cc9xt8el.s 			page 72
 
 
 3936:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Discard the received data */
@@ -4318,7 +4318,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3978:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
 3979:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
 3980:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** }
-ARM GAS  /tmp/cc7zNdOR.s 			page 73
+ARM GAS  /tmp/cc9xt8el.s 			page 73
 
 
  129              		.loc 1 3980 1 view .LVU24
@@ -4378,7 +4378,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  168 003a 9BB2     		uxth	r3, r3
 3977:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
  169              		.loc 1 3977 25 view .LVU40
-ARM GAS  /tmp/cc7zNdOR.s 			page 74
+ARM GAS  /tmp/cc9xt8el.s 			page 74
 
 
  170 003c 013B     		subs	r3, r3, #1
@@ -4438,7 +4438,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4007:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       huart->Instance->TDR = (((uint32_t)(*tmp)) & 0x01FFUL);
 4008:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       huart->pTxBuffPtr += 2U;
 4009:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       huart->TxXferCount--;
-ARM GAS  /tmp/cc7zNdOR.s 			page 75
+ARM GAS  /tmp/cc9xt8el.s 			page 75
 
 
 4010:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
@@ -4498,7 +4498,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  237              		.loc 1 4008 25 is_stmt 0 view .LVU61
  238 0034 036D     		ldr	r3, [r0, #80]
  239 0036 0233     		adds	r3, r3, #2
-ARM GAS  /tmp/cc7zNdOR.s 			page 76
+ARM GAS  /tmp/cc9xt8el.s 			page 76
 
 
  240 0038 0365     		str	r3, [r0, #80]
@@ -4558,7 +4558,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4030:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       if (huart->TxXferCount == 0U)
 4031:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       {
 4032:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         /* Disable the TX FIFO threshold interrupt */
-ARM GAS  /tmp/cc7zNdOR.s 			page 77
+ARM GAS  /tmp/cc9xt8el.s 			page 77
 
 
 4033:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         CLEAR_BIT(huart->Instance->CR3, USART_CR3_TXFTIE);
@@ -4618,7 +4618,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  302              		.loc 1 4049 7 discriminator 2 view .LVU79
 4028:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
  303              		.loc 1 4028 78 discriminator 2 view .LVU80
-ARM GAS  /tmp/cc7zNdOR.s 			page 78
+ARM GAS  /tmp/cc9xt8el.s 			page 78
 
 
  304 0026 013B     		subs	r3, r3, #1
@@ -4678,7 +4678,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  341              		.loc 1 4044 14 is_stmt 0 view .LVU97
  342 004e B0F85620 		ldrh	r2, [r0, #86]
  343 0052 92B2     		uxth	r2, r2
-ARM GAS  /tmp/cc7zNdOR.s 			page 79
+ARM GAS  /tmp/cc9xt8el.s 			page 79
 
 
 4044:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
@@ -4738,7 +4738,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4077:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         SET_BIT(huart->Instance->CR1, USART_CR1_TCIE);
 4078:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
 4079:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         break; /* force exit loop */
-ARM GAS  /tmp/cc7zNdOR.s 			page 80
+ARM GAS  /tmp/cc9xt8el.s 			page 80
 
 
 4080:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
@@ -4798,7 +4798,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4069:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
  405              		.loc 1 4069 78 is_stmt 0 discriminator 2 view .LVU115
  406 0028 9BB2     		uxth	r3, r3
-ARM GAS  /tmp/cc7zNdOR.s 			page 81
+ARM GAS  /tmp/cc9xt8el.s 			page 81
 
 
  407              	.LVL18:
@@ -4858,7 +4858,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4086:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
  445              		.loc 1 4086 14 is_stmt 0 view .LVU132
  446 0052 B0F85620 		ldrh	r2, [r0, #86]
-ARM GAS  /tmp/cc7zNdOR.s 			page 82
+ARM GAS  /tmp/cc9xt8el.s 			page 82
 
 
  447 0056 92B2     		uxth	r2, r2
@@ -4918,7 +4918,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  499              		.align	1
  500              		.global	HAL_UART_DeInit
  501              		.syntax unified
-ARM GAS  /tmp/cc7zNdOR.s 			page 83
+ARM GAS  /tmp/cc9xt8el.s 			page 83
 
 
  502              		.thumb
@@ -4978,7 +4978,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  543              		.loc 1 640 24 view .LVU153
  544 001e 5C60     		str	r4, [r3, #4]
  641:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 84
+ARM GAS  /tmp/cc9xt8el.s 			page 84
 
 
  545              		.loc 1 641 3 is_stmt 1 view .LVU154
@@ -5038,7 +5038,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  629:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
  582              		.loc 1 629 12 view .LVU172
  583 003e 0120     		movs	r0, #1
-ARM GAS  /tmp/cc7zNdOR.s 			page 85
+ARM GAS  /tmp/cc9xt8el.s 			page 85
 
 
  584              	.LVL27:
@@ -5098,7 +5098,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  627              		.loc 1 1308 5 discriminator 2 view .LVU185
 1308:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     huart->TxXferSize  = Size;
  628              		.loc 1 1308 24 is_stmt 0 discriminator 2 view .LVU186
-ARM GAS  /tmp/cc7zNdOR.s 			page 86
+ARM GAS  /tmp/cc9xt8el.s 			page 86
 
 
  629 001e 0165     		str	r1, [r0, #80]
@@ -5158,7 +5158,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1346:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  665              		.loc 1 1346 7 is_stmt 1 view .LVU205
 1346:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 87
+ARM GAS  /tmp/cc9xt8el.s 			page 87
 
 
  666              		.loc 1 1346 7 view .LVU206
@@ -5218,7 +5218,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  705 0070 0268     		ldr	r2, [r0]
  706              	.LVL33:
 1332:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
-ARM GAS  /tmp/cc7zNdOR.s 			page 88
+ARM GAS  /tmp/cc9xt8el.s 			page 88
 
 
  707              		.loc 1 1332 7 is_stmt 0 view .LVU222
@@ -5278,7 +5278,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  748              		.loc 1 1303 14 view .LVU235
  749 009a 7047     		bx	lr
  750              	.LVL39:
-ARM GAS  /tmp/cc7zNdOR.s 			page 89
+ARM GAS  /tmp/cc9xt8el.s 			page 89
 
 
  751              	.L48:
@@ -5338,7 +5338,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  797              		.loc 1 1414 1 view .LVU245
  798 000a 10B5     		push	{r4, lr}
  799              	.LCFI2:
-ARM GAS  /tmp/cc7zNdOR.s 			page 90
+ARM GAS  /tmp/cc9xt8el.s 			page 90
 
 
  800              		.cfi_def_cfa_offset 8
@@ -5398,7 +5398,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1432:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
  837              		.loc 1 1432 5 is_stmt 1 discriminator 2 view .LVU263
 1432:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
-ARM GAS  /tmp/cc7zNdOR.s 			page 91
+ARM GAS  /tmp/cc9xt8el.s 			page 91
 
 
  838              		.loc 1 1432 14 is_stmt 0 discriminator 2 view .LVU264
@@ -5458,7 +5458,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  875              		.loc 1 1447 11 view .LVU281
  876 005c FFF7FEFF 		bl	HAL_DMA_Start_IT
  877              	.LVL48:
-ARM GAS  /tmp/cc7zNdOR.s 			page 92
+ARM GAS  /tmp/cc9xt8el.s 			page 92
 
 
 1447:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       {
@@ -5518,7 +5518,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  915 008e 10BD     		pop	{r4, pc}
  916              	.LVL49:
  917              	.L58:
-ARM GAS  /tmp/cc7zNdOR.s 			page 93
+ARM GAS  /tmp/cc9xt8el.s 			page 93
 
 
  918              	.LCFI3:
@@ -5578,7 +5578,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  965              		.thumb
  966              		.thumb_func
  968              	HAL_UART_DMAPause:
-ARM GAS  /tmp/cc7zNdOR.s 			page 94
+ARM GAS  /tmp/cc9xt8el.s 			page 94
 
 
  969              	.LVL57:
@@ -5638,7 +5638,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1009              	.L70:
 1540:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       (rxstate == HAL_UART_STATE_BUSY_RX))
  1010              		.loc 1 1540 3 is_stmt 1 view .LVU321
-ARM GAS  /tmp/cc7zNdOR.s 			page 95
+ARM GAS  /tmp/cc9xt8el.s 			page 95
 
 
 1540:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       (rxstate == HAL_UART_STATE_BUSY_RX))
@@ -5698,7 +5698,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1545:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  1053              		.loc 1 1545 5 view .LVU334
  1054 0054 1968     		ldr	r1, [r3]
-ARM GAS  /tmp/cc7zNdOR.s 			page 96
+ARM GAS  /tmp/cc9xt8el.s 			page 96
 
 
  1055 0056 8A68     		ldr	r2, [r1, #8]
@@ -5758,7 +5758,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1100              		.loc 1 1565 12 is_stmt 0 discriminator 2 view .LVU345
  1101 0010 D0F88420 		ldr	r2, [r0, #132]
 1565:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
-ARM GAS  /tmp/cc7zNdOR.s 			page 97
+ARM GAS  /tmp/cc9xt8el.s 			page 97
 
 
  1102              		.loc 1 1565 6 discriminator 2 view .LVU346
@@ -5818,7 +5818,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1143 0046 8A68     		ldr	r2, [r1, #8]
  1144 0048 42F00102 		orr	r2, r2, #1
  1145 004c 8A60     		str	r2, [r1, #8]
-ARM GAS  /tmp/cc7zNdOR.s 			page 98
+ARM GAS  /tmp/cc9xt8el.s 			page 98
 
 
 1580:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
@@ -5878,7 +5878,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1192              		.loc 1 1606 3 is_stmt 1 view .LVU369
 1606:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       (gstate == HAL_UART_STATE_BUSY_TX))
  1193              		.loc 1 1606 8 is_stmt 0 view .LVU370
-ARM GAS  /tmp/cc7zNdOR.s 			page 99
+ARM GAS  /tmp/cc9xt8el.s 			page 99
 
 
  1194 000c 0368     		ldr	r3, [r0]
@@ -5938,7 +5938,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1234 003c 18B9     		cbnz	r0, .L93
  1235              	.L85:
 1626:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
-ARM GAS  /tmp/cc7zNdOR.s 			page 100
+ARM GAS  /tmp/cc9xt8el.s 			page 100
 
 
  1236              		.loc 1 1626 5 is_stmt 1 view .LVU385
@@ -5998,7 +5998,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1275              		.loc 1 1650 5 is_stmt 1 view .LVU400
  1276 006c 2046     		mov	r0, r4
  1277 006e FFF7FEFF 		bl	UART_EndRxTransfer
-ARM GAS  /tmp/cc7zNdOR.s 			page 101
+ARM GAS  /tmp/cc9xt8el.s 			page 101
 
 
  1278              	.LVL78:
@@ -6058,7 +6058,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1322              		@ frame_needed = 0, uses_anonymous_args = 0
 1669:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Disable TXE, TC, RXNE, PE, RXFT, TXFT and ERR (Frame error, noise error, overrun error) interr
  1323              		.loc 1 1669 1 is_stmt 0 view .LVU413
-ARM GAS  /tmp/cc7zNdOR.s 			page 102
+ARM GAS  /tmp/cc9xt8el.s 			page 102
 
 
  1324 0000 10B5     		push	{r4, lr}
@@ -6118,7 +6118,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1691:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  1365              		.loc 1 1691 40 is_stmt 0 view .LVU427
  1366 0038 0022     		movs	r2, #0
-ARM GAS  /tmp/cc7zNdOR.s 			page 103
+ARM GAS  /tmp/cc9xt8el.s 			page 103
 
 
  1367 003a 9A63     		str	r2, [r3, #56]
@@ -6178,7 +6178,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1405 0066 50BB     		cbnz	r0, .L104
  1406              	.L99:
 1732:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->RxXferCount = 0U;
-ARM GAS  /tmp/cc7zNdOR.s 			page 104
+ARM GAS  /tmp/cc9xt8el.s 			page 104
 
 
  1407              		.loc 1 1732 3 is_stmt 1 view .LVU444
@@ -6238,7 +6238,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1444              		.loc 1 1754 3 is_stmt 1 view .LVU461
  1445              	.L98:
 1755:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 105
+ARM GAS  /tmp/cc9xt8el.s 			page 105
 
 
  1446              		.loc 1 1755 1 is_stmt 0 view .LVU462
@@ -6298,7 +6298,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1725:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         }
  1487              		.loc 1 1725 11 is_stmt 1 view .LVU476
 1725:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         }
-ARM GAS  /tmp/cc7zNdOR.s 			page 106
+ARM GAS  /tmp/cc9xt8el.s 			page 106
 
 
  1488              		.loc 1 1725 18 is_stmt 0 view .LVU477
@@ -6358,7 +6358,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1536              		.loc 1 1776 6 view .LVU485
  1537 001c 12F0800F 		tst	r2, #128
  1538 0020 0BD0     		beq	.L107
-ARM GAS  /tmp/cc7zNdOR.s 			page 107
+ARM GAS  /tmp/cc9xt8el.s 			page 107
 
 
 1778:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -6418,7 +6418,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1576 004a C4F88430 		str	r3, [r4, #132]
 1812:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** }
  1577              		.loc 1 1812 3 is_stmt 1 view .LVU503
-ARM GAS  /tmp/cc7zNdOR.s 			page 108
+ARM GAS  /tmp/cc9xt8el.s 			page 108
 
 
 1812:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** }
@@ -6478,7 +6478,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1623              		@ args = 0, pretend = 0, frame = 0
  1624              		@ frame_needed = 0, uses_anonymous_args = 0
 1828:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Disable PEIE, EIE, RXNEIE and RXFTIE interrupts */
-ARM GAS  /tmp/cc7zNdOR.s 			page 109
+ARM GAS  /tmp/cc9xt8el.s 			page 109
 
 
  1625              		.loc 1 1828 1 is_stmt 0 view .LVU515
@@ -6538,7 +6538,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1666              		.loc 1 1849 7 is_stmt 1 view .LVU528
 1849:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  1667              		.loc 1 1849 40 is_stmt 0 view .LVU529
-ARM GAS  /tmp/cc7zNdOR.s 			page 110
+ARM GAS  /tmp/cc9xt8el.s 			page 110
 
 
  1668 0038 0022     		movs	r2, #0
@@ -6598,7 +6598,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1707 0064 0268     		ldr	r2, [r0]
  1708 0066 1368     		ldr	r3, [r2]
  1709 0068 23F01003 		bic	r3, r3, #16
-ARM GAS  /tmp/cc7zNdOR.s 			page 111
+ARM GAS  /tmp/cc9xt8el.s 			page 111
 
 
  1710 006c 1360     		str	r3, [r2]
@@ -6658,7 +6658,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1757              		.thumb
  1758              		.thumb_func
  1760              	UART_DMATransmitCplt:
-ARM GAS  /tmp/cc7zNdOR.s 			page 112
+ARM GAS  /tmp/cc9xt8el.s 			page 112
 
 
  1761              	.LVL100:
@@ -6718,7 +6718,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3608:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  1803              		.loc 1 3608 1 is_stmt 0 view .LVU567
  1804 002a 08BD     		pop	{r3, pc}
-ARM GAS  /tmp/cc7zNdOR.s 			page 113
+ARM GAS  /tmp/cc9xt8el.s 			page 113
 
 
  1805              	.LVL104:
@@ -6778,7 +6778,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4111:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->TxISR = NULL;
  1843              		.loc 1 4111 3 is_stmt 1 view .LVU575
  1844              		.loc 1 4111 16 is_stmt 0 view .LVU576
-ARM GAS  /tmp/cc7zNdOR.s 			page 114
+ARM GAS  /tmp/cc9xt8el.s 			page 114
 
 
  1845 0012 0022     		movs	r2, #0
@@ -6838,7 +6838,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1889              		.loc 1 3616 1 is_stmt 0 view .LVU583
  1890 0000 08B5     		push	{r3, lr}
  1891              	.LCFI14:
-ARM GAS  /tmp/cc7zNdOR.s 			page 115
+ARM GAS  /tmp/cc9xt8el.s 			page 115
 
 
  1892              		.cfi_def_cfa_offset 8
@@ -6898,7 +6898,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1942              		@ frame_needed = 0, uses_anonymous_args = 0
  1943              		@ link register save eliminated.
 2595:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 116
+ARM GAS  /tmp/cc9xt8el.s 			page 116
 
 
  1944              		.loc 1 2595 3 view .LVU592
@@ -6958,7 +6958,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  1994 0002 846A     		ldr	r4, [r0, #40]
  1995              	.LVL117:
 3728:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   const HAL_UART_StateTypeDef rxstate = huart->RxState;
-ARM GAS  /tmp/cc7zNdOR.s 			page 117
+ARM GAS  /tmp/cc9xt8el.s 			page 117
 
 
  1996              		.loc 1 3728 3 is_stmt 1 view .LVU601
@@ -7018,7 +7018,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3756:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  2036              		.loc 1 3756 1 is_stmt 0 view .LVU616
  2037 003a 38BD     		pop	{r3, r4, r5, pc}
-ARM GAS  /tmp/cc7zNdOR.s 			page 118
+ARM GAS  /tmp/cc9xt8el.s 			page 118
 
 
  2038              	.LVL122:
@@ -7078,7 +7078,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3766:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->RxXferCount = 0U;
  2084              		.loc 1 3766 3 is_stmt 1 view .LVU627
 3766:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->RxXferCount = 0U;
-ARM GAS  /tmp/cc7zNdOR.s 			page 119
+ARM GAS  /tmp/cc9xt8el.s 			page 119
 
 
  2085              		.loc 1 3766 23 is_stmt 0 view .LVU628
@@ -7138,7 +7138,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1895:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   uint32_t abortcplt = 1U;
  2134              		.loc 1 1895 1 is_stmt 1 view -0
  2135              		.cfi_startproc
-ARM GAS  /tmp/cc7zNdOR.s 			page 120
+ARM GAS  /tmp/cc9xt8el.s 			page 120
 
 
  2136              		@ args = 0, pretend = 0, frame = 0
@@ -7198,7 +7198,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1918:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
  2177              		.loc 1 1918 7 is_stmt 1 view .LVU652
 1918:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
-ARM GAS  /tmp/cc7zNdOR.s 			page 121
+ARM GAS  /tmp/cc9xt8el.s 			page 121
 
 
  2178              		.loc 1 1918 40 is_stmt 0 view .LVU653
@@ -7258,7 +7258,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1953:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       {
  2217              		.loc 1 1953 7 is_stmt 1 view .LVU669
 1953:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       {
-ARM GAS  /tmp/cc7zNdOR.s 			page 122
+ARM GAS  /tmp/cc9xt8el.s 			page 122
 
 
  2218              		.loc 1 1953 11 is_stmt 0 view .LVU670
@@ -7318,7 +7318,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2259              		.loc 1 1965 7 is_stmt 0 view .LVU683
  2260 008a 2368     		ldr	r3, [r4]
  2261 008c 9A68     		ldr	r2, [r3, #8]
-ARM GAS  /tmp/cc7zNdOR.s 			page 123
+ARM GAS  /tmp/cc9xt8el.s 			page 123
 
 
 1965:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
@@ -7378,7 +7378,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1996:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     huart->TxISR = NULL;
  2298              		.loc 1 1996 18 is_stmt 0 view .LVU702
  2299 00b6 2367     		str	r3, [r4, #112]
-ARM GAS  /tmp/cc7zNdOR.s 			page 124
+ARM GAS  /tmp/cc9xt8el.s 			page 124
 
 
 1997:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -7438,7 +7438,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2338              	.LVL139:
  2339              	.L154:
 1896:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 125
+ARM GAS  /tmp/cc9xt8el.s 			page 125
 
 
  2340              		.loc 1 1896 12 is_stmt 0 view .LVU719
@@ -7498,7 +7498,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2388              		.loc 1 3843 1 is_stmt 0 view .LVU727
  2389 0000 08B5     		push	{r3, lr}
  2390              	.LCFI18:
-ARM GAS  /tmp/cc7zNdOR.s 			page 126
+ARM GAS  /tmp/cc9xt8el.s 			page 126
 
 
  2391              		.cfi_def_cfa_offset 8
@@ -7558,7 +7558,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2427 0022 0F21     		movs	r1, #15
  2428 0024 1162     		str	r1, [r2, #32]
 3868:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 127
+ARM GAS  /tmp/cc9xt8el.s 			page 127
 
 
  2429              		.loc 1 3868 3 view .LVU746
@@ -7618,7 +7618,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2473              		.loc 1 3789 23 is_stmt 0 view .LVU758
  2474 0002 806A     		ldr	r0, [r0, #40]
  2475              	.LVL147:
-ARM GAS  /tmp/cc7zNdOR.s 			page 128
+ARM GAS  /tmp/cc9xt8el.s 			page 128
 
 
 3791:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -7678,7 +7678,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2511 0028 B3F1005F 		cmp	r3, #536870912
  2512 002c 09D0     		beq	.L170
  2513              	.L168:
-ARM GAS  /tmp/cc7zNdOR.s 			page 129
+ARM GAS  /tmp/cc9xt8el.s 			page 129
 
 
 3819:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->RxState = HAL_UART_STATE_READY;
@@ -7738,7 +7738,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2558              		.loc 1 2645 1 is_stmt 0 view .LVU789
  2559 0000 7047     		bx	lr
  2560              		.cfi_endproc
-ARM GAS  /tmp/cc7zNdOR.s 			page 130
+ARM GAS  /tmp/cc9xt8el.s 			page 130
 
 
  2561              	.LFE358:
@@ -7798,7 +7798,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2607 002a 836F     		ldr	r3, [r0, #120]
 2058:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
  2608              		.loc 1 2058 8 view .LVU800
-ARM GAS  /tmp/cc7zNdOR.s 			page 131
+ARM GAS  /tmp/cc9xt8el.s 			page 131
 
 
  2609 002c 4BB1     		cbz	r3, .L174
@@ -7858,7 +7858,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2646 0050 FFF7FEFF 		bl	HAL_UART_AbortTransmitCpltCallback
  2647              	.LVL156:
 2088:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
-ARM GAS  /tmp/cc7zNdOR.s 			page 132
+ARM GAS  /tmp/cc9xt8el.s 			page 132
 
 
  2648              		.loc 1 2088 7 is_stmt 0 view .LVU818
@@ -7918,7 +7918,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2688              	.L180:
  2689              		.align	2
  2690              	.L179:
-ARM GAS  /tmp/cc7zNdOR.s 			page 133
+ARM GAS  /tmp/cc9xt8el.s 			page 133
 
 
  2691 0080 00000000 		.word	UART_DMATxOnlyAbortCallback
@@ -7978,7 +7978,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2735              	.LVL163:
 3917:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  2736              		.loc 1 3917 1 is_stmt 0 view .LVU845
-ARM GAS  /tmp/cc7zNdOR.s 			page 134
+ARM GAS  /tmp/cc9xt8el.s 			page 134
 
 
  2737 001c 08BD     		pop	{r3, pc}
@@ -8038,7 +8038,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2789              		.cfi_offset 14, -4
  2790 0002 0446     		mov	r4, r0
 2139:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   CLEAR_BIT(huart->Instance->CR3, (USART_CR3_EIE | USART_CR3_RXFTIE));
-ARM GAS  /tmp/cc7zNdOR.s 			page 135
+ARM GAS  /tmp/cc9xt8el.s 			page 135
 
 
  2791              		.loc 1 2139 3 is_stmt 1 view .LVU852
@@ -8098,7 +8098,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2830              		.loc 1 2161 11 is_stmt 0 view .LVU867
  2831 003c E06F     		ldr	r0, [r4, #124]
  2832              	.LVL167:
-ARM GAS  /tmp/cc7zNdOR.s 			page 136
+ARM GAS  /tmp/cc9xt8el.s 			page 136
 
 
 2161:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       {
@@ -8158,7 +8158,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2182:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       huart->ReceptionType = HAL_UART_RECEPTION_STANDARD;
  2873              		.loc 1 2182 22 is_stmt 0 view .LVU882
  2874 0070 2022     		movs	r2, #32
-ARM GAS  /tmp/cc7zNdOR.s 			page 137
+ARM GAS  /tmp/cc9xt8el.s 			page 137
 
 
  2875 0072 C4F88820 		str	r2, [r4, #136]
@@ -8218,7 +8218,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2221:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  2913              		.loc 1 2221 1 is_stmt 0 view .LVU899
  2914 009a 0020     		movs	r0, #0
-ARM GAS  /tmp/cc7zNdOR.s 			page 138
+ARM GAS  /tmp/cc9xt8el.s 			page 138
 
 
  2915 009c 10BD     		pop	{r4, pc}
@@ -8278,7 +8278,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  2961              		.loc 1 3940 3 view .LVU909
 3940:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->ReceptionType = HAL_UART_RECEPTION_STANDARD;
  2962              		.loc 1 3940 18 is_stmt 0 view .LVU910
-ARM GAS  /tmp/cc7zNdOR.s 			page 139
+ARM GAS  /tmp/cc9xt8el.s 			page 139
 
 
  2963 001a 2023     		movs	r3, #32
@@ -8338,7 +8338,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2229:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   uint32_t isrflags   = READ_REG(huart->Instance->ISR);
  3012              		.loc 1 2229 1 is_stmt 0 view .LVU920
  3013 0000 70B5     		push	{r4, r5, r6, lr}
-ARM GAS  /tmp/cc7zNdOR.s 			page 140
+ARM GAS  /tmp/cc9xt8el.s 			page 140
 
 
  3014              	.LCFI24:
@@ -8398,7 +8398,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3051              		.loc 1 2243 9 view .LVU937
  3052 001a 10F0200F 		tst	r0, #32
  3053 001e 34D1     		bne	.L200
-ARM GAS  /tmp/cc7zNdOR.s 			page 141
+ARM GAS  /tmp/cc9xt8el.s 			page 141
 
 
 2244:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
@@ -8458,7 +8458,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3093 0054 40F02781 		bne	.L225
 2499:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
  3094              		.loc 1 2499 11 view .LVU953
-ARM GAS  /tmp/cc7zNdOR.s 			page 142
+ARM GAS  /tmp/cc9xt8el.s 			page 142
 
 
  3095 0058 15F4000F 		tst	r5, #8388608
@@ -8518,7 +8518,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3135 0090 2046     		mov	r0, r4
  3136              	.LVL191:
 2248:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
-ARM GAS  /tmp/cc7zNdOR.s 			page 143
+ARM GAS  /tmp/cc9xt8el.s 			page 143
 
 
  3137              		.loc 1 2248 9 is_stmt 0 view .LVU968
@@ -8578,7 +8578,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3177              		.loc 1 2276 5 is_stmt 1 view .LVU982
 2276:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
  3178              		.loc 1 2276 8 is_stmt 0 view .LVU983
-ARM GAS  /tmp/cc7zNdOR.s 			page 144
+ARM GAS  /tmp/cc9xt8el.s 			page 144
 
 
  3179 00ce 13F0040F 		tst	r3, #4
@@ -8638,7 +8638,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3219 0110 10F0806F 		tst	r0, #67108864
  3220 0114 09D0     		beq	.L210
 2296:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 145
+ARM GAS  /tmp/cc9xt8el.s 			page 145
 
 
  3221              		.loc 1 2296 7 is_stmt 1 view .LVU998
@@ -8698,7 +8698,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2320:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       if ((HAL_IS_BIT_SET(huart->Instance->CR3, USART_CR3_DMAR)) ||
  3261              		.loc 1 2320 7 is_stmt 1 view .LVU1013
 2320:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       if ((HAL_IS_BIT_SET(huart->Instance->CR3, USART_CR3_DMAR)) ||
-ARM GAS  /tmp/cc7zNdOR.s 			page 146
+ARM GAS  /tmp/cc9xt8el.s 			page 146
 
 
  3262              		.loc 1 2320 17 is_stmt 0 view .LVU1014
@@ -8758,7 +8758,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2342:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****             {
  3301              		.loc 1 2342 17 is_stmt 0 view .LVU1030
  3302 0180 E06F     		ldr	r0, [r4, #124]
-ARM GAS  /tmp/cc7zNdOR.s 			page 147
+ARM GAS  /tmp/cc9xt8el.s 			page 147
 
 
  3303 0182 FFF7FEFF 		bl	HAL_DMA_Abort_IT
@@ -8818,7 +8818,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3345 01b6 3FF441AF 		beq	.L218
 2395:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
  3346              		.loc 1 2395 7 view .LVU1043
-ARM GAS  /tmp/cc7zNdOR.s 			page 148
+ARM GAS  /tmp/cc9xt8el.s 			page 148
 
 
  3347 01ba 10F0100F 		tst	r0, #16
@@ -8878,7 +8878,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3385 01ec 0B68     		ldr	r3, [r1]
  3386              	.LVL209:
 2414:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         {
-ARM GAS  /tmp/cc7zNdOR.s 			page 149
+ARM GAS  /tmp/cc9xt8el.s 			page 149
 
 
  3387              		.loc 1 2414 13 view .LVU1060
@@ -8938,7 +8938,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3429              		.loc 1 2426 11 is_stmt 1 view .LVU1072
 2426:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  3430              		.loc 1 2426 32 is_stmt 0 view .LVU1073
-ARM GAS  /tmp/cc7zNdOR.s 			page 150
+ARM GAS  /tmp/cc9xt8el.s 			page 150
 
 
  3431 022e 0023     		movs	r3, #0
@@ -8998,7 +8998,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3472 026a 1360     		str	r3, [r2]
 2456:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  3473              		.loc 1 2456 9 view .LVU1087
-ARM GAS  /tmp/cc7zNdOR.s 			page 151
+ARM GAS  /tmp/cc9xt8el.s 			page 151
 
 
  3474 026c 2268     		ldr	r2, [r4]
@@ -9058,7 +9058,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3514              	.LVL221:
 2491:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
  3515              		.loc 1 2491 5 is_stmt 0 view .LVU1102
-ARM GAS  /tmp/cc7zNdOR.s 			page 152
+ARM GAS  /tmp/cc9xt8el.s 			page 152
 
 
  3516 02a0 FFF7FEFF 		bl	HAL_UARTEx_WakeupCallback
@@ -9118,7 +9118,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3557              	.LVL233:
  3558              	.L234:
 2536:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
-ARM GAS  /tmp/cc7zNdOR.s 			page 153
+ARM GAS  /tmp/cc9xt8el.s 			page 153
 
 
  3559              		.loc 1 2536 5 view .LVU1116
@@ -9178,7 +9178,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4133:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   if (huart->RxState == HAL_UART_STATE_BUSY_RX)
  3601              		.loc 1 4133 3 view .LVU1124
  3602              		.loc 1 4133 12 is_stmt 0 view .LVU1125
-ARM GAS  /tmp/cc7zNdOR.s 			page 154
+ARM GAS  /tmp/cc9xt8el.s 			page 154
 
 
  3603 0008 D0F88820 		ldr	r2, [r0, #136]
@@ -9238,7 +9238,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4184:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
 4185:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     /* Clear RXNE interrupt flag */
 4186:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     __HAL_UART_SEND_REQ(huart, UART_RXDATA_FLUSH_REQUEST);
-ARM GAS  /tmp/cc7zNdOR.s 			page 155
+ARM GAS  /tmp/cc9xt8el.s 			page 155
 
 
  3607              		.loc 1 4186 5 is_stmt 1 view .LVU1127
@@ -9298,7 +9298,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3646              		.loc 1 4138 23 view .LVU1142
  3647 0034 013B     		subs	r3, r3, #1
  3648 0036 9BB2     		uxth	r3, r3
-ARM GAS  /tmp/cc7zNdOR.s 			page 156
+ARM GAS  /tmp/cc9xt8el.s 			page 156
 
 
  3649 0038 A0F85E30 		strh	r3, [r0, #94]	@ movhi
@@ -9358,7 +9358,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3688 0070 E366     		str	r3, [r4, #108]
  3689 0072 D2E7     		b	.L238
  3690              	.LVL245:
-ARM GAS  /tmp/cc7zNdOR.s 			page 157
+ARM GAS  /tmp/cc9xt8el.s 			page 157
 
 
  3691              	.L245:
@@ -9418,7 +9418,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3731 0004 B0F86020 		ldrh	r2, [r0, #96]
  3732              	.LVL249:
 4201:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   uint16_t  uhdata;
-ARM GAS  /tmp/cc7zNdOR.s 			page 158
+ARM GAS  /tmp/cc9xt8el.s 			page 158
 
 
  3733              		.loc 1 4201 3 is_stmt 1 view .LVU1167
@@ -9478,7 +9478,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4249:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         HAL_UART_RxCpltCallback(huart);
 4250:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #endif /* USE_HAL_UART_REGISTER_CALLBACKS */
 4251:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
-ARM GAS  /tmp/cc7zNdOR.s 			page 159
+ARM GAS  /tmp/cc9xt8el.s 			page 159
 
 
 4252:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       huart->ReceptionType = HAL_UART_RECEPTION_STANDARD;
@@ -9538,7 +9538,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3774              		.loc 1 4210 10 is_stmt 0 view .LVU1184
  3775 002c B0F85E30 		ldrh	r3, [r0, #94]
  3776 0030 9BB2     		uxth	r3, r3
-ARM GAS  /tmp/cc7zNdOR.s 			page 160
+ARM GAS  /tmp/cc9xt8el.s 			page 160
 
 
 4210:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -9598,7 +9598,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3816              	.LVL257:
  3817              	.L250:
 4252:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
-ARM GAS  /tmp/cc7zNdOR.s 			page 161
+ARM GAS  /tmp/cc9xt8el.s 			page 161
 
 
  3818              		.loc 1 4252 7 view .LVU1200
@@ -9658,7 +9658,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3859              		.cfi_offset 4, -28
  3860              		.cfi_offset 5, -24
  3861              		.cfi_offset 6, -20
-ARM GAS  /tmp/cc7zNdOR.s 			page 162
+ARM GAS  /tmp/cc9xt8el.s 			page 162
 
 
  3862              		.cfi_offset 7, -16
@@ -9718,7 +9718,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4294:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         /* UART parity error interrupt occurred -------------------------------------*/
 4295:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         if (((isrflags & USART_ISR_PE) != 0U) && ((cr1its & USART_CR1_PEIE) != 0U))
 4296:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         {
-ARM GAS  /tmp/cc7zNdOR.s 			page 163
+ARM GAS  /tmp/cc9xt8el.s 			page 163
 
 
 4297:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           __HAL_UART_CLEAR_FLAG(huart, UART_CLEAR_PEF);
@@ -9778,7 +9778,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4351:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         if (huart->ReceptionType == HAL_UART_RECEPTION_TOIDLE)
 4352:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         {
 4353:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           /* Disable IDLE interrupt */
-ARM GAS  /tmp/cc7zNdOR.s 			page 164
+ARM GAS  /tmp/cc9xt8el.s 			page 164
 
 
 4354:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           CLEAR_BIT(huart->Instance->CR1, USART_CR1_IDLEIE);
@@ -9838,7 +9838,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3899              		.loc 1 4401 1 is_stmt 0 view .LVU1224
  3900 0024 BDE8F883 		pop	{r3, r4, r5, r6, r7, r8, r9, pc}
  3901              	.LVL267:
-ARM GAS  /tmp/cc7zNdOR.s 			page 165
+ARM GAS  /tmp/cc9xt8el.s 			page 165
 
 
  3902              	.L268:
@@ -9898,7 +9898,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3942 005a C4F88830 		str	r3, [r4, #136]
 4347:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  3943              		.loc 1 4347 9 is_stmt 1 view .LVU1240
-ARM GAS  /tmp/cc7zNdOR.s 			page 166
+ARM GAS  /tmp/cc9xt8el.s 			page 166
 
 
 4347:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -9958,7 +9958,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  3982 0086 1370     		strb	r3, [r2]
 4287:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       huart->RxXferCount--;
  3983              		.loc 1 4287 7 is_stmt 1 view .LVU1257
-ARM GAS  /tmp/cc7zNdOR.s 			page 167
+ARM GAS  /tmp/cc9xt8el.s 			page 167
 
 
 4287:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       huart->RxXferCount--;
@@ -10018,7 +10018,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4022              	.L258:
 4303:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         {
  4023              		.loc 1 4303 9 is_stmt 1 view .LVU1274
-ARM GAS  /tmp/cc7zNdOR.s 			page 168
+ARM GAS  /tmp/cc9xt8el.s 			page 168
 
 
 4303:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         {
@@ -10078,7 +10078,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4064 0106 0023     		movs	r3, #0
  4065 0108 C4F88C30 		str	r3, [r4, #140]
  4066 010c 94E7     		b	.L257
-ARM GAS  /tmp/cc7zNdOR.s 			page 169
+ARM GAS  /tmp/cc9xt8el.s 			page 169
 
 
  4067              	.L270:
@@ -10138,7 +10138,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4108 014c 43F02003 		orr	r3, r3, #32
  4109 0150 1360     		str	r3, [r2]
  4110 0152 67E7     		b	.L254
-ARM GAS  /tmp/cc7zNdOR.s 			page 170
+ARM GAS  /tmp/cc9xt8el.s 			page 170
 
 
  4111              	.L272:
@@ -10198,7 +10198,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4151              		.loc 1 4417 3 view .LVU1310
  4152              		.loc 1 4417 24 is_stmt 0 view .LVU1311
  4153 0008 0368     		ldr	r3, [r0]
-ARM GAS  /tmp/cc7zNdOR.s 			page 171
+ARM GAS  /tmp/cc9xt8el.s 			page 171
 
 
  4154              		.loc 1 4417 13 view .LVU1312
@@ -10258,7 +10258,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4455:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         {
 4456:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           __HAL_UART_CLEAR_FLAG(huart, UART_CLEAR_NEF);
 4457:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 172
+ARM GAS  /tmp/cc9xt8el.s 			page 172
 
 
 4458:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           huart->ErrorCode |= HAL_UART_ERROR_NE;
@@ -10318,7 +10318,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 4512:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           huart->RxCpltCallback(huart);
 4513:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** #else
 4514:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           /*Call legacy weak Rx complete callback*/
-ARM GAS  /tmp/cc7zNdOR.s 			page 173
+ARM GAS  /tmp/cc9xt8el.s 			page 173
 
 
 4515:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           HAL_UART_RxCpltCallback(huart);
@@ -10378,7 +10378,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4191              	.L279:
 4462:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         {
  4192              		.loc 1 4462 9 is_stmt 1 view .LVU1327
-ARM GAS  /tmp/cc7zNdOR.s 			page 174
+ARM GAS  /tmp/cc9xt8el.s 			page 174
 
 
 4462:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         {
@@ -10438,7 +10438,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4232 006a FFF7FEFF 		bl	HAL_UART_RxCpltCallback
  4233              	.LVL287:
  4234              	.L282:
-ARM GAS  /tmp/cc7zNdOR.s 			page 175
+ARM GAS  /tmp/cc9xt8el.s 			page 175
 
 
 4518:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
@@ -10498,7 +10498,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4273 0096 A4F85E30 		strh	r3, [r4, #94]	@ movhi
 4432:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  4274              		.loc 1 4432 7 is_stmt 1 view .LVU1359
-ARM GAS  /tmp/cc7zNdOR.s 			page 176
+ARM GAS  /tmp/cc9xt8el.s 			page 176
 
 
 4432:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -10558,7 +10558,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4313              		.loc 1 4450 11 view .LVU1375
 4450:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         }
  4314              		.loc 1 4450 28 is_stmt 0 view .LVU1376
-ARM GAS  /tmp/cc7zNdOR.s 			page 177
+ARM GAS  /tmp/cc9xt8el.s 			page 177
 
 
  4315 00d2 D4F88C30 		ldr	r3, [r4, #140]
@@ -10618,7 +10618,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4358              	.L283:
 4526:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     if ((rxdatacount != 0U) && (rxdatacount < huart->NbRxDataToProcess))
  4359              		.loc 1 4526 5 view .LVU1388
-ARM GAS  /tmp/cc7zNdOR.s 			page 178
+ARM GAS  /tmp/cc9xt8el.s 			page 178
 
 
 4526:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     if ((rxdatacount != 0U) && (rxdatacount < huart->NbRxDataToProcess))
@@ -10678,7 +10678,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3691:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   UART_HandleTypeDef *huart = (UART_HandleTypeDef *)(hdma->Parent);
  4406              		.loc 1 3691 1 view -0
  4407              		.cfi_startproc
-ARM GAS  /tmp/cc7zNdOR.s 			page 179
+ARM GAS  /tmp/cc9xt8el.s 			page 179
 
 
  4408              		@ args = 0, pretend = 0, frame = 0
@@ -10738,7 +10738,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4452              	UART_DMAReceiveCplt:
  4453              	.LVL302:
  4454              	.LFB382:
-ARM GAS  /tmp/cc7zNdOR.s 			page 180
+ARM GAS  /tmp/cc9xt8el.s 			page 180
 
 
 3634:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   UART_HandleTypeDef *huart = (UART_HandleTypeDef *)(hdma->Parent);
@@ -10798,7 +10798,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4496 002e 23F04003 		bic	r3, r3, #64
  4497 0032 9360     		str	r3, [r2, #8]
 3651:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 181
+ARM GAS  /tmp/cc9xt8el.s 			page 181
 
 
  4498              		.loc 1 3651 5 view .LVU1425
@@ -10858,7 +10858,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4541              		.global	HAL_UART_ReceiverTimeout_Config
  4542              		.syntax unified
  4543              		.thumb
-ARM GAS  /tmp/cc7zNdOR.s 			page 182
+ARM GAS  /tmp/cc9xt8el.s 			page 182
 
 
  4544              		.thumb_func
@@ -10918,7 +10918,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4592              		@ frame_needed = 0, uses_anonymous_args = 0
  4593              		@ link register save eliminated.
 2734:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
-ARM GAS  /tmp/cc7zNdOR.s 			page 183
+ARM GAS  /tmp/cc9xt8el.s 			page 183
 
 
  4594              		.loc 1 2734 3 view .LVU1447
@@ -10978,7 +10978,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2749:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  4632              		.loc 1 2749 7 discriminator 2 view .LVU1464
 2751:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
-ARM GAS  /tmp/cc7zNdOR.s 			page 184
+ARM GAS  /tmp/cc9xt8el.s 			page 184
 
 
  4633              		.loc 1 2751 7 discriminator 2 view .LVU1465
@@ -11038,7 +11038,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4680              		@ frame_needed = 0, uses_anonymous_args = 0
  4681              		@ link register save eliminated.
 2772:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
-ARM GAS  /tmp/cc7zNdOR.s 			page 185
+ARM GAS  /tmp/cc9xt8el.s 			page 185
 
 
  4682              		.loc 1 2772 3 view .LVU1475
@@ -11098,7 +11098,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 2787:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  4720              		.loc 1 2787 7 discriminator 2 view .LVU1492
 2789:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
-ARM GAS  /tmp/cc7zNdOR.s 			page 186
+ARM GAS  /tmp/cc9xt8el.s 			page 186
 
 
  4721              		.loc 1 2789 7 discriminator 2 view .LVU1493
@@ -11158,7 +11158,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4768              		@ frame_needed = 0, uses_anonymous_args = 0
  4769              		@ link register save eliminated.
 2850:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** }
-ARM GAS  /tmp/cc7zNdOR.s 			page 187
+ARM GAS  /tmp/cc9xt8el.s 			page 187
 
 
  4770              		.loc 1 2850 3 view .LVU1503
@@ -11218,7 +11218,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4816 0022 43F00803 		orr	r3, r3, #8
  4817 0026 1360     		str	r3, [r2]
 2869:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 188
+ARM GAS  /tmp/cc9xt8el.s 			page 188
 
 
  4818              		.loc 1 2869 3 discriminator 2 view .LVU1514
@@ -11278,7 +11278,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4862 0006 17D0     		beq	.L328
 2883:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   huart->gState = HAL_UART_STATE_BUSY;
  4863              		.loc 1 2883 3 discriminator 2 view .LVU1527
-ARM GAS  /tmp/cc7zNdOR.s 			page 189
+ARM GAS  /tmp/cc9xt8el.s 			page 189
 
 
  4864 0008 0123     		movs	r3, #1
@@ -11338,7 +11338,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4903              		.cfi_endproc
  4904              	.LFE368:
  4906              		.section	.text.HAL_LIN_SendBreak,"ax",%progbits
-ARM GAS  /tmp/cc7zNdOR.s 			page 190
+ARM GAS  /tmp/cc9xt8el.s 			page 190
 
 
  4907              		.align	1
@@ -11398,7 +11398,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4948              		.loc 1 2919 3 discriminator 2 view .LVU1556
 2921:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** }
  4949              		.loc 1 2921 3 discriminator 2 view .LVU1557
-ARM GAS  /tmp/cc7zNdOR.s 			page 191
+ARM GAS  /tmp/cc9xt8el.s 			page 191
 
 
 2921:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** }
@@ -11458,7 +11458,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  4993              	.LVL342:
 2958:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  4994              		.loc 1 2958 1 view .LVU1571
-ARM GAS  /tmp/cc7zNdOR.s 			page 192
+ARM GAS  /tmp/cc9xt8el.s 			page 192
 
 
  4995 000a 7047     		bx	lr
@@ -11518,7 +11518,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3014:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   uint16_t brrtemp;
  5047              		.loc 1 3014 3 is_stmt 1 view .LVU1578
 3015:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   UART_ClockSourceTypeDef clocksource;
-ARM GAS  /tmp/cc7zNdOR.s 			page 193
+ARM GAS  /tmp/cc9xt8el.s 			page 193
 
 
  5048              		.loc 1 3015 3 view .LVU1579
@@ -11578,7 +11578,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5079 0010 C269     		ldr	r2, [r0, #28]
 3048:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   MODIFY_REG(huart->Instance->CR1, USART_CR1_FIELDS, tmpreg);
  5080              		.loc 1 3048 10 view .LVU1603
-ARM GAS  /tmp/cc7zNdOR.s 			page 194
+ARM GAS  /tmp/cc9xt8el.s 			page 194
 
 
  5081 0012 1343     		orrs	r3, r3, r2
@@ -11638,7 +11638,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5122 0044 0B43     		orrs	r3, r3, r1
  5123 0046 9360     		str	r3, [r2, #8]
 3073:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 195
+ARM GAS  /tmp/cc9xt8el.s 			page 195
 
 
  5124              		.loc 1 3073 3 view .LVU1617
@@ -11698,7 +11698,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3132:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
  5166              		.loc 1 3132 23 is_stmt 0 view .LVU1630
  5167 0080 E069     		ldr	r0, [r4, #28]
-ARM GAS  /tmp/cc7zNdOR.s 			page 196
+ARM GAS  /tmp/cc9xt8el.s 			page 196
 
 
 3132:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
@@ -11758,7 +11758,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5214              		.loc 1 3076 3 discriminator 7 view .LVU1638
  5215 00c6 0822     		movs	r2, #8
  5216 00c8 D6E7     		b	.L340
-ARM GAS  /tmp/cc7zNdOR.s 			page 197
+ARM GAS  /tmp/cc9xt8el.s 			page 197
 
 
  5217              	.LVL357:
@@ -11818,7 +11818,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5263              	.LVL361:
  5264              	.L344:
 3076:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 198
+ARM GAS  /tmp/cc9xt8el.s 			page 198
 
 
  5265              		.loc 1 3076 3 discriminator 10 view .LVU1647
@@ -11878,7 +11878,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5313 0154 B2F5006F 		cmp	r2, #2048
  5314 0158 1FD0     		beq	.L388
 3076:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 199
+ARM GAS  /tmp/cc9xt8el.s 			page 199
 
 
  5315              		.loc 1 3076 3 is_stmt 0 view .LVU1654
@@ -11938,7 +11938,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5369              	.LVL363:
  5370              	.L412:
 3082:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
-ARM GAS  /tmp/cc7zNdOR.s 			page 200
+ARM GAS  /tmp/cc9xt8el.s 			page 200
 
 
  5371              		.loc 1 3082 5 is_stmt 1 view .LVU1655
@@ -11998,7 +11998,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3109:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           (lpuart_ker_ck_pres > (4096U * huart->Init.BaudRate)))
  5414              		.loc 1 3109 37 view .LVU1667
  5415 01dc 05EB4501 		add	r1, r5, r5, lsl #1
-ARM GAS  /tmp/cc7zNdOR.s 			page 201
+ARM GAS  /tmp/cc9xt8el.s 			page 201
 
 
 3109:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****           (lpuart_ker_ck_pres > (4096U * huart->Init.BaudRate)))
@@ -12058,7 +12058,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5457 0222 62E0     		b	.L355
  5458              	.LVL371:
  5459              	.L358:
-ARM GAS  /tmp/cc7zNdOR.s 			page 202
+ARM GAS  /tmp/cc9xt8el.s 			page 202
 
 
 3091:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         break;
@@ -12118,7 +12118,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3138:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       case UART_CLOCKSOURCE_PCLK2:
  5507              		.loc 1 3138 9 is_stmt 1 view .LVU1688
  5508              	.L369:
-ARM GAS  /tmp/cc7zNdOR.s 			page 203
+ARM GAS  /tmp/cc9xt8el.s 			page 203
 
 
 3158:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
@@ -12178,7 +12178,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5548 02a0 2268     		ldr	r2, [r4]
 3165:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
  5549              		.loc 1 3165 30 view .LVU1704
-ARM GAS  /tmp/cc7zNdOR.s 			page 204
+ARM GAS  /tmp/cc9xt8el.s 			page 204
 
 
  5550 02a2 D360     		str	r3, [r2, #12]
@@ -12238,7 +12238,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5590 02c2 1E4B     		ldr	r3, .L416
  5591 02c4 33F81230 		ldrh	r3, [r3, r2, lsl #1]
  5592 02c8 B0FBF3F0 		udiv	r0, r0, r3
-ARM GAS  /tmp/cc7zNdOR.s 			page 205
+ARM GAS  /tmp/cc9xt8el.s 			page 205
 
 
  5593 02cc 6368     		ldr	r3, [r4, #4]
@@ -12298,7 +12298,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5631              	.L374:
 3181:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         break;
  5632              		.loc 1 3181 9 is_stmt 1 view .LVU1735
-ARM GAS  /tmp/cc7zNdOR.s 			page 206
+ARM GAS  /tmp/cc9xt8el.s 			page 206
 
 
 3181:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         break;
@@ -12358,7 +12358,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5675              		.loc 1 3125 15 view .LVU1747
  5676 0320 E3E7     		b	.L355
  5677              	.LVL399:
-ARM GAS  /tmp/cc7zNdOR.s 			page 207
+ARM GAS  /tmp/cc9xt8el.s 			page 207
 
 
  5678              	.L398:
@@ -12418,7 +12418,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5724              		.syntax unified
  5725              		.thumb
  5726              		.thumb_func
-ARM GAS  /tmp/cc7zNdOR.s 			page 208
+ARM GAS  /tmp/cc9xt8el.s 			page 208
 
 
  5728              	UART_AdvFeatureConfig:
@@ -12478,7 +12478,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5768              		.loc 1 3249 7 is_stmt 0 view .LVU1770
  5769 002c 836A     		ldr	r3, [r0, #40]
 3249:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
-ARM GAS  /tmp/cc7zNdOR.s 			page 209
+ARM GAS  /tmp/cc9xt8el.s 			page 209
 
 
  5770              		.loc 1 3249 6 view .LVU1771
@@ -12538,7 +12538,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3270:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
  5812              		.loc 1 3270 3 view .LVU1784
 3270:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
-ARM GAS  /tmp/cc7zNdOR.s 			page 210
+ARM GAS  /tmp/cc9xt8el.s 			page 210
 
 
  5813              		.loc 1 3270 7 is_stmt 0 view .LVU1785
@@ -12598,7 +12598,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5852              		.loc 1 3291 6 view .LVU1800
  5853 00a4 13F0800F 		tst	r3, #128
  5854 00a8 06D0     		beq	.L418
-ARM GAS  /tmp/cc7zNdOR.s 			page 211
+ARM GAS  /tmp/cc9xt8el.s 			page 211
 
 
 3293:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     MODIFY_REG(huart->Instance->CR2, USART_CR2_MSBFIRST, huart->AdvancedInit.MSBFirst);
@@ -12658,7 +12658,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5904              		.cfi_offset 14, -4
  5905 0004 0546     		mov	r5, r0
  5906 0006 0F46     		mov	r7, r1
-ARM GAS  /tmp/cc7zNdOR.s 			page 212
+ARM GAS  /tmp/cc9xt8el.s 			page 212
 
 
  5907 0008 1646     		mov	r6, r2
@@ -12718,7 +12718,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5946 003e 12F0040F 		tst	r2, #4
  5947 0042 E5D0     		beq	.L430
 3380:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         {
-ARM GAS  /tmp/cc7zNdOR.s 			page 213
+ARM GAS  /tmp/cc9xt8el.s 			page 213
 
 
  5948              		.loc 1 3380 9 is_stmt 1 view .LVU1823
@@ -12778,7 +12778,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  5986              	.L431:
 3367:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****         CLEAR_BIT(huart->Instance->CR3, USART_CR3_EIE);
  5987              		.loc 1 3367 9 is_stmt 1 view .LVU1840
-ARM GAS  /tmp/cc7zNdOR.s 			page 214
+ARM GAS  /tmp/cc9xt8el.s 			page 214
 
 
  5988 007e 2A68     		ldr	r2, [r5]
@@ -12838,7 +12838,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6031              	.LVL412:
  6032              	.LFB336:
 1122:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   uint8_t  *pdata8bits;
-ARM GAS  /tmp/cc7zNdOR.s 			page 215
+ARM GAS  /tmp/cc9xt8el.s 			page 215
 
 
  6033              		.loc 1 1122 1 is_stmt 1 view -0
@@ -12898,7 +12898,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6075 0024 55D0     		beq	.L447
 1135:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  6076              		.loc 1 1135 5 discriminator 2 view .LVU1867
-ARM GAS  /tmp/cc7zNdOR.s 			page 216
+ARM GAS  /tmp/cc9xt8el.s 			page 216
 
 
  6077 0026 0123     		movs	r3, #1
@@ -12958,7 +12958,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6113 0052 0023     		movs	r3, #0
  6114 0054 84F88030 		strb	r3, [r4, #128]
 1158:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 217
+ARM GAS  /tmp/cc9xt8el.s 			page 217
 
 
  6115              		.loc 1 1158 5 view .LVU1886
@@ -13018,7 +13018,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6153 0076 B4F85620 		ldrh	r2, [r4, #86]
  6154 007a 92B2     		uxth	r2, r2
 1176:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
-ARM GAS  /tmp/cc7zNdOR.s 			page 218
+ARM GAS  /tmp/cc9xt8el.s 			page 218
 
 
  6155              		.loc 1 1176 25 view .LVU1903
@@ -13078,7 +13078,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6194              		.loc 1 1179 5 is_stmt 1 view .LVU1918
 1179:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
  6195              		.loc 1 1179 9 is_stmt 0 view .LVU1919
-ARM GAS  /tmp/cc7zNdOR.s 			page 219
+ARM GAS  /tmp/cc9xt8el.s 			page 219
 
 
  6196 00aa 0096     		str	r6, [sp]
@@ -13138,7 +13138,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6239              		.loc 1 1132 15 view .LVU1930
  6240 00d0 F8E7     		b	.L438
  6241              	.LVL432:
-ARM GAS  /tmp/cc7zNdOR.s 			page 220
+ARM GAS  /tmp/cc9xt8el.s 			page 220
 
 
  6242              	.L447:
@@ -13198,7 +13198,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6290              		.loc 1 1213 3 view .LVU1938
 1214:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   uint32_t tickstart;
  6291              		.loc 1 1214 3 view .LVU1939
-ARM GAS  /tmp/cc7zNdOR.s 			page 221
+ARM GAS  /tmp/cc9xt8el.s 			page 221
 
 
 1215:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -13258,7 +13258,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6329              		.loc 1 1229 5 is_stmt 1 discriminator 2 view .LVU1956
 1229:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  6330              		.loc 1 1229 26 is_stmt 0 discriminator 2 view .LVU1957
-ARM GAS  /tmp/cc7zNdOR.s 			page 222
+ARM GAS  /tmp/cc9xt8el.s 			page 222
 
 
  6331 003a C366     		str	r3, [r0, #108]
@@ -13318,7 +13318,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6370 0070 A4F86020 		strh	r2, [r4, #96]	@ movhi
  6371 0074 09E0     		b	.L460
  6372              	.L462:
-ARM GAS  /tmp/cc7zNdOR.s 			page 223
+ARM GAS  /tmp/cc9xt8el.s 			page 223
 
 
 1238:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     uhMask = huart->Mask;
@@ -13378,7 +13378,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6411              		.loc 1 1238 5 discriminator 11 view .LVU1988
  6412 00a4 7F22     		movs	r2, #127
  6413 00a6 A4F86020 		strh	r2, [r4, #96]	@ movhi
-ARM GAS  /tmp/cc7zNdOR.s 			page 224
+ARM GAS  /tmp/cc9xt8el.s 			page 224
 
 
  6414 00aa EEE7     		b	.L460
@@ -13438,7 +13438,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6453 00d0 B4F85E20 		ldrh	r2, [r4, #94]
  6454 00d4 92B2     		uxth	r2, r2
 1272:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
-ARM GAS  /tmp/cc7zNdOR.s 			page 225
+ARM GAS  /tmp/cc9xt8el.s 			page 225
 
 
  6455              		.loc 1 1272 25 view .LVU2004
@@ -13498,7 +13498,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1270:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****       }
  6494              		.loc 1 1270 9 is_stmt 0 view .LVU2020
  6495 0108 E2E7     		b	.L468
-ARM GAS  /tmp/cc7zNdOR.s 			page 226
+ARM GAS  /tmp/cc9xt8el.s 			page 226
 
 
  6496              	.L481:
@@ -13558,7 +13558,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1225:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  6539              		.loc 1 1225 5 view .LVU2032
  6540 0126 F6E7     		b	.L457
-ARM GAS  /tmp/cc7zNdOR.s 			page 227
+ARM GAS  /tmp/cc9xt8el.s 			page 227
 
 
  6541              	.LVL457:
@@ -13618,7 +13618,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3314:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
  6587              		.loc 1 3314 13 is_stmt 0 view .LVU2043
  6588 0012 2268     		ldr	r2, [r4]
-ARM GAS  /tmp/cc7zNdOR.s 			page 228
+ARM GAS  /tmp/cc9xt8el.s 			page 228
 
 
 3314:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
@@ -13678,7 +13678,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6626              		.cfi_def_cfa_offset 12
  6627              		@ sp needed
  6628 003a 30BD     		pop	{r4, r5, pc}
-ARM GAS  /tmp/cc7zNdOR.s 			page 229
+ARM GAS  /tmp/cc9xt8el.s 			page 229
 
 
  6629              	.LVL462:
@@ -13738,7 +13738,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6675              		.thumb
  6676              		.thumb_func
  6678              	HAL_UART_Init:
-ARM GAS  /tmp/cc7zNdOR.s 			page 230
+ARM GAS  /tmp/cc9xt8el.s 			page 230
 
 
  6679              	.LVL466:
@@ -13798,7 +13798,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6718              		.loc 1 352 6 view .LVU2084
  6719 0022 0128     		cmp	r0, #1
  6720 0024 13D0     		beq	.L493
-ARM GAS  /tmp/cc7zNdOR.s 			page 231
+ARM GAS  /tmp/cc9xt8el.s 			page 231
 
 
  357:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
@@ -13858,7 +13858,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6761              		.loc 1 359 5 is_stmt 1 view .LVU2098
  6762 005a 2046     		mov	r0, r4
  6763 005c FFF7FEFF 		bl	UART_AdvFeatureConfig
-ARM GAS  /tmp/cc7zNdOR.s 			page 232
+ARM GAS  /tmp/cc9xt8el.s 			page 232
 
 
  6764              	.LVL472:
@@ -13918,7 +13918,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6810 000c 33B3     		cbz	r3, .L512
  6811              	.LVL476:
  6812              	.L505:
-ARM GAS  /tmp/cc7zNdOR.s 			page 233
+ARM GAS  /tmp/cc9xt8el.s 			page 233
 
 
  412:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -13978,7 +13978,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6854 004e 43F00103 		orr	r3, r3, #1
  6855 0052 1360     		str	r3, [r2]
  439:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** }
-ARM GAS  /tmp/cc7zNdOR.s 			page 234
+ARM GAS  /tmp/cc9xt8el.s 			page 234
 
 
  6856              		.loc 1 439 3 view .LVU2122
@@ -14038,7 +14038,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6903              	.LFB331:
  454:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   /* Check the UART handle allocation */
  6904              		.loc 1 454 1 is_stmt 1 view -0
-ARM GAS  /tmp/cc7zNdOR.s 			page 235
+ARM GAS  /tmp/cc9xt8el.s 			page 235
 
 
  6905              		.cfi_startproc
@@ -14098,7 +14098,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  498:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  6944              		.loc 1 498 17 is_stmt 0 view .LVU2148
  6945 001e 2423     		movs	r3, #36
-ARM GAS  /tmp/cc7zNdOR.s 			page 236
+ARM GAS  /tmp/cc9xt8el.s 			page 236
 
 
  6946 0020 C4F88430 		str	r3, [r4, #132]
@@ -14158,7 +14158,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  6988 0066 2268     		ldr	r2, [r4]
  6989 0068 1368     		ldr	r3, [r2]
  6990 006a 43F00103 		orr	r3, r3, #1
-ARM GAS  /tmp/cc7zNdOR.s 			page 237
+ARM GAS  /tmp/cc9xt8el.s 			page 237
 
 
  6991 006e 1360     		str	r3, [r2]
@@ -14218,7 +14218,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7035              		.cfi_offset 5, -8
  7036              		.cfi_offset 14, -4
  469:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
-ARM GAS  /tmp/cc7zNdOR.s 			page 238
+ARM GAS  /tmp/cc9xt8el.s 			page 238
 
 
  7037              		.loc 1 469 12 view .LVU2171
@@ -14278,7 +14278,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7083              		.loc 1 561 12 is_stmt 0 view .LVU2181
  7084 000c D0F88430 		ldr	r3, [r0, #132]
  561:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
-ARM GAS  /tmp/cc7zNdOR.s 			page 239
+ARM GAS  /tmp/cc9xt8el.s 			page 239
 
 
  7085              		.loc 1 561 6 view .LVU2182
@@ -14338,7 +14338,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7126              	.L531:
  610:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  7127              		.loc 1 610 3 is_stmt 1 view .LVU2196
-ARM GAS  /tmp/cc7zNdOR.s 			page 240
+ARM GAS  /tmp/cc9xt8el.s 			page 240
 
 
  7128 004a 2268     		ldr	r2, [r4]
@@ -14398,7 +14398,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7172              	.LCFI53:
  7173              		.cfi_def_cfa_offset 0
  7174              		.cfi_restore 4
-ARM GAS  /tmp/cc7zNdOR.s 			page 241
+ARM GAS  /tmp/cc9xt8el.s 			page 241
 
 
  7175              		.cfi_restore 5
@@ -14458,7 +14458,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7220 0016 0268     		ldr	r2, [r0]
  7221 0018 1368     		ldr	r3, [r2]
  7222 001a 43F40053 		orr	r3, r3, #8192
-ARM GAS  /tmp/cc7zNdOR.s 			page 242
+ARM GAS  /tmp/cc9xt8el.s 			page 242
 
 
  7223 001e 1360     		str	r3, [r2]
@@ -14518,7 +14518,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7268 0006 012B     		cmp	r3, #1
  7269 0008 10D0     		beq	.L546
 2830:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
-ARM GAS  /tmp/cc7zNdOR.s 			page 243
+ARM GAS  /tmp/cc9xt8el.s 			page 243
 
 
  7270              		.loc 1 2830 3 discriminator 2 view .LVU2229
@@ -14578,7 +14578,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7314              		.loc 1 3417 1 is_stmt 1 view -0
  7315              		.cfi_startproc
  7316              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  /tmp/cc7zNdOR.s 			page 244
+ARM GAS  /tmp/cc9xt8el.s 			page 244
 
 
  7317              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -14638,7 +14638,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7355              		.loc 1 3424 3 discriminator 4 view .LVU2257
  7356 0032 FF23     		movs	r3, #255
  7357 0034 A0F86030 		strh	r3, [r0, #96]	@ movhi
-ARM GAS  /tmp/cc7zNdOR.s 			page 245
+ARM GAS  /tmp/cc9xt8el.s 			page 245
 
 
  7358 0038 09E0     		b	.L551
@@ -14698,7 +14698,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7397              		.loc 1 3454 21 is_stmt 0 view .LVU2272
  7398 006c 8368     		ldr	r3, [r0, #8]
 3454:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
-ARM GAS  /tmp/cc7zNdOR.s 			page 246
+ARM GAS  /tmp/cc9xt8el.s 			page 246
 
 
  7399              		.loc 1 3454 8 view .LVU2273
@@ -14758,7 +14758,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7440 009e D6E7     		b	.L551
  7441              	.LVL520:
  7442              	.L564:
-ARM GAS  /tmp/cc7zNdOR.s 			page 247
+ARM GAS  /tmp/cc9xt8el.s 			page 247
 
 
 3433:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   {
@@ -14818,7 +14818,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7482              		.loc 1 3436 56 discriminator 1 view .LVU2301
  7483 00d2 002B     		cmp	r3, #0
  7484 00d4 ECD1     		bne	.L557
-ARM GAS  /tmp/cc7zNdOR.s 			page 248
+ARM GAS  /tmp/cc9xt8el.s 			page 248
 
 
 3438:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
@@ -14878,7 +14878,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 1375:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
  7531              		.loc 1 1375 5 is_stmt 1 view .LVU2312
 1375:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     {
-ARM GAS  /tmp/cc7zNdOR.s 			page 249
+ARM GAS  /tmp/cc9xt8el.s 			page 249
 
 
  7532              		.loc 1 1375 8 is_stmt 0 view .LVU2313
@@ -14938,7 +14938,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7571 0036 1C60     		str	r4, [r3]
  7572              	.L571:
 1395:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****   }
-ARM GAS  /tmp/cc7zNdOR.s 			page 250
+ARM GAS  /tmp/cc9xt8el.s 			page 250
 
 
  7573              		.loc 1 1395 5 view .LVU2329
@@ -14998,7 +14998,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7618              		.section	.text.UART_Start_Receive_DMA,"ax",%progbits
  7619              		.align	1
  7620              		.global	UART_Start_Receive_DMA
-ARM GAS  /tmp/cc7zNdOR.s 			page 251
+ARM GAS  /tmp/cc9xt8el.s 			page 251
 
 
  7621              		.syntax unified
@@ -15058,7 +15058,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7661              		.loc 1 3493 5 is_stmt 1 view .LVU2354
 3493:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  7662              		.loc 1 3493 37 is_stmt 0 view .LVU2355
-ARM GAS  /tmp/cc7zNdOR.s 			page 252
+ARM GAS  /tmp/cc9xt8el.s 			page 252
 
 
  7663 001c 1749     		ldr	r1, .L587
@@ -15118,7 +15118,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
 3518:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  7701              		.loc 1 3518 3 view .LVU2372
  7702 0040 0020     		movs	r0, #0
-ARM GAS  /tmp/cc7zNdOR.s 			page 253
+ARM GAS  /tmp/cc9xt8el.s 			page 253
 
 
  7703 0042 84F88000 		strb	r0, [r4, #128]
@@ -15178,7 +15178,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7742 007a F3E7     		b	.L584
  7743              	.L588:
  7744              		.align	2
-ARM GAS  /tmp/cc7zNdOR.s 			page 254
+ARM GAS  /tmp/cc9xt8el.s 			page 254
 
 
  7745              	.L587:
@@ -15238,7 +15238,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7790 0018 80F88030 		strb	r3, [r0, #128]
 1499:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
  7791              		.loc 1 1499 5 discriminator 2 view .LVU2399
-ARM GAS  /tmp/cc7zNdOR.s 			page 255
+ARM GAS  /tmp/cc9xt8el.s 			page 255
 
 
 1502:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c **** 
@@ -15298,7 +15298,7 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7832              	.L593:
 1496:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c ****     }
  7833              		.loc 1 1496 14 view .LVU2414
-ARM GAS  /tmp/cc7zNdOR.s 			page 256
+ARM GAS  /tmp/cc9xt8el.s 			page 256
 
 
  7834 0042 0120     		movs	r0, #1
@@ -15358,197 +15358,197 @@ ARM GAS  /tmp/cc7zNdOR.s 			page 1
  7886              		.file 8 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h"
  7887              		.file 9 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h"
  7888              		.file 10 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h"
-ARM GAS  /tmp/cc7zNdOR.s 			page 257
+ARM GAS  /tmp/cc9xt8el.s 			page 257
 
 
  7889              		.file 11 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h"
-ARM GAS  /tmp/cc7zNdOR.s 			page 258
+ARM GAS  /tmp/cc9xt8el.s 			page 258
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_hal_uart.c
-     /tmp/cc7zNdOR.s:20     .text.UART_EndTxTransfer:0000000000000000 $t
-     /tmp/cc7zNdOR.s:25     .text.UART_EndTxTransfer:0000000000000000 UART_EndTxTransfer
-     /tmp/cc7zNdOR.s:54     .text.UART_EndRxTransfer:0000000000000000 $t
-     /tmp/cc7zNdOR.s:59     .text.UART_EndRxTransfer:0000000000000000 UART_EndRxTransfer
-     /tmp/cc7zNdOR.s:109    .text.UART_TxISR_8BIT:0000000000000000 $t
-     /tmp/cc7zNdOR.s:114    .text.UART_TxISR_8BIT:0000000000000000 UART_TxISR_8BIT
-     /tmp/cc7zNdOR.s:179    .text.UART_TxISR_16BIT:0000000000000000 $t
-     /tmp/cc7zNdOR.s:184    .text.UART_TxISR_16BIT:0000000000000000 UART_TxISR_16BIT
-     /tmp/cc7zNdOR.s:255    .text.UART_TxISR_8BIT_FIFOEN:0000000000000000 $t
-     /tmp/cc7zNdOR.s:260    .text.UART_TxISR_8BIT_FIFOEN:0000000000000000 UART_TxISR_8BIT_FIFOEN
-     /tmp/cc7zNdOR.s:353    .text.UART_TxISR_16BIT_FIFOEN:0000000000000000 $t
-     /tmp/cc7zNdOR.s:358    .text.UART_TxISR_16BIT_FIFOEN:0000000000000000 UART_TxISR_16BIT_FIFOEN
-     /tmp/cc7zNdOR.s:457    .text.HAL_UART_MspInit:0000000000000000 $t
-     /tmp/cc7zNdOR.s:463    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
-     /tmp/cc7zNdOR.s:478    .text.HAL_UART_MspDeInit:0000000000000000 $t
-     /tmp/cc7zNdOR.s:484    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
-     /tmp/cc7zNdOR.s:499    .text.HAL_UART_DeInit:0000000000000000 $t
-     /tmp/cc7zNdOR.s:505    .text.HAL_UART_DeInit:0000000000000000 HAL_UART_DeInit
-     /tmp/cc7zNdOR.s:591    .text.HAL_UART_Transmit_IT:0000000000000000 $t
-     /tmp/cc7zNdOR.s:597    .text.HAL_UART_Transmit_IT:0000000000000000 HAL_UART_Transmit_IT
-     /tmp/cc7zNdOR.s:767    .text.HAL_UART_Transmit_IT:00000000000000a4 $d
-     /tmp/cc7zNdOR.s:775    .text.HAL_UART_Transmit_DMA:0000000000000000 $t
-     /tmp/cc7zNdOR.s:781    .text.HAL_UART_Transmit_DMA:0000000000000000 HAL_UART_Transmit_DMA
-     /tmp/cc7zNdOR.s:955    .text.HAL_UART_Transmit_DMA:00000000000000a0 $d
-     /tmp/cc7zNdOR.s:1760   .text.UART_DMATransmitCplt:0000000000000000 UART_DMATransmitCplt
-     /tmp/cc7zNdOR.s:1882   .text.UART_DMATxHalfCplt:0000000000000000 UART_DMATxHalfCplt
-     /tmp/cc7zNdOR.s:1977   .text.UART_DMAError:0000000000000000 UART_DMAError
-     /tmp/cc7zNdOR.s:962    .text.HAL_UART_DMAPause:0000000000000000 $t
-     /tmp/cc7zNdOR.s:968    .text.HAL_UART_DMAPause:0000000000000000 HAL_UART_DMAPause
-     /tmp/cc7zNdOR.s:1074   .text.HAL_UART_DMAResume:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1080   .text.HAL_UART_DMAResume:0000000000000000 HAL_UART_DMAResume
-     /tmp/cc7zNdOR.s:1162   .text.HAL_UART_DMAStop:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1168   .text.HAL_UART_DMAStop:0000000000000000 HAL_UART_DMAStop
-     /tmp/cc7zNdOR.s:1310   .text.HAL_UART_Abort:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1316   .text.HAL_UART_Abort:0000000000000000 HAL_UART_Abort
-     /tmp/cc7zNdOR.s:1502   .text.HAL_UART_AbortTransmit:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1508   .text.HAL_UART_AbortTransmit:0000000000000000 HAL_UART_AbortTransmit
-     /tmp/cc7zNdOR.s:1612   .text.HAL_UART_AbortReceive:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1618   .text.HAL_UART_AbortReceive:0000000000000000 HAL_UART_AbortReceive
-     /tmp/cc7zNdOR.s:1734   .text.HAL_UART_TxCpltCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1740   .text.HAL_UART_TxCpltCallback:0000000000000000 HAL_UART_TxCpltCallback
-     /tmp/cc7zNdOR.s:1755   .text.UART_DMATransmitCplt:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1816   .text.UART_EndTransmit_IT:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1821   .text.UART_EndTransmit_IT:0000000000000000 UART_EndTransmit_IT
-     /tmp/cc7zNdOR.s:1856   .text.HAL_UART_TxHalfCpltCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1862   .text.HAL_UART_TxHalfCpltCallback:0000000000000000 HAL_UART_TxHalfCpltCallback
-     /tmp/cc7zNdOR.s:1877   .text.UART_DMATxHalfCplt:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1909   .text.HAL_UART_RxCpltCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1915   .text.HAL_UART_RxCpltCallback:0000000000000000 HAL_UART_RxCpltCallback
-     /tmp/cc7zNdOR.s:1930   .text.HAL_UART_RxHalfCpltCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1936   .text.HAL_UART_RxHalfCpltCallback:0000000000000000 HAL_UART_RxHalfCpltCallback
-     /tmp/cc7zNdOR.s:1951   .text.HAL_UART_ErrorCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:1957   .text.HAL_UART_ErrorCallback:0000000000000000 HAL_UART_ErrorCallback
-     /tmp/cc7zNdOR.s:1972   .text.UART_DMAError:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2066   .text.UART_DMAAbortOnError:0000000000000000 $t
-ARM GAS  /tmp/cc7zNdOR.s 			page 259
+     /tmp/cc9xt8el.s:20     .text.UART_EndTxTransfer:0000000000000000 $t
+     /tmp/cc9xt8el.s:25     .text.UART_EndTxTransfer:0000000000000000 UART_EndTxTransfer
+     /tmp/cc9xt8el.s:54     .text.UART_EndRxTransfer:0000000000000000 $t
+     /tmp/cc9xt8el.s:59     .text.UART_EndRxTransfer:0000000000000000 UART_EndRxTransfer
+     /tmp/cc9xt8el.s:109    .text.UART_TxISR_8BIT:0000000000000000 $t
+     /tmp/cc9xt8el.s:114    .text.UART_TxISR_8BIT:0000000000000000 UART_TxISR_8BIT
+     /tmp/cc9xt8el.s:179    .text.UART_TxISR_16BIT:0000000000000000 $t
+     /tmp/cc9xt8el.s:184    .text.UART_TxISR_16BIT:0000000000000000 UART_TxISR_16BIT
+     /tmp/cc9xt8el.s:255    .text.UART_TxISR_8BIT_FIFOEN:0000000000000000 $t
+     /tmp/cc9xt8el.s:260    .text.UART_TxISR_8BIT_FIFOEN:0000000000000000 UART_TxISR_8BIT_FIFOEN
+     /tmp/cc9xt8el.s:353    .text.UART_TxISR_16BIT_FIFOEN:0000000000000000 $t
+     /tmp/cc9xt8el.s:358    .text.UART_TxISR_16BIT_FIFOEN:0000000000000000 UART_TxISR_16BIT_FIFOEN
+     /tmp/cc9xt8el.s:457    .text.HAL_UART_MspInit:0000000000000000 $t
+     /tmp/cc9xt8el.s:463    .text.HAL_UART_MspInit:0000000000000000 HAL_UART_MspInit
+     /tmp/cc9xt8el.s:478    .text.HAL_UART_MspDeInit:0000000000000000 $t
+     /tmp/cc9xt8el.s:484    .text.HAL_UART_MspDeInit:0000000000000000 HAL_UART_MspDeInit
+     /tmp/cc9xt8el.s:499    .text.HAL_UART_DeInit:0000000000000000 $t
+     /tmp/cc9xt8el.s:505    .text.HAL_UART_DeInit:0000000000000000 HAL_UART_DeInit
+     /tmp/cc9xt8el.s:591    .text.HAL_UART_Transmit_IT:0000000000000000 $t
+     /tmp/cc9xt8el.s:597    .text.HAL_UART_Transmit_IT:0000000000000000 HAL_UART_Transmit_IT
+     /tmp/cc9xt8el.s:767    .text.HAL_UART_Transmit_IT:00000000000000a4 $d
+     /tmp/cc9xt8el.s:775    .text.HAL_UART_Transmit_DMA:0000000000000000 $t
+     /tmp/cc9xt8el.s:781    .text.HAL_UART_Transmit_DMA:0000000000000000 HAL_UART_Transmit_DMA
+     /tmp/cc9xt8el.s:955    .text.HAL_UART_Transmit_DMA:00000000000000a0 $d
+     /tmp/cc9xt8el.s:1760   .text.UART_DMATransmitCplt:0000000000000000 UART_DMATransmitCplt
+     /tmp/cc9xt8el.s:1882   .text.UART_DMATxHalfCplt:0000000000000000 UART_DMATxHalfCplt
+     /tmp/cc9xt8el.s:1977   .text.UART_DMAError:0000000000000000 UART_DMAError
+     /tmp/cc9xt8el.s:962    .text.HAL_UART_DMAPause:0000000000000000 $t
+     /tmp/cc9xt8el.s:968    .text.HAL_UART_DMAPause:0000000000000000 HAL_UART_DMAPause
+     /tmp/cc9xt8el.s:1074   .text.HAL_UART_DMAResume:0000000000000000 $t
+     /tmp/cc9xt8el.s:1080   .text.HAL_UART_DMAResume:0000000000000000 HAL_UART_DMAResume
+     /tmp/cc9xt8el.s:1162   .text.HAL_UART_DMAStop:0000000000000000 $t
+     /tmp/cc9xt8el.s:1168   .text.HAL_UART_DMAStop:0000000000000000 HAL_UART_DMAStop
+     /tmp/cc9xt8el.s:1310   .text.HAL_UART_Abort:0000000000000000 $t
+     /tmp/cc9xt8el.s:1316   .text.HAL_UART_Abort:0000000000000000 HAL_UART_Abort
+     /tmp/cc9xt8el.s:1502   .text.HAL_UART_AbortTransmit:0000000000000000 $t
+     /tmp/cc9xt8el.s:1508   .text.HAL_UART_AbortTransmit:0000000000000000 HAL_UART_AbortTransmit
+     /tmp/cc9xt8el.s:1612   .text.HAL_UART_AbortReceive:0000000000000000 $t
+     /tmp/cc9xt8el.s:1618   .text.HAL_UART_AbortReceive:0000000000000000 HAL_UART_AbortReceive
+     /tmp/cc9xt8el.s:1734   .text.HAL_UART_TxCpltCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:1740   .text.HAL_UART_TxCpltCallback:0000000000000000 HAL_UART_TxCpltCallback
+     /tmp/cc9xt8el.s:1755   .text.UART_DMATransmitCplt:0000000000000000 $t
+     /tmp/cc9xt8el.s:1816   .text.UART_EndTransmit_IT:0000000000000000 $t
+     /tmp/cc9xt8el.s:1821   .text.UART_EndTransmit_IT:0000000000000000 UART_EndTransmit_IT
+     /tmp/cc9xt8el.s:1856   .text.HAL_UART_TxHalfCpltCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:1862   .text.HAL_UART_TxHalfCpltCallback:0000000000000000 HAL_UART_TxHalfCpltCallback
+     /tmp/cc9xt8el.s:1877   .text.UART_DMATxHalfCplt:0000000000000000 $t
+     /tmp/cc9xt8el.s:1909   .text.HAL_UART_RxCpltCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:1915   .text.HAL_UART_RxCpltCallback:0000000000000000 HAL_UART_RxCpltCallback
+     /tmp/cc9xt8el.s:1930   .text.HAL_UART_RxHalfCpltCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:1936   .text.HAL_UART_RxHalfCpltCallback:0000000000000000 HAL_UART_RxHalfCpltCallback
+     /tmp/cc9xt8el.s:1951   .text.HAL_UART_ErrorCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:1957   .text.HAL_UART_ErrorCallback:0000000000000000 HAL_UART_ErrorCallback
+     /tmp/cc9xt8el.s:1972   .text.UART_DMAError:0000000000000000 $t
+     /tmp/cc9xt8el.s:2066   .text.UART_DMAAbortOnError:0000000000000000 $t
+ARM GAS  /tmp/cc9xt8el.s 			page 259
 
 
-     /tmp/cc7zNdOR.s:2071   .text.UART_DMAAbortOnError:0000000000000000 UART_DMAAbortOnError
-     /tmp/cc7zNdOR.s:2104   .text.HAL_UART_AbortCpltCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2110   .text.HAL_UART_AbortCpltCallback:0000000000000000 HAL_UART_AbortCpltCallback
-     /tmp/cc7zNdOR.s:2125   .text.HAL_UART_Abort_IT:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2131   .text.HAL_UART_Abort_IT:0000000000000000 HAL_UART_Abort_IT
-     /tmp/cc7zNdOR.s:2370   .text.HAL_UART_Abort_IT:0000000000000108 $d
-     /tmp/cc7zNdOR.s:2459   .text.UART_DMATxAbortCallback:0000000000000000 UART_DMATxAbortCallback
-     /tmp/cc7zNdOR.s:2381   .text.UART_DMARxAbortCallback:0000000000000000 UART_DMARxAbortCallback
-     /tmp/cc7zNdOR.s:2376   .text.UART_DMARxAbortCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2454   .text.UART_DMATxAbortCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2543   .text.HAL_UART_AbortTransmitCpltCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2549   .text.HAL_UART_AbortTransmitCpltCallback:0000000000000000 HAL_UART_AbortTransmitCpltCallback
-     /tmp/cc7zNdOR.s:2564   .text.HAL_UART_AbortTransmit_IT:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2570   .text.HAL_UART_AbortTransmit_IT:0000000000000000 HAL_UART_AbortTransmit_IT
-     /tmp/cc7zNdOR.s:2691   .text.HAL_UART_AbortTransmit_IT:0000000000000080 $d
-     /tmp/cc7zNdOR.s:2701   .text.UART_DMATxOnlyAbortCallback:0000000000000000 UART_DMATxOnlyAbortCallback
-     /tmp/cc7zNdOR.s:2696   .text.UART_DMATxOnlyAbortCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2750   .text.HAL_UART_AbortReceiveCpltCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2756   .text.HAL_UART_AbortReceiveCpltCallback:0000000000000000 HAL_UART_AbortReceiveCpltCallback
-     /tmp/cc7zNdOR.s:2771   .text.HAL_UART_AbortReceive_IT:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2777   .text.HAL_UART_AbortReceive_IT:0000000000000000 HAL_UART_AbortReceive_IT
-     /tmp/cc7zNdOR.s:2921   .text.HAL_UART_AbortReceive_IT:00000000000000a0 $d
-     /tmp/cc7zNdOR.s:2931   .text.UART_DMARxOnlyAbortCallback:0000000000000000 UART_DMARxOnlyAbortCallback
-     /tmp/cc7zNdOR.s:2926   .text.UART_DMARxOnlyAbortCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2977   .text.HAL_UARTEx_RxEventCallback:0000000000000000 $t
-     /tmp/cc7zNdOR.s:2983   .text.HAL_UARTEx_RxEventCallback:0000000000000000 HAL_UARTEx_RxEventCallback
-     /tmp/cc7zNdOR.s:2999   .text.HAL_UART_IRQHandler:0000000000000000 $t
-     /tmp/cc7zNdOR.s:3005   .text.HAL_UART_IRQHandler:0000000000000000 HAL_UART_IRQHandler
-     /tmp/cc7zNdOR.s:3570   .text.HAL_UART_IRQHandler:00000000000002cc $d
-     /tmp/cc7zNdOR.s:3577   .text.UART_RxISR_8BIT:0000000000000000 $t
-     /tmp/cc7zNdOR.s:3582   .text.UART_RxISR_8BIT:0000000000000000 UART_RxISR_8BIT
-     /tmp/cc7zNdOR.s:3709   .text.UART_RxISR_16BIT:0000000000000000 $t
-     /tmp/cc7zNdOR.s:3714   .text.UART_RxISR_16BIT:0000000000000000 UART_RxISR_16BIT
-     /tmp/cc7zNdOR.s:3842   .text.UART_RxISR_8BIT_FIFOEN:0000000000000000 $t
-     /tmp/cc7zNdOR.s:3847   .text.UART_RxISR_8BIT_FIFOEN:0000000000000000 UART_RxISR_8BIT_FIFOEN
-     /tmp/cc7zNdOR.s:4114   .text.UART_RxISR_8BIT_FIFOEN:0000000000000154 $d
-     /tmp/cc7zNdOR.s:4119   .text.UART_RxISR_16BIT_FIFOEN:0000000000000000 $t
-     /tmp/cc7zNdOR.s:4124   .text.UART_RxISR_16BIT_FIFOEN:0000000000000000 UART_RxISR_16BIT_FIFOEN
-     /tmp/cc7zNdOR.s:4393   .text.UART_RxISR_16BIT_FIFOEN:0000000000000154 $d
-     /tmp/cc7zNdOR.s:4398   .text.UART_DMARxHalfCplt:0000000000000000 $t
-     /tmp/cc7zNdOR.s:4403   .text.UART_DMARxHalfCplt:0000000000000000 UART_DMARxHalfCplt
-     /tmp/cc7zNdOR.s:4447   .text.UART_DMAReceiveCplt:0000000000000000 $t
-     /tmp/cc7zNdOR.s:4452   .text.UART_DMAReceiveCplt:0000000000000000 UART_DMAReceiveCplt
-     /tmp/cc7zNdOR.s:4540   .text.HAL_UART_ReceiverTimeout_Config:0000000000000000 $t
-     /tmp/cc7zNdOR.s:4546   .text.HAL_UART_ReceiverTimeout_Config:0000000000000000 HAL_UART_ReceiverTimeout_Config
-     /tmp/cc7zNdOR.s:4575   .text.HAL_UART_ReceiverTimeout_Config:0000000000000014 $d
-     /tmp/cc7zNdOR.s:4580   .text.HAL_UART_EnableReceiverTimeout:0000000000000000 $t
-     /tmp/cc7zNdOR.s:4586   .text.HAL_UART_EnableReceiverTimeout:0000000000000000 HAL_UART_EnableReceiverTimeout
-     /tmp/cc7zNdOR.s:4663   .text.HAL_UART_EnableReceiverTimeout:0000000000000048 $d
-     /tmp/cc7zNdOR.s:4668   .text.HAL_UART_DisableReceiverTimeout:0000000000000000 $t
-     /tmp/cc7zNdOR.s:4674   .text.HAL_UART_DisableReceiverTimeout:0000000000000000 HAL_UART_DisableReceiverTimeout
-     /tmp/cc7zNdOR.s:4751   .text.HAL_UART_DisableReceiverTimeout:0000000000000048 $d
-     /tmp/cc7zNdOR.s:4756   .text.HAL_MultiProcessor_EnterMuteMode:0000000000000000 $t
-     /tmp/cc7zNdOR.s:4762   .text.HAL_MultiProcessor_EnterMuteMode:0000000000000000 HAL_MultiProcessor_EnterMuteMode
-     /tmp/cc7zNdOR.s:4781   .text.HAL_HalfDuplex_EnableTransmitter:0000000000000000 $t
-     /tmp/cc7zNdOR.s:4787   .text.HAL_HalfDuplex_EnableTransmitter:0000000000000000 HAL_HalfDuplex_EnableTransmitter
-     /tmp/cc7zNdOR.s:4844   .text.HAL_HalfDuplex_EnableReceiver:0000000000000000 $t
-ARM GAS  /tmp/cc7zNdOR.s 			page 260
+     /tmp/cc9xt8el.s:2071   .text.UART_DMAAbortOnError:0000000000000000 UART_DMAAbortOnError
+     /tmp/cc9xt8el.s:2104   .text.HAL_UART_AbortCpltCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:2110   .text.HAL_UART_AbortCpltCallback:0000000000000000 HAL_UART_AbortCpltCallback
+     /tmp/cc9xt8el.s:2125   .text.HAL_UART_Abort_IT:0000000000000000 $t
+     /tmp/cc9xt8el.s:2131   .text.HAL_UART_Abort_IT:0000000000000000 HAL_UART_Abort_IT
+     /tmp/cc9xt8el.s:2370   .text.HAL_UART_Abort_IT:0000000000000108 $d
+     /tmp/cc9xt8el.s:2459   .text.UART_DMATxAbortCallback:0000000000000000 UART_DMATxAbortCallback
+     /tmp/cc9xt8el.s:2381   .text.UART_DMARxAbortCallback:0000000000000000 UART_DMARxAbortCallback
+     /tmp/cc9xt8el.s:2376   .text.UART_DMARxAbortCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:2454   .text.UART_DMATxAbortCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:2543   .text.HAL_UART_AbortTransmitCpltCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:2549   .text.HAL_UART_AbortTransmitCpltCallback:0000000000000000 HAL_UART_AbortTransmitCpltCallback
+     /tmp/cc9xt8el.s:2564   .text.HAL_UART_AbortTransmit_IT:0000000000000000 $t
+     /tmp/cc9xt8el.s:2570   .text.HAL_UART_AbortTransmit_IT:0000000000000000 HAL_UART_AbortTransmit_IT
+     /tmp/cc9xt8el.s:2691   .text.HAL_UART_AbortTransmit_IT:0000000000000080 $d
+     /tmp/cc9xt8el.s:2701   .text.UART_DMATxOnlyAbortCallback:0000000000000000 UART_DMATxOnlyAbortCallback
+     /tmp/cc9xt8el.s:2696   .text.UART_DMATxOnlyAbortCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:2750   .text.HAL_UART_AbortReceiveCpltCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:2756   .text.HAL_UART_AbortReceiveCpltCallback:0000000000000000 HAL_UART_AbortReceiveCpltCallback
+     /tmp/cc9xt8el.s:2771   .text.HAL_UART_AbortReceive_IT:0000000000000000 $t
+     /tmp/cc9xt8el.s:2777   .text.HAL_UART_AbortReceive_IT:0000000000000000 HAL_UART_AbortReceive_IT
+     /tmp/cc9xt8el.s:2921   .text.HAL_UART_AbortReceive_IT:00000000000000a0 $d
+     /tmp/cc9xt8el.s:2931   .text.UART_DMARxOnlyAbortCallback:0000000000000000 UART_DMARxOnlyAbortCallback
+     /tmp/cc9xt8el.s:2926   .text.UART_DMARxOnlyAbortCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:2977   .text.HAL_UARTEx_RxEventCallback:0000000000000000 $t
+     /tmp/cc9xt8el.s:2983   .text.HAL_UARTEx_RxEventCallback:0000000000000000 HAL_UARTEx_RxEventCallback
+     /tmp/cc9xt8el.s:2999   .text.HAL_UART_IRQHandler:0000000000000000 $t
+     /tmp/cc9xt8el.s:3005   .text.HAL_UART_IRQHandler:0000000000000000 HAL_UART_IRQHandler
+     /tmp/cc9xt8el.s:3570   .text.HAL_UART_IRQHandler:00000000000002cc $d
+     /tmp/cc9xt8el.s:3577   .text.UART_RxISR_8BIT:0000000000000000 $t
+     /tmp/cc9xt8el.s:3582   .text.UART_RxISR_8BIT:0000000000000000 UART_RxISR_8BIT
+     /tmp/cc9xt8el.s:3709   .text.UART_RxISR_16BIT:0000000000000000 $t
+     /tmp/cc9xt8el.s:3714   .text.UART_RxISR_16BIT:0000000000000000 UART_RxISR_16BIT
+     /tmp/cc9xt8el.s:3842   .text.UART_RxISR_8BIT_FIFOEN:0000000000000000 $t
+     /tmp/cc9xt8el.s:3847   .text.UART_RxISR_8BIT_FIFOEN:0000000000000000 UART_RxISR_8BIT_FIFOEN
+     /tmp/cc9xt8el.s:4114   .text.UART_RxISR_8BIT_FIFOEN:0000000000000154 $d
+     /tmp/cc9xt8el.s:4119   .text.UART_RxISR_16BIT_FIFOEN:0000000000000000 $t
+     /tmp/cc9xt8el.s:4124   .text.UART_RxISR_16BIT_FIFOEN:0000000000000000 UART_RxISR_16BIT_FIFOEN
+     /tmp/cc9xt8el.s:4393   .text.UART_RxISR_16BIT_FIFOEN:0000000000000154 $d
+     /tmp/cc9xt8el.s:4398   .text.UART_DMARxHalfCplt:0000000000000000 $t
+     /tmp/cc9xt8el.s:4403   .text.UART_DMARxHalfCplt:0000000000000000 UART_DMARxHalfCplt
+     /tmp/cc9xt8el.s:4447   .text.UART_DMAReceiveCplt:0000000000000000 $t
+     /tmp/cc9xt8el.s:4452   .text.UART_DMAReceiveCplt:0000000000000000 UART_DMAReceiveCplt
+     /tmp/cc9xt8el.s:4540   .text.HAL_UART_ReceiverTimeout_Config:0000000000000000 $t
+     /tmp/cc9xt8el.s:4546   .text.HAL_UART_ReceiverTimeout_Config:0000000000000000 HAL_UART_ReceiverTimeout_Config
+     /tmp/cc9xt8el.s:4575   .text.HAL_UART_ReceiverTimeout_Config:0000000000000014 $d
+     /tmp/cc9xt8el.s:4580   .text.HAL_UART_EnableReceiverTimeout:0000000000000000 $t
+     /tmp/cc9xt8el.s:4586   .text.HAL_UART_EnableReceiverTimeout:0000000000000000 HAL_UART_EnableReceiverTimeout
+     /tmp/cc9xt8el.s:4663   .text.HAL_UART_EnableReceiverTimeout:0000000000000048 $d
+     /tmp/cc9xt8el.s:4668   .text.HAL_UART_DisableReceiverTimeout:0000000000000000 $t
+     /tmp/cc9xt8el.s:4674   .text.HAL_UART_DisableReceiverTimeout:0000000000000000 HAL_UART_DisableReceiverTimeout
+     /tmp/cc9xt8el.s:4751   .text.HAL_UART_DisableReceiverTimeout:0000000000000048 $d
+     /tmp/cc9xt8el.s:4756   .text.HAL_MultiProcessor_EnterMuteMode:0000000000000000 $t
+     /tmp/cc9xt8el.s:4762   .text.HAL_MultiProcessor_EnterMuteMode:0000000000000000 HAL_MultiProcessor_EnterMuteMode
+     /tmp/cc9xt8el.s:4781   .text.HAL_HalfDuplex_EnableTransmitter:0000000000000000 $t
+     /tmp/cc9xt8el.s:4787   .text.HAL_HalfDuplex_EnableTransmitter:0000000000000000 HAL_HalfDuplex_EnableTransmitter
+     /tmp/cc9xt8el.s:4844   .text.HAL_HalfDuplex_EnableReceiver:0000000000000000 $t
+ARM GAS  /tmp/cc9xt8el.s 			page 260
 
 
-     /tmp/cc7zNdOR.s:4850   .text.HAL_HalfDuplex_EnableReceiver:0000000000000000 HAL_HalfDuplex_EnableReceiver
-     /tmp/cc7zNdOR.s:4907   .text.HAL_LIN_SendBreak:0000000000000000 $t
-     /tmp/cc7zNdOR.s:4913   .text.HAL_LIN_SendBreak:0000000000000000 HAL_LIN_SendBreak
-     /tmp/cc7zNdOR.s:4966   .text.HAL_UART_GetState:0000000000000000 $t
-     /tmp/cc7zNdOR.s:4972   .text.HAL_UART_GetState:0000000000000000 HAL_UART_GetState
-     /tmp/cc7zNdOR.s:5000   .text.HAL_UART_GetError:0000000000000000 $t
-     /tmp/cc7zNdOR.s:5006   .text.HAL_UART_GetError:0000000000000000 HAL_UART_GetError
-     /tmp/cc7zNdOR.s:5025   .text.UART_SetConfig:0000000000000000 $t
-     /tmp/cc7zNdOR.s:5031   .text.UART_SetConfig:0000000000000000 UART_SetConfig
-     /tmp/cc7zNdOR.s:5176   .text.UART_SetConfig:0000000000000094 $d
-     /tmp/cc7zNdOR.s:5186   .text.UART_SetConfig:00000000000000a6 $t
-     /tmp/cc7zNdOR.s:5196   .text.UART_SetConfig:00000000000000ba $d
-     /tmp/cc7zNdOR.s:5200   .text.UART_SetConfig:00000000000000be $t
-     /tmp/cc7zNdOR.s:5233   .text.UART_SetConfig:00000000000000e2 $d
-     /tmp/cc7zNdOR.s:5376   .text.UART_SetConfig:00000000000001b4 $d
-     /tmp/cc7zNdOR.s:5477   .text.UART_SetConfig:0000000000000236 $d
-     /tmp/cc7zNdOR.s:5493   .text.UART_SetConfig:0000000000000244 $d
-     /tmp/cc7zNdOR.s:5505   .text.UART_SetConfig:0000000000000268 $t
-     /tmp/cc7zNdOR.s:5716   .text.UART_SetConfig:000000000000033c $d
-     /tmp/cc7zNdOR.s:5722   .text.UART_AdvFeatureConfig:0000000000000000 $t
-     /tmp/cc7zNdOR.s:5728   .text.UART_AdvFeatureConfig:0000000000000000 UART_AdvFeatureConfig
-     /tmp/cc7zNdOR.s:5880   .text.UART_WaitOnFlagUntilTimeout:0000000000000000 $t
-     /tmp/cc7zNdOR.s:5886   .text.UART_WaitOnFlagUntilTimeout:0000000000000000 UART_WaitOnFlagUntilTimeout
-     /tmp/cc7zNdOR.s:6024   .text.HAL_UART_Transmit:0000000000000000 $t
-     /tmp/cc7zNdOR.s:6030   .text.HAL_UART_Transmit:0000000000000000 HAL_UART_Transmit
-     /tmp/cc7zNdOR.s:6261   .text.HAL_UART_Receive:0000000000000000 $t
-     /tmp/cc7zNdOR.s:6267   .text.HAL_UART_Receive:0000000000000000 HAL_UART_Receive
-     /tmp/cc7zNdOR.s:6550   .text.UART_CheckIdleState:0000000000000000 $t
-     /tmp/cc7zNdOR.s:6556   .text.UART_CheckIdleState:0000000000000000 UART_CheckIdleState
-     /tmp/cc7zNdOR.s:6672   .text.HAL_UART_Init:0000000000000000 $t
-     /tmp/cc7zNdOR.s:6678   .text.HAL_UART_Init:0000000000000000 HAL_UART_Init
-     /tmp/cc7zNdOR.s:6781   .text.HAL_HalfDuplex_Init:0000000000000000 $t
-     /tmp/cc7zNdOR.s:6787   .text.HAL_HalfDuplex_Init:0000000000000000 HAL_HalfDuplex_Init
-     /tmp/cc7zNdOR.s:6895   .text.HAL_LIN_Init:0000000000000000 $t
-     /tmp/cc7zNdOR.s:6901   .text.HAL_LIN_Init:0000000000000000 HAL_LIN_Init
-     /tmp/cc7zNdOR.s:7053   .text.HAL_MultiProcessor_Init:0000000000000000 $t
-     /tmp/cc7zNdOR.s:7059   .text.HAL_MultiProcessor_Init:0000000000000000 HAL_MultiProcessor_Init
-     /tmp/cc7zNdOR.s:7187   .text.HAL_MultiProcessor_EnableMuteMode:0000000000000000 $t
-     /tmp/cc7zNdOR.s:7193   .text.HAL_MultiProcessor_EnableMuteMode:0000000000000000 HAL_MultiProcessor_EnableMuteMode
-     /tmp/cc7zNdOR.s:7246   .text.HAL_MultiProcessor_DisableMuteMode:0000000000000000 $t
-     /tmp/cc7zNdOR.s:7252   .text.HAL_MultiProcessor_DisableMuteMode:0000000000000000 HAL_MultiProcessor_DisableMuteMode
-     /tmp/cc7zNdOR.s:7305   .text.UART_Start_Receive_IT:0000000000000000 $t
-     /tmp/cc7zNdOR.s:7311   .text.UART_Start_Receive_IT:0000000000000000 UART_Start_Receive_IT
-     /tmp/cc7zNdOR.s:7504   .text.UART_Start_Receive_IT:00000000000000e8 $d
-     /tmp/cc7zNdOR.s:7512   .text.HAL_UART_Receive_IT:0000000000000000 $t
-     /tmp/cc7zNdOR.s:7518   .text.HAL_UART_Receive_IT:0000000000000000 HAL_UART_Receive_IT
-     /tmp/cc7zNdOR.s:7614   .text.HAL_UART_Receive_IT:0000000000000050 $d
-     /tmp/cc7zNdOR.s:7619   .text.UART_Start_Receive_DMA:0000000000000000 $t
-     /tmp/cc7zNdOR.s:7625   .text.UART_Start_Receive_DMA:0000000000000000 UART_Start_Receive_DMA
-     /tmp/cc7zNdOR.s:7746   .text.UART_Start_Receive_DMA:000000000000007c $d
-     /tmp/cc7zNdOR.s:7753   .text.HAL_UART_Receive_DMA:0000000000000000 $t
-     /tmp/cc7zNdOR.s:7759   .text.HAL_UART_Receive_DMA:0000000000000000 HAL_UART_Receive_DMA
-     /tmp/cc7zNdOR.s:7855   .text.HAL_UART_Receive_DMA:0000000000000050 $d
-     /tmp/cc7zNdOR.s:7865   .rodata.UARTPrescTable:0000000000000000 UARTPrescTable
-     /tmp/cc7zNdOR.s:7861   .rodata.UARTPrescTable:0000000000000000 $d
-     /tmp/cc7zNdOR.s:5246   .text.UART_SetConfig:00000000000000ef $d
-     /tmp/cc7zNdOR.s:5246   .text.UART_SetConfig:00000000000000f0 $t
-ARM GAS  /tmp/cc7zNdOR.s 			page 261
+     /tmp/cc9xt8el.s:4850   .text.HAL_HalfDuplex_EnableReceiver:0000000000000000 HAL_HalfDuplex_EnableReceiver
+     /tmp/cc9xt8el.s:4907   .text.HAL_LIN_SendBreak:0000000000000000 $t
+     /tmp/cc9xt8el.s:4913   .text.HAL_LIN_SendBreak:0000000000000000 HAL_LIN_SendBreak
+     /tmp/cc9xt8el.s:4966   .text.HAL_UART_GetState:0000000000000000 $t
+     /tmp/cc9xt8el.s:4972   .text.HAL_UART_GetState:0000000000000000 HAL_UART_GetState
+     /tmp/cc9xt8el.s:5000   .text.HAL_UART_GetError:0000000000000000 $t
+     /tmp/cc9xt8el.s:5006   .text.HAL_UART_GetError:0000000000000000 HAL_UART_GetError
+     /tmp/cc9xt8el.s:5025   .text.UART_SetConfig:0000000000000000 $t
+     /tmp/cc9xt8el.s:5031   .text.UART_SetConfig:0000000000000000 UART_SetConfig
+     /tmp/cc9xt8el.s:5176   .text.UART_SetConfig:0000000000000094 $d
+     /tmp/cc9xt8el.s:5186   .text.UART_SetConfig:00000000000000a6 $t
+     /tmp/cc9xt8el.s:5196   .text.UART_SetConfig:00000000000000ba $d
+     /tmp/cc9xt8el.s:5200   .text.UART_SetConfig:00000000000000be $t
+     /tmp/cc9xt8el.s:5233   .text.UART_SetConfig:00000000000000e2 $d
+     /tmp/cc9xt8el.s:5376   .text.UART_SetConfig:00000000000001b4 $d
+     /tmp/cc9xt8el.s:5477   .text.UART_SetConfig:0000000000000236 $d
+     /tmp/cc9xt8el.s:5493   .text.UART_SetConfig:0000000000000244 $d
+     /tmp/cc9xt8el.s:5505   .text.UART_SetConfig:0000000000000268 $t
+     /tmp/cc9xt8el.s:5716   .text.UART_SetConfig:000000000000033c $d
+     /tmp/cc9xt8el.s:5722   .text.UART_AdvFeatureConfig:0000000000000000 $t
+     /tmp/cc9xt8el.s:5728   .text.UART_AdvFeatureConfig:0000000000000000 UART_AdvFeatureConfig
+     /tmp/cc9xt8el.s:5880   .text.UART_WaitOnFlagUntilTimeout:0000000000000000 $t
+     /tmp/cc9xt8el.s:5886   .text.UART_WaitOnFlagUntilTimeout:0000000000000000 UART_WaitOnFlagUntilTimeout
+     /tmp/cc9xt8el.s:6024   .text.HAL_UART_Transmit:0000000000000000 $t
+     /tmp/cc9xt8el.s:6030   .text.HAL_UART_Transmit:0000000000000000 HAL_UART_Transmit
+     /tmp/cc9xt8el.s:6261   .text.HAL_UART_Receive:0000000000000000 $t
+     /tmp/cc9xt8el.s:6267   .text.HAL_UART_Receive:0000000000000000 HAL_UART_Receive
+     /tmp/cc9xt8el.s:6550   .text.UART_CheckIdleState:0000000000000000 $t
+     /tmp/cc9xt8el.s:6556   .text.UART_CheckIdleState:0000000000000000 UART_CheckIdleState
+     /tmp/cc9xt8el.s:6672   .text.HAL_UART_Init:0000000000000000 $t
+     /tmp/cc9xt8el.s:6678   .text.HAL_UART_Init:0000000000000000 HAL_UART_Init
+     /tmp/cc9xt8el.s:6781   .text.HAL_HalfDuplex_Init:0000000000000000 $t
+     /tmp/cc9xt8el.s:6787   .text.HAL_HalfDuplex_Init:0000000000000000 HAL_HalfDuplex_Init
+     /tmp/cc9xt8el.s:6895   .text.HAL_LIN_Init:0000000000000000 $t
+     /tmp/cc9xt8el.s:6901   .text.HAL_LIN_Init:0000000000000000 HAL_LIN_Init
+     /tmp/cc9xt8el.s:7053   .text.HAL_MultiProcessor_Init:0000000000000000 $t
+     /tmp/cc9xt8el.s:7059   .text.HAL_MultiProcessor_Init:0000000000000000 HAL_MultiProcessor_Init
+     /tmp/cc9xt8el.s:7187   .text.HAL_MultiProcessor_EnableMuteMode:0000000000000000 $t
+     /tmp/cc9xt8el.s:7193   .text.HAL_MultiProcessor_EnableMuteMode:0000000000000000 HAL_MultiProcessor_EnableMuteMode
+     /tmp/cc9xt8el.s:7246   .text.HAL_MultiProcessor_DisableMuteMode:0000000000000000 $t
+     /tmp/cc9xt8el.s:7252   .text.HAL_MultiProcessor_DisableMuteMode:0000000000000000 HAL_MultiProcessor_DisableMuteMode
+     /tmp/cc9xt8el.s:7305   .text.UART_Start_Receive_IT:0000000000000000 $t
+     /tmp/cc9xt8el.s:7311   .text.UART_Start_Receive_IT:0000000000000000 UART_Start_Receive_IT
+     /tmp/cc9xt8el.s:7504   .text.UART_Start_Receive_IT:00000000000000e8 $d
+     /tmp/cc9xt8el.s:7512   .text.HAL_UART_Receive_IT:0000000000000000 $t
+     /tmp/cc9xt8el.s:7518   .text.HAL_UART_Receive_IT:0000000000000000 HAL_UART_Receive_IT
+     /tmp/cc9xt8el.s:7614   .text.HAL_UART_Receive_IT:0000000000000050 $d
+     /tmp/cc9xt8el.s:7619   .text.UART_Start_Receive_DMA:0000000000000000 $t
+     /tmp/cc9xt8el.s:7625   .text.UART_Start_Receive_DMA:0000000000000000 UART_Start_Receive_DMA
+     /tmp/cc9xt8el.s:7746   .text.UART_Start_Receive_DMA:000000000000007c $d
+     /tmp/cc9xt8el.s:7753   .text.HAL_UART_Receive_DMA:0000000000000000 $t
+     /tmp/cc9xt8el.s:7759   .text.HAL_UART_Receive_DMA:0000000000000000 HAL_UART_Receive_DMA
+     /tmp/cc9xt8el.s:7855   .text.HAL_UART_Receive_DMA:0000000000000050 $d
+     /tmp/cc9xt8el.s:7865   .rodata.UARTPrescTable:0000000000000000 UARTPrescTable
+     /tmp/cc9xt8el.s:7861   .rodata.UARTPrescTable:0000000000000000 $d
+     /tmp/cc9xt8el.s:5246   .text.UART_SetConfig:00000000000000ef $d
+     /tmp/cc9xt8el.s:5246   .text.UART_SetConfig:00000000000000f0 $t
+ARM GAS  /tmp/cc9xt8el.s 			page 261
 
 
-     /tmp/cc7zNdOR.s:5385   .text.UART_SetConfig:00000000000001bd $d
-     /tmp/cc7zNdOR.s:5385   .text.UART_SetConfig:00000000000001be $t
-     /tmp/cc7zNdOR.s:5486   .text.UART_SetConfig:000000000000023f $d
-     /tmp/cc7zNdOR.s:5486   .text.UART_SetConfig:0000000000000240 $t
+     /tmp/cc9xt8el.s:5385   .text.UART_SetConfig:00000000000001bd $d
+     /tmp/cc9xt8el.s:5385   .text.UART_SetConfig:00000000000001be $t
+     /tmp/cc9xt8el.s:5486   .text.UART_SetConfig:000000000000023f $d
+     /tmp/cc9xt8el.s:5486   .text.UART_SetConfig:0000000000000240 $t
 
 UNDEFINED SYMBOLS
 HAL_DMA_Start_IT

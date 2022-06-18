@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccoOrVBs.s 			page 1
+ARM GAS  /tmp/ccPVyylh.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
   27:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****         (++) Both of them
   28:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
   29:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     (+) When set in interrupt mode, configurable Exti lines have two different
-ARM GAS  /tmp/ccoOrVBs.s 			page 2
+ARM GAS  /tmp/ccPVyylh.s 			page 2
 
 
   30:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****         interrupt pending registers which allow to distinguish which transition
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
   84:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   ******************************************************************************
   85:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   */
   86:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
-ARM GAS  /tmp/ccoOrVBs.s 			page 3
+ARM GAS  /tmp/ccPVyylh.s 			page 3
 
 
   87:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** /* Includes ------------------------------------------------------------------*/
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  141:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   * @param  hexti Exti handle.
  142:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   * @param  pExtiConfig Pointer on EXTI configuration to be set.
  143:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   * @retval HAL Status.
-ARM GAS  /tmp/ccoOrVBs.s 			page 4
+ARM GAS  /tmp/ccPVyylh.s 			page 4
 
 
  144:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   */
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  165:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  166:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Compute line register offset */
  167:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   offset = ((pExtiConfig->Line & EXTI_REG_MASK) >> EXTI_REG_SHIFT);
-ARM GAS  /tmp/ccoOrVBs.s 			page 5
+ARM GAS  /tmp/ccPVyylh.s 			page 5
 
 
   62              		.loc 1 167 3 is_stmt 1 view .LVU15
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
   98              		.loc 1 185 7 is_stmt 1 view .LVU33
   99              		.loc 1 185 14 is_stmt 0 view .LVU34
  100 0032 0543     		orrs	r5, r5, r0
-ARM GAS  /tmp/ccoOrVBs.s 			page 6
+ARM GAS  /tmp/ccPVyylh.s 			page 6
 
 
  101              	.LVL7:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  127              		.loc 1 213 5 is_stmt 1 view .LVU47
  128              		.loc 1 213 28 is_stmt 0 view .LVU48
  129 004c 0D68     		ldr	r5, [r1]
-ARM GAS  /tmp/ccoOrVBs.s 			page 7
+ARM GAS  /tmp/ccPVyylh.s 			page 7
 
 
  130              	.LVL11:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  237:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
  238:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  239:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Store interrupt mode */
-ARM GAS  /tmp/ccoOrVBs.s 			page 8
+ARM GAS  /tmp/ccPVyylh.s 			page 8
 
 
  240:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   *regaddr = regval;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  194              		.cfi_remember_state
  195              		.cfi_restore 7
  196              		.cfi_restore 6
-ARM GAS  /tmp/ccoOrVBs.s 			page 9
+ARM GAS  /tmp/ccPVyylh.s 			page 9
 
 
  197              		.cfi_restore 5
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  219:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       regval |= (pExtiConfig->GPIOSel << (SYSCFG_EXTICR1_EXTI1_Pos * (linepos & 0x03u)));
  238              		.loc 1 219 69 view .LVU90
  239 00a0 9200     		lsls	r2, r2, #2
-ARM GAS  /tmp/ccoOrVBs.s 			page 10
+ARM GAS  /tmp/ccPVyylh.s 			page 10
 
 
  219:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       regval |= (pExtiConfig->GPIOSel << (SYSCFG_EXTICR1_EXTI1_Pos * (linepos & 0x03u)));
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  280              		.cfi_restore 6
  281              		.cfi_restore 7
  156:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
-ARM GAS  /tmp/ccoOrVBs.s 			page 11
+ARM GAS  /tmp/ccPVyylh.s 			page 11
 
 
  282              		.loc 1 156 12 view .LVU105
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  275:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   uint32_t offset;
  322              		.loc 1 275 3 view .LVU114
  276:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
-ARM GAS  /tmp/ccoOrVBs.s 			page 12
+ARM GAS  /tmp/ccPVyylh.s 			page 12
 
 
  277:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Check null pointer */
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  355              		.loc 1 297 3 is_stmt 1 view .LVU129
  356              		.loc 1 297 26 is_stmt 0 view .LVU130
  357 001c 4001     		lsls	r0, r0, #5
-ARM GAS  /tmp/ccoOrVBs.s 			page 13
+ARM GAS  /tmp/ccPVyylh.s 			page 13
 
 
  358              	.LVL46:
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  392 003a 4C68     		ldr	r4, [r1, #4]
  393              	.LVL52:
  394              		.loc 1 317 23 view .LVU147
-ARM GAS  /tmp/ccoOrVBs.s 			page 14
+ARM GAS  /tmp/ccPVyylh.s 			page 14
 
 
  395 003c 44F00204 		orr	r4, r4, #2
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  428              	.LVL57:
  339:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  340:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     /* Check if configuration of selected line is enable */
-ARM GAS  /tmp/ccoOrVBs.s 			page 15
+ARM GAS  /tmp/ccPVyylh.s 			page 15
 
 
  341:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     if ((regval & maskline) != 0x00u)
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  464              	.L27:
  333:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     }
  465              		.loc 1 333 7 is_stmt 1 view .LVU177
-ARM GAS  /tmp/ccoOrVBs.s 			page 16
+ARM GAS  /tmp/ccPVyylh.s 			page 16
 
 
  333:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     }
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  499              	.L26:
  361:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     pExtiConfig->GPIOSel = 0x00u;
  500              		.loc 1 361 5 is_stmt 1 view .LVU191
-ARM GAS  /tmp/ccoOrVBs.s 			page 17
+ARM GAS  /tmp/ccPVyylh.s 			page 17
 
 
  361:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     pExtiConfig->GPIOSel = 0x00u;
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  549              	.LVL75:
  550              	.LFB331:
  367:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
-ARM GAS  /tmp/ccoOrVBs.s 			page 18
+ARM GAS  /tmp/ccPVyylh.s 			page 18
 
 
  368:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  393:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* compute line position */
  394:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   linepos = (hexti->Line & EXTI_PIN_MASK);
  579              		.loc 1 394 3 is_stmt 1 view .LVU214
-ARM GAS  /tmp/ccoOrVBs.s 			page 19
+ARM GAS  /tmp/ccPVyylh.s 			page 19
 
 
  580              		.loc 1 394 11 is_stmt 0 view .LVU215
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  407:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  408:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* 3] Clear triggers in case of configurable lines */
  409:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   if ((hexti->Line & EXTI_CONFIG) != 0x00u)
-ARM GAS  /tmp/ccoOrVBs.s 			page 20
+ARM GAS  /tmp/ccPVyylh.s 			page 20
 
 
  622              		.loc 1 409 3 is_stmt 1 view .LVU234
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  421:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     {
  422:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       assert_param(IS_EXTI_GPIO_PIN(linepos));
  423:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
-ARM GAS  /tmp/ccoOrVBs.s 			page 21
+ARM GAS  /tmp/ccPVyylh.s 			page 21
 
 
  424:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****       regval = SYSCFG->EXTICR[linepos >> 2u];
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  701              		.cfi_restore 4
  702              		.cfi_restore 5
  703              		.cfi_restore 14
-ARM GAS  /tmp/ccoOrVBs.s 			page 22
+ARM GAS  /tmp/ccPVyylh.s 			page 22
 
 
  385:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  745              		@ frame_needed = 0, uses_anonymous_args = 0
  746              		@ link register save eliminated.
  444:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   HAL_StatusTypeDef status = HAL_OK;
-ARM GAS  /tmp/ccoOrVBs.s 			page 23
+ARM GAS  /tmp/ccPVyylh.s 			page 23
 
 
  747              		.loc 1 444 3 view .LVU273
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  781              		.syntax unified
  782              		.thumb
  783              		.thumb_func
-ARM GAS  /tmp/ccoOrVBs.s 			page 24
+ARM GAS  /tmp/ccPVyylh.s 			page 24
 
 
  785              	HAL_EXTI_GetHandle:
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  811              		.loc 1 490 1 view .LVU298
  812 000a 7047     		bx	lr
  813              		.cfi_endproc
-ARM GAS  /tmp/ccoOrVBs.s 			page 25
+ARM GAS  /tmp/ccPVyylh.s 			page 25
 
 
  814              	.LFE333:
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  521:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* Compute line register offset */
  522:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   offset = ((hexti->Line & EXTI_REG_MASK) >> EXTI_REG_SHIFT);
  840              		.loc 1 522 3 view .LVU305
-ARM GAS  /tmp/ccoOrVBs.s 			page 26
+ARM GAS  /tmp/ccPVyylh.s 			page 26
 
 
  841              		.loc 1 522 19 is_stmt 0 view .LVU306
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  879              	.LVL117:
  880              	.L58:
  539:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****     }
-ARM GAS  /tmp/ccoOrVBs.s 			page 27
+ARM GAS  /tmp/ccPVyylh.s 			page 27
 
 
  540:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   }
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  563:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   offset = ((hexti->Line & EXTI_REG_MASK) >> EXTI_REG_SHIFT);
  914              		.loc 1 563 3 view .LVU335
  915              		.loc 1 563 19 is_stmt 0 view .LVU336
-ARM GAS  /tmp/ccoOrVBs.s 			page 28
+ARM GAS  /tmp/ccPVyylh.s 			page 28
 
 
  916 0000 0368     		ldr	r3, [r0]
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  959              		.syntax unified
  960              		.thumb
  961              		.thumb_func
-ARM GAS  /tmp/ccoOrVBs.s 			page 29
+ARM GAS  /tmp/ccPVyylh.s 			page 29
 
 
  963              	HAL_EXTI_ClearPending:
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  601:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   regaddr = (&EXTI->PR1 + (EXTI_CONFIG_OFFSET * offset));
  992              		.loc 1 601 3 is_stmt 1 view .LVU365
  993              		.loc 1 601 25 is_stmt 0 view .LVU366
-ARM GAS  /tmp/ccoOrVBs.s 			page 30
+ARM GAS  /tmp/ccPVyylh.s 			page 30
 
 
  994 000e 5301     		lsls	r3, r2, #5
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  1030              		.loc 1 621 3 view .LVU376
  622:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c **** 
  623:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   /* compute line register offset */
-ARM GAS  /tmp/ccoOrVBs.s 			page 31
+ARM GAS  /tmp/ccPVyylh.s 			page 31
 
 
  624:Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c ****   offset = ((hexti->Line & EXTI_REG_MASK) >> EXTI_REG_SHIFT);
@@ -1846,35 +1846,35 @@ ARM GAS  /tmp/ccoOrVBs.s 			page 1
  1067              		.file 4 "Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g431xx.h"
  1068              		.file 5 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h"
  1069              		.file 6 "Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h"
-ARM GAS  /tmp/ccoOrVBs.s 			page 32
+ARM GAS  /tmp/ccPVyylh.s 			page 32
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32g4xx_hal_exti.c
-     /tmp/ccoOrVBs.s:20     .text.HAL_EXTI_SetConfigLine:0000000000000000 $t
-     /tmp/ccoOrVBs.s:26     .text.HAL_EXTI_SetConfigLine:0000000000000000 HAL_EXTI_SetConfigLine
-     /tmp/ccoOrVBs.s:297    .text.HAL_EXTI_SetConfigLine:00000000000000cc $d
-     /tmp/ccoOrVBs.s:305    .text.HAL_EXTI_GetConfigLine:0000000000000000 $t
-     /tmp/ccoOrVBs.s:311    .text.HAL_EXTI_GetConfigLine:0000000000000000 HAL_EXTI_GetConfigLine
-     /tmp/ccoOrVBs.s:534    .text.HAL_EXTI_GetConfigLine:00000000000000ac $d
-     /tmp/ccoOrVBs.s:542    .text.HAL_EXTI_ClearConfigLine:0000000000000000 $t
-     /tmp/ccoOrVBs.s:548    .text.HAL_EXTI_ClearConfigLine:0000000000000000 HAL_EXTI_ClearConfigLine
-     /tmp/ccoOrVBs.s:725    .text.HAL_EXTI_ClearConfigLine:0000000000000090 $d
-     /tmp/ccoOrVBs.s:733    .text.HAL_EXTI_RegisterCallback:0000000000000000 $t
-     /tmp/ccoOrVBs.s:739    .text.HAL_EXTI_RegisterCallback:0000000000000000 HAL_EXTI_RegisterCallback
-     /tmp/ccoOrVBs.s:779    .text.HAL_EXTI_GetHandle:0000000000000000 $t
-     /tmp/ccoOrVBs.s:785    .text.HAL_EXTI_GetHandle:0000000000000000 HAL_EXTI_GetHandle
-     /tmp/ccoOrVBs.s:817    .text.HAL_EXTI_IRQHandler:0000000000000000 $t
-     /tmp/ccoOrVBs.s:823    .text.HAL_EXTI_IRQHandler:0000000000000000 HAL_EXTI_IRQHandler
-     /tmp/ccoOrVBs.s:887    .text.HAL_EXTI_IRQHandler:0000000000000024 $d
-     /tmp/ccoOrVBs.s:892    .text.HAL_EXTI_GetPending:0000000000000000 $t
-     /tmp/ccoOrVBs.s:898    .text.HAL_EXTI_GetPending:0000000000000000 HAL_EXTI_GetPending
-     /tmp/ccoOrVBs.s:952    .text.HAL_EXTI_GetPending:000000000000001c $d
-     /tmp/ccoOrVBs.s:957    .text.HAL_EXTI_ClearPending:0000000000000000 $t
-     /tmp/ccoOrVBs.s:963    .text.HAL_EXTI_ClearPending:0000000000000000 HAL_EXTI_ClearPending
-     /tmp/ccoOrVBs.s:1007   .text.HAL_EXTI_ClearPending:0000000000000018 $d
-     /tmp/ccoOrVBs.s:1012   .text.HAL_EXTI_GenerateSWI:0000000000000000 $t
-     /tmp/ccoOrVBs.s:1018   .text.HAL_EXTI_GenerateSWI:0000000000000000 HAL_EXTI_GenerateSWI
-     /tmp/ccoOrVBs.s:1059   .text.HAL_EXTI_GenerateSWI:0000000000000018 $d
+     /tmp/ccPVyylh.s:20     .text.HAL_EXTI_SetConfigLine:0000000000000000 $t
+     /tmp/ccPVyylh.s:26     .text.HAL_EXTI_SetConfigLine:0000000000000000 HAL_EXTI_SetConfigLine
+     /tmp/ccPVyylh.s:297    .text.HAL_EXTI_SetConfigLine:00000000000000cc $d
+     /tmp/ccPVyylh.s:305    .text.HAL_EXTI_GetConfigLine:0000000000000000 $t
+     /tmp/ccPVyylh.s:311    .text.HAL_EXTI_GetConfigLine:0000000000000000 HAL_EXTI_GetConfigLine
+     /tmp/ccPVyylh.s:534    .text.HAL_EXTI_GetConfigLine:00000000000000ac $d
+     /tmp/ccPVyylh.s:542    .text.HAL_EXTI_ClearConfigLine:0000000000000000 $t
+     /tmp/ccPVyylh.s:548    .text.HAL_EXTI_ClearConfigLine:0000000000000000 HAL_EXTI_ClearConfigLine
+     /tmp/ccPVyylh.s:725    .text.HAL_EXTI_ClearConfigLine:0000000000000090 $d
+     /tmp/ccPVyylh.s:733    .text.HAL_EXTI_RegisterCallback:0000000000000000 $t
+     /tmp/ccPVyylh.s:739    .text.HAL_EXTI_RegisterCallback:0000000000000000 HAL_EXTI_RegisterCallback
+     /tmp/ccPVyylh.s:779    .text.HAL_EXTI_GetHandle:0000000000000000 $t
+     /tmp/ccPVyylh.s:785    .text.HAL_EXTI_GetHandle:0000000000000000 HAL_EXTI_GetHandle
+     /tmp/ccPVyylh.s:817    .text.HAL_EXTI_IRQHandler:0000000000000000 $t
+     /tmp/ccPVyylh.s:823    .text.HAL_EXTI_IRQHandler:0000000000000000 HAL_EXTI_IRQHandler
+     /tmp/ccPVyylh.s:887    .text.HAL_EXTI_IRQHandler:0000000000000024 $d
+     /tmp/ccPVyylh.s:892    .text.HAL_EXTI_GetPending:0000000000000000 $t
+     /tmp/ccPVyylh.s:898    .text.HAL_EXTI_GetPending:0000000000000000 HAL_EXTI_GetPending
+     /tmp/ccPVyylh.s:952    .text.HAL_EXTI_GetPending:000000000000001c $d
+     /tmp/ccPVyylh.s:957    .text.HAL_EXTI_ClearPending:0000000000000000 $t
+     /tmp/ccPVyylh.s:963    .text.HAL_EXTI_ClearPending:0000000000000000 HAL_EXTI_ClearPending
+     /tmp/ccPVyylh.s:1007   .text.HAL_EXTI_ClearPending:0000000000000018 $d
+     /tmp/ccPVyylh.s:1012   .text.HAL_EXTI_GenerateSWI:0000000000000000 $t
+     /tmp/ccPVyylh.s:1018   .text.HAL_EXTI_GenerateSWI:0000000000000000 HAL_EXTI_GenerateSWI
+     /tmp/ccPVyylh.s:1059   .text.HAL_EXTI_GenerateSWI:0000000000000018 $d
 
 NO UNDEFINED SYMBOLS
