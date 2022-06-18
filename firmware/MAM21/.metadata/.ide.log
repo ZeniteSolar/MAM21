@@ -1,0 +1,16 @@
+2022-06-17 19:07:36,443 [INFO] Activator:170 - 
+
+
+2022-06-17 19:07:36,447 [INFO] Activator:171 - !SESSION log4j initialized
+2022-06-17 19:07:37,831 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2022-06-17 19:07:37,842 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2022-06-17 19:07:37,845 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2022-06-17 19:07:42,550 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Jun 17, 2022 7:07:42 PM org.glassfish.grizzly.http.server.NetworkListener start
+2022-06-17 19:07:42,551 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: Started listener bound to [localhost:1594]
+2022-06-17 19:07:42,552 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-06-17 19:07:42,553 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Jun 17, 2022 7:07:42 PM org.glassfish.grizzly.http.server.HttpServer start
+2022-06-17 19:07:42,554 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] INFO: [HttpServer] Started.
+2022-06-17 19:07:42,555 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
+2022-06-17 19:09:03,850 [ERROR] ApiDbMcu:1496 - Can't use Application install path:
+2022-06-17 19:09:03,856 [WARN] RulesReader:54 - Compatibility file://mcu/compatibility.xml not found
+2022-06-17 19:26:20,843 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
