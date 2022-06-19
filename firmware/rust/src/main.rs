@@ -18,7 +18,7 @@ use crate::hal::{
 use defmt::*;
 use defmt_rtt as _;
 use embedded_hal::PwmPin;
-use hal::{gpio::AF6, pwm::PwmExt};
+use hal::{gpio::AF6, pwm::PwmExt, prelude::{OutputPin, ToggleableOutputPin}};
 use stm32g4xx_hal as hal;
 // use panic_halt as _;
 // use panic_reset as _;
@@ -41,7 +41,13 @@ fn main() -> ! {
 
     let gpioa = dp.GPIOA.split(&mut rcc);
     let gpiob = dp.GPIOB.split(&mut rcc);
-    let _gpioc = dp.GPIOC.split(&mut rcc);
+    let gpioc = dp.GPIOC.split(&mut rcc);
+
+    let mut led1 = gpioc.pc14.into_push_pull_output().set_speed(Speed::Low);
+    let mut led2 = gpioc.pc15.into_push_pull_output().set_speed(Speed::Low);
+
+    led1.set_low().unwrap();
+    led2.set_low().unwrap();
 
     let mut pwm1 = {
         let dp = Peripherals::take().unwrap();
@@ -132,6 +138,8 @@ fn main() -> ! {
             // info!("Received Header: {:#X?}", &h);
             // info!("received data: {:X?}", &b);
             info!("Received: {:#?}, {:#?}", &header, &body);
+            led1.toggle().unwrap();
+
             for (i, d) in body.iter().enumerate() {
                 buffer[i] = *d;
             }
@@ -143,6 +151,7 @@ fn main() -> ! {
                     body[..len].clone_from_slice(&buffer[..len]);
                     // info!("Transmit: {:X?}", b);
                     info!("Transmit: {:#?}", &body);
+                    led2.toggle().unwrap();
                 })
             )
             .unwrap();
