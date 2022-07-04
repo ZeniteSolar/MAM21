@@ -1,21 +1,21 @@
 /* USER CODE BEGIN Header */
 /**
-	******************************************************************************
-	* @file           : main.c
-	* @brief          : Main program body
-	******************************************************************************
-	* @attention
-	*
-	* <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
-	* All rights reserved.</center></h2>
-	*
-	* This software component is licensed by ST under BSD 3-Clause license,
-	* the "License"; You may not use this file except in compliance with the
-	* License. You may obtain a copy of the License at:
-	*                        opensource.org/licenses/BSD-3-Clause
-	*
-	******************************************************************************
-	*/
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
+ * All rights reserved.</center></h2>
+ *
+ * This software component is licensed by ST under BSD 3-Clause license,
+ * the "License"; You may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at:
+ *                        opensource.org/licenses/BSD-3-Clause
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -59,6 +59,14 @@ FDCAN_RxHeaderTypeDef RxHeader;
 uint8_t RxData[8];
 FDCAN_TxHeaderTypeDef TxHeader;
 uint8_t TxData[8];
+
+// For PWM control of engine
+struct MotorControl
+{
+    uint32_t dir;
+    float duty;
+} control;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -118,43 +126,51 @@ int main(void)
   MX_TIM17_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-  	/* Configure the FDCAN peripheral */
-  	FDCAN_Config();
-	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-	HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
-	HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
+    /* Configure the FDCAN peripheral */
+    FDCAN_Config();
+    HAL_TIM_Base_Start_IT(&htim1);
+    HAL_TIM_PWM_Start_IT(&htim1, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
+    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
+    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-	while (1)
-	{
+    while (1)
+    {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		/* Set the data to be transmitted */
+        /* Set the data to be transmitted */
         TxData[0] = ubKeyNumber;
         TxData[1] = 0xAD;
-		batata = HAL_FDCAN_GetRxFifoFillLevel(&hfdcan1, FDCAN_RX_FIFO0);
+        batata = HAL_FDCAN_GetRxFifoFillLevel(&hfdcan1, FDCAN_RX_FIFO0);
         /* Start the Transmission process */
-        // if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK)
-        // {
-        //   /* Transmission request Error */
-        //   Error_Handler();
-        // }
-		/* Retrieve Rx messages from RX FIFO0 */
-		if(HAL_FDCAN_GetRxFifoFillLevel(&hfdcan1, FDCAN_RX_FIFO0)){
-			if (HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
-			{
-			Error_Handler();
-			}
-		}
-		//HAL_FDCAN_IRQHandler(&hfdcan1);
+        if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK)
+        {
+            /* Transmission request Error */
+            //  Error_Handler();
+        }
+        /* Retrieve Rx messages from RX FIFO0 */
+        if (HAL_FDCAN_GetRxFifoFillLevel(&hfdcan1, FDCAN_RX_FIFO0))
+        {
+            if (HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
+            {
+                Error_Handler();
+            }
+        }
+        // HAL_FDCAN_IRQHandler(&hfdcan1);
         HAL_Delay(10);
-		HAL_GPIO_TogglePin(GPIOC,GPIO_PIN_15);
-		HAL_Delay(100);
-	}
+        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_15);
+        control.duty = 0.3;
+        if (control.duty >= 1.0)
+        {
+          control.duty = 0;
+        }
+        HAL_Delay(1000);
+    }
   /* USER CODE END 3 */
 }
 
@@ -402,7 +418,7 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 1;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 65535;
+  htim1.Init.Period = 6666;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -426,8 +442,8 @@ static void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
-  sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 30000;
+  sConfigOC.OCMode = TIM_OCMODE_PWM2;
+  sConfigOC.Pulse = 3333;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
@@ -437,6 +453,7 @@ static void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
+  sConfigOC.OCMode = TIM_OCMODE_PWM1;
   if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_2) != HAL_OK)
   {
     Error_Handler();
@@ -444,7 +461,7 @@ static void MX_TIM1_Init(void)
   sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
   sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
   sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
-  sBreakDeadTimeConfig.DeadTime = 255;
+  sBreakDeadTimeConfig.DeadTime = 30;
   sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
   sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
   sBreakDeadTimeConfig.BreakFilter = 0;
@@ -675,82 +692,134 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 static void FDCAN_Config(void)
 {
-	FDCAN_FilterTypeDef sFilterConfig;
+    FDCAN_FilterTypeDef sFilterConfig;
 
-	/* Configure Rx filter */
-	sFilterConfig.IdType = FDCAN_STANDARD_ID;
-	sFilterConfig.FilterIndex = 0;
-	sFilterConfig.FilterType = FDCAN_FILTER_MASK;
-	sFilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
-	sFilterConfig.FilterID1 = 0x00;
-	sFilterConfig.FilterID2 = 0x00;
-	if (HAL_FDCAN_ConfigFilter(&hfdcan1, &sFilterConfig) != HAL_OK)
-	{
-		Error_Handler();
-	}
+    /* Configure Rx filter */
+    sFilterConfig.IdType = FDCAN_STANDARD_ID;
+    sFilterConfig.FilterIndex = 0;
+    sFilterConfig.FilterType = FDCAN_FILTER_MASK;
+    sFilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
+    sFilterConfig.FilterID1 = 0x00;
+    sFilterConfig.FilterID2 = 0x00;
+    if (HAL_FDCAN_ConfigFilter(&hfdcan1, &sFilterConfig) != HAL_OK)
+    {
+        Error_Handler();
+    }
 
-	/* Configure global filter:
-		Filter all remote frames with STD and EXT ID
-		Reject non matching frames with STD ID and EXT ID */
-	if (HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, FDCAN_FILTER_REMOTE, FDCAN_FILTER_REMOTE) != HAL_OK)
-	{
-		Error_Handler();
-	}
+    /* Configure global filter:
+      Filter all remote frames with STD and EXT ID
+      Reject non matching frames with STD ID and EXT ID */
+    if (HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, FDCAN_FILTER_REMOTE, FDCAN_FILTER_REMOTE) != HAL_OK)
+    {
+        Error_Handler();
+    }
 
-	/* Start the FDCAN module */
-	if (HAL_FDCAN_Start(&hfdcan1) != HAL_OK)
-	{
-		Error_Handler();
-	}
+    /* Start the FDCAN module */
+    if (HAL_FDCAN_Start(&hfdcan1) != HAL_OK)
+    {
+        Error_Handler();
+    }
 
-	if (HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
-	{
-		Error_Handler();
-	}
-		if (HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO1_NEW_MESSAGE, 0) != HAL_OK)
-	{
-		Error_Handler();
-	}
+    if (HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
+    {
+        Error_Handler();
+    }
+    if (HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO1_NEW_MESSAGE, 0) != HAL_OK)
+    {
+        Error_Handler();
+    }
 
-	/* Prepare Tx Header */
-	TxHeader.Identifier = 0x321;
-	TxHeader.IdType = FDCAN_STANDARD_ID;
-	TxHeader.TxFrameType = FDCAN_DATA_FRAME;
-	TxHeader.DataLength = FDCAN_DLC_BYTES_2;
-	TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
-	TxHeader.BitRateSwitch = FDCAN_BRS_OFF;
-	TxHeader.FDFormat = FDCAN_CLASSIC_CAN;
-	TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
-	TxHeader.MessageMarker = 0;
+    /* Prepare Tx Header */
+    TxHeader.Identifier = 0x321;
+    TxHeader.IdType = FDCAN_STANDARD_ID;
+    TxHeader.TxFrameType = FDCAN_DATA_FRAME;
+    TxHeader.DataLength = FDCAN_DLC_BYTES_2;
+    TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
+    TxHeader.BitRateSwitch = FDCAN_BRS_OFF;
+    TxHeader.FDFormat = FDCAN_CLASSIC_CAN;
+    TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
+    TxHeader.MessageMarker = 0;
 }
 
 void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 {
-  if((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET)
-  {
-    /* Retrieve Rx messages from RX FIFO0 */
-    if (HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
+    if ((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET)
     {
-    Error_Handler();
+        /* Retrieve Rx messages from RX FIFO0 */
+        if (HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
+        {
+            Error_Handler();
+        }
+
+        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_14);
     }
-	
-	HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_14);
-  }
 }
 void HAL_FDCAN_RxFifo1Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo1ITs)
 {
-  if((RxFifo1ITs & FDCAN_IT_RX_FIFO1_NEW_MESSAGE) != RESET)
-  {
-    /* Retrieve Rx messages from RX FIFO0 */
-    if (HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO1, &RxHeader, RxData) != HAL_OK)
+    if ((RxFifo1ITs & FDCAN_IT_RX_FIFO1_NEW_MESSAGE) != RESET)
     {
-    Error_Handler();
+        /* Retrieve Rx messages from RX FIFO0 */
+        if (HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO1, &RxHeader, RxData) != HAL_OK)
+        {
+            Error_Handler();
+        }
     }
-
-	HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_14);
-  }
 }
+void set_PWM(TIM_HandleTypeDef *htim, uint32_t channel, float D)
+{
+    uint32_t top = 0;
+    if (D < 0)  D = 0;
+    else if (D > 1)  D = 1;
+    top = __HAL_TIM_GET_AUTORELOAD(htim);
+    __HAL_TIM_SET_COMPARE(htim, channel, ((int)((top + 1) * D)));
+}
+/*
+https://www.modularcircuits.com/blog/articles/h-bridge-secrets/h-bridge-control/
 
+  | 0cycle | 1cycle
+Q1|DIR      |DT
+Q2|!DIR     |!DT
+Q3|!DT     |!DIR
+Q4|DT      |DIR
+Assuming Q1 = CH1,Q2 = !CH1 and Q3 = CH2,Q4 = !CH2
+    | 0cycle | 1 cycle
+CH1 |DIR     | DT
+CH2 |!DT     | !DIR
+For the power off state all Mosfets can be disabled and let the current be conduced for the body diode
+
+*/
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+    HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
+    static uint32_t cycle = 0;
+    static uint32_t ncycle = 0;
+    //HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
+    if (htim->Instance == htim1.Instance)
+    {
+        __HAL_TIM_CLEAR_IT(htim, TIM_IT_UPDATE);    
+        if (cycle)
+        {
+            //HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_SET);
+            set_PWM(htim, TIM_CHANNEL_1, 0 == control.dir);
+            set_PWM(htim, TIM_CHANNEL_2, control.duty);
+        }
+        else
+        {
+            //HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET);
+            set_PWM(htim, TIM_CHANNEL_1, control.duty);
+            set_PWM(htim, TIM_CHANNEL_2, 0 == control.dir);
+        }
+        if (++ncycle > 3){
+            ncycle = 0;
+            cycle = !cycle;
+        }
+    }
+}
+void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim)
+{
+
+    
+}
 /* USER CODE END 4 */
 
 /**
@@ -760,11 +829,13 @@ void HAL_FDCAN_RxFifo1Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo1ITs)
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-	/* User can add his own implementation to report the HAL error return state */
-	__disable_irq();
-	while (1)
-	{
-	}
+    /* User can add his own implementation to report the HAL error return state */
+    __disable_irq();
+    while(1)
+    {
+        HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+        HAL_Delay(1);
+    }
   /* USER CODE END Error_Handler_Debug */
 }
 
@@ -779,8 +850,8 @@ void Error_Handler(void)
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */
-	/* User can add his own implementation to report the file name and line number,
-		 ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+    /* User can add his own implementation to report the file name and line number,
+       ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
