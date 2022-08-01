@@ -1,12 +1,13 @@
 #ifndef CAN_APP_H
 #define CAN_APP_H 
 
-#include "main.h"
+
 
 void can_init(void);
 void can_config(void);
+void can_task_run(void);
 
-struct {
+typedef struct {
     FDCAN_RxHeaderTypeDef RxHeader;
     union{
         uint8_t signature;

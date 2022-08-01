@@ -1,10 +1,10 @@
 #ifndef MACHINE_H
 #define MACHINE_H 
 
-#include "control.h"
-#include "can_app.h"
+#include "stm32g4xx_hal.h"
 
-typedef enum state_machine{
+
+typedef enum {
     STATE_INITIALIZING,
     STATE_CONTACTOR,
     STATE_IDLE,
@@ -33,7 +33,7 @@ typedef union {
         uint32_t   all;
 } error_flags_t;
 
-struct {
+typedef struct {
     float       dt;            //duty cycle
     float       io;            //output current (A)
     float       vo;            //output voltage (V)
@@ -41,7 +41,7 @@ struct {
     float       temp;          //temperature (ºC)
 } system_infos_t;
 
-
+void machine_init(void);
 void machine_run(void);
 
 void set_state_initializing(void);
@@ -55,11 +55,12 @@ void task_running(void);
 void task_error(void);
 
 
-struct machine_t{
+typedef struct {
     uint32_t run;
     state_machine_t state;
-};
+}machine_t;
 
+extern system_infos_t system_infos;
 extern system_flags_t system_flags;
 extern error_flags_t error_flags;
 

@@ -66,7 +66,7 @@ struct MotorControl
     uint32_t dir;
     uint32_t enable;
     float duty;
-} control;
+} control_temp;
 
 /* USER CODE END PV */
 
@@ -741,12 +741,12 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
             switch (RxHeader.Identifier)
             {
             case 9:
-                control.duty = RxData[3] / 100.0f;
-                if (control.duty >= 0.5f)
-                    control.duty = 0.5f;
+                control_temp.duty = RxData[3] / 100.0f;
+                if (control_temp.duty >= 0.5f)
+                    control_temp.duty = 0.5f;
                 if (!(RxData[1] && 0x1))
                 {
-                    control.enable = 0;
+                    control_temp.enable = 0;
                     HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
                     HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
                     HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_1);
@@ -754,7 +754,7 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
                 }
                 else
                 {
-                    control.enable = 1;
+                    control_temp.enable = 1;
                     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
                     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
                     HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
@@ -772,7 +772,7 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
                 {
                     if (!(RxData[1] && 0x1))
                     {
-                        control.enable = 0;
+                        control_temp.enable = 0;
                         HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
                         HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
                         HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_1);
@@ -839,14 +839,14 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         if (cycle)
         {
             // HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_SET);
-            set_PWM(htim, TIM_CHANNEL_1, 0 == control.dir);
-            set_PWM(htim, TIM_CHANNEL_2, control.duty);
+            set_PWM(htim, TIM_CHANNEL_1, 0 == control_temp.dir);
+            set_PWM(htim, TIM_CHANNEL_2, control_temp.duty);
         }
         else
         {
             // HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET);
-            set_PWM(htim, TIM_CHANNEL_1, control.duty);
-            set_PWM(htim, TIM_CHANNEL_2, 0 == control.dir);
+            set_PWM(htim, TIM_CHANNEL_1, control_temp.duty);
+            set_PWM(htim, TIM_CHANNEL_2, 0 == control_temp.dir);
         }
         if (++ncycle > 3)
         {
