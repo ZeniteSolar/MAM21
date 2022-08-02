@@ -42,8 +42,7 @@ void set_state_error(void)
 
 void task_initializing(void)
 {
-    control_init();
-
+    control_set_enable_motor(DISABLE);
     set_state_idle();
 }
 
@@ -59,6 +58,7 @@ void task_idle(void)
 void task_running(void)
 {
     control_set_enable_motor(ENABLE);
+    control_set_duty_target(system_infos.dt);
 
     if (!system_flags.motor_on || !system_flags.dms){
         set_state_idle();

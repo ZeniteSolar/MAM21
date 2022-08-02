@@ -32,7 +32,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "h_bridge.h"
+#include "can_app.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

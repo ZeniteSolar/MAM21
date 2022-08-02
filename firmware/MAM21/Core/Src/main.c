@@ -56,9 +56,8 @@ UART_HandleTypeDef huart1;
 uint8_t batata;
 uint8_t ubKeyNumber = 0x0;
 FDCAN_RxHeaderTypeDef RxHeader;
-uint8_t RxData[8];
 FDCAN_TxHeaderTypeDef TxHeader;
-uint8_t TxData[8];
+
 
 // For PWM control of engine
 struct MotorControl
@@ -129,12 +128,7 @@ int main(void)
     /* USER CODE BEGIN 2 */
     /* Configure the FDCAN peripheral */
     FDCAN_Config();
-    HAL_TIM_Base_Start_IT(&htim1);
-    HAL_TIM_PWM_Start_IT(&htim1, TIM_CHANNEL_1);
-    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
-    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
+
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -145,23 +139,16 @@ int main(void)
 
         /* USER CODE BEGIN 3 */
         /* Set the data to be transmitted */
-        TxData[0] = ubKeyNumber;
-        TxData[1] = 0xAD;
-        batata = HAL_FDCAN_GetRxFifoFillLevel(&hfdcan1, FDCAN_RX_FIFO0);
-        /* Start the Transmission process */
-        if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK)
-        {
-            /* Transmission request Error */
-            //  Error_Handler();
-        }
+
+        // batata = HAL_FDCAN_GetRxFifoFillLevel(&hfdcan1, FDCAN_RX_FIFO0);
+        // /* Start the Transmission process */
+        // if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &TxHeader, TxData) != HAL_OK)
+        // {
+        //     /* Transmission request Error */
+        //     //  Error_Handler();
+        // }
         /* Retrieve Rx messages from RX FIFO0 */
-        if (HAL_FDCAN_GetRxFifoFillLevel(&hfdcan1, FDCAN_RX_FIFO0))
-        {
-            if (HAL_FDCAN_GetRxMessage(&hfdcan1, FDCAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
-            {
-                Error_Handler();
-            }
-        }
+
         // HAL_FDCAN_IRQHandler(&hfdcan1);
         HAL_Delay(10);
         HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_15);
@@ -729,89 +716,21 @@ static void FDCAN_Config(void)
 
 void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 {
+    can_msg_t Rx_msg;
     if ((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET)
     {
         /* Retrieve Rx messages from RX FIFO0 */
-        if (HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &RxHeader, RxData) != HAL_OK)
+        if (HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &Rx_msg.RxHeader, Rx_msg.data.raw) != HAL_OK)
         {
             
         }
-        if (RxData[0] == 240)
-        {
-            switch (RxHeader.Identifier)
-            {
-            case 9:
-                control_temp.duty = RxData[3] / 100.0f;
-                if (control_temp.duty >= 0.5f)
-                    control_temp.duty = 0.5f;
-                if (!(RxData[1] && 0x1))
-                {
-                    control_temp.enable = 0;
-                    HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
-                    HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
-                    HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_1);
-                    HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_2);
-                }
-                else
-                {
-                    control_temp.enable = 1;
-                    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-                    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-                    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
-                    HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
-                }
-                break;
-            case 12:
-                batata = 0;
-
-                break;
-            }
-            if (RxData[0] == 200)
-            {
-                if (RxHeader.Identifier == 516)
-                {
-                    if (!(RxData[1] && 0x1))
-                    {
-                        control_temp.enable = 0;
-                        HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
-                        HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
-                        HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_1);
-                        HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_2);
-                    }
-                    else
-                    {
-                        HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-                        HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-                        HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
-                        HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
-                    }
-                }
-            }
-        }
+        can_parse(&Rx_msg);
+     
         HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_14);
     }
 }
-void HAL_FDCAN_RxFifo1Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo1ITs)
-{
-    if ((RxFifo1ITs & FDCAN_IT_RX_FIFO1_NEW_MESSAGE) != RESET)
-    {
-        /* Retrieve Rx messages from RX FIFO0 */
-        if (HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO1, &RxHeader, RxData) != HAL_OK)
-        {
-            
-        }
-    }
-}
-void set_PWM(TIM_HandleTypeDef *htim, uint32_t channel, float D)
-{
-    uint32_t top = 0;
-    if (D < 0)
-        D = 0;
-    else if (D > 1)
-        D = 1;
-    top = __HAL_TIM_GET_AUTORELOAD(htim);
-    __HAL_TIM_SET_COMPARE(htim, channel, ((int)((top + 1) * D)));
-}
+
+
 /*
 https://www.modularcircuits.com/blog/articles/h-bridge-secrets/h-bridge-control/
 
@@ -830,29 +749,10 @@ For the power off state all Mosfets can be disabled and let the current be condu
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
     HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
-    static uint32_t cycle = 0;
-    static uint32_t ncycle = 0;
-    // HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
+
     if (htim->Instance == htim1.Instance)
     {
-        __HAL_TIM_CLEAR_IT(htim, TIM_IT_UPDATE);
-        if (cycle)
-        {
-            // HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_SET);
-            set_PWM(htim, TIM_CHANNEL_1, 0 == control_temp.dir);
-            set_PWM(htim, TIM_CHANNEL_2, control_temp.duty);
-        }
-        else
-        {
-            // HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET);
-            set_PWM(htim, TIM_CHANNEL_1, control_temp.duty);
-            set_PWM(htim, TIM_CHANNEL_2, 0 == control_temp.dir);
-        }
-        if (++ncycle > 3)
-        {
-            ncycle = 0;
-            cycle = !cycle;
-        }
+        h_bridge_run();
     }
 }
 void HAL_TIM_PWM_PulseFinishedCallback(TIM_HandleTypeDef *htim)
