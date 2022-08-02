@@ -2,7 +2,6 @@
 #define CONTROL_H 
 
 #include "stm32g4xx_hal.h"
-#include <stdbool.h>
 #include "utils.h"
 
 typedef enum {
@@ -13,6 +12,7 @@ typedef enum {
 } state_control_t;
 
 typedef struct {
+    
     struct {
         FunctionalState    enable      :1;//enable motor
         FunctionalState    reverse     :1;//reverse motor
@@ -28,7 +28,7 @@ typedef struct {
     float       rpm;                //motor angular velocity (rpm)
 } control_t;
 
-void control_init(void);
+void control_init(TIM_HandleTypeDef *pwm_htim);
 void control_run(void);
 void control_clear(void);
 
@@ -41,6 +41,8 @@ void control_task_stopped(void);
 void control_task_stopping(void);
 void control_task_forward(void);
 void control_task_reverse(void);
+
+void control_compute_duty(void);
 
 void control_set_duty_target(float D);
 void control_set_enable_motor(FunctionalState enable);

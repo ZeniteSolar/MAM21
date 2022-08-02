@@ -2,14 +2,18 @@
 
 control_t control;
 
-void control_init(void)
+void control_init(TIM_HandleTypeDef *pwm_htim)
 {
-
+    control.duty_setpoint = 0;
+    control.duty = 0;
+    hbridge_init(pwm_htim);
+    control.state = CONTROL_STOPPING;
 }
 
 void control_clear(void)
 {
-
+    control.duty_setpoint = 0;
+    control.flags.enable = DISABLE;
 }
 
 void control_set_duty_target(float D)
@@ -21,6 +25,27 @@ void control_compute_rpm(void)
 {
     //faking rpm measurement
     control.rpm = control.duty;
+}
+
+void control_compute_duty(void)
+{
+    static const float pos_step = 0.01f;
+    static const float neg_step = -0.01f;
+    static const float error_tolerance = 0.015f;
+
+    float step = (control.duty_setpoint < control.duty) ?
+        pos_step : neg_step;
+
+    float error = control.duty_setpoint - control.duty;
+
+    if (error > error_tolerance){
+        control.duty += step;
+    }else {
+        control.duty = control.duty_setpoint;
+    }
+
+    h_bridge_set_duty(control.duty);
+
 }
 
 void control_set_enable_motor(FunctionalState enable)
@@ -37,22 +62,27 @@ void control_set_reverse_motor(FunctionalState reverse)
 
 void control_set_state_stopped(void)
 {
-    LOG_INFO("");
+    LOG_INFO("==> State stopped");
     control.state = CONTROL_STOPPED;
 }
 
 void control_set_state_stopping(void)
 {
+    LOG_INFO("==> State stopping");
     control.state = CONTROL_STOPPING;
 }
 
 void control_set_state_forward(void)
 {
+    LOG_INFO("==> State forward");
+    h_bridge_set_reverse(DISABLE);
     control.state = CONTROL_FORWARD;
 }
 
 void control_set_state_reverse(void)
 {
+    LOG_INFO("==> State reverse");
+    h_bridge_set_reverse(ENABLE);
     control.state = CONTROL_REVERSE;
 }
 
@@ -77,7 +107,7 @@ void control_task_stopping(void)
     control_compute_rpm();
 
     //if motor is stopped
-    if (!(int)(100 * control.rpm)){
+    if ((int)(100 * control.rpm) == 0){
         control_set_state_stopped();
     }
 }
@@ -101,8 +131,11 @@ void control_task_reverse(void)
 }
 
 
+
 void control_run(void)
 {
+    control_compute_duty();
+
     switch (control.state)
     {
     case CONTROL_FORWARD:
