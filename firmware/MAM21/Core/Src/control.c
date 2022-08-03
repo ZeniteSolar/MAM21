@@ -38,6 +38,8 @@ void control_compute_duty(void)
 
     float error = control.duty_setpoint - control.duty;
 
+    float step = (error > 0) ? pos_step : neg_step;
+
     if (error > error_tolerance){
         control.duty += step;
     }else {
