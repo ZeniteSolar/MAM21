@@ -6,7 +6,7 @@ void control_init(TIM_HandleTypeDef *pwm_htim)
 {
     control.duty_setpoint = 0;
     control.duty = 0;
-    hbridge_init(pwm_htim);
+    h_bridge_init(pwm_htim);
     control.state = CONTROL_STOPPING;
 }
 
@@ -44,7 +44,7 @@ void control_compute_duty(void)
         control.duty = control.duty_setpoint;
     }
 
-    h_bridge_set_duty(control.duty);
+    h_bridge_set_duty_target(control.duty);
 
 }
 
@@ -75,14 +75,14 @@ void control_set_state_stopping(void)
 void control_set_state_forward(void)
 {
     LOG_INFO("==> State forward");
-    h_bridge_set_reverse(DISABLE);
+    h_bridge_set_reverse_motor(DISABLE);
     control.state = CONTROL_FORWARD;
 }
 
 void control_set_state_reverse(void)
 {
     LOG_INFO("==> State reverse");
-    h_bridge_set_reverse(ENABLE);
+    h_bridge_set_reverse_motor(ENABLE);
     control.state = CONTROL_REVERSE;
 }
 
@@ -146,6 +146,7 @@ void control_run(void)
         break;
     case CONTROL_STOPPED:
         control_task_stopped();
+        break;
     default:
         LOG_WARN("Unrecognized control state!");
     case CONTROL_STOPPING:
