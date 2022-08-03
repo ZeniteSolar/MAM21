@@ -128,7 +128,8 @@ int main(void)
     /* USER CODE BEGIN 2 */
     /* Configure the FDCAN peripheral */
     FDCAN_Config();
-
+    machine_init();
+    control_init(&htim1);
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -150,10 +151,8 @@ int main(void)
         /* Retrieve Rx messages from RX FIFO0 */
 
         // HAL_FDCAN_IRQHandler(&hfdcan1);
-        HAL_Delay(10);
-        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_15);
-
-        HAL_Delay(1000);
+        
+        machine_run();
     }
     /* USER CODE END 3 */
 }
@@ -748,10 +747,15 @@ For the power off state all Mosfets can be disabled and let the current be condu
 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
+    static uint32_t machine_clk_div = 0; 
     HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
 
     if (htim->Instance == htim1.Instance)
     {
+        if (++machine_clk_div >= 10){
+            machine_clk_div = 0;
+            machine_set_run();
+        }
         h_bridge_run();
     }
 }
@@ -768,10 +772,6 @@ void Error_Handler(void)
 {
     /* USER CODE BEGIN Error_Handler_Debug */
     /* User can add his own implementation to report the HAL error return state */
-    HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
-    HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
-    HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_1);
-    HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_2);
     __disable_irq();
     while (1)
     {

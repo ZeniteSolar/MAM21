@@ -3,6 +3,7 @@
 
 #include "stm32g4xx_hal.h"
 #include "utils.h"
+#include "h_bridge.h"
 
 typedef enum {
     CONTROL_STOPPED,

@@ -4,7 +4,7 @@
 #include "can_app.h"
 
 /* Some global variables*/
-machine_t machine;
+static machine_t machine;
 system_infos_t system_infos;
 system_flags_t system_flags;
 error_flags_t error_flags;
@@ -40,6 +40,42 @@ void set_state_error(void)
     machine.state = STATE_ERROR;
 }
 
+void check_pot_zero(void){
+    static const float error_tolerance = 0.01f;
+    static uint32_t pot_zero_clk;
+    if (machine.motor.duty >= error_tolerance){
+        pot_zero_clk = 0;
+    }
+
+    if (++pot_zero_clk >= 10){
+        machine.motor.pot_zero_with = 1;
+        system_flags.pot_zero_width = 1;
+    }else {
+        machine.motor.pot_zero_with = 0;
+        system_flags.pot_zero_width = 0;
+    }
+}
+
+void machine_set_motor_duty(float D)
+{
+    machine.motor.duty = D;
+}
+
+void machine_set_motor_on(FunctionalState motor_on)
+{
+    machine.motor.motor_on = motor_on;
+}
+
+void machine_set_motor_dms(FunctionalState dms)
+{
+    machine.motor.dms = dms;
+}
+
+void machine_set_motor_reverse(FunctionalState reverse)
+{
+    machine.motor.reverse = reverse;
+}
+
 void task_initializing(void)
 {
     control_set_enable_motor(DISABLE);
@@ -49,8 +85,9 @@ void task_initializing(void)
 void task_idle(void)
 {
     control_set_enable_motor(DISABLE);
+    check_pot_zero();
 
-    if (system_flags.motor_on && system_flags.dms && system_flags.pot_zero_width){
+    if (system_flags.motor_on && system_flags.dms && machine.motor.pot_zero_with){
         set_state_running();
     }
 }
@@ -58,7 +95,7 @@ void task_idle(void)
 void task_running(void)
 {
     control_set_enable_motor(ENABLE);
-    control_set_duty_target(system_infos.dt);
+    control_set_duty_target(machine.motor.duty);
 
     if (!system_flags.motor_on || !system_flags.dms){
         set_state_idle();
@@ -68,15 +105,21 @@ void task_running(void)
 void task_error(void)
 {
     LOG_ERROR("error");
+    set_state_idle();
+}
+
+void machine_set_run(void){
+    machine.run = 1;
 }
 
 void machine_run(void)
 {
+
     if (machine.run){
-        
+        machine.run = 0;
         can_task_run();
         control_run();
-
+        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_15);
         switch (machine.state)
         {
         case STATE_INITIALIZING:

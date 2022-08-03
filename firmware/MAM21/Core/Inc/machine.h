@@ -54,11 +54,25 @@ void task_idle(void);
 void task_running(void);
 void task_error(void);
 
+void machine_set_run(void);
+void machine_set_motor_duty(float D);
+void machine_set_motor_on(FunctionalState motor_on);
+void machine_set_motor_dms(FunctionalState dms);
+void machine_set_motor_reverse(FunctionalState reverse);
 
 typedef struct {
     uint32_t run;
     state_machine_t state;
+    struct {
+        float duty;
+        FunctionalState dms;
+        FunctionalState motor_on;
+        FunctionalState reverse;
+        uint32_t pot_zero_with;
+    }motor;
 }machine_t;
+
+
 
 extern system_infos_t system_infos;
 extern system_flags_t system_flags;

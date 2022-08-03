@@ -5,6 +5,7 @@
 #include "machine.h"
 #include "stm32g4xx_hal.h"
 #include "bit_utils.h"
+#include "utils.h"
 
 typedef struct{
     FDCAN_HandleTypeDef *hfdcan;

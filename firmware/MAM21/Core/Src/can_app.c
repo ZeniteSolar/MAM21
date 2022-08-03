@@ -18,28 +18,28 @@ void can_config(FDCAN_HandleTypeDef *hfdcan1)
     sFilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
     sFilterConfig.FilterID1 = 0x00;
     sFilterConfig.FilterID2 = 0x00;
-    if (HAL_FDCAN_ConfigFilter(&hfdcan1, &sFilterConfig) != HAL_OK)
+    if (HAL_FDCAN_ConfigFilter(hfdcan1, &sFilterConfig) != HAL_OK)
     {
-        Error_Handler();
+        LOG_ERROR("Failed to configure CAN");
     }
 
     /* Configure global filter:
       Filter all remote frames with STD and EXT ID
       Reject non matching frames with STD ID and EXT ID */
-    if (HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, FDCAN_FILTER_REMOTE, FDCAN_FILTER_REMOTE) != HAL_OK)
+    if (HAL_FDCAN_ConfigGlobalFilter(hfdcan1, FDCAN_REJECT, FDCAN_REJECT, FDCAN_FILTER_REMOTE, FDCAN_FILTER_REMOTE) != HAL_OK)
     {
-        Error_Handler();
+        LOG_ERROR("Failed to configure CAN");
     }
 
     /* Start the FDCAN module */
-    if (HAL_FDCAN_Start(&hfdcan1) != HAL_OK)
+    if (HAL_FDCAN_Start(hfdcan1) != HAL_OK)
     {
-        Error_Handler();
+        LOG_ERROR("Failed to configure CAN");
     }
 
-    if (HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
+    if (HAL_FDCAN_ActivateNotification(hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
     {
-        Error_Handler();
+        LOG_ERROR("Failed to configure CAN");
     }
 
 }
@@ -65,7 +65,13 @@ void can_app_extractor_mic19_motor(can_msg_t *msg)
             CAN_MSG_MIC19_MOTOR_MOTOR_BYTE],
             CAN_MSG_MIC19_MOTOR_MOTOR_REVERSE_BIT);
 
-        system_infos.dt = msg->data.raw[CAN_MSG_MIC19_MOTOR_D_BYTE];
+        system_infos.dt = msg->data.raw[CAN_MSG_MIC19_MOTOR_D_BYTE] / 255.0f;
+        
+        machine_set_motor_duty(system_infos.dt);
+        machine_set_motor_on(system_flags.motor_on);
+        machine_set_motor_dms(system_flags.dms);
+        machine_set_motor_reverse(system_flags.reverse);
+
 
     }
 }
