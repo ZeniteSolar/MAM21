@@ -64,13 +64,11 @@ void h_bridge_run(void)
     */
     if (cycle)
     {
-        // HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_SET);
         h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_LEFT_CHANNEL, 0 == h_bridge.flags.reverse);
         h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_RIGHT_CHANNEL, 1 - h_bridge.duty);
     }
     else
     {
-        // HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET);
         h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_LEFT_CHANNEL, h_bridge.duty);
         h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_RIGHT_CHANNEL, 0 == !h_bridge.flags.reverse);
     }
