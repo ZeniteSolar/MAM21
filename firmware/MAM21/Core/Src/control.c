@@ -28,7 +28,8 @@ static void control_compute_duty(void)
 
     float step = (error > 0) ? pos_step : neg_step;
 
-    if (error > error_tolerance){
+    if (fabsf(error) > error_tolerance)
+    {
         control.duty += step;
     }
     else
@@ -80,19 +81,21 @@ static void control_task_stopped(void)
     {
         if (control.flags.reverse)
             control_set_state_reverse();
-        else 
+        else
             control_set_state_forward();
     }
 }
 
 static void control_task_stopping(void)
 {
+    const float minimum_rpm = 0.001;
     control.duty_setpoint = 0;
-    
+
     control_compute_rpm();
 
-    //if motor is stopped
-    if ((int)(100 * control.rpm) == 0){
+    // if motor is stopped
+    if (control.rpm <= minimum_rpm)
+    {
         control_set_state_stopped();
     }
 }
@@ -110,7 +113,7 @@ static void control_task_forward(void)
 static void control_task_reverse(void)
 {
     control.duty_setpoint = control.duty_target;
-    
+
     if (!control.flags.reverse || !control.flags.enable)
     {
         control_set_state_stopping();
@@ -126,8 +129,8 @@ void control_init(TIM_HandleTypeDef *pwm_htim)
     control.duty_setpoint = 0;
     control.duty = 0;
     h_bridge_init(pwm_htim);
-        control_set_state_stopping();
-    }
+    control_set_state_stopping();
+}
 
 void control_clear(void)
 {
