@@ -5,28 +5,31 @@
 #include "utils.h"
 #include "h_bridge.h"
 
-typedef enum {
+typedef enum
+{
     CONTROL_STOPPED,
     CONTROL_STOPPING,
     CONTROL_FORWARD,
     CONTROL_REVERSE
 } state_control_t;
 
-typedef struct {
+typedef struct
+{
     
-    struct {
-        FunctionalState    enable      :1;//enable motor
-        FunctionalState    reverse     :1;//reverse motor
+    struct
+    {
+        FunctionalState enable : 1;  // enable motor
+        FunctionalState reverse : 1; // reverse motor
     } flags;
-    state_control_t state;          //control machine state
-    float       duty_target;        //input of duty cycle
-    float       duty_setpoint;      //duty cycle setpoint
-    float       duty;               //real duty cycle 
-    float       io;                 //output current (A)
-    float       vo;                 //output voltage (V)
-    float       vi;                 //input voltage (V)
-    float       temp;               //temperature (ºC)
-    float       rpm;                //motor angular velocity (rpm)
+    state_control_t state; // control machine state
+    float duty_target;     // input of duty cycle
+    float duty_setpoint;   // duty cycle setpoint
+    float duty;            // real duty cycle
+    float io;              // output current (A)
+    float vo;              // output voltage (V)
+    float vi;              // input voltage (V)
+    float temp;            // temperature (ºC)
+    float rpm;             // motor angular velocity (rpm)
 } control_t;
 
 void control_init(TIM_HandleTypeDef *pwm_htim);

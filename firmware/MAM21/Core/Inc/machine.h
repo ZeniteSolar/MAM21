@@ -3,8 +3,8 @@
 
 #include "stm32g4xx_hal.h"
 
-
-typedef enum {
+typedef enum
+{
     STATE_INITIALIZING,
     STATE_CONTACTOR,
     STATE_IDLE,
@@ -12,33 +12,38 @@ typedef enum {
     STATE_ERROR,
 } state_machine_t;
 
-typedef union {
-    struct{
-        uint32_t     motor_on        :1;
-        uint32_t     dms             :1;
-        uint32_t     pot_zero_width  :1;
-        uint32_t     reverse         :1;
+typedef union
+{
+    struct
+    {
+        uint32_t motor_on : 1;
+        uint32_t dms : 1;
+        uint32_t pot_zero_width : 1;
+        uint32_t reverse : 1;
     };
-    uint32_t   all__;
+    uint32_t all__;
 } system_flags_t;
 
-typedef union {
-    struct{
-        uint32_t     overcurrent     :1;
-        uint32_t     overvoltage     :1;
-        uint32_t     overheat        :1;
-        uint32_t     fault           :1;
-        uint32_t     no_canbus       :1;
+typedef union
+{
+    struct
+    {
+        uint32_t overcurrent : 1;
+        uint32_t overvoltage : 1;
+        uint32_t overheat : 1;
+        uint32_t fault : 1;
+        uint32_t no_canbus : 1;
     };
-        uint32_t   all;
+    uint32_t all;
 } error_flags_t;
 
-typedef struct {
-    float       dt;            //duty cycle
-    float       io;            //output current (A)
-    float       vo;            //output voltage (V)
-    float       vi;            //input voltage (V)
-    float       temp;          //temperature (ºC)
+typedef struct
+{
+    float dt;   // duty cycle
+    float io;   // output current (A)
+    float vo;   // output voltage (V)
+    float vi;   // input voltage (V)
+    float temp; // temperature (ºC)
 } system_infos_t;
 
 void machine_init(void);
@@ -60,22 +65,22 @@ void machine_set_motor_on(FunctionalState motor_on);
 void machine_set_motor_dms(FunctionalState dms);
 void machine_set_motor_reverse(FunctionalState reverse);
 
-typedef struct {
+typedef struct
+{
     uint32_t run;
     state_machine_t state;
-    struct {
+    struct
+    {
         float duty;
         FunctionalState dms;
         FunctionalState motor_on;
         FunctionalState reverse;
         uint32_t pot_zero_with;
-    }motor;
-}machine_t;
-
-
+    } motor;
+} machine_t;
 
 extern system_infos_t system_infos;
 extern system_flags_t system_flags;
 extern error_flags_t error_flags;
 
-#endif //MACHINE_H
+#endif // MACHINE_H

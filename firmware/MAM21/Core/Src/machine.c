@@ -43,14 +43,18 @@ void set_state_error(void)
 void check_pot_zero(void){
     static const float error_tolerance = 0.01f;
     static uint32_t pot_zero_clk;
-    if (machine.motor.duty >= error_tolerance){
+    if (machine.motor.duty >= error_tolerance)
+    {
         pot_zero_clk = 0;
     }
 
-    if (++pot_zero_clk >= 10){
+    if (++pot_zero_clk >= 10)
+    {
         machine.motor.pot_zero_with = 1;
         system_flags.pot_zero_width = 1;
-    }else {
+    }
+    else
+    {
         machine.motor.pot_zero_with = 0;
         system_flags.pot_zero_width = 0;
     }

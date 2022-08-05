@@ -1,7 +1,6 @@
 // CODE GENERATED USING MAKOTEMPLATES.ORG, DO NOT EDIT.
 // FILE_VERSION: {db["version"]}
 
-
 // GENERIC - Modulo generico para facilitar implementacoes genericas
 #define CAN_SIGNATURE_GENERIC 0
 // GENERIC - STATE - Module state report
@@ -22,7 +21,6 @@
 #define CAN_MSG_GENERIC_GENERIC_SIGNATURE_BYTE 0 //<!" Senders signature
 #define CAN_MSG_GENERIC_GENERIC_SIGNATURE_TYPE "u8"
 #define CAN_MSG_GENERIC_GENERIC_SIGNATURE_UNITS ""
-
 
 // MIC19 - Modulo de Interface de Controle
 #define CAN_SIGNATURE_MIC19 240
@@ -104,7 +102,6 @@
 #define CAN_MSG_MIC19_MDE_POSITION_H_TYPE "u16"
 #define CAN_MSG_MIC19_MDE_POSITION_H_UNITS "°/100"
 
-
 // MDE22 - Modulo da Direção Elétrica
 #define CAN_SIGNATURE_MDE22 170
 // MDE22 - STATE - Module state report
@@ -144,7 +141,6 @@
 #define CAN_MSG_MDE22_STEERINGBAT_MEASUREMENTS_BATCURRENT_H_TYPE "u16"
 #define CAN_MSG_MDE22_STEERINGBAT_MEASUREMENTS_BATCURRENT_H_UNITS "A/100"
 
-
 // MVC19_1 - Modulo de voltimetro 1
 #define CAN_SIGNATURE_MVC19_1 210
 // MVC19_1 - STATE - Module state report
@@ -160,7 +156,6 @@
 #define CAN_MSG_MVC19_1_STATE_ERROR_TYPE "u8"
 #define CAN_MSG_MVC19_1_STATE_ERROR_UNITS ""
 
-
 // MVC19_2 - Modulo de voltimetro 2
 #define CAN_SIGNATURE_MVC19_2 211
 // MVC19_2 - STATE - Module state report
@@ -175,7 +170,6 @@
 #define CAN_MSG_MVC19_2_STATE_ERROR_BYTE 2 //<!" Error code
 #define CAN_MSG_MVC19_2_STATE_ERROR_TYPE "u8"
 #define CAN_MSG_MVC19_2_STATE_ERROR_UNITS ""
-
 
 // MCC19_1 - Modulo controlador de carga
 #define CAN_SIGNATURE_MCC19_1 225
@@ -224,7 +218,6 @@
 #define CAN_MSG_MCC19_1_MEASUREMENTS_DT_TYPE "u8"
 #define CAN_MSG_MCC19_1_MEASUREMENTS_DT_UNITS "%/255"
 
-
 // MCC19_2 - Modulo controlador de carga
 #define CAN_SIGNATURE_MCC19_2 226
 // MCC19_2 - STATE - Module state report
@@ -271,7 +264,6 @@
 #define CAN_MSG_MCC19_2_MEASUREMENTS_DT_BYTE 7 //<!" converter's duty cycle
 #define CAN_MSG_MCC19_2_MEASUREMENTS_DT_TYPE "u8"
 #define CAN_MSG_MCC19_2_MEASUREMENTS_DT_UNITS "%/255"
-
 
 // MCC19_3 - Modulo controlador de carga
 #define CAN_SIGNATURE_MCC19_3 227
@@ -320,7 +312,6 @@
 #define CAN_MSG_MCC19_3_MEASUREMENTS_DT_TYPE "u8"
 #define CAN_MSG_MCC19_3_MEASUREMENTS_DT_UNITS "%/255"
 
-
 // MCC19_4 - Modulo controlador de carga
 #define CAN_SIGNATURE_MCC19_4 228
 // MCC19_4 - STATE - Module state report
@@ -367,7 +358,6 @@
 #define CAN_MSG_MCC19_4_MEASUREMENTS_DT_BYTE 7 //<!" converter's duty cycle
 #define CAN_MSG_MCC19_4_MEASUREMENTS_DT_TYPE "u8"
 #define CAN_MSG_MCC19_4_MEASUREMENTS_DT_UNITS "%/255"
-
 
 // MCB19_1 - Modulo de carregamento das baterias auxiliares
 #define CAN_SIGNATURE_MCB19_1 220
@@ -416,7 +406,6 @@
 #define CAN_MSG_MCB19_1_MEASUREMENTS_DT_TYPE "u8"
 #define CAN_MSG_MCB19_1_MEASUREMENTS_DT_UNITS "%/255"
 
-
 // MCB19_2 - Modulo de carregamento das baterias auxiliares
 #define CAN_SIGNATURE_MCB19_2 221
 // MCB19_2 - STATE - Module state report
@@ -464,7 +453,6 @@
 #define CAN_MSG_MCB19_2_MEASUREMENTS_DT_TYPE "u8"
 #define CAN_MSG_MCB19_2_MEASUREMENTS_DT_UNITS "%/255"
 
-
 // MAC22 - Modulo de Acionamento da Contatora
 #define CAN_SIGNATURE_MAC22 180
 // MAC22 - STATE - Module state report
@@ -488,7 +476,6 @@
 #define CAN_MSG_MAC22_CONTACTOR_RESPONSE_BYTE 1 //<!" Contactor task response
 #define CAN_MSG_MAC22_CONTACTOR_RESPONSE_TYPE "u8"
 #define CAN_MSG_MAC22_CONTACTOR_RESPONSE_UNITS ""
-
 
 // MAM19 - Modulo de Acionamento do Motor
 #define CAN_SIGNATURE_MAM19 190
@@ -526,7 +513,6 @@
 #define CAN_MSG_MAM19_CONTACTOR_REQUEST_TYPE "u8"
 #define CAN_MSG_MAM19_CONTACTOR_REQUEST_UNITS ""
 
-
 // MAB19 - Modulo de Acionamento das Bombas de Porao
 #define CAN_SIGNATURE_MAB19 230
 // MAB19 - STATE - Module state report
@@ -553,7 +539,6 @@
 #define CAN_MSG_MAB19_PUMPS_PUMPS_PUMP1_BIT 0
 #define CAN_MSG_MAB19_PUMPS_PUMPS_PUMP2_BIT 1
 #define CAN_MSG_MAB19_PUMPS_PUMPS_PUMP3_BIT 2
-
 
 // MSC19_1 - Main Battery Voltage Sensor
 #define CAN_SIGNATURE_MSC19_1 250
@@ -594,7 +579,6 @@
 #define CAN_MSG_MSC19_1_ADC_MAX_H_TYPE "u16"
 #define CAN_MSG_MSC19_1_ADC_MAX_H_UNITS "V/100"
 
-
 // MSC19_2 - Auxilliary Battery Voltage Sensor
 #define CAN_SIGNATURE_MSC19_2 251
 // MSC19_2 - STATE - Module state report
@@ -633,7 +617,6 @@
 #define CAN_MSG_MSC19_2_ADC_MAX_H_BYTE 6 //<!" Max byte low
 #define CAN_MSG_MSC19_2_ADC_MAX_H_TYPE "u16"
 #define CAN_MSG_MSC19_2_ADC_MAX_H_UNITS "V/100"
-
 
 // MSC19_3 - Extra Battery Voltage Sensor
 #define CAN_SIGNATURE_MSC19_3 252
@@ -674,7 +657,6 @@
 #define CAN_MSG_MSC19_3_ADC_MAX_H_TYPE "u16"
 #define CAN_MSG_MSC19_3_ADC_MAX_H_UNITS "V/100"
 
-
 // MSC19_4 - Main Battery Input Current Sensor
 #define CAN_SIGNATURE_MSC19_4 253
 // MSC19_4 - STATE - Module state report
@@ -714,7 +696,6 @@
 #define CAN_MSG_MSC19_4_ADC_MAX_H_TYPE "u16"
 #define CAN_MSG_MSC19_4_ADC_MAX_H_UNITS "A/100"
 
-
 // MSC19_5 - Main Battery Output Current Sensor
 #define CAN_SIGNATURE_MSC19_5 254
 // MSC19_5 - STATE - Module state report
@@ -753,7 +734,6 @@
 #define CAN_MSG_MSC19_5_ADC_MAX_H_BYTE 6 //<!" Max byte low
 #define CAN_MSG_MSC19_5_ADC_MAX_H_TYPE "u16"
 #define CAN_MSG_MSC19_5_ADC_MAX_H_UNITS "A/100"
-
 
 // MCS19 - Modulo de Carregamento do Sistema
 #define CAN_SIGNATURE_MCS19 200
@@ -832,7 +812,6 @@
 #define CAN_MSG_MCS19_CAP_MAX_H_TYPE "u16"
 #define CAN_MSG_MCS19_CAP_MAX_H_UNITS ""
 
-
 // MT19 - Modulo Tacometro
 #define CAN_SIGNATURE_MT19 255
 // MT19 - STATE - Module state report
@@ -859,7 +838,6 @@
 #define CAN_MSG_MT19_RPM_AVG_H_BYTE 2 //<!" RPM Average, byte high
 #define CAN_MSG_MT19_RPM_AVG_H_TYPE "u16"
 #define CAN_MSG_MT19_RPM_AVG_H_UNITS ""
-
 
 // MSWI19 - Modulo de Interface de Controle
 #define CAN_SIGNATURE_MSWI19 241
@@ -927,5 +905,3 @@
 #define CAN_MSG_MSWI19_MCS_BOAT_ON_TYPE "bitfield"
 #define CAN_MSG_MSWI19_MCS_BOAT_ON_UNITS ""
 #define CAN_MSG_MSWI19_MCS_BOAT_ON_BOAT_ON_BIT 0
-
-

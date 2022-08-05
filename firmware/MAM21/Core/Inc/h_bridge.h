@@ -4,15 +4,17 @@
 #include "stm32g4xx_hal.h"
 #include "utils.h"
 
-typedef struct{
+typedef struct
+{
     TIM_HandleTypeDef *pwm_htim;
-    struct{
+    struct
+    {
         FunctionalState enable;
         FunctionalState reverse;
-    }flags;
+    } flags;
     float duty;
-    
-}h_bridge_t;
+
+} h_bridge_t;
 
 void h_bridge_init(TIM_HandleTypeDef *pwm_htim);
 void h_bridge_run(void);

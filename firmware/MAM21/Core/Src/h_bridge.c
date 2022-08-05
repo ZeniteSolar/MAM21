@@ -21,9 +21,10 @@ void h_bridge_set_pwm(TIM_HandleTypeDef *htim, uint32_t channel, float D)
     else if (D > 1)
         D = 1;
     uint32_t top = __HAL_TIM_GET_AUTORELOAD(htim);
-    
-    //Invert inverted channels 
-    if (channel == TIM_CHANNEL_2){
+
+    // Invert inverted channels
+    if (channel == TIM_CHANNEL_2)
+    {
         D = 1 - D;
     }
     __HAL_TIM_SET_COMPARE(htim, channel, (int)((top + 1) * D));
@@ -58,7 +59,7 @@ void h_bridge_set_duty_target(float D)
     if (D < 0)
         D = 0;
     else if (D > 1)
-        D = 1;   
+        D = 1;
 
     h_bridge.duty = D;
 }

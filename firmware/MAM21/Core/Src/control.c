@@ -42,7 +42,9 @@ void control_compute_duty(void)
 
     if (error > error_tolerance){
         control.duty += step;
-    }else {
+    }
+    else
+    {
         control.duty = control.duty_setpoint;
     }
 
@@ -94,7 +96,8 @@ void control_task_stopped(void)
 
     control.duty_setpoint = 0;
 
-    if (control.flags.enable){
+    if (control.flags.enable)
+    {
         if (control.flags.reverse)
             control_set_state_reverse();
         else 
@@ -118,7 +121,8 @@ void control_task_forward(void)
 {
     control.duty_setpoint = control.duty_target;
 
-    if (control.flags.reverse || !control.flags.enable){
+    if (control.flags.reverse || !control.flags.enable)
+    {
         control_set_state_stopping();
     }
 }
@@ -127,7 +131,11 @@ void control_task_reverse(void)
 {
     control.duty_setpoint = control.duty_target;
     
-    if (!control.flags.reverse || !control.flags.enable){
+    if (!control.flags.reverse || !control.flags.enable)
+    {
+        control_set_state_stopping();
+    }
+}
         control_set_state_stopping();
     }
 }
