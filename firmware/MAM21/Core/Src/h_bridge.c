@@ -1,6 +1,39 @@
 #include "h_bridge.h"
 
-h_bridge_t h_bridge;
+static h_bridge_t h_bridge;
+
+/*
+**  PRIVATE FUNCTIONS
+*/
+
+/*
+ * Set duty cycle in the timer compare register.
+ * Not to be confused with the duty cycle of the motor! this is the PWM in the channel.
+ * Duty cycle is automatically inverted depending of the pwm_mode.
+ * \param htim is the Pwm Time Base Handle
+ * \param channel is the channel that D wil be applied
+ * \param D duty cycle
+ */
+static void h_bridge_set_pwm(TIM_HandleTypeDef *htim, h_bridge_channel_t channel, float D)
+{
+    if (D < 0)
+        D = 0;
+    else if (D > 1)
+        D = 1;
+    uint32_t top = __HAL_TIM_GET_AUTORELOAD(htim);
+
+    // Invert inverted channels
+    if (get_pwm_mode(htim, channel) == TIM_OCMODE_PWM2)
+    {
+        D = 1 - D;
+    }
+
+    __HAL_TIM_SET_COMPARE(htim, channel, (int)((top + 1) * D));
+}
+
+/*
+**  PUBLIC FUNCTIONS
+*/
 
 void h_bridge_init(TIM_HandleTypeDef *pwm_htim)
 {
@@ -26,23 +59,6 @@ uint32_t get_pwm_mode(TIM_HandleTypeDef *htim, h_bridge_channel_t channel)
     default:
         __builtin_unreachable();
     }
-}
-
-void h_bridge_set_pwm(TIM_HandleTypeDef *htim, h_bridge_channel_t channel, float D)
-{
-    if (D < 0)
-        D = 0;
-    else if (D > 1)
-        D = 1;
-    uint32_t top = __HAL_TIM_GET_AUTORELOAD(htim);
-
-    // Invert inverted channels
-    if (get_pwm_mode(htim, channel) == TIM_OCMODE_PWM2)
-    {
-        D = 1 - D;
-    }
-
-    __HAL_TIM_SET_COMPARE(htim, channel, (int)((top + 1) * D));
 }
 
 void h_bridge_run(void)
