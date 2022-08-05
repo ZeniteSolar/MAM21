@@ -1,3 +1,12 @@
+/**
+ ******************************************************************************
+ * @file    machine.h
+ * @brief   This file contains the control state machine, does the control action
+ *  and forbids abrupt variations in the motor. Is in the midle level being
+ * betwen the main state machine and the hardware,
+ ******************************************************************************
+ */
+
 #ifndef CONTROL_H
 #define CONTROL_H 
 
@@ -32,8 +41,18 @@ typedef struct
     float rpm;             // motor angular velocity (rpm)
 } control_t;
 
+/*
+ *  Initialize control state machine
+ * \param pwm_htim Pwm Time Base Handle
+ */
 void control_init(TIM_HandleTypeDef *pwm_htim);
+/*
+ * Run the state machine
+ */
 void control_run(void);
+/*
+ * Clear all internal states
+ */
 void control_clear(void);
 
 void control_set_state_stopped(void);
@@ -47,11 +66,20 @@ void control_task_forward(void);
 void control_task_reverse(void);
 
 void control_compute_duty(void);
-
+/*
+ * Set target setpoint of the duty cycle
+ * \param D duty cycle target setpoint
+ */
 void control_set_duty_target(float D);
+/*
+ *   Enable motor
+ * \param enable enable motor
+ */
 void control_set_enable_motor(FunctionalState enable);
+/*
+ *  Reverse motor
+ * \param reverse reverse motor
+ */
 void control_set_reverse_motor(FunctionalState reverse);
-
-
 
 #endif
