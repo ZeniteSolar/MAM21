@@ -1,40 +1,28 @@
 #include "control.h"
 
-control_t control;
+static control_t control;
 
-void control_init(TIM_HandleTypeDef *pwm_htim)
-{
-    control.duty_setpoint = 0;
-    control.duty = 0;
-    h_bridge_init(pwm_htim);
-    control.state = CONTROL_STOPPING;
-}
+/*
+**  PRIVATE FUNCTIONS
+*/
+static void control_set_state_stopped(void);
+static void control_set_state_stopping(void);
+static void control_set_state_forward(void);
+static void control_set_state_reverse(void);
 
-void control_clear(void)
-{
-    control.duty_setpoint = 0;
-    control.flags.enable = DISABLE;
-}
+static void control_task_stopped(void);
+static void control_task_stopping(void);
+static void control_task_forward(void);
+static void control_task_reverse(void);
 
-void control_set_duty_target(float D)
-{
-    control.duty_target = D;
-}
+static void control_compute_duty(void);
+static void control_compute_rpm(void);
 
-void control_compute_rpm(void)
-{
-    //faking rpm measurement
-    control.rpm = control.duty;
-}
-
-void control_compute_duty(void)
+static void control_compute_duty(void)
 {
     static const float pos_step = 0.01f;
     static const float neg_step = -0.01f;
     static const float error_tolerance = 0.015f;
-
-    float step = (control.duty_setpoint < control.duty) ?
-        pos_step : neg_step;
 
     float error = control.duty_setpoint - control.duty;
 
@@ -49,49 +37,41 @@ void control_compute_duty(void)
     }
 
     h_bridge_set_duty_target(control.duty);
-
 }
 
-void control_set_enable_motor(FunctionalState enable)
+static void control_compute_rpm(void)
 {
-    LOG_INFO("turning on motor");
-    control.flags.enable = enable;
+    // faking rpm measurement
+    control.rpm = control.duty;
 }
 
-void control_set_reverse_motor(FunctionalState reverse)
-{
-    LOG_INFO("changing motor direction");
-    control.flags.reverse = reverse;
-}
-
-void control_set_state_stopped(void)
+static void control_set_state_stopped(void)
 {
     LOG_INFO("==> State stopped");
     control.state = CONTROL_STOPPED;
 }
 
-void control_set_state_stopping(void)
+static void control_set_state_stopping(void)
 {
     LOG_INFO("==> State stopping");
     control.state = CONTROL_STOPPING;
 }
 
-void control_set_state_forward(void)
+static void control_set_state_forward(void)
 {
     LOG_INFO("==> State forward");
     h_bridge_set_reverse_motor(DISABLE);
     control.state = CONTROL_FORWARD;
 }
 
-void control_set_state_reverse(void)
+static void control_set_state_reverse(void)
 {
     LOG_INFO("==> State reverse");
     h_bridge_set_reverse_motor(ENABLE);
     control.state = CONTROL_REVERSE;
 }
 
-
-void control_task_stopped(void)
+static void control_task_stopped(void)
 {
 
     control.duty_setpoint = 0;
@@ -105,7 +85,7 @@ void control_task_stopped(void)
     }
 }
 
-void control_task_stopping(void)
+static void control_task_stopping(void)
 {
     control.duty_setpoint = 0;
     
@@ -117,7 +97,7 @@ void control_task_stopping(void)
     }
 }
 
-void control_task_forward(void)
+static void control_task_forward(void)
 {
     control.duty_setpoint = control.duty_target;
 
@@ -127,7 +107,7 @@ void control_task_forward(void)
     }
 }
 
-void control_task_reverse(void)
+static void control_task_reverse(void)
 {
     control.duty_setpoint = control.duty_target;
     
@@ -136,11 +116,41 @@ void control_task_reverse(void)
         control_set_state_stopping();
     }
 }
+
+/*
+**  PUBLIC FUNCTIONS
+*/
+
+void control_init(TIM_HandleTypeDef *pwm_htim)
+{
+    control.duty_setpoint = 0;
+    control.duty = 0;
+    h_bridge_init(pwm_htim);
         control_set_state_stopping();
     }
+
+void control_clear(void)
+{
+    control.duty_setpoint = 0;
+    control.flags.enable = DISABLE;
 }
 
+void control_set_duty_target(float D)
+{
+    control.duty_target = D;
+}
 
+void control_set_enable_motor(FunctionalState enable)
+{
+    LOG_INFO("turning on motor");
+    control.flags.enable = enable;
+}
+
+void control_set_reverse_motor(FunctionalState reverse)
+{
+    LOG_INFO("changing motor direction");
+    control.flags.reverse = reverse;
+}
 
 void control_run(void)
 {

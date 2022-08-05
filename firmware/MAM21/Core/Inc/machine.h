@@ -71,16 +71,6 @@ void machine_init(void);
  */
 void machine_run(void);
 
-void set_state_initializing(void);
-void set_state_idle(void);
-void set_state_running(void);
-void set_state_error(void);
-
-void task_initializing(void);
-void task_idle(void);
-void task_running(void);
-void task_error(void);
-
 /*
  * Trigger to run state machine,
  * this function should be used at a fixed frequency

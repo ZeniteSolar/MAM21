@@ -8,8 +8,9 @@
  */
 
 #ifndef CONTROL_H
-#define CONTROL_H 
+#define CONTROL_H
 
+#include <math.h>
 #include "stm32g4xx_hal.h"
 #include "utils.h"
 #include "h_bridge.h"
@@ -24,7 +25,7 @@ typedef enum
 
 typedef struct
 {
-    
+
     struct
     {
         FunctionalState enable : 1;  // enable motor
@@ -46,36 +47,29 @@ typedef struct
  * \param pwm_htim Pwm Time Base Handle
  */
 void control_init(TIM_HandleTypeDef *pwm_htim);
+
 /*
  * Run the state machine
  */
 void control_run(void);
+
 /*
  * Clear all internal states
  */
 void control_clear(void);
 
-void control_set_state_stopped(void);
-void control_set_state_stopping(void);
-void control_set_state_forward(void);
-void control_set_state_reverse(void);
-
-void control_task_stopped(void);
-void control_task_stopping(void);
-void control_task_forward(void);
-void control_task_reverse(void);
-
-void control_compute_duty(void);
 /*
  * Set target setpoint of the duty cycle
  * \param D duty cycle target setpoint
  */
 void control_set_duty_target(float D);
+
 /*
  *   Enable motor
  * \param enable enable motor
  */
 void control_set_enable_motor(FunctionalState enable);
+
 /*
  *  Reverse motor
  * \param reverse reverse motor
