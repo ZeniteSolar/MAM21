@@ -15,7 +15,20 @@ void h_bridge_init(TIM_HandleTypeDef *pwm_htim)
     HAL_TIMEx_PWMN_Start(pwm_htim, TIM_CHANNEL_2);
 }
 
-void h_bridge_set_pwm(TIM_HandleTypeDef *htim, uint32_t channel, float D)
+uint32_t get_pwm_mode(TIM_HandleTypeDef *htim, h_bridge_channel_t channel)
+{
+    switch (channel)
+    {
+    case H_BRIDGE_LEFT_CHANNEL:
+        return (htim->Instance->CCMR1 & TIM_CCMR1_OC1M_Msk) >> (TIM_CCMR1_OC1M_Pos - TIM_CCMR1_OC1M_Pos);
+    case H_BRIDGE_RIGHT_CHANNEL:
+        return (htim->Instance->CCMR1 & TIM_CCMR1_OC2M_Msk) >> (TIM_CCMR1_OC2M_Pos - TIM_CCMR1_OC1M_Pos);
+    default:
+        __builtin_unreachable();
+    }
+}
+
+void h_bridge_set_pwm(TIM_HandleTypeDef *htim, h_bridge_channel_t channel, float D)
 {
     if (D < 0)
         D = 0;
@@ -24,10 +37,11 @@ void h_bridge_set_pwm(TIM_HandleTypeDef *htim, uint32_t channel, float D)
     uint32_t top = __HAL_TIM_GET_AUTORELOAD(htim);
 
     // Invert inverted channels
-    if (channel == TIM_CHANNEL_2)
+    if (get_pwm_mode(htim, channel) == TIM_OCMODE_PWM2)
     {
         D = 1 - D;
     }
+
     __HAL_TIM_SET_COMPARE(htim, channel, (int)((top + 1) * D));
 }
 
@@ -51,14 +65,14 @@ void h_bridge_run(void)
     if (cycle)
     {
         // HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_SET);
-        h_bridge_set_pwm(h_bridge.pwm_htim, TIM_CHANNEL_1, 0 == h_bridge.flags.reverse);
-        h_bridge_set_pwm(h_bridge.pwm_htim, TIM_CHANNEL_2, 1 - h_bridge.duty);
+        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_LEFT_CHANNEL, 0 == h_bridge.flags.reverse);
+        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_RIGHT_CHANNEL, 1 - h_bridge.duty);
     }
     else
     {
         // HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_RESET);
-        h_bridge_set_pwm(h_bridge.pwm_htim, TIM_CHANNEL_1, h_bridge.duty);
-        h_bridge_set_pwm(h_bridge.pwm_htim, TIM_CHANNEL_2, 0 == !h_bridge.flags.reverse);
+        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_LEFT_CHANNEL, h_bridge.duty);
+        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_RIGHT_CHANNEL, 0 == !h_bridge.flags.reverse);
     }
     if (++ncycle > 3)
     {

@@ -11,6 +11,12 @@
 #include "stm32g4xx_hal.h"
 #include "utils.h"
 
+typedef enum
+{
+    H_BRIDGE_LEFT_CHANNEL = TIM_CHANNEL_1,
+    H_BRIDGE_RIGHT_CHANNEL = TIM_CHANNEL_2,
+} h_bridge_channel_t;
+
 typedef struct
 {
     TIM_HandleTypeDef *pwm_htim;
