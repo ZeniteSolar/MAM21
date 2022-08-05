@@ -1,0 +1,42 @@
+{
+	"34640": {
+		"Type": "TRICE0",
+		"Strg": "s:                                          \\n"
+	},
+	"36291": {
+		"Type": "TRICE8",
+		"Strg": "s:     NUCLEO-G071RB     TRICE_MODE %3u     \\n"
+	},
+	"37130": {
+		"Type": "TRICE32",
+		"Strg": "att:Single Trice Stack buf size:%4u"
+	},
+	"41052": {
+		"Type": "TRICE32",
+		"Strg": "att: Trice 2x half buffer size:%4u "
+	},
+	"46427": {
+		"Type": "TRICE0",
+		"Strg": "s:     \\n"
+	},
+	"52064": {
+		"Type": "TRICE0",
+		"Strg": "s:     "
+	},
+	"56816": {
+		"Type": "TRICE0",
+		"Strg": "s:                                          \\n"
+	},
+	"57449": {
+		"Type": "TRICE0",
+		"Strg": "s:                                          \\n"
+	},
+	"60363": {
+		"Type": "TRICE",
+		"Strg": "1/11 = %g\\n"
+	},
+	"61732": {
+		"Type": "TRICE32",
+		"Strg": "wrn:Transmit buffer truncated from %u to %u\\n"
+	}
+}
