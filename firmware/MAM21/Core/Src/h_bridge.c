@@ -34,7 +34,19 @@ void h_bridge_run(void)
 {
     static uint32_t cycle = 0;
     static uint32_t ncycle = 0;
+    /*
+    https://www.modularcircuits.com/blog/articles/h-bridge-secrets/h-bridge-control/
 
+      | 0cycle | 1cycle
+    Q1|DIR      |DT
+    Q2|!DIR     |!DT
+    Q3|!DT     |!DIR
+    Q4|DT      |DIR
+    Assuming Q1 = CH1,Q2 = !CH1 and Q3 = CH2,Q4 = !CH2
+        | 0cycle | 1 cycle
+    CH1 |DIR     | DT
+    CH2 |!DT     | !DIR
+    */
     if (cycle)
     {
         // HAL_GPIO_WritePin(LED0_GPIO_Port, LED0_Pin, GPIO_PIN_SET);
