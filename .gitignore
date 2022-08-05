@@ -1,7 +1,8 @@
 # https://github.com/github/gitignore/blob/master/C.gitignore
-
+# Zip 
+*.zip
 # Vscode
-.vscode/*
+.vscode/
 
 # Prerequisites
 *.d
@@ -83,7 +84,8 @@ _autosave-*
 *-save.pro
 *-save.kicad_pcb
 fp-info-cache
-
+*-backups/
+\#auto_saved_files\#
 # Netlist files (exported from Eeschema)
 *.net
 
@@ -94,6 +96,10 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+
+#Ltspice
+*.raw
+*.log
 
 # Object files
 *.o
