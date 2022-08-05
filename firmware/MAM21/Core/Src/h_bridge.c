@@ -5,7 +5,8 @@ h_bridge_t h_bridge;
 void h_bridge_init(TIM_HandleTypeDef *pwm_htim)
 {
     h_bridge.pwm_htim = pwm_htim;
-
+    h_bridge_set_pwm(pwm_htim, TIM_CHANNEL_1, 0.0);
+    h_bridge_set_pwm(pwm_htim, TIM_CHANNEL_2, 0.0);
     HAL_TIM_Base_Start_IT(pwm_htim);
     HAL_TIM_PWM_Start_IT(pwm_htim, TIM_CHANNEL_1);
     HAL_TIM_PWM_Start(pwm_htim, TIM_CHANNEL_1);
