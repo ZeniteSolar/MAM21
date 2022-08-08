@@ -7,7 +7,7 @@
  */
 
 #ifndef MACHINE_H
-#define MACHINE_H 
+#define MACHINE_H
 
 #include "stm32g4xx_hal.h"
 
@@ -109,6 +109,7 @@ typedef struct
         float duty;
         FunctionalState dms;
         FunctionalState motor_on;
+        FunctionalState reverse_running; // reverse value when machine is going to running state
         FunctionalState reverse;
         uint32_t pot_zero_with;
     } motor;

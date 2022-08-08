@@ -35,6 +35,8 @@ static void check_pot_zero(void);
 
 static void set_state_initializing(void)
 {
+
+    led_set_prescaler(LED_GREEN, 1000);
     LOG_INFO("==> STATE INITIALIZING");
     control_clear();
     machine.state = STATE_INITIALIZING;
@@ -42,17 +44,22 @@ static void set_state_initializing(void)
 
 static void set_state_idle(void)
 {
+    led_set_prescaler(LED_GREEN, 2000);
     LOG_INFO("==> STATE IDLE");
     machine.state = STATE_IDLE;
 }
 
 static void set_state_running(void)
 {
+    led_set_prescaler(LED_GREEN, 250);
     LOG_INFO("==> STATE RUNNING");
+    machine.motor.reverse_running = machine.motor.reverse;
     machine.state = STATE_RUNNING;
 }
 static void set_state_error(void)
 {
+    led_set_prescaler(LED_RED, 50);
+    led_set_prescaler(LED_GREEN, 50);
     LOG_INFO("==> STATE ERROR");
     machine.state = STATE_ERROR;
 }
@@ -89,7 +96,7 @@ static void task_idle(void)
     control_set_enable_motor(DISABLE);
     check_pot_zero();
 
-    if (system_flags.motor_on && system_flags.dms && machine.motor.pot_zero_with)
+    if (machine.motor.motor_on && machine.motor.dms && machine.motor.pot_zero_with)
     {
         set_state_running();
     }
@@ -98,9 +105,10 @@ static void task_idle(void)
 static void task_running(void)
 {
     control_set_enable_motor(ENABLE);
+    control_set_reverse_motor(machine.motor.reverse);
     control_set_duty_target(machine.motor.duty);
 
-    if (!system_flags.motor_on || !system_flags.dms)
+    if (!machine.motor.motor_on || !machine.motor.dms || (machine.motor.reverse_running != machine.motor.reverse))
     {
         set_state_idle();
     }
@@ -154,7 +162,6 @@ void machine_run(void)
         machine.run = 0;
         can_task_run();
         control_run();
-        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_15);
         switch (machine.state)
         {
         case STATE_INITIALIZING:
@@ -173,4 +180,5 @@ void machine_run(void)
             break;
         }
     }
+    led_run();
 }

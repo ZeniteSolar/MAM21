@@ -58,7 +58,6 @@ uint8_t ubKeyNumber = 0x0;
 FDCAN_RxHeaderTypeDef RxHeader;
 FDCAN_TxHeaderTypeDef TxHeader;
 
-
 // For PWM control of engine
 struct MotorControl
 {
@@ -81,6 +80,7 @@ static void MX_TIM16_Init(void);
 static void MX_TIM17_Init(void);
 static void MX_TIM1_Init(void);
 /* USER CODE BEGIN PFP */
+
 static void FDCAN_Config(void);
 /* USER CODE END PFP */
 
@@ -126,10 +126,9 @@ int main(void)
     MX_TIM17_Init();
     MX_TIM1_Init();
     /* USER CODE BEGIN 2 */
-    /* Configure the FDCAN peripheral */
-    FDCAN_Config();
     machine_init();
     control_init(&htim1);
+    can_init(&hfdcan1);
     /* USER CODE END 2 */
 
     /* Infinite loop */
@@ -151,8 +150,8 @@ int main(void)
         /* Retrieve Rx messages from RX FIFO0 */
 
         // HAL_FDCAN_IRQHandler(&hfdcan1);
-        
-        machine_run();
+
+         machine_run();
     }
     /* USER CODE END 3 */
 }
@@ -662,73 +661,21 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-static void FDCAN_Config(void)
-{
-    FDCAN_FilterTypeDef sFilterConfig;
 
-    /* Configure Rx filter */
-    sFilterConfig.IdType = FDCAN_STANDARD_ID;
-    sFilterConfig.FilterIndex = 0;
-    sFilterConfig.FilterType = FDCAN_FILTER_MASK;
-    sFilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
-    sFilterConfig.FilterID1 = 0x00;
-    sFilterConfig.FilterID2 = 0x00;
-    if (HAL_FDCAN_ConfigFilter(&hfdcan1, &sFilterConfig) != HAL_OK)
-    {
-        Error_Handler();
-    }
+// void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
+// {
+//     can_msg_t Rx_msg;
+//     if ((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET)
+//     {
+//         /* Retrieve Rx messages from RX FIFO0 */
+//         if (HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &Rx_msg.RxHeader, Rx_msg.data.raw) != HAL_OK)
+//         {
+//         }
+//         can_parse(&Rx_msg);
 
-    /* Configure global filter:
-      Filter all remote frames with STD and EXT ID
-      Reject non matching frames with STD ID and EXT ID */
-    if (HAL_FDCAN_ConfigGlobalFilter(&hfdcan1, FDCAN_REJECT, FDCAN_REJECT, FDCAN_FILTER_REMOTE, FDCAN_FILTER_REMOTE) != HAL_OK)
-    {
-        Error_Handler();
-    }
-
-    /* Start the FDCAN module */
-    if (HAL_FDCAN_Start(&hfdcan1) != HAL_OK)
-    {
-        Error_Handler();
-    }
-
-    if (HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
-    {
-        Error_Handler();
-    }
-    if (HAL_FDCAN_ActivateNotification(&hfdcan1, FDCAN_IT_RX_FIFO1_NEW_MESSAGE, 0) != HAL_OK)
-    {
-        Error_Handler();
-    }
-
-    /* Prepare Tx Header */
-    TxHeader.Identifier = 0x321;
-    TxHeader.IdType = FDCAN_STANDARD_ID;
-    TxHeader.TxFrameType = FDCAN_DATA_FRAME;
-    TxHeader.DataLength = FDCAN_DLC_BYTES_2;
-    TxHeader.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
-    TxHeader.BitRateSwitch = FDCAN_BRS_OFF;
-    TxHeader.FDFormat = FDCAN_CLASSIC_CAN;
-    TxHeader.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
-    TxHeader.MessageMarker = 0;
-}
-
-void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
-{
-    can_msg_t Rx_msg;
-    if ((RxFifo0ITs & FDCAN_IT_RX_FIFO0_NEW_MESSAGE) != RESET)
-    {
-        /* Retrieve Rx messages from RX FIFO0 */
-        if (HAL_FDCAN_GetRxMessage(hfdcan, FDCAN_RX_FIFO0, &Rx_msg.RxHeader, Rx_msg.data.raw) != HAL_OK)
-        {
-            
-        }
-        can_parse(&Rx_msg);
-     
-        HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_14);
-    }
-}
-
+//         HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_14);
+//     }
+// }
 
 /*
 https://www.modularcircuits.com/blog/articles/h-bridge-secrets/h-bridge-control/
@@ -747,12 +694,12 @@ For the power off state all Mosfets can be disabled and let the current be condu
 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-    static uint32_t machine_clk_div = 0; 
-    HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
+    static uint32_t machine_clk_div = 0;
 
     if (htim->Instance == htim1.Instance)
     {
-        if (++machine_clk_div >= 10){
+        if (++machine_clk_div >= 100)
+        {
             machine_clk_div = 0;
             machine_set_run();
         }

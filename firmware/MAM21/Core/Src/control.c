@@ -20,9 +20,9 @@ static void control_compute_rpm(void);
 
 static void control_compute_duty(void)
 {
-    static const float pos_step = 0.01f;
-    static const float neg_step = -0.01f;
-    static const float error_tolerance = 0.015f;
+    static const float pos_step = 0.001f;
+    static const float neg_step = -0.001f;
+    static const float error_tolerance = 1.01 * pos_step;
 
     float error = control.duty_setpoint - control.duty;
 
@@ -48,18 +48,21 @@ static void control_compute_rpm(void)
 
 static void control_set_state_stopped(void)
 {
+    led_set_prescaler(LED_RED, 2000);
     LOG_INFO("==> State stopped");
     control.state = CONTROL_STOPPED;
 }
 
 static void control_set_state_stopping(void)
 {
+    led_set_prescaler(LED_RED, 1000);
     LOG_INFO("==> State stopping");
     control.state = CONTROL_STOPPING;
 }
 
 static void control_set_state_forward(void)
 {
+    led_set_prescaler(LED_RED, 250);
     LOG_INFO("==> State forward");
     h_bridge_set_reverse_motor(DISABLE);
     control.state = CONTROL_FORWARD;
@@ -67,6 +70,7 @@ static void control_set_state_forward(void)
 
 static void control_set_state_reverse(void)
 {
+    led_set_prescaler(LED_RED, 250);
     LOG_INFO("==> State reverse");
     h_bridge_set_reverse_motor(ENABLE);
     control.state = CONTROL_REVERSE;
@@ -145,7 +149,6 @@ void control_set_duty_target(float D)
 
 void control_set_enable_motor(FunctionalState enable)
 {
-    LOG_INFO("turning on motor");
     control.flags.enable = enable;
 }
 
@@ -158,7 +161,8 @@ void control_set_reverse_motor(FunctionalState reverse)
 void control_run(void)
 {
     control_compute_duty();
-
+    printf("D_set: %d D: %d", (int)(100 * control.duty_setpoint), (int)(100 * control.duty));
+    printf("\n");
     switch (control.state)
     {
     case CONTROL_FORWARD:

@@ -1,50 +1,25 @@
 #include "can_app.h"
 
-can_hardware_t can_hardware;
+static can_hardware_t can_hardware;
+static module_t mic;
 
 void can_init(FDCAN_HandleTypeDef *hfdcan)
 {
     can_hardware.hfdcan = hfdcan;
     can_config(hfdcan);
 }
-void can_config(FDCAN_HandleTypeDef *hfdcan1)
-{
-    FDCAN_FilterTypeDef sFilterConfig;
-
-    /* Configure Rx filter */
-    sFilterConfig.IdType = FDCAN_STANDARD_ID;
-    sFilterConfig.FilterIndex = 0;
-    sFilterConfig.FilterType = FDCAN_FILTER_MASK;
-    sFilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
-    sFilterConfig.FilterID1 = 0x00;
-    sFilterConfig.FilterID2 = 0x00;
-    if (HAL_FDCAN_ConfigFilter(hfdcan1, &sFilterConfig) != HAL_OK)
-    {
-        LOG_ERROR("Failed to configure CAN");
-    }
-
-    /* Configure global filter:
-      Filter all remote frames with STD and EXT ID
-      Reject non matching frames with STD ID and EXT ID */
-    if (HAL_FDCAN_ConfigGlobalFilter(hfdcan1, FDCAN_REJECT, FDCAN_REJECT, FDCAN_FILTER_REMOTE, FDCAN_FILTER_REMOTE) != HAL_OK)
-    {
-        LOG_ERROR("Failed to configure CAN");
-    }
-
-    /* Start the FDCAN module */
-    if (HAL_FDCAN_Start(hfdcan1) != HAL_OK)
-    {
-        LOG_ERROR("Failed to configure CAN");
-    }
-
-    if (HAL_FDCAN_ActivateNotification(hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
-    {
-        LOG_ERROR("Failed to configure CAN");
-    }
-}
 
 void can_task_run(void)
 {
+    can_msg_t Rx_msg;
+    if (HAL_FDCAN_GetRxFifoFillLevel(can_hardware.hfdcan, can_hardware.fifo))
+    {
+        if (HAL_FDCAN_GetRxMessage(can_hardware.hfdcan, can_hardware.fifo, &Rx_msg.RxHeader, Rx_msg.data.raw) != HAL_OK)
+        {
+            LOG_ERROR("Failed to receive can message");
+        }
+        can_parse(&Rx_msg);
+    }
 }
 
 void can_app_extractor_mic19_motor(can_msg_t *msg)

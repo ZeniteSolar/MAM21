@@ -36,6 +36,7 @@ extern "C"
 #include "h_bridge.h"
 #include "control.h"
 #include "can_app.h"
+#include "utils.h"
   /* USER CODE END Includes */
 
   /* Exported types ------------------------------------------------------------*/
