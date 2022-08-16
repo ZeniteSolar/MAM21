@@ -35,9 +35,20 @@ typedef struct
     uint32_t connected;        // Module conected
 } module_t;
 
+/*
+ *   Initialize can module
+ *   \param hfdcan can handle
+ */
 void can_init(FDCAN_HandleTypeDef *hfdcan);
 
+/*
+ *   Run can module, it sends and recive can messages
+ */
 void can_task_run(void);
+
+/*
+ *   Parse an can message
+ */
 void can_parse(can_msg_t *msg);
 
 #endif
