@@ -16,16 +16,16 @@ static h_bridge_t h_bridge;
  */
 static void h_bridge_set_pwm(TIM_HandleTypeDef *htim, h_bridge_channel_t channel, float D)
 {
-    if (D < 0)
+    if (D < 0.05f)
         D = 0;
-    else if (D > 1)
+    else if (D > 0.95f)
         D = 1;
     uint32_t top = __HAL_TIM_GET_AUTORELOAD(htim);
 
     // Invert inverted channels
-    if (get_pwm_mode(htim, channel) == TIM_OCMODE_PWM2)
+    if (get_pwm_mode(htim, channel) == TIM_OCMODE_PWM1)
     {
-        D = 1 - D;
+        D = 1.0 - D;
     }
 
     __HAL_TIM_SET_COMPARE(htim, channel, (int)((top + 1) * D));
