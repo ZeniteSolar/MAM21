@@ -80,13 +80,17 @@ void h_bridge_run(void)
     */
     if (cycle)
     {
-        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_LEFT_CHANNEL, 0 == h_bridge.flags.reverse);
-        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_RIGHT_CHANNEL, 1 - h_bridge.duty);
+        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_LEFT_CHANNEL,
+                         0 == !h_bridge.flags.reverse);
+        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_RIGHT_CHANNEL,
+                         h_bridge.flags.reverse ? (1 - h_bridge.duty) : (h_bridge.duty));
     }
     else
     {
-        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_LEFT_CHANNEL, h_bridge.duty);
-        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_RIGHT_CHANNEL, 0 == !h_bridge.flags.reverse);
+        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_LEFT_CHANNEL,
+                         h_bridge.flags.reverse ? (h_bridge.duty) : (1 - h_bridge.duty));
+        h_bridge_set_pwm(h_bridge.pwm_htim, H_BRIDGE_RIGHT_CHANNEL,
+                         0 == h_bridge.flags.reverse);
     }
     if (++ncycle > 3)
     {
