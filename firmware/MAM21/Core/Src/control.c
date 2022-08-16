@@ -20,8 +20,8 @@ static void control_compute_rpm(void);
 
 static void control_compute_duty(void)
 {
-    static const float pos_step = 0.001f;
-    static const float neg_step = -0.001f;
+    static const float pos_step = 0.005f;
+    static const float neg_step = -0.005f;
     static const float error_tolerance = 1.01 * pos_step;
 
     float error = control.duty_setpoint - control.duty;
