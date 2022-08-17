@@ -1,0 +1,3 @@
+[submodule "firmware/MAM21/firmware/MAM21/Lib/CAN_PARSER"]
+	path = firmware/MAM21/firmware/MAM21/Lib/CAN_PARSER
+	url = git@github.com:ZeniteSolar/CAN_PARSER.git

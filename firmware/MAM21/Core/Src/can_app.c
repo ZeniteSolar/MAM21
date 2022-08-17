@@ -1,7 +1,21 @@
 #include "can_app.h"
+#include "can_parser.h"
 
 static can_hardware_t can_hardware;
-static module_t mic;
+static struct modules_t
+{
+    struct
+    {
+        uint32_t mic : 1;
+        uint32_t mswi : 1;
+    } connected;
+    struct
+    {
+        uint32_t mic : 1;
+        uint32_t mswi : 1;
+    } error;
+} modules;
+
 void can_config(FDCAN_HandleTypeDef *hfdcan1)
 {
     FDCAN_FilterTypeDef sFilterConfig;
@@ -43,66 +57,65 @@ void can_init(FDCAN_HandleTypeDef *hfdcan)
     can_config(hfdcan);
 }
 
+void can_parse_mic_motor(can_msg_t *msg)
+{
+    CAN_DECLARE_MSG_OF_TYPE(can_mic19_motor_msg_t, mic_motor, msg);
+    modules.connected.mic = 1;
+    if (!modules.connected.mswi)
+    {
+        machine_set_motor_duty(mic_motor->d);
+    }
+    machine_set_motor_on(mic_motor->motor.motor_on);
+    machine_set_motor_dms(mic_motor->motor.dms_on);
+    machine_set_motor_reverse(mic_motor->motor.reverse);
+}
+
+void can_parse_mswi_motor(can_msg_t *msg)
+{
+    CAN_DECLARE_MSG_OF_TYPE(can_mswi19_motor_msg_t, mswi_motor, msg);
+    modules.connected.mswi = 1;
+
+    machine_set_motor_duty(mswi_motor->d);
+}
+
+CAN_REGISTER_PARSER(100);
+
+void can_handle_timeout(uint8_t signature)
+{
+    switch (signature)
+    {
+    case CAN_SIGNATURE_MIC19:
+        modules.connected.mic = 0;
+        break;
+    case CAN_SIGNATURE_MSWI19:
+        modules.connected.mswi = 0;
+    default:
+        break;
+    }
+}
+
 void can_task_run(void)
 {
-    can_msg_t Rx_msg;
+    CAN_REGISTER_TOPICS(mic,
+                        {CAN_MSG_MIC19_MOTOR_ID, &can_parse_mic_motor});
+
+    CAN_REGISTER_TOPICS(mswi,
+                        {CAN_MSG_MSWI19_MOTOR_ID, &can_parse_mswi_motor});
+
+    CAN_REGISTER_MODULES(mam_rx,
+                         {CAN_SIGNATURE_MIC19, &CAN_TOPICS_NAME(mic), 10},
+                         {CAN_SIGNATURE_MSWI19, &CAN_TOPICS_NAME(mswi), 10});
+
+    FDCAN_RxHeaderTypeDef RxHeader;
+    can_msg_t msg;
     if (HAL_FDCAN_GetRxFifoFillLevel(can_hardware.hfdcan, can_hardware.fifo))
     {
-        if (HAL_FDCAN_GetRxMessage(can_hardware.hfdcan, can_hardware.fifo, &Rx_msg.RxHeader, Rx_msg.data.raw) != HAL_OK)
+        if (HAL_FDCAN_GetRxMessage(can_hardware.hfdcan, can_hardware.fifo, &RxHeader, msg.raw) != HAL_OK)
         {
             LOG_ERROR("Failed to receive can message");
         }
-        can_parse(&Rx_msg);
+        msg.id = RxHeader.Identifier;
+        can_parser(&CAN_MODULES_NAME(mam_rx), &msg);
     }
-}
-
-void can_app_extractor_mic19_motor(can_msg_t *msg)
-{
-    if (msg->data.signature == CAN_SIGNATURE_MIC19)
-    {
-
-        system_flags.motor_on = bit_is_set(msg->data.raw[CAN_MSG_MIC19_MOTOR_MOTOR_BYTE],
-                                           CAN_MSG_MIC19_MOTOR_MOTOR_MOTOR_ON_BIT);
-
-        system_flags.dms = bit_is_set(msg->data.raw[CAN_MSG_MIC19_MOTOR_MOTOR_BYTE],
-                                      CAN_MSG_MIC19_MOTOR_MOTOR_DMS_ON_BIT);
-
-        system_flags.reverse = bit_is_set(msg->data.raw[CAN_MSG_MIC19_MOTOR_MOTOR_BYTE],
-                                          CAN_MSG_MIC19_MOTOR_MOTOR_REVERSE_BIT);
-
-        system_infos.dt = msg->data.raw[CAN_MSG_MIC19_MOTOR_D_BYTE] / 255.0f;
-
-        machine_set_motor_duty(system_infos.dt);
-        machine_set_motor_on(system_flags.motor_on);
-        machine_set_motor_dms(system_flags.dms);
-        machine_set_motor_reverse(system_flags.reverse);
-    }
-}
-
-void can_parse_mic19_msg(can_msg_t *msg)
-{
-    switch (msg->RxHeader.Identifier)
-    {
-    case CAN_MSG_MIC19_MOTOR_ID:
-        can_app_extractor_mic19_motor(msg);
-        break;
-    case CAN_MSG_MIC19_STATE_ID:
-
-        break;
-    default:
-
-        break;
-    }
-}
-
-void can_parse(can_msg_t *msg)
-{
-    switch (msg->data.signature)
-    {
-    case CAN_SIGNATURE_MIC19:
-        can_parse_mic19_msg(msg);
-        break;
-    default:
-        break;
-    }
+    can_update_timeout(&CAN_MODULES_NAME(mam_rx));
 }

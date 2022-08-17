@@ -25,15 +25,7 @@ typedef struct
             uint8_t payload[7];
         };
     } data;
-} can_msg_t;
-
-typedef struct
-{
-    const uint8_t signature;   // Module signature
-    const uint32_t timeout;    // Time elapsed without messages to consider lost conection
-    uint32_t time_without_msg; // Time elapsed without messages
-    uint32_t connected;        // Module conected
-} module_t;
+} can_rx_msg_t;
 
 /*
  *   Initialize can module
@@ -49,6 +41,6 @@ void can_task_run(void);
 /*
  *   Parse an can message
  */
-void can_parse(can_msg_t *msg);
+void can_parse(can_rx_msg_t *msg);
 
 #endif
