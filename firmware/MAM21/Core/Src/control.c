@@ -20,9 +20,9 @@ static void control_compute_rpm(void);
 
 static void control_compute_duty(void)
 {
-    static const float pos_step = 0.005f;
-    static const float neg_step = -0.005f;
-    static const float error_tolerance = 1.01 * pos_step;
+    static const float pos_step = 0.003f;
+    static const float neg_step = -0.003f;
+    static const float error_tolerance = 0.75 * pos_step;
 
     float error = control.duty_setpoint - control.duty;
 
@@ -31,10 +31,6 @@ static void control_compute_duty(void)
     if (fabsf(error) > error_tolerance)
     {
         control.duty += step;
-    }
-    else
-    {
-        control.duty = control.duty_setpoint;
     }
 
     h_bridge_set_duty_target(control.duty);
