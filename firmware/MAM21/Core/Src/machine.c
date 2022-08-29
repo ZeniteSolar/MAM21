@@ -66,7 +66,7 @@ static void set_state_error(void)
 
 static void check_pot_zero(void)
 {
-    static const float error_tolerance = 0.01f;
+    static const float error_tolerance = 0.05f;
     static uint32_t pot_zero_clk;
     if (machine.motor.duty >= error_tolerance)
     {
@@ -160,7 +160,7 @@ void machine_run(void)
     if (machine.run)
     {
         machine.run = 0;
-        can_task_run();
+
         control_run();
         switch (machine.state)
         {
@@ -168,9 +168,11 @@ void machine_run(void)
             task_initializing();
             break;
         case STATE_IDLE:
+            can_task_run();
             task_idle();
             break;
         case STATE_RUNNING:
+            can_task_run();
             task_running();
             break;
         default:
