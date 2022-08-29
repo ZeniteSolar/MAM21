@@ -1,6 +1,7 @@
 # https://github.com/github/gitignore/blob/master/C.gitignore
 # Zip 
 *.zip
+*.make
 # Vscode
 .vscode/
 
