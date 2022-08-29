@@ -698,7 +698,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
     if (htim->Instance == htim1.Instance)
     {
-        if (++machine_clk_div >= 100)
+        if (++machine_clk_div == 100)
         {
             machine_clk_div = 0;
             machine_set_run();
