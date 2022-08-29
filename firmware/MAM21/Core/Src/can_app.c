@@ -81,7 +81,7 @@ void can_parse_mswi_motor(can_msg_t *msg)
     machine_set_motor_duty((float)mswi_motor->d / 255.0f);
 }
 
-CAN_REGISTER_PARSER(100);
+CAN_REGISTER_PARSER(122);
 
 void can_handle_timeout(uint8_t signature)
 {
