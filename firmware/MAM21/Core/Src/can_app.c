@@ -66,7 +66,7 @@ void can_parse_mic_motor(can_msg_t *msg)
     modules.connected.mic = 1;
     if (!modules.connected.mswi)
     {
-        machine_set_motor_duty(mic_motor->d);
+        machine_set_motor_duty((float)mic_motor->d / 255.0f);
     }
     machine_set_motor_on(mic_motor->motor.motor_on);
     machine_set_motor_dms(mic_motor->motor.dms_on);
@@ -78,7 +78,7 @@ void can_parse_mswi_motor(can_msg_t *msg)
     CAN_DECLARE_MSG_OF_TYPE(can_mswi19_motor_msg_t, mswi_motor, msg);
     modules.connected.mswi = 1;
 
-    machine_set_motor_duty(mswi_motor->d);
+    machine_set_motor_duty((float)mswi_motor->d / 255.0f);
 }
 
 CAN_REGISTER_PARSER(100);
@@ -89,6 +89,7 @@ void can_handle_timeout(uint8_t signature)
     {
     case CAN_SIGNATURE_MIC19:
         modules.connected.mic = 0;
+        machine_set_motor_on(DISABLE);
         break;
     case CAN_SIGNATURE_MSWI19:
         modules.connected.mswi = 0;
@@ -107,7 +108,7 @@ void can_task_run(void)
 
     CAN_REGISTER_MODULES(mam_rx,
                          {CAN_SIGNATURE_MIC19, &CAN_TOPICS_NAME(mic), 10},
-                         {CAN_SIGNATURE_MSWI19, &CAN_TOPICS_NAME(mswi), 10});
+                         {CAN_SIGNATURE_MSWI19, &CAN_TOPICS_NAME(mswi), 0});
 
     FDCAN_RxHeaderTypeDef RxHeader;
     can_msg_t msg;
