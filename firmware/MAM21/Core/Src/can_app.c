@@ -27,6 +27,9 @@ void can_config(FDCAN_HandleTypeDef *hfdcan1)
     sFilterConfig.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
     sFilterConfig.FilterID1 = 0x00;
     sFilterConfig.FilterID2 = 0x00;
+
+    can_hardware.fifo = FDCAN_RX_FIFO0;
+
     if (HAL_FDCAN_ConfigFilter(hfdcan1, &sFilterConfig) != HAL_OK)
     {
         LOG_ERROR("Failed to configure CAN");
@@ -46,10 +49,10 @@ void can_config(FDCAN_HandleTypeDef *hfdcan1)
         LOG_ERROR("Failed to configure CAN");
     }
 
-    if (HAL_FDCAN_ActivateNotification(hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
-    {
-        LOG_ERROR("Failed to configure CAN");
-    }
+    // if (HAL_FDCAN_ActivateNotification(hfdcan1, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0) != HAL_OK)
+    // {
+    //     LOG_ERROR("Failed to configure CAN");
+    // }
 }
 void can_init(FDCAN_HandleTypeDef *hfdcan)
 {
