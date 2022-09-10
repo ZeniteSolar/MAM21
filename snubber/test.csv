@@ -37,3 +37,40 @@ Ensaio Nº,C_low (n),C_low_tec,R_low (R),"D_low ",C_high (n),C_high_tec,R_high (
 36,100,polyester,1,"yes",50,ceramic,0.5,yes,26.14,21.51,20.32,NaN,NaN,NaN,NaN,NaN,https://drive.google.com/file/d/1CGMLJhaM0Z0sBpZIxHP_urDkdVMAx-w5/view?usp=sharing
 37,40,polyester,1,"yes",50,ceramic,0.5,yes,30.06,20.61,20.23,NaN,NaN,NaN,NaN,NaN,https://drive.google.com/file/d/1aJp3iQrv8AHkuGpgGhv9dmKhdGeZUBLi/view?usp=sharing
 38,80,polyester,1,"yes",50,ceramic,0.5,yes,28.57,21.98,20.33,NaN,NaN,NaN,NaN,NaN,https://drive.google.com/file/d/1SXC_GaLeYke8AhVMNSpc5WeCjrWjOaVR/view?usp=sharing
+39,130,polyester,1,"yes",50,ceramic,0.5,yes,26.06,20.49,20.32,NaN,NaN,NaN,NaN,NaN,https://drive.google.com/file/d/149bDw5mZPGN0RTRP9vG-RYy7zrRBVMA1/view?usp=sharing
+40,142.3,pol/cer,1,"yes",50,ceramic,0.5,yes,26.69,22.20,20.33,NaN,NaN,NaN,NaN,NaN,https://drive.google.com/file/d/15PfVbhcW2NcM1uL5lctRd35MWmZU5uCU/view?usp=sharing
+41,142.3,pol/cer,10,"yes",50,ceramic,0.5,yes,26.69,23.31,20.34,NaN,NaN,30,NaN,NaN,https://drive.google.com/file/d/12FJ5TN31WTzBhThiQOztyqIaAl-l8Db2/view?usp=sharing
+42,142.3,pol/cer,10,"yes",50,ceramic,0.5,yes,12.49,10.37,9.95,NaN,NaN,24,NaN,NaN,
+43,142.3,pol/cer,10,"yes",50,ceramic,0.5,yes,19.16,15.39,15.14,NaN,NaN,26,NaN,NaN,
+44,142.3,pol/cer,10,"yes",50,ceramic,0.5,yes,26.76,20.29,20.39,NaN,NaN,29,NaN,NaN,
+45,142.3,pol/cer,10,"yes",50,ceramic,0.5,yes,33.67,29.59,24.99,NaN,NaN,34,NaN,NaN,
+46,142.3,pol/cer,10,"yes",50,ceramic,0.5,yes,41.76,35.49,30.19,NaN,NaN,41,NaN,NaN,
+47,142.3,pol/cer,10,"yes",50,ceramic,0.5,yes,50.39,41.76,35.36,NaN,NaN,68,NaN,NaN,
+48,142.3,pol/cer,10,"yes",50,ceramic,0.5,yes,59.18,47.10,40.03,NaN,NaN,87,NaN,NaN,
+49,142.3,pol blue,10,"yes",50,ceramic,0.5,yes,28.00,24.10,20.32,NaN,NaN,28,NaN,NaN,https://drive.google.com/file/d/1Uf9RnpAYs7FgSjyq2frA6-GQWPMJ_KO0/view?usp=sharing
+50,242.3,pol blue,10,"yes",50,ceramic,0.5,yes,31.08,31.47,20.26,NaN,NaN,26,NaN,NaN,https://drive.google.com/file/d/1LKjvhXfidrNWoVhuwqVNgNh2my4SGILh/view?usp=sharing
+51,220,polyester parallel,1,"yes",50,ceramic,0.5,yes,25.04,22.92,19.83,NaN,NaN,33,NaN,NaN,https://drive.google.com/file/d/1GhSH7rKHgUJZO5OaZCwIIUX5VuIQjaxz/view?usp=sharing
+52,220,polyester parallel,1,"yes",50,ceramic,0.5,yes,38.36,30.16,30.04,NaN,NaN,57,NaN,NaN,https://drive.google.com/file/d/14270ll8sVJWzBW9o4ZNQ38P6_ylnr1wp/view?usp=sharing
+53,220,polyester parallel,1,"yes",50,ceramic,0.5,yes,53.37,45.37,40,NaN,NaN,90,NaN,NaN,https://drive.google.com/file/d/1_jkf0wb1N5crSpq2x-jRYFANAZRn2QLD/view?usp=sharing
+54,200,polyester parallel,1,"no",50,ceramic,0.5,yes,29.57,20.31,20.33,NaN,NaN,31,NaN,NaN,https://drive.google.com/file/d/14dIhltnsIIvoW6Io7TaCTtT9LcP_jkpj/view?usp=sharing
+55,200,polyester parallel,1,"no",50,ceramic,0.5,yes,48.3,32.39,30.18,NaN,NaN,37,NaN,NaN,https://drive.google.com/file/d/1dqs_iH-Dh4SXhqALfn-gqYLEOOeO7UyI/view?usp=sharing
+56,200,polyester parallel,1,"no",50,ceramic,0.5,yes,83.29,48.78,40.1,NaN,NaN,36,NaN,NaN,https://drive.google.com/file/d/1UWt9pHAwGC3nSfPoL5wVZ6myedLlYo3z/view?usp=sharing
+57,200,polyester parallel,0.5,"no",50,ceramic,0.5,yes,29.5,20.16,20.32,NaN,NaN,30,NaN,NaN,https://drive.google.com/file/d/1pNXyq_npHePzELec1uqfwfX_-evGqnV4/view?usp=sharing
+58,200,polyester parallel,0.5,"no",50,ceramic,0.5,yes,48.24,29.28,30.10,NaN,NaN,37,NaN,NaN,https://drive.google.com/file/d/12j7HCIX3_YxdrfslpCdYy3SWHTrC7zRm/view?usp=sharing
+59,200,polyester parallel,0.5,"no",50,ceramic,0.5,yes,82.98,40.63,40.57,NaN,NaN,32,NaN,NaN,https://drive.google.com/file/d/1NGiKRpf0kxf_h-C-3YF-GZLwSMupw1f9/view?usp=sharing
+60,200,polyester parallel,0.2,"no",50,ceramic,0.5,yes,26.75,20.94,20.88,NaN,NaN,33,NaN,NaN,https://drive.google.com/file/d/1mHIvzeSAwMx8BV5pMbe09ch1FvOlSELv/view?usp=sharing
+61,200,polyester parallel,0.2,"no",50,ceramic,0.5,yes,42.59,30.04,30.22,NaN,NaN,41,NaN,NaN,https://drive.google.com/file/d/1d_bdVC73mdOtMQxk8Gx77emDlQJjslEm/view?usp=sharing
+62,200,polyester parallel,0.2,"no",50,ceramic,0.5,yes,62.9,40.31,40.04,NaN,NaN,55,NaN,NaN,https://drive.google.com/file/d/1tkx2Hm6S2w5wGxgBR4BZteHAxfv5WUND/view?usp=sharing
+63,200,polyester parallel,0.14,"yes",50,ceramic,0.5,yes,24.71,20.78,20.88,NaN,NaN,37,NaN,NaN,https://drive.google.com/file/d/1g25OepnwL4vZpy4gI7XZJ01FCqmgeJBJ/view?usp=sharing
+64,200,polyester parallel,0.14,"yes",50,ceramic,0.5,yes,38.35,30.04,30.21,NaN,NaN,45,NaN,NaN,https://drive.google.com/file/d/1Ph_FmMOgzetEAH_oukb3S2Ewaq4Y8f2P/view?usp=sharing
+65,200,polyester parallel,0.14,"yes",50,ceramic,0.5,yes,56.63,40.31,40.05,NaN,NaN,63,NaN,NaN,https://drive.google.com/file/d/1HIKR9zQSZa8gNndWJBGyMNq3pswqO6j3/view?usp=sharing
+66,200,polyester parallel,0.14,"no",50,ceramic,0.5,yes,24.31,24.39,20.38,NaN,NaN,38,NaN,NaN,https://drive.google.com/file/d/12UM4Cv72L8R6r8sj5e6Jj9rwi4p6CqJ0/view?usp=sharing
+67,200,polyester parallel,0.14,"no",50,ceramic,0.5,yes,37.73,36.00,30.23,NaN,NaN,50,NaN,NaN,https://drive.google.com/file/d/1PoXMifn3F2zxkq7iFlmYHU8W-Bag7cEn/view?usp=sharing
+68,200,polyester parallel,0.14,"no",50,ceramic,0.5,yes,54.75,48.47,40.08,NaN,NaN,67,NaN,NaN,https://drive.google.com/file/d/1gnnOjzEUH1Fc3FW_4jzy5DwTRS4T9S_o/view?usp=sharing
+69,200,polyester parallel,0.16,"no",50,ceramic,0.5,yes,25.33,24.08,20.83,NaN,NaN,34,NaN,NaN,https://drive.google.com/file/d/1qj5moQBCTFWBG7xF0aev-gfzFt16B5pv/view?usp=sharing
+70,200,polyester parallel,0.16,"no",50,ceramic,0.5,yes,40.24,35.37,30.20,NaN,NaN,44,NaN,NaN,https://drive.google.com/file/d/1pXDgrTcP-2BMcPISCdR52VKlYnjT4yuK/view?usp=sharing
+71,200,polyester parallel,0.16,"no",50,ceramic,0.5,yes,58.82,47.22,40.10,NaN,NaN,55,NaN,NaN,https://drive.google.com/file/d/1I4_Od-x-6x1jdLVMFc8IQLZpRY7oQ4em/view?usp=sharing
+72,200,polyester parallel,0.16,"no",50,ceramic,0.5,yes,80.16,58.51,50.87,NaN,NaN,85,NaN,NaN,https://drive.google.com/file/d/1sdPSqlkJuPfxBNOfAgIgbOz-GsXKdE2l/view?usp=sharing
+73,200,polyester parallel,0.16,"no",100,polyester,0.5,yes,24.43,23.25,20.27,NaN,NaN,33,NaN,NaN,https://drive.google.com/file/d/1-w6WHNpIDrhfg2T5XcFpiImfMgxHbsnE/view?usp=sharing
+74,200,polyester parallel,0.16,"no",100,polyester,0.5,yes,40.55,34.5,30.6,NaN,NaN,42,NaN,NaN,
+75,200,polyester parallel,0.16,"no",100,polyester,0.5,yes,58.27,44.63,39.98,NaN,NaN,56,NaN,NaN,https://drive.google.com/file/d/1Pzx-R6k-ucsFix8hZA2LTrpnA-favojh/view?usp=sharing
