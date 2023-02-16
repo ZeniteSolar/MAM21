@@ -5,6 +5,15 @@ Embarcação Guarapuvu II
 
 Equipe Zênite Solar
 
+### About
+High current >150A Electronic Speed Controller for **[ME0909](https://www.electricmotorsport.com/me0909-pmdc-motor-12-48v-4-hp-cont-12-8-hp-pk.html)** motor, with CANBus.
+
+### Images
+
+<img style="background-color:white"  src="imgs/mounting/controlandcapacitorboard.jpg" alt="board" align="center" width="600"/>
+<img style="background-color:white"  src="imgs/mounting/powerboard.jpg" alt="board" align="center" width="600"/>
+<img style="background-color:white"  src="imgs/mounting/tests.jpg" alt="board" align="center" width="600"/>
+
 ### Sobre
 Este módulo é responsável por realizar o acionamento de um motor de imã permanente, controlando sua velocidade e sentido de rotação.
 
